@@ -6,6 +6,7 @@
 <head id="Head1" runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
+    <!--[if lt IE 8 ]><script type="text/javascript" src="/js/common/json2.min.js"></script><![endif]-->
 	<!-- easyui 样式开始 -->
 	<link rel="stylesheet" type="text/css" href="/lib/ealib/themes/default/easyui.css" />
 	<link rel="stylesheet" type="text/css" href="/lib/ealib/themes/icon.css" />

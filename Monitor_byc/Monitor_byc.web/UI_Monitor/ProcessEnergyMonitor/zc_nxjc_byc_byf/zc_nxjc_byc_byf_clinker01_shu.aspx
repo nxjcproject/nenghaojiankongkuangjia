@@ -14,6 +14,7 @@
 
     <script type="text/javascript" src="/lib/ealib/jquery.min.js" charset="utf-8"></script>
     <script type="text/javascript" src="/js/common/jquery.utility.js" charset="utf-8"></script>
+    <!--[if lt IE 8 ]><script type="text/javascript" src="/js/common/json2.min.js"></script><![endif]-->
 
     <script type="text/javascript" src="/lib/ealib/jquery.easyui.min.js" charset="utf-8"></script>
     <script type="text/javascript" src="/lib/ealib/easyui-lang-zh_CN.js" charset="utf-8"></script>
@@ -50,6 +51,30 @@
             </tr>
             <tr>
                 <td><span id="zc_nxjc_byc_byf_clinker01>clinkerHoist2>Power" class="mchart"></span></td>
+            </tr>
+        </table>
+        <%--新加的窑尾排风机--%>
+        <table class="mytable" style="position: absolute; top: 264px; left: 25px;">
+            <tr>
+                <td><span id="zc_nxjc_byc_byf_clinker01>kilnTailExhaustFan>ElectricityConsumption" class="mchart"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_byc_byf_clinker01>kilnTailExhaustFan>Current" class="mchart"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_byc_byf_clinker01>kilnTailExhaustFan>Power" class="mchart"></span></td>
+            </tr>
+        </table>
+        <%--新加的窑尾高温风机--%>
+        <table class="mytable" style="position: absolute; top: 418px; left: 63px;">
+            <tr>
+                <td><span id="zc_nxjc_byc_byf_clinker01>highTemperatureFan>ElectricityConsumption" class="mchart"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_byc_byf_clinker01>highTemperatureFan>Current" class="mchart"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_byc_byf_clinker01>highTemperatureFan>Power" class="mchart"></span></td>
             </tr>
         </table>
         <table class="mytable" style="position: absolute; top: 230px; left: 742px;">
