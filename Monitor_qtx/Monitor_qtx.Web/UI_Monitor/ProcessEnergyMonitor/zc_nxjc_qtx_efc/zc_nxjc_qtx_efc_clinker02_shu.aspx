@@ -23,6 +23,7 @@
     <script src="/UI_Monitor/js/common/chartjs.js"></script>
     <script src="/UI_Monitor/js/common/SubMonitorAdapter.js"></script>
     <script src="/UI_Monitor/js/common/alarm.js"></script>
+    <script src="/UI_Monitor/js/common/multiTagChart.js"></script>
     <script>
         publicData.organizationId = "zc_nxjc_qtx_efc_clinker02";
         publicData.sceneName = "2#熟料线";
@@ -338,7 +339,7 @@
                 <td><span id="zc_nxjc_qtx_efc_clinker02>coalPreparation_ElectricityQuantity>Day" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker02>clinker_PulverizedCoalOutput>Day" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_efc_clinker02>clinker_PulverizedCoalOutput>Day" class="mchart;nodisplay"></span></td>
             </tr>
             <tr>
                 <td><span id="zc_nxjc_qtx_efc_clinker02>coalPreparation_ElectricityConsumption>Day" class="mchart"></span></td>
@@ -349,7 +350,7 @@
                 <td><span id="zc_nxjc_qtx_efc_clinker02>coalPreparation_ElectricityQuantity>Class" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker02>clinker_PulverizedCoalOutput>Class" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_efc_clinker02>clinker_PulverizedCoalOutput>Class" class="mchart;nodisplay"></span></td>
             </tr>
             <tr>
                 <td><span id="zc_nxjc_qtx_efc_clinker02>coalPreparation_ElectricityConsumption>Class" class="mchart"></span></td>
@@ -360,7 +361,7 @@
                 <td><span id="zc_nxjc_qtx_efc_clinker02>coalPreparation>ElectricityQuantity" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker02>clinker_PulverizedCoalOutput>Material" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_efc_clinker02>clinker_PulverizedCoalOutput>Material" class="mchart;nodisplay"></span></td>
             </tr>
             <tr>
                 <td><span id="zc_nxjc_qtx_efc_clinker02>coalPreparation>ElectricityConsumption" class="mchart"></span></td>
@@ -371,7 +372,7 @@
                 <td><span id="zc_nxjc_qtx_efc_clinker02>clinkerBurning>ElectricityQuantity" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker02>clinker_ClinkerOutput>Material" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_efc_clinker02>clinker_ClinkerOutput>Material" class="mchart;nodisplay"></span></td>
             </tr>
             <tr>
                 <td><span id="zc_nxjc_qtx_efc_clinker02>clinkerBurning>ElectricityConsumption" class="mchart"></span></td>
@@ -388,7 +389,7 @@
                 <td><span id="zc_nxjc_qtx_efc_clinker02>clinkerBurning_ElectricityQuantity>Class" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker02>clinker_ClinkerOutput>Class" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_efc_clinker02>clinker_ClinkerOutput>Class" class="mchart;nodisplay"></span></td>
             </tr>
             <tr>
                 <td><span id="zc_nxjc_qtx_efc_clinker02>clinkerBurning_ElectricityConsumption>Class" class="mchart"></span></td>
@@ -405,7 +406,7 @@
                 <td><span id="zc_nxjc_qtx_efc_clinker02>clinkerBurning_ElectricityQuantity>Day" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker02>clinker_ClinkerOutput>Day" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_efc_clinker02>clinker_ClinkerOutput>Day" class="mchart;nodisplay"></span></td>
             </tr>
             <tr>
                 <td><span id="zc_nxjc_qtx_efc_clinker02>clinkerBurning_ElectricityConsumption>Day" class="mchart"></span></td>

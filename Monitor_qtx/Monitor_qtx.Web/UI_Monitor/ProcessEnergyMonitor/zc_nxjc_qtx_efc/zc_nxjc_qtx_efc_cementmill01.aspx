@@ -22,6 +22,7 @@
     <script src="/UI_Monitor/js/common/chartjs.js"></script>
     <script src="/UI_Monitor/js/common/SubMonitorAdapter.js"></script>
     <script src="/UI_Monitor/js/common/alarm.js"></script>
+    <script src="/UI_Monitor/js/common/multiTagChart.js"></script>
     <script>
         publicData.organizationId = "zc_nxjc_qtx_efc_cementmill01";
         publicData.sceneName = "1#水泥磨";
@@ -113,7 +114,7 @@
                 <td><span id="zc_nxjc_qtx_efc_cementmill01>cementPreparation>ElectricityQuantity" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_qtx_efc_cementmill01>cement_CementOutput>Material" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_efc_cementmill01>cement_CementOutput>Material" class="mchart;nodisplay"></span></td>
             </tr>
             <tr>
                 <td><span id="zc_nxjc_qtx_efc_cementmill01>cementPreparation>ElectricityConsumption" class="mchart"></span></td>
@@ -124,7 +125,7 @@
                 <td><span id="zc_nxjc_qtx_efc_cementmill01>cementPreparation_ElectricityQuantity>Class" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_qtx_efc_cementmill01>cement_CementOutput>Class" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_efc_cementmill01>cement_CementOutput>Class" class="mchart;nodisplay"></span></td>
             </tr>
             <tr>
                 <td><span id="zc_nxjc_qtx_efc_cementmill01>cementPreparation_ElectricityConsumption>Class" class="mchart"></span></td>
@@ -135,7 +136,7 @@
                 <td><span id="zc_nxjc_qtx_efc_cementmill01>cementPreparation_ElectricityQuantity>Day" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_qtx_efc_cementmill01>cement_CementOutput>Day" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_efc_cementmill01>cement_CementOutput>Day" class="mchart;nodisplay"></span></td>
             </tr>
             <tr>
                 <td><span id="zc_nxjc_qtx_efc_cementmill01>cementPreparation_ElectricityConsumption>Day" class="mchart"></span></td>

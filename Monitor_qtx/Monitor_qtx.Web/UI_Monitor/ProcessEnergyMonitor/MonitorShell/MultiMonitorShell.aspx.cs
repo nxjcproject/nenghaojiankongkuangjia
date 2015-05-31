@@ -15,7 +15,7 @@ namespace Monitor_shell.Web.UI_Monitor.ProcessEnergyMonitor.MonitorShell
             base.InitComponts();
             string pageInfors = "";
 #if DEBUG
-            pageInfors = GetPageIdByNodeId("zc_nxjc_byc_byf_cementmill02,saa");
+            pageInfors = GetPageIdByNodeId("zc_nxjc_qtx_efc,zc_nxjc_qtx_efc");
             pageIdStringContainerId.Value = pageInfors;
 
 #elif !DEBUG
@@ -26,8 +26,9 @@ namespace Monitor_shell.Web.UI_Monitor.ProcessEnergyMonitor.MonitorShell
 
             string[] pageInfoArray = pageInfors.Split(',');
             string organizationId = pageInfoArray[0];
-            string viewName = pageInfoArray[1];
+            string pageUrl = pageInfoArray[1];
             organizationIdContainerId.Value = organizationId;
+            pageUrlId.Value = pageUrl;
 
             DataTable m_OrganzationInfo = Monitor_shell.Service.ProcessEnergyMonitor.MultiMonitorShell.GetOrganizationInfo(organizationId);
             if (m_OrganzationInfo != null)

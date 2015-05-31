@@ -23,15 +23,18 @@
     <script src="/UI_Monitor/js/common/chartjs.js"></script>
     <script src="/UI_Monitor/js/common/SubMonitorAdapter.js"></script>
     <script src="/UI_Monitor/js/common/alarm.js"></script>
+    <script src="/UI_Monitor/js/common/multiTagChart.js"></script>
     <script>
         publicData.organizationId = "zc_nxjc_byc_byf";
         publicData.sceneName = "";
     </script>
     <title></title>
 </head>
-<body id="SubMonitorBody" style="margin: 0px; padding: 0px; overflow: auto;">
+<body id="SubMonitorBody" style="margin: 0px; padding: 0px; overflow: auto;">   
     <div id="SubMonitorLayout" style="position: relative; background-image: url('../../images/page/zc_nxjc_byc_byf.png'); width: 1350px; height: 740px; overflow: hidden;">
-        <table class="mytable" style="position: absolute; top: 90px; left: 27px;">
+       <div onclick="getAllCookie()">cookie测试</div>
+        <div onclick="openWindow()">打开趋势窗口</div>
+         <table class="mytable" style="position: absolute; top: 90px; left: 27px;">
             <tr>
                 <td><span id="zc_nxjc_byc_byf_clinker01>rawMaterialsHomogenize_ElectricityQuantity>Class" class="mchart"></span></td>
             </tr>
@@ -55,13 +58,13 @@
         </table>
         <table class="mytable" style="position: absolute; top: 156px; left: 204px;">
             <tr>
-                <td><span id="zc_nxjc_byc_byf_clinker01>clinker_MixtureMaterialsOutput>Class" class="mchart"></span></td>
+                <td><span id="zc_nxjc_byc_byf_clinker01>clinker_MixtureMaterialsOutput>Class" class="mchart;material"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_byc_byf_clinker01>clinker_MixtureMaterialsOutput>Day" class="mchart"></span></td>
+                <td><span id="zc_nxjc_byc_byf_clinker01>clinker_MixtureMaterialsOutput>Day" class="mchart;material"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_byc_byf_clinker01>clinker_MixtureMaterialsOutput>Month" class="mchart"></span></td>
+                <td><span id="zc_nxjc_byc_byf_clinker01>clinker_MixtureMaterialsOutput>Month" class="mchart;material"></span></td>
             </tr>
         </table>
         <table class="mytable" style="position: absolute; top: 322px; left: 522px;">
@@ -132,13 +135,13 @@
         </table>
         <table class="mytable" style="position: absolute; top: 407px; left: 528px;">
             <tr>
-                <td><span id="zc_nxjc_byc_byf_clinker01>clinker_PulverizedCoalOutput>Class" class="mchart"></span></td>
+                <td><span id="zc_nxjc_byc_byf_clinker01>clinker_PulverizedCoalOutput>Class" class="mchart;material"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_byc_byf_clinker01>clinker_PulverizedCoalOutput>Day" class="mchart"></span></td>
+                <td><span id="zc_nxjc_byc_byf_clinker01>clinker_PulverizedCoalOutput>Day" class="mchart;material"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_byc_byf_clinker01>clinker_PulverizedCoalOutput>Month" class="mchart"></span></td>
+                <td><span id="zc_nxjc_byc_byf_clinker01>clinker_PulverizedCoalOutput>Month" class="mchart;material"></span></td>
             </tr>
         </table>
         <table class="mytable" style="position: absolute; top: 56px; left: 976px;">
@@ -250,24 +253,24 @@
         </table>
         <table class="mytable" style="position: absolute; top: 205px; left: 1056px; height: 50px;">
             <tr>
-                <td><span id="zc_nxjc_byc_byf_cementmill01>cement_CementOutput>Class" class="mchart"></span></td>
+                <td><span id="zc_nxjc_byc_byf_cementmill01>cement_CementOutput>Class" class="mchart;material"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_byc_byf_cementmill01>cement_CementOutput>Day" class="mchart"></span></td>
+                <td><span id="zc_nxjc_byc_byf_cementmill01>cement_CementOutput>Day" class="mchart;material"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_byc_byf_cementmill01>cement_CementOutput>Month" class="mchart"></span></td>
+                <td><span id="zc_nxjc_byc_byf_cementmill01>cement_CementOutput>Month" class="mchart;material"></span></td>
             </tr>
         </table>
         <table class="mytable" style="position: absolute; top: 431px; left: 1057px;">
             <tr>
-                <td><span id="zc_nxjc_byc_byf_cementmill02>cement_CementOutput>Class" class="mchart"></span></td>
+                <td><span id="zc_nxjc_byc_byf_cementmill02>cement_CementOutput>Class" class="mchart;material"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_byc_byf_cementmill02>cement_CementOutput>Day" class="mchart"></span></td>
+                <td><span id="zc_nxjc_byc_byf_cementmill02>cement_CementOutput>Day" class="mchart;material"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_byc_byf_cementmill02>cement_CementOutput>Month" class="mchart"></span></td>
+                <td><span id="zc_nxjc_byc_byf_cementmill02>cement_CementOutput>Month" class="mchart;material"></span></td>
             </tr>
         </table>
         <table class="mytable" style="position: absolute; top: 391px; left: 885px;">
@@ -294,13 +297,13 @@
         </table>
         <table class="mytable" style="position: absolute; top: 530px; left: 813px;">
             <tr>
-                <td><span id="zc_nxjc_byc_byf_clinker01>clinker_ClinkerOutput>Class" class="mchart"></span></td>
+                <td><span id="zc_nxjc_byc_byf_clinker01>clinker_ClinkerOutput>Class" class="mchart;material"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_byc_byf_clinker01>clinker_ClinkerOutput>Day" class="mchart"></span></td>
+                <td><span id="zc_nxjc_byc_byf_clinker01>clinker_ClinkerOutput>Day" class="mchart;material"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_byc_byf_clinker01>clinker_ClinkerOutput>Month" class="mchart"></span></td>
+                <td><span id="zc_nxjc_byc_byf_clinker01>clinker_ClinkerOutput>Month" class="mchart;material"></span></td>
             </tr>
         </table>
 
@@ -328,13 +331,13 @@
         </table>
         <table class="mytable" style="position: absolute; top: 636px; left: 791px;">
             <tr>
-                <td><span id="zc_nxjc_byc_byf_clinker01>clinker_PulverizedCoalInput>Class" class="mchart"></span></td>
+                <td><span id="zc_nxjc_byc_byf_clinker01>clinker_PulverizedCoalInput>Class" class="mchart;material"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_byc_byf_clinker01>clinker_PulverizedCoalInput>Day" class="mchart"></span></td>
+                <td><span id="zc_nxjc_byc_byf_clinker01>clinker_PulverizedCoalInput>Day" class="mchart;material"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_byc_byf_clinker01>clinker_PulverizedCoalInput>Month" class="mchart"></span></td>
+                <td><span id="zc_nxjc_byc_byf_clinker01>clinker_PulverizedCoalInput>Month" class="mchart;material"></span></td>
             </tr>
         </table>
         <table class="mytable" style="position: absolute; top: 635px; left: 856px;">

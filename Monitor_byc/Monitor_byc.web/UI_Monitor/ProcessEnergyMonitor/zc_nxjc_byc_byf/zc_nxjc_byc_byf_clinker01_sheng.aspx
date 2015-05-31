@@ -23,6 +23,8 @@
     <script src="/UI_Monitor/js/common/chartjs.js"></script>
     <script src="/UI_Monitor/js/common/SubMonitorAdapter.js"></script>
     <script src="/UI_Monitor/js/common/alarm.js"></script>
+    <script src="/UI_Monitor/js/common/multiTagChart.js"></script>
+
     <script>
         publicData.organizationId = "zc_nxjc_byc_byf_clinker01";
         publicData.sceneName = "1#熟料线";
@@ -36,7 +38,7 @@
                 <td><span id="zc_nxjc_byc_byf>limestoneCrusher1>ElectricityConsumption" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_byc_byf_clinker01>limestoneCrusher1>Current" class="mchart"></span></td>
+                <td><span id="zc_nxjc_byc_byf_clinker01>limestoneCrusher1>Current" class="mchart;nodisplay"></span></td>
             </tr>
             <tr>
                 <td><span id="zc_nxjc_byc_byf>limestoneCrusher1>Power" class="mchart"></span></td>
@@ -47,7 +49,7 @@
                 <td><span id="zc_nxjc_byc_byf>limestoneMineBelt>ElectricityConsumption" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_byc_byf_clinker01>limestoneMineBelt>Current" class="mchart"></span></td>
+                <td><span id="zc_nxjc_byc_byf_clinker01>limestoneMineBelt>Current" class="mchart;nodisplay"></span></td>
             </tr>
             <tr>
                 <td><span id="zc_nxjc_byc_byf>limestoneMineBelt>Power" class="mchart"></span></td>
@@ -158,7 +160,7 @@
                 <td><span id="zc_nxjc_byc_byf_clinker01>rawMaterialsPreparation>ElectricityQuantity" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_byc_byf_clinker01>clinker_MixtureMaterialsOutput>Material" class="mchart"></span></td>
+                <td><span id="zc_nxjc_byc_byf_clinker01>clinker_MixtureMaterialsOutput>Material" class="mchart;material"></span></td>
             </tr>
             <tr>
                 <td><span id="zc_nxjc_byc_byf_clinker01>rawMaterialsPreparation>ElectricityConsumption" class="mchart"></span></td>
@@ -169,7 +171,7 @@
                 <td><span id="zc_nxjc_byc_byf_clinker01>rawMaterialsPreparation_ElectricityQuantity>Class" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_byc_byf_clinker01>clinker_MixtureMaterialsOutput>Class" class="mchart"></span></td>
+                <td><span id="zc_nxjc_byc_byf_clinker01>clinker_MixtureMaterialsOutput>Class" class="mchart;material"></span></td>
             </tr>
             <tr>
                 <td><span id="zc_nxjc_byc_byf_clinker01>rawMaterialsPreparation_ElectricityConsumption>Class" class="mchart"></span></td>
@@ -180,7 +182,7 @@
                 <td><span id="zc_nxjc_byc_byf_clinker01>rawMaterialsPreparation_ElectricityQuantity>Day" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_byc_byf_clinker01>clinker_MixtureMaterialsOutput>Day" class="mchart"></span></td>
+                <td><span id="zc_nxjc_byc_byf_clinker01>clinker_MixtureMaterialsOutput>Day" class="mchart;material"></span></td>
             </tr>
             <tr>
                 <td><span id="zc_nxjc_byc_byf_clinker01>rawMaterialsPreparation_ElectricityConsumption>Day" class="mchart"></span></td>

@@ -242,3 +242,9 @@ function HiddenParentTopLeft() {
         window.parent.HiddenTopLeftLayoutFun();
     }
 }
+
+//打开多曲线对比窗口
+function openMultiTrendLineWindow() {
+    var url = "/UI_Monitor/TrendTool/MultiTrendlineRenderer.aspx";
+    window.open(url, "WindowChart", "width=1000,height=600,toolbar=no,menubar=no,scrollbars=no,resizable=no,location=no,status=no");
+}

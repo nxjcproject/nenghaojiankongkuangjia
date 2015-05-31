@@ -86,6 +86,7 @@
     <Compile Include="TrendTool\DCSDataProvider.cs" />
     <Compile Include="TrendTool\HistoryFormulaValueDataProvider.cs" />
     <Compile Include="TrendTool\IDataProvider.cs" />
+    <Compile Include="TrendTool\MultiTrendlineRendererService.cs" />
     <Compile Include="TrendTool\MaterialDataProvider.cs" />
     <Compile Include="TrendTool\TrendLineService.cs" />
     <Compile Include="TrendTool\Utility.cs" />

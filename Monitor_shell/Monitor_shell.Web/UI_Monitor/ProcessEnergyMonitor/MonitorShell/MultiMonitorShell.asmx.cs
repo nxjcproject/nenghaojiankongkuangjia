@@ -1,6 +1,7 @@
 ﻿using Monitor_shell.Service.Alarm;
 using Monitor_shell.Service.ProcessEnergyMonitor;
 using Monitor_shell.Service.ProcessEnergyMonitor.MonitorShell;
+using Monitor_shell.Service.TrendTool;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -177,6 +178,14 @@ namespace Monitor_shell.Web.UI_Monitor.ProcessEnergyMonitor.MonitorShell
         {
             DataTable table = AlarmService.GetRealtimeAlarmData();
             string json = EasyUIJsonParser.DataGridJsonParser.DataTableToJson(table);
+            return json;
+        }
+
+        //获取标签信息
+        [WebMethod]
+        public  string GetLableJson()
+        {
+            string json = MultiTrendlineRendererService.GetLableName();
             return json;
         }
         /*private void GetProductionLineRealTimeData(string organizationId, string factoryLevelOrganizaiontId, string sceneName, IList<DataItem> dataItems)

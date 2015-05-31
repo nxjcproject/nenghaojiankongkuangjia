@@ -303,7 +303,7 @@
 			<a href="javascript:void(0)" name="lineTrend" class="easyui-linkbutton" data-options="plain:true,toggle:true">趋势</a>
 		</div>
 	</div>
-	<div data-options="region:'south',border:false,split:true" style="height:80px;">
+	<div data-options="region:'south',border:false,split:true" style="height:80px;display:none">
 		<table class="easyui-datagrid" data-options="singleSelect:true,fit:true">
 			<thead>
 				<tr>

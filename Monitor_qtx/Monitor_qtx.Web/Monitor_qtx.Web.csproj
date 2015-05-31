@@ -52,8 +52,7 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Monitor_shell\Monitor_shell.Web\bin\Monitor_shell.Service.dll</HintPath>
     </Reference>
-    <Reference Include="Monitor_shell.Web, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Monitor_shell.Web">
       <HintPath>..\..\Monitor_shell\Monitor_shell.Web\bin\Monitor_shell.Web.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.DynamicData" />
@@ -1779,6 +1778,7 @@
     <Content Include="lib\pllib\syntaxhighlighter\LGPL-LICENSE" />
     <Content Include="lib\pllib\syntaxhighlighter\MIT-LICENSE" />
     <Content Include="UI_Monitor\css\common\mymonitor.css.orig" />
+    <None Include="Properties\PublishProfiles\Monitor_qtx.pubxml" />
     <None Include="Properties\PublishProfiles\new_Monitor_qtx.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

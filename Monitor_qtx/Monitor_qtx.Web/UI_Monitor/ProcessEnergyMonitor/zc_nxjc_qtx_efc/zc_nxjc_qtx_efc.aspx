@@ -23,6 +23,7 @@
     <script src="/UI_Monitor/js/common/chartjs.js"></script>
     <script src="/UI_Monitor/js/common/SubMonitorAdapter.js"></script>
     <script src="/UI_Monitor/js/common/alarm.js"></script>
+    <script src="/UI_Monitor/js/common/multiTagChart.js"></script>
     <script>
         publicData.organizationId = "zc_nxjc_qtx_efc";
         publicData.sceneName = "";
@@ -58,13 +59,13 @@
         <%--生料产量--%>
         <table class="mytable" style="position: absolute; top: 75px; left: 258px;">
             <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker02>clinker_MixtureMaterialsOutput>Class" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_efc_clinker02>clinker_MixtureMaterialsOutput>Class" class="mchart;nodisplay"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker02>clinker_MixtureMaterialsOutput>Day" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_efc_clinker02>clinker_MixtureMaterialsOutput>Day" class="mchart;nodisplay"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker02>clinker_MixtureMaterialsOutput>Month" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_efc_clinker02>clinker_MixtureMaterialsOutput>Month" class="mchart;nodisplay"></span></td>
             </tr>
         </table>
         <%--煤粉制备--%>
@@ -140,13 +141,13 @@
         <%--煤粉产量--%>
         <table class="mytable" style="position: absolute; top: 237px; left: 790px;">
             <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker02>clinker_PulverizedCoalOutput>Class" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_efc_clinker02>clinker_PulverizedCoalOutput>Class" class="mchart;nodisplay"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker02>clinker_PulverizedCoalOutput>Day" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_efc_clinker02>clinker_PulverizedCoalOutput>Day" class="mchart;nodisplay"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker02>clinker_PulverizedCoalOutput>Month" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_efc_clinker02>clinker_PulverizedCoalOutput>Month" class="mchart;nodisplay"></span></td>
             </tr>
         </table>
         <%--混合材制备--%>
@@ -252,26 +253,26 @@
         <%--水泥产量--%>
         <table class="mytable" style="position: absolute; top: 186px; left: 1068px; height: 50px;">
             <tr>
-                <td><span id="zc_nxjc_qtx_efc_cementmill01>cement_CementOutput>Class" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_efc_cementmill01>cement_CementOutput>Class" class="mchart;nodisplay"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_qtx_efc_cementmill01>cement_CementOutput>Day" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_efc_cementmill01>cement_CementOutput>Day" class="mchart;nodisplay"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_qtx_efc_cementmill01>cement_CementOutput>Month" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_efc_cementmill01>cement_CementOutput>Month" class="mchart;nodisplay"></span></td>
             </tr>
         </table>
         <%--水泥粉磨--%>
         <%--熟料产量--%>
         <table class="mytable" style="position: absolute; top: 291px; left: 290px;">
             <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker02>clinker_ClinkerOutput>Class" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_efc_clinker02>clinker_ClinkerOutput>Class" class="mchart;nodisplay"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker02>clinker_ClinkerOutput>Day" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_efc_clinker02>clinker_ClinkerOutput>Day" class="mchart;nodisplay"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker02>clinker_ClinkerOutput>Month" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_efc_clinker02>clinker_ClinkerOutput>Month" class="mchart;nodisplay"></span></td>
             </tr>
         </table>
         <%--水泥包装--%>
@@ -375,13 +376,13 @@
         <%--生料产量--%>
         <table class="mytable" style="position: absolute; top: 367px; left: 255px;">
             <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker03>clinker_MixtureMaterialsOutput>Class" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_efc_clinker03>clinker_MixtureMaterialsOutput>Class" class="mchart;nodisplay"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker03>clinker_MixtureMaterialsOutput>Day" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_efc_clinker03>clinker_MixtureMaterialsOutput>Day" class="mchart;nodisplay"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker03>clinker_MixtureMaterialsOutput>Month" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_efc_clinker03>clinker_MixtureMaterialsOutput>Month" class="mchart;nodisplay"></span></td>
             </tr>
         </table>
         <%--煤粉制备--%>
@@ -457,13 +458,13 @@
         <%--煤粉产量--%>
         <table class="mytable" style="position: absolute; top: 533px; left: 790px;">
             <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker03>clinker_PulverizedCoalOutput>Class" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_efc_clinker03>clinker_PulverizedCoalOutput>Class" class="mchart;nodisplay"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker03>clinker_PulverizedCoalOutput>Day" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_efc_clinker03>clinker_PulverizedCoalOutput>Day" class="mchart;nodisplay"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker03>clinker_PulverizedCoalOutput>Month" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_efc_clinker03>clinker_PulverizedCoalOutput>Month" class="mchart;nodisplay"></span></td>
             </tr>
         </table>
         <%--混合材制备--%>
@@ -581,26 +582,26 @@
         <%--水泥产量--%>
         <table class="mytable" style="position: absolute; top: 448px; left: 1210px; height: 50px;">
             <tr>
-                <td><span id="zc_nxjc_qtx_efc_cementmill02>cement_CementOutput>Class" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_efc_cementmill02>cement_CementOutput>Class" class="mchart;nodisplay"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_qtx_efc_cementmill02>cement_CementOutput>Day" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_efc_cementmill02>cement_CementOutput>Day" class="mchart;nodisplay"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_qtx_efc_cementmill02>cement_CementOutput>Month" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_efc_cementmill02>cement_CementOutput>Month" class="mchart;nodisplay"></span></td>
             </tr>
         </table>
         <%--水泥粉磨--%>
         <%--熟料产量--%>
         <table class="mytable" style="position: absolute; top: 676px; left: 646px;">
             <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker03>clinker_ClinkerOutput>Class" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_efc_clinker03>clinker_ClinkerOutput>Class" class="mchart;nodisplay"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker03>clinker_ClinkerOutput>Day" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_efc_clinker03>clinker_ClinkerOutput>Day" class="mchart;nodisplay"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker03>clinker_ClinkerOutput>Month" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_efc_clinker03>clinker_ClinkerOutput>Month" class="mchart;nodisplay"></span></td>
             </tr>
         </table>
         <%--水泥包装--%>
@@ -629,13 +630,13 @@
        <%--煤粉消耗量--%>
         <table class="mytable" style="position: absolute; top: 677px; left: 900px; right: 384px;">
             <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker03>clinker_PulverizedCoalInput>Class" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_efc_clinker03>clinker_PulverizedCoalInput>Class" class="mchart;nodisplay"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker03>clinker_PulverizedCoalInput>Day" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_efc_clinker03>clinker_PulverizedCoalInput>Day" class="mchart;nodisplay"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker03>clinker_PulverizedCoalInput>Month" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_efc_clinker03>clinker_PulverizedCoalInput>Month" class="mchart;nodisplay"></span></td>
             </tr>
         </table>
         <%--煤耗--%>
@@ -748,13 +749,13 @@
         <%--水泥产量--%>
         <table class="mytable" style="position: absolute; top: 544px; left: 1076px; height: 50px;">
             <tr>
-                <td><span id="zc_nxjc_qtx_efc_cementmill03>cement_CementOutput>Class" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_efc_cementmill03>cement_CementOutput>Class" class="mchart;nodisplay"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_qtx_efc_cementmill03>cement_CementOutput>Day" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_efc_cementmill03>cement_CementOutput>Day" class="mchart;nodisplay"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_qtx_efc_cementmill03>cement_CementOutput>Month" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_efc_cementmill03>cement_CementOutput>Month" class="mchart;nodisplay"></span></td>
             </tr>
         </table>
         <%--三号水泥线结束--%>

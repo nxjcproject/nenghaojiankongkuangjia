@@ -36,6 +36,9 @@
                 <table style="margin-right: 15px;">
                     <tr>
                         <td style="width: 35px;">
+                            <a href="#" class="easyui-linkbutton" data-options="iconCls:'ext-icon-chart_curve',toggle:false" style="height: 22px;" onclick="openMultiTrendLineWindow()"></a>
+                        </td>
+                        <td style="width: 35px;">
                             <a href="#" class="easyui-linkbutton" data-options="iconCls:'ext-icon-shape_square',toggle:false" style="height: 22px;" onclick="HiddenParentTopLeft();"></a>
                         </td>
                         <td style="width: 35px;">
