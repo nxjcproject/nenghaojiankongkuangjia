@@ -21,13 +21,14 @@ namespace Monitor_shell.Service.ProcessEnergyMonitor.MonitorShell
         {
             IList<DataItem> results = new List<DataItem>();
 
-            string sqlSource = @"select * from (SELECT A.OrganizationID,A.VariableId,A.CumulantClass,A.CumulantLastClass,A.CumulantDay,(A.CumulantDay+B.MonthValue) AS CumulantMonth
-                                FROM RealtimeIncrementCumulant AS A,
-                                (select D.OrganizationID,D.VariableId,sum(D.TotalPeakValleyFlat) as MonthValue
-	                            from tz_Balance as C, balance_Energy as D 
-	                            where C.BalanceId=D.KeyId and TimeStamp>=CONVERT(varchar(8),GETDATE(),20)+'01'
-	                            group by D.OrganizationID, VariableId) AS B
-                                WHERE A.VariableId=B.VariableId and A.OrganizationID=B.OrganizationID) AS E
+            string sqlSource = @"select * from (SELECT A.OrganizationID,A.VariableId,A.CumulantClass,A.CumulantLastClass,A.CumulantDay,(A.CumulantDay+(case when B.MonthValue is null then 0 else B.MonthValue end)) AS CumulantMonth
+                                                    FROM RealtimeIncrementCumulant AS A
+                                                LEFT JOIN  
+                                                    (select D.OrganizationID,D.VariableId,sum(D.TotalPeakValleyFlat) as MonthValue
+	                                                from tz_Balance as C, balance_Energy as D 
+	                                                where C.BalanceId=D.KeyId and TimeStamp>=CONVERT(varchar(8),GETDATE(),20)+'01'
+	                                                group by D.OrganizationID, VariableId) AS B
+                                                ON A.VariableId=B.VariableId and A.OrganizationID=B.OrganizationID) AS E
                                 where E.OrganizationID=@organizationId";
 
             //cdy修改开始

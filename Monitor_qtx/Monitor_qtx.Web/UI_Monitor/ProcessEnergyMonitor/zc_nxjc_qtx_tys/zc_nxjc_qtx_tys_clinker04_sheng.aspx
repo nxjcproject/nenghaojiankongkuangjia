@@ -159,7 +159,7 @@
                 <td><span id="zc_nxjc_qtx_tys_clinker04>rawMaterialsPreparation>ElectricityQuantity" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_qtx_tys_clinker04>clinker_MixtureMaterialsOutput>Material" class="mchart;nodisplay"></span></td>
+                <td><span id="zc_nxjc_qtx_tys_clinker04>clinker_MixtureMaterialsOutput>Material" class="mchart nodisplay"></span></td>
             </tr>
             <tr>
                 <td><span id="zc_nxjc_qtx_tys_clinker04>rawMaterialsPreparation>ElectricityConsumption" class="mchart"></span></td>
@@ -170,7 +170,7 @@
                 <td><span id="zc_nxjc_qtx_tys_clinker04>rawMaterialsPreparation_ElectricityQuantity>Class" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_qtx_tys_clinker04>clinker_MixtureMaterialsOutput>Class" class="mchart;nodisplay"></span></td>
+                <td><span id="zc_nxjc_qtx_tys_clinker04>clinker_MixtureMaterialsOutput>Class" class="mchart nodisplay"></span></td>
             </tr>
             <tr>
                 <td><span id="zc_nxjc_qtx_tys_clinker04>rawMaterialsPreparation_ElectricityConsumption>Class" class="mchart"></span></td>
@@ -181,7 +181,7 @@
                 <td><span id="zc_nxjc_qtx_tys_clinker04>rawMaterialsPreparation_ElectricityQuantity>Day" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_qtx_tys_clinker04>clinker_MixtureMaterialsOutput>Day" class="mchart;nodisplay"></span></td>
+                <td><span id="zc_nxjc_qtx_tys_clinker04>clinker_MixtureMaterialsOutput>Day" class="mchart nodisplay"></span></td>
             </tr>
             <tr>
                 <td><span id="zc_nxjc_qtx_tys_clinker04>rawMaterialsPreparation_ElectricityConsumption>Day" class="mchart"></span></td>

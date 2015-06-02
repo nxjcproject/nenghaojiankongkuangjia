@@ -21,18 +21,31 @@ namespace Monitor_shell.Service.ProcessEnergyMonitor.MonitorShell
         {
             IList<DataItem> results = new List<DataItem>();
 
-            string sqlSource = @"SELECT B.OrganizationID,A.VariableId,SUM(A.CumulantClass) AS CumulantClass,SUM(A.CumulantLastClass) AS CumulantLastClass,SUM(A.CumulantDay) AS CumulantDay,SUM(A.CumulantDay+B.MonthValue) AS CumulantMonth
-                                FROM RealtimeIncrementCumulant AS A,
+//            string sqlSource = @"SELECT A.OrganizationID,A.VariableId,SUM(A.CumulantClass) AS CumulantClass,SUM(A.CumulantLastClass) AS CumulantLastClass,SUM(A.CumulantDay) AS CumulantDay,SUM(A.CumulantDay+(case when B.MonthValue is null then 0 else B.MonthValue end)) AS CumulantMonth
+//                                FROM RealtimeIncrementCumulant AS A
+//                            left join
+//                                (select C.OrganizationID,D.VariableId,sum(D.TotalPeakValleyFlat) as MonthValue
+//	                            from tz_Balance as C, balance_Energy as D 
+//	                            where C.BalanceId=D.KeyId and TimeStamp>=CONVERT(varchar(8),GETDATE(),20)+'01'
+//	                            group by C.OrganizationID, D.VariableId) AS B
+//                            on A.VariableId=B.VariableId
+//                                where B.OrganizationID=@myOrganizationID
+                                //GROUP BY A.OrganizationID,A.VariableId";
+            string sqlSource = @"SELECT LEFT(G.Levelcode,5),A.VariableId,SUM(A.CumulantClass) AS CumulantClass,SUM(A.CumulantLastClass) AS CumulantLastClass,SUM(A.CumulantDay) AS CumulantDay,SUM(A.CumulantDay+(case when B.MonthValue is null then 0 else B.MonthValue end)) AS CumulantMonth
+                                FROM RealtimeIncrementCumulant AS A
+                            left join
                                 (select C.OrganizationID,D.VariableId,sum(D.TotalPeakValleyFlat) as MonthValue
 	                            from tz_Balance as C, balance_Energy as D 
 	                            where C.BalanceId=D.KeyId and TimeStamp>=CONVERT(varchar(8),GETDATE(),20)+'01'
-	                            group by C.OrganizationID, VariableId) AS B
-                                WHERE A.VariableId=B.VariableId
-                                AND B.OrganizationID=@myOrganizationID
-								GROUP BY B.OrganizationID,A.VariableId";
+	                            group by C.OrganizationID, D.VariableId) AS B
+                            on A.VariableId=B.VariableId
+							left join system_Organization AS G
+							on A.OrganizationID=G.OrganizationID
+                                where (G.LevelCode like (select LevelCode from system_Organization where OrganizationID=@myOrganizationID)+'%')
+								GROUP BY  LEFT(G.Levelcode,5),A.VariableId";
             SqlParameter parameter = new SqlParameter("myOrganizationID", organizationId);
             DataTable sourceDt = _nxjcFactory.Query(sqlSource,parameter);
-            string m_OrganizationId = sourceDt.Rows[0]["OrganizationID"].ToString().Trim();
+            string m_OrganizationId = organizationId;//sourceDt.Rows[0]["OrganizationID"].ToString().Trim();
             string sqlTemplate = @"SELECT A.VariableId,A.ValueFormula 
                                     FROM balance_Energy_Template AS A
                                     WHERE A.ValueType='ElectricityConsumption'
@@ -49,21 +62,21 @@ namespace Monitor_shell.Service.ProcessEnergyMonitor.MonitorShell
             {
                 DataItem itemClass = new DataItem
                 {
-                    ID = dr["OrganizationID"].ToString().Trim() + ">" + dr["VariableId"].ToString().Trim() + ">SumProcessClass",
+                    ID = organizationId + ">" + dr["VariableId"].ToString().Trim() + ">SumProcessClass",
                     Value = dr["CumulantClass"].ToString().Trim()
                 };
                 results.Add(itemClass);
 
                 DataItem itemDay = new DataItem
                 {
-                    ID = dr["OrganizationID"].ToString().Trim() + ">" + dr["VariableId"].ToString().Trim() + ">SumProcessDay",
+                    ID = organizationId + ">" + dr["VariableId"].ToString().Trim() + ">SumProcessDay",
                     Value = dr["CumulantDay"].ToString().Trim()
                 };
                 results.Add(itemDay);
 
                 DataItem itemMonth = new DataItem
                 {
-                    ID = dr["OrganizationID"].ToString().Trim() + ">" + dr["VariableId"].ToString().Trim() + ">SumProcessMonth",
+                    ID = organizationId + ">" + dr["VariableId"].ToString().Trim() + ">SumProcessMonth",
                     Value = dr["CumulantMonth"].ToString().Trim()
                 };
                 results.Add(itemMonth);

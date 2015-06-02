@@ -339,7 +339,7 @@
                 <td><span id="zc_nxjc_qtx_tys_clinker04>coalPreparation_ElectricityQuantity>Day" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_qtx_tys_clinker04>clinker_PulverizedCoalOutput>Day" class="mchart;nodisplay"></span></td>
+                <td><span id="zc_nxjc_qtx_tys_clinker04>clinker_PulverizedCoalOutput>Day" class="mchart nodisplay"></span></td>
             </tr>
             <tr>
                 <td><span id="zc_nxjc_qtx_tys_clinker04>coalPreparation_ElectricityConsumption>Day" class="mchart"></span></td>
@@ -350,7 +350,7 @@
                 <td><span id="zc_nxjc_qtx_tys_clinker04>coalPreparation_ElectricityQuantity>Class" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_qtx_tys_clinker04>clinker_PulverizedCoalOutput>Class" class="mchart;nodisplay"></span></td>
+                <td><span id="zc_nxjc_qtx_tys_clinker04>clinker_PulverizedCoalOutput>Class" class="mchart nodisplay"></span></td>
             </tr>
             <tr>
                 <td><span id="zc_nxjc_qtx_tys_clinker04>coalPreparation_ElectricityConsumption>Class" class="mchart"></span></td>
@@ -361,7 +361,7 @@
                 <td><span id="zc_nxjc_qtx_tys_clinker04>coalPreparation>ElectricityQuantity" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_qtx_tys_clinker04>clinker_PulverizedCoalOutput>Material" class="mchart;nodisplay"></span></td>
+                <td><span id="zc_nxjc_qtx_tys_clinker04>clinker_PulverizedCoalOutput>Material" class="mchart nodisplay"></span></td>
             </tr>
             <tr>
                 <td><span id="zc_nxjc_qtx_tys_clinker04>coalPreparation>ElectricityConsumption" class="mchart"></span></td>
@@ -372,7 +372,7 @@
                 <td><span id="zc_nxjc_qtx_tys_clinker04>clinkerBurning>ElectricityQuantity" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_qtx_tys_clinker04>clinker_ClinkerOutput>Material" class="mchart;nodisplay"></span></td>
+                <td><span id="zc_nxjc_qtx_tys_clinker04>clinker_ClinkerOutput>Material" class="mchart nodisplay"></span></td>
             </tr>
             <tr>
                 <td><span id="zc_nxjc_qtx_tys_clinker04>clinkerBurning>ElectricityConsumption" class="mchart"></span></td>
@@ -389,7 +389,7 @@
                 <td><span id="zc_nxjc_qtx_tys_clinker04>clinkerBurning_ElectricityQuantity>Class" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_qtx_tys_clinker04>clinker_ClinkerOutput>Class" class="mchart;nodisplay"></span></td>
+                <td><span id="zc_nxjc_qtx_tys_clinker04>clinker_ClinkerOutput>Class" class="mchart nodisplay"></span></td>
             </tr>
             <tr>
                 <td><span id="zc_nxjc_qtx_tys_clinker04>clinkerBurning_ElectricityConsumption>Class" class="mchart"></span></td>
@@ -406,7 +406,7 @@
                 <td><span id="zc_nxjc_qtx_tys_clinker04>clinkerBurning_ElectricityQuantity>Day" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_qtx_tys_clinker04>clinker_ClinkerOutput>Day" class="mchart;nodisplay"></span></td>
+                <td><span id="zc_nxjc_qtx_tys_clinker04>clinker_ClinkerOutput>Day" class="mchart nodisplay"></span></td>
             </tr>
             <tr>
                 <td><span id="zc_nxjc_qtx_tys_clinker04>clinkerBurning_ElectricityConsumption>Day" class="mchart"></span></td>

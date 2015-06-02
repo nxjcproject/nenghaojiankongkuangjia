@@ -8,7 +8,7 @@ $(function () {
 
 //绑定右键菜单事件
 function BindContextmenu() {
-    $(".mchart:not(.material.nodisplay)").bind('contextmenu', function (e) {
+    $(".mchart:not(.nodisplay)").bind('contextmenu', function (e) {
         e.preventDefault();
         var preLableId = this.id;//前台标签ID
         var fixedId = '';//处理后的标签ID

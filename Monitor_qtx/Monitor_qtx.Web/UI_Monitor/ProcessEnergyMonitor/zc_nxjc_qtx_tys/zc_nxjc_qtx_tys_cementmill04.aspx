@@ -115,7 +115,7 @@
                 <td><span id="zc_nxjc_qtx_tys_cementmill04>cementPreparation>ElectricityQuantity" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_qtx_tys_cementmill04>cement_CementOutput>Material" class="mchart;nodisplay"></span></td>
+                <td><span id="zc_nxjc_qtx_tys_cementmill04>cement_CementOutput>Material" class="mchart nodisplay"></span></td>
             </tr>
             <tr>
                 <td><span id="zc_nxjc_qtx_tys_cementmill04>cementPreparation>ElectricityConsumption" class="mchart"></span></td>
@@ -126,7 +126,7 @@
                 <td><span id="zc_nxjc_qtx_tys_cementmill04>cementPreparation_ElectricityQuantity>Class" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_qtx_tys_cementmill04>cement_CementOutput>Class" class="mchart;nodisplay"></span></td>
+                <td><span id="zc_nxjc_qtx_tys_cementmill04>cement_CementOutput>Class" class="mchart nodisplay"></span></td>
             </tr>
             <tr>
                 <td><span id="zc_nxjc_qtx_tys_cementmill04>cementPreparation_ElectricityConsumption>Class" class="mchart"></span></td>
@@ -137,7 +137,7 @@
                 <td><span id="zc_nxjc_qtx_tys_cementmill04>cementPreparation_ElectricityQuantity>Day" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_qtx_tys_cementmill04>cement_CementOutput>Day" class="mchart;nodisplay"></span></td>
+                <td><span id="zc_nxjc_qtx_tys_cementmill04>cement_CementOutput>Day" class="mchart nodisplay"></span></td>
             </tr>
             <tr>
                 <td><span id="zc_nxjc_qtx_tys_cementmill04>cementPreparation_ElectricityConsumption>Day" class="mchart"></span></td>
