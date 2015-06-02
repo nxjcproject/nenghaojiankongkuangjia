@@ -61,7 +61,7 @@ namespace Monitor_shell.Service.ProcessEnergyMonitor.MonitorShell
             DataTable templateDt = _nxjcFactory.Query(sqlTemplate);
             DataRow row = templateDt.NewRow();
             row["VariableId"] = "cementmill_CoalConsumption";
-            row["ValueFormula"] = "[clinker_PulverizedCoalInput]/[cement_CementOutput]";
+            row["ValueFormula"] = "[clinker_PulverizedCoalInput]*1000/[cement_CementOutput]";
             templateDt.Rows.Add(row);
             string[] columns = { "CumulantClass", "CumulantDay", "CumulantMonth" };
 
@@ -74,21 +74,21 @@ namespace Monitor_shell.Service.ProcessEnergyMonitor.MonitorShell
                 DataItem itemClass = new DataItem
                 {
                     ID = organizationId + ">" + dr["VariableId"].ToString().Trim() + ">SumClass",
-                    Value = dr["CumulantClass"].ToString().Trim()
+                    Value = Convert.ToDecimal(dr["CumulantClass"]).ToString("#.00").Trim()
                 };
                 results.Add(itemClass);
 
                 DataItem itemDay = new DataItem
                 {
                     ID = organizationId + ">" + dr["VariableId"].ToString().Trim() + ">SumDay",
-                    Value = dr["CumulantDay"].ToString().Trim()
+                    Value = Convert.ToDecimal(dr["CumulantDay"]).ToString("#.00").Trim()
                 };
                 results.Add(itemDay);
 
                 DataItem itemMonth = new DataItem
                 {
                     ID = organizationId + ">" + dr["VariableId"].ToString().Trim() + ">SumMonth",
-                    Value = dr["CumulantMonth"].ToString().Trim()
+                    Value = Convert.ToDecimal(dr["CumulantMonth"]).ToString("#.00").Trim()
                 };
                 results.Add(itemMonth);
             }

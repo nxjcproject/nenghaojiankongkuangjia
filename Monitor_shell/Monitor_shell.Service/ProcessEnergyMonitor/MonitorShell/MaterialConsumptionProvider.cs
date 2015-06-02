@@ -53,7 +53,7 @@ namespace Monitor_shell.Service.ProcessEnergyMonitor.MonitorShell
                     DataItem dataItem = new DataItem
                     {
                         ID = organizationId + ">" + item + ">Material",
-                        Value = resultDt.Rows[0][item].ToString().Trim()
+                        Value = Convert.ToDecimal(resultDt.Rows[0][item]).ToString("#.00").Trim()
                     };
                     results.Add(dataItem);
                 }

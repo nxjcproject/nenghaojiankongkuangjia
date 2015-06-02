@@ -56,28 +56,27 @@ namespace Monitor_shell.Service.ProcessEnergyMonitor.MonitorShell
             DataTable templateDt = _nxjcFactory.Query(sqlTemplateBase.ToString(), templateparameters.ToArray());
 
             string[] columns = { "CumulantClass", "CumulantDay", "CumulantMonth" };
-
             DataTable resultDt = EnergyConsumption.EnergyConsumptionCalculate.CalculateByOrganizationId(sourceDt, templateDt, "ValueFormula", columns);
             foreach (DataRow dr in resultDt.Rows)
             {
                 DataItem itemClass = new DataItem
                 {
                     ID = dr["OrganizationID"].ToString().Trim() + ">" + dr["VariableId"].ToString().Trim() + ">Class",
-                    Value = dr["CumulantClass"].ToString().Trim()
+                    Value =Convert.ToDecimal(dr["CumulantClass"]).ToString("#.00").Trim()
                 };
                 results.Add(itemClass);
 
                 DataItem itemDay = new DataItem
                 {
                     ID = dr["OrganizationID"].ToString().Trim() + ">" + dr["VariableId"].ToString().Trim() + ">Day",
-                    Value = dr["CumulantDay"].ToString().Trim()
+                    Value = Convert.ToDecimal(dr["CumulantDay"]).ToString("#.00").Trim()
                 };
                 results.Add(itemDay);
 
                 DataItem itemMonth = new DataItem
                 {
                     ID = dr["OrganizationID"].ToString().Trim() + ">" + dr["VariableId"].ToString().Trim() + ">Month",
-                    Value = dr["CumulantMonth"].ToString().Trim()
+                    Value = Convert.ToDecimal(dr["CumulantMonth"]).ToString("#.00").Trim()
                 };
                 results.Add(itemMonth);
 

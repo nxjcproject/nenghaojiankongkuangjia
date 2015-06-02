@@ -38,7 +38,7 @@ namespace Monitor_shell.Service.ProcessEnergyMonitor.MonitorShell
                 DataItem itemPower = new DataItem
                 {
                     ID = dr["OrganizationID"].ToString().Trim() + ">" + dr["VariableID"].ToString().Trim() + ">Power",
-                    Value = dr["Power"].ToString().Trim()
+                    Value = Convert.ToDecimal(dr["Power"]).ToString("#").Trim()
                 };
                 results.Add(itemPower);                
             }

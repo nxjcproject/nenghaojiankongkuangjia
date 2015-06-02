@@ -38,7 +38,7 @@ namespace Monitor_shell.Service.ProcessEnergyMonitor.MonitorShell
                 DataItem itemFormulaValue = new DataItem
                 {
                     ID = dr["OrganizationID"].ToString().Trim() + ">" + dr["VariableID"].ToString().Trim() + ">ElectricityQuantity",
-                    Value = dr["FormulaValue"].ToString().Trim()
+                    Value = Convert.ToDecimal(dr["FormulaValue"]).ToString("#").Trim()
                 };
                 results.Add(itemFormulaValue);
             }

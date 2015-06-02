@@ -45,7 +45,7 @@ namespace Monitor_shell.Service.ProcessEnergyMonitor.MonitorShell
                         DataItem itemCoalConsumption = new DataItem
                         {
                             ID = item["OrganizationID"].ToString().Trim() + ">" + item["VariableID"].ToString().Trim() + ">" + "CoalConsumption",
-                            Value = denominatorValue==0?"0":(coalDustConsumption / denominatorValue).ToString()//产量为0时将煤耗致为0
+                            Value = denominatorValue == 0 ? "0" : Convert.ToDecimal((coalDustConsumption / denominatorValue)).ToString("#.00").Trim()//产量为0时将煤耗致为0
                         };
                         results.Add(itemCoalConsumption);
                     //}

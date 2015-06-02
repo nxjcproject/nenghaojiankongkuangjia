@@ -38,7 +38,7 @@ namespace Monitor_shell.Service.ProcessEnergyMonitor.MonitorShell
                 DataItem itemCoalDustConsumption = new DataItem
                 {
                     ID = dr["OrganizationID"].ToString().Trim() + ">" + dr["VariableID"].ToString().Trim() + ">PulverizedCoalInput",
-                    Value = dr["CoalDustConsumption"].ToString().Trim()
+                    Value = Convert.ToDecimal(dr["CoalDustConsumption"]).ToString("#.00").Trim()
                 };
                 results.Add(itemCoalDustConsumption);
             }
