@@ -30,7 +30,11 @@ function getLatestData() {
         dataType: "json",
         success: function (data) {
             serviceSuccessful(data);
+        },
+        error: function () {
+            setupTimerToPollLatestData();
         }
+
     });
 }
 

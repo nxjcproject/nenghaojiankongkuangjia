@@ -41,17 +41,17 @@ namespace Monitor_shell.Service.ProcessEnergyMonitor.MonitorShell
                 DataItem itemClass = new DataItem
                 {
                     ID = dr["OrganizationID"].ToString().Trim() + ">" + dr["VariableId"].ToString().Trim() + ">Class",
-                    Value =Convert.ToDecimal(dr["CumulantClass"]).ToString("#")
+                    Value = dr["CumulantClass"] is DBNull ? "0" : Convert.ToDecimal(dr["CumulantClass"]).ToString("#")
                 };
                 DataItem itemDay = new DataItem
                 {
                     ID = dr["OrganizationID"].ToString().Trim() + ">" + dr["VariableId"].ToString().Trim() + ">Day",
-                    Value = Convert.ToDecimal(dr["CumulantDay"]).ToString("#")
+                    Value = dr["CumulantDay"] is DBNull ? "0" : Convert.ToDecimal(dr["CumulantDay"]).ToString("#")
                 };
                 DataItem itemMonth = new DataItem
                 {
                     ID = dr["OrganizationID"].ToString().Trim() + ">" + dr["VariableId"].ToString().Trim() + ">Month",
-                    Value = Convert.ToDecimal(dr["CumulantMonth"]).ToString("#").Trim()
+                    Value =dr["CumulantMonth"] is DBNull?"0":Convert.ToDecimal(dr["CumulantMonth"]).ToString("#").Trim()
                 };
                 results.Add(itemClass);
                 results.Add(itemDay);

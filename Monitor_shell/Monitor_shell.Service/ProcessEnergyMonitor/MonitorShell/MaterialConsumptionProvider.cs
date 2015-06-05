@@ -45,7 +45,10 @@ namespace Monitor_shell.Service.ProcessEnergyMonitor.MonitorShell
                     }
                 }
                 baseString.Remove(baseString.Length - 1, 1);
-                baseString.Append(" from ").Append("[zc_nxjc_byc_byf].[dbo]." + baseTableName).Append(" order by vDate desc");
+                SingletonForDataBase singleton = SingletonForDataBase.GetInstance();
+                Dictionary<string, string> myDictionary = (Dictionary<string, string>)singleton.AddFactoryDB(organizationId);
+
+                baseString.Append(" from ").Append(string.Format("[{0}].[dbo].",myDictionary[organizationId].Trim()) + baseTableName).Append(" order by vDate desc");
                 DataTable resultDt = _companyFactory.Query(baseString.ToString());
 
                 foreach (var item in variables)
@@ -53,7 +56,7 @@ namespace Monitor_shell.Service.ProcessEnergyMonitor.MonitorShell
                     DataItem dataItem = new DataItem
                     {
                         ID = organizationId + ">" + item + ">Material",
-                        Value = Convert.ToDecimal(resultDt.Rows[0][item]).ToString("#.00").Trim()
+                        Value =resultDt.Rows[0][item] is DBNull?"0": Convert.ToDecimal(resultDt.Rows[0][item]).ToString("#.00").Trim()
                     };
                     results.Add(dataItem);
                 }

@@ -21,8 +21,10 @@ namespace Monitor_shell.Service.ProcessEnergyMonitor.MonitorShell
         public IEnumerable<DataItem> GetDataItem(string organizationId, params string[] variableIds)
         {
             IList<DataItem> results = new List<DataItem>();
+            SingletonForDataBase singleton = SingletonForDataBase.GetInstance();
+            Dictionary<string,string> myDictionary= (Dictionary<string,string>)singleton.AddFactoryDB(organizationId);
 
-            string queryString = @"select OrganizationID,VariableID,Power from [zc_nxjc_byc_byf].[dbo].[RealtimeFormulaValue] 
+            string queryString = @"select OrganizationID,VariableID,Power from [{0}].[dbo].[RealtimeFormulaValue] 
                                    where OrganizationID=@organizationId";
             StringBuilder baseString = new StringBuilder(queryString);
             IList<SqlParameter> parameters = new List<SqlParameter>();
@@ -31,14 +33,14 @@ namespace Monitor_shell.Service.ProcessEnergyMonitor.MonitorShell
 
             ParametersHelper.AddParamsCondition(baseString, parameters, variableIds);
 
-            DataTable dt = _companyFactory.Query(queryString.ToString(), parameters.ToArray());
+            DataTable dt = _companyFactory.Query(string.Format(queryString,myDictionary[organizationId]), parameters.ToArray());
 
             foreach (DataRow dr in dt.Rows)
             {
                 DataItem itemPower = new DataItem
                 {
                     ID = dr["OrganizationID"].ToString().Trim() + ">" + dr["VariableID"].ToString().Trim() + ">Power",
-                    Value = Convert.ToDecimal(dr["Power"]).ToString("#").Trim()
+                    Value = dr["Power"] is DBNull ? "0" : Convert.ToDecimal(dr["Power"]).ToString("#").Trim()
                 };
                 results.Add(itemPower);                
             }

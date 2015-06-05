@@ -321,7 +321,7 @@
             <tr>
                 <td><span id="zc_nxjc_qtx_tys_clinker04>clinker_CoalConsumption>Month" class="mchart"></span></td>
             </tr>
-        </table>--%>
+        </table>
         <%--熟料烧成--%>
         <table class="mytable" style="position: absolute; top: 15px; left: 538px;">
             <tr>
@@ -650,7 +650,7 @@
             <tr>
                 <td><span id="zc_nxjc_qtx_tys_clinker05>clinker_CoalConsumption>Month" class="mchart"></span></td>
             </tr>
-        </table>--%>
+        </table>
         <%--熟料烧成--%>
         <table class="mytable" style="position: absolute; top: 677px; left: 742px;">
             <tr>

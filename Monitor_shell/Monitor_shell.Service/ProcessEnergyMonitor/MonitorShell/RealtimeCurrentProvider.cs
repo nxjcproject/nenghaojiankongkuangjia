@@ -48,7 +48,7 @@ namespace Monitor_shell.Service.ProcessEnergyMonitor.MonitorShell
                     result.Add(new DataItem
                     {
                         ID = organizationId + ">" + item + ">Current",
-                        Value =Convert.ToDecimal(table.Rows[0][item]).ToString("#").Trim()
+                        Value =table.Rows[0][item] is DBNull?"0": Convert.ToDecimal(table.Rows[0][item]).ToString("#").Trim()
                     });
                 }
             }
