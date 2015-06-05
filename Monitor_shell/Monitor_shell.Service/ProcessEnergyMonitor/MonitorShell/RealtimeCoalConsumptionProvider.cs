@@ -43,6 +43,7 @@ namespace Monitor_shell.Service.ProcessEnergyMonitor.MonitorShell
                     //{
                         decimal coalDustConsumption = 0;
                         decimal.TryParse(item["CoalDustConsumption"].ToString().Trim(), out coalDustConsumption);
+                        coalDustConsumption = coalDustConsumption * 1000;
 
                         DataItem itemCoalConsumption = new DataItem
                         {
