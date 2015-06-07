@@ -21,7 +21,11 @@ namespace Monitor_shell.Service.ProcessEnergyMonitor.MonitorShell
         {
             IList<DataItem> results = new List<DataItem>();
 
-            string sqlSource = @"select * from (SELECT A.OrganizationID,A.VariableId,A.CumulantClass,A.CumulantLastClass,A.CumulantDay,(A.CumulantDay+(case when B.MonthValue is null then 0 else B.MonthValue end)) AS CumulantMonth
+            string sqlSource = @"select * from (SELECT A.OrganizationID,A.VariableId,(case when A.CumulantClass<=@correctionValue then 0 else A.CumulantClass end) as CumulantClass,
+				(case when A.CumulantLastClass<=@correctionValue then 0 else A.CumulantLastClass end) as CumulantLastClass,
+				(case when A.CumulantDay<=@correctionValue then 0 else A.CumulantDay end) as CumulantDay,
+				(case when (A.CumulantDay+(case when B.MonthValue is null then 0 else B.MonthValue end))<=@correctionValue then 0 
+				else (A.CumulantDay+(case when B.MonthValue is null then 0 else B.MonthValue end)) end) AS CumulantMonth
                                                     FROM RealtimeIncrementCumulant AS A
                                                 LEFT JOIN  
                                                     (select D.OrganizationID,D.VariableId,sum(D.TotalPeakValleyFlat) as MonthValue
@@ -34,12 +38,13 @@ namespace Monitor_shell.Service.ProcessEnergyMonitor.MonitorShell
             //cdy修改开始
 
             //StringBuilder sqlSourceBase = new StringBuilder(sqlSource);
-            //IList<SqlParameter> sourceparameters = new List<SqlParameter>();
-            //sourceparameters.Add(new SqlParameter("@organizationId", organizationId));
+            IList<SqlParameter> sourceparameters = new List<SqlParameter>();
+            sourceparameters.Add(new SqlParameter("@organizationId", organizationId));
+            sourceparameters.Add(new SqlParameter("@correctionValue", CorrectionValue.OutputCorrectionValue));
             //ParametersHelper.AddParamsCondition(sqlSourceBase, sourceparameters, variableIds);
-            //DataTable sourceDt = _nxjcFactory.Query(sqlSourceBase.ToString(), sourceparameters.ToArray());
-            SqlParameter parameter = new SqlParameter("organizationId",organizationId);
-            DataTable sourceDt = _nxjcFactory.Query(sqlSource, parameter);
+            DataTable sourceDt = _nxjcFactory.Query(sqlSource, sourceparameters.ToArray());
+            //SqlParameter parameter = new SqlParameter("organizationId",organizationId);
+            //DataTable sourceDt = _nxjcFactory.Query(sqlSource, parameter);
             //cdy修改结束
 
             string sqlTemplate = @"select * from (SELECT A.OrganizationID,B.VariableID,B.ValueFormula

@@ -133,7 +133,8 @@
                 <td><span id="zc_nxjc_qtx_efc_clinker02>coalMillFan>Power" class="mchart"></span></td>
             </tr>
         </table>
-        <table class="mytable" style="position: absolute; top: 276px; left: 994px;">
+        <%--罗茨风机--%>
+        <table class="mytable" style="position: absolute; top: 353px; left: 1052px;">
             <tr>
                 <td><span id="zc_nxjc_qtx_efc_clinker02>coalMilRootsBlower1>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -144,7 +145,7 @@
                 <td><span id="zc_nxjc_qtx_efc_clinker02>coalMilRootsBlower1>Power" class="mchart"></span></td>
             </tr>
         </table>
-        <table class="mytable" style="position: absolute; top: 279px; left: 1227px;">
+        <table class="mytable" style="position: absolute; top: 276px; left: 994px;">
             <tr>
                 <td><span id="zc_nxjc_qtx_efc_clinker02>coalMilRootsBlower2>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -155,6 +156,18 @@
                 <td><span id="zc_nxjc_qtx_efc_clinker02>coalMilRootsBlower2>Power" class="mchart"></span></td>
             </tr>
         </table>
+        <table class="mytable" style="position: absolute; top: 279px; left: 1227px;">
+            <tr>
+                <td><span id="zc_nxjc_qtx_efc_clinker02>coalMilRootsBlower3>ElectricityConsumption" class="mchart"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_qtx_efc_clinker02>coalMilRootsBlower3>Current" class="mchart"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_qtx_efc_clinker02>coalMilRootsBlower3>Power" class="mchart"></span></td>
+            </tr>
+        </table>
+        <%--罗茨风机--%>
         <table class="mytable" style="position: absolute; top: 450px; left: 1142px;">
             <tr>
                 <td><span id="zc_nxjc_qtx_efc_clinker02>kilnHeadExhaustFan>ElectricityConsumption" class="mchart"></span></td>
