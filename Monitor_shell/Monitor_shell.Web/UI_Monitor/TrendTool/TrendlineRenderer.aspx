@@ -186,7 +186,9 @@
 	            //rendererOptions: {} 
 	        },
 	        cursor: {
-	            show: true
+	            show: true,
+	            showVerticalLine: true,
+	            showHorizontalLine: true
 	        },
 	        highlighter: {
 	            show: true,
