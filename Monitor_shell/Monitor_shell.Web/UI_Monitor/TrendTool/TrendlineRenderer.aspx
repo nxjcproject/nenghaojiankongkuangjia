@@ -49,7 +49,6 @@
 	    var variableId = '';
 
 	    $(document).ready(function () {
-
 	        variableId = window.location.hash;
 	        if (variableId != "" && variableId != undefined) {
 	            variableId = variableId.substr(1, variableId.length - 1);
@@ -151,6 +150,38 @@
 	            chartOptions.seriesDefaults.trendline.show = !chartOptions.seriesDefaults.trendline.show;
 	            plot1.replot(chartOptions);
 	        });
+
+	        // 上限开关
+
+	        $("input[type=radio][name=upperAuto]").change(function () {
+	            chartOptions.axes.yaxis.max = ($(this).val() == '1') ? null : $("input[type=text][name=upperLimit]").val();
+	            plot1.replot(chartOptions);
+	        });
+
+	        // 上限值
+
+	        $("input[type=text][name=upperLimit]").change(function () {
+	            if (chartOptions.axes.yaxis.max != null) {
+	                chartOptions.axes.yaxis.max = $("input[type=text][name=upperLimit]").val();
+	                plot1.replot(chartOptions);
+	            }
+	        });
+
+	        // 下限开关
+
+	        $("input[type=radio][name=lowerAuto]").change(function () {
+	            chartOptions.axes.yaxis.min = ($(this).val() == '1') ? null : $("input[type=text][name=lowerLimit]").val();
+	            plot1.replot(chartOptions);
+	        });
+
+	        // 下限值
+
+	        $("input[type=text][name=lowerLimit]").change(function () {
+	            if (chartOptions.axes.yaxis.min != null) {
+	                chartOptions.axes.yaxis.min = $("input[type=text][name=lowerLimit]").val();
+	                plot1.replot(chartOptions);
+	            }
+	        });
 	    });
 
 	    var plot1 = null;
@@ -186,6 +217,7 @@
 	            //rendererOptions: {} 
 	        },
 	        cursor: {
+	            //zoom: true,
 	            show: true,
 	            showVerticalLine: true,
 	            showHorizontalLine: true
@@ -201,11 +233,13 @@
 	                tickRenderer: $.jqplot.CanvasAxisTickRenderer,
 	                tickOptions: {
 	                    showGridline: false,
-	                    angle: -30,
-	                    formatString: '%Y-%m-%d %H:%M:%S'
+	                    //angle: -30,
+	                    formatString: '%m-%d %H:%M'
 	                }
 	            },
 	            yaxis: {
+	                min: null,      // null means Determined automatically.
+	                max: null,      
 	                tickOptions: {
 	                    showGridline: false
 	                }
@@ -265,7 +299,11 @@
 	        }
 
 	        DATA_POINT_PER_SCREEN = data.length / 10;
-	        currentData = data.slice(0, DATA_POINT_PER_SCREEN);
+	        currentData = data.slice(data.length - DATA_POINT_PER_SCREEN, data.length);
+            
+            // 设置滚动条到最右，防止看不清楚，设置为99
+	        $('#sliderId').slider('setValue', 99);
+
 	        plotChart();
 	    }
 
@@ -303,6 +341,7 @@
 			<a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-reload'" onclick="getData()">刷新</a>
 			<a href="javascript:void(0)" name="lineFilled" class="easyui-linkbutton" data-options="plain:true,toggle:true">填充</a>
 			<a href="javascript:void(0)" name="lineTrend" class="easyui-linkbutton" data-options="plain:true,toggle:true">趋势</a>
+            <a href="javascript:void(0)" class="easyui-linkbutton" data-options="plain:true" onclick="$('#dlgLimit').dialog('open')">上下限</a>
 		</div>
 	</div>
 	<div data-options="region:'south',border:false,split:true" style="height:80px;display:none">
@@ -326,7 +365,7 @@
 				<div id="chart" style="width:100%;height:100%;"></div>
 			</div>
 			<div id="sliderContainer" data-options="region:'south',border:false" style="height:20px;overflow:hidden;background-color:black;">
-				<input class="easyui-slider" data-options="onChange:sliderChanged" style="margin-bottom:0px;" />
+				<input id="sliderId" class="easyui-slider" data-options="onChange:sliderChanged" style="margin-bottom:0px;" />
 			<div>
 		<div>
 	</div>
@@ -404,8 +443,42 @@
 	</div>
     <!-- 帮助窗口结束 -->
 
+    <!-- 上下限设置窗口开始 -->
+	<div id="dlgLimit" class="easyui-dialog" title="上下限设置" style="width:320px;height:260px;padding:10px"
+			data-options="
+				closed:true,
+				modal:true,
+				buttons: [{
+					text:'确认',
+					iconCls:'icon-ok',
+					handler:function(){
+						$('#dlgLimit').dialog('close');
+					}
+				}]
+			">
+        <div>
+            <b>上限：</b>
+            <ul>
+                <li><input name="upperAuto" value="1" type="radio" checked />自动适应</li>
+                <li><input name="upperAuto" value="2" type="radio" />手动设置 | <input name="upperLimit" type="text" value="0" /></li>
+            </ul>
+            
+        </div>
+        <div>
+            <b>下限：</b>
+            <ul>
+                <li><input name="lowerAuto" value="1" type="radio" checked />自动适应</li>
+                <li><input name="lowerAuto" value="2" type="radio" />手动设置 | <input name="lowerLimit" type="text" value="0" /></li>
+            </ul>
+            
+        </div>
+	</div>
+    <!-- 上下限设置窗口结束 -->
+
     <!-- 操作菜单开始 -->
 	<div id="menAction" style="width:100px;">
+        <div onclick="$('#dlgLimit').dialog('open')">上下限设置</div>
+        <div class="menu-sep"></div>
 		<div>打印</div>
 		<div class="menu-sep"></div>
 		<div>保存</div>
