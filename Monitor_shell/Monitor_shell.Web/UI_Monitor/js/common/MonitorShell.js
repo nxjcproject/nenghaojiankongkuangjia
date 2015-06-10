@@ -1,4 +1,5 @@
 ﻿var BrowserName = "IE";
+var BrowserVersion = 8;
 var AutoResizeFlag = false;    //当true表示自动调整大小，当false根据滑动条调整大小
 var OrganizationId = "";
 var OrganizationName = "";
@@ -15,7 +16,7 @@ $(function () {
 
 //初始化数据
 function InitializeData() {
-    BrowserName = getbrowser();    //获得浏览器信息
+    getbrowser();    //获得浏览器信
 
     OrganizationId = $('#organizationIdContainerId').val();              //后台传来的组织机构ID
     OrganizationName = $('#organizationNameContainerId').val();          //后台传来的组织机构名称
@@ -94,7 +95,7 @@ function InitializeSlider() {
         onChange: function (newValue, oldValue) {
             if (AutoResizeFlag == false) {
                 MonitorZoom(newValue, oldValue);
-                document.getElementById("ProcessMontor").contentWindow.SetBodySize(parseFloat(newValue) / 100, $('#ProcessMontor').width(), $('#ProcessMontor').height(), BrowserName);
+                document.getElementById("ProcessMontor").contentWindow.SetBodySize(parseFloat(newValue) / 100, $('#ProcessMontor').width(), $('#ProcessMontor').height(), BrowserName, BrowserVersion);
             }
         }
     });
@@ -124,7 +125,7 @@ function SetAutoMonitorZoom(myWidth, myHeight) {
         m_ZommRadioValue = myWidth * 100 / m_SubPageWidth;
     }
     MonitorZoom(m_ZommRadioValue, m_ZommRadioValue);
-    document.getElementById("ProcessMontor").contentWindow.SetBodySize(parseFloat(m_ZommRadioValue) / 100, $('#ProcessMontor').width(), $('#ProcessMontor').height(), BrowserName);
+    document.getElementById("ProcessMontor").contentWindow.SetBodySize(parseFloat(m_ZommRadioValue) / 100, $('#ProcessMontor').width(), $('#ProcessMontor').height(), BrowserName, BrowserVersion);
 }
 //改变缩放比例
 function MonitorZoom(myNewValue, myOldValue) {
@@ -135,29 +136,85 @@ function MonitorZoom(myNewValue, myOldValue) {
 
 //获得浏览器名称
 function getbrowser() {
-    var userAgent = navigator.userAgent; //取得浏览器的userAgent字符串
-    var isOpera = userAgent.indexOf("Opera") > -1;
-    if (isOpera) { return "Opera" }; //判断是否Opera浏览器
-    if (userAgent.indexOf("Firefox") > -1) { return "FF"; } //判断是否Firefox浏览器
-    if (userAgent.indexOf("Safari") > -1) { return "Safari"; } //判断是否Safari浏览器
-    if (userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1 && !isOpera) { return "IE"; };
+    //var userAgent = navigator.userAgent; //取得浏览器的userAgent字符串
+    //var isOpera = userAgent.indexOf("Opera") > -1;
+    //if (isOpera) { return "Opera" }; //判断是否Opera浏览器
+    //if (userAgent.indexOf("Firefox") > -1) { return "FF"; } //判断是否Firefox浏览器
+    //if (userAgent.indexOf("Safari") > -1) { return "Safari"; } //判断是否Safari浏览器
+    //if (userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1 && !isOpera) { return "IE"; };var brow = $.browser;
+    var brow = $.browser;
+    if (brow.msie)
+    {
+        BrowserName = "IE";
+        var m_Version = (brow.version).substring(0, brow.version.indexOf('.'));
+        BrowserVersion = parseInt(m_Version,0);
+    }
+    if (brow.mozilla)
+    {
+        BrowserName = "FF";
+        var m_Version = (brow.version).substring(0, brow.version.indexOf('.'));
+        BrowserVersion = parseInt(m_Version, 0);
+    }
+    if (brow.safari)
+    {
+        BrowserName = "Safari";
+        var m_Version = (brow.version).substring(0, brow.version.indexOf('.'));
+        BrowserVersion = parseInt(m_Version, 0);
+    }
+    if (brow.opera)
+    {
+        BrowserName = "Opera";
+        var m_Version = (brow.version).substring(0, brow.version.indexOf('.'));
+        BrowserVersion = parseInt(m_Version, 0);
+    }
+    if (brow.chrome) {
+        BrowserName = "Chrome";
+        var m_Version = (brow.version).substring(0, brow.version.indexOf('.'));
+        BrowserVersion = parseInt(m_Version, 0);
+    }
     //判断是否IE浏览器
 }
 //对DOM元素缩放
 function zoomEle(el, xScale, yScale) {
     style = el.getAttribute('style') || "";
-    if (BrowserName == "IE") {
+    if (BrowserName == "IE" && BrowserVersion < 9) {
         if (document.compatMode == "CSS1Compat") {//模式匹配 解决ie8下兼容模式
             el.style.width = el.clientWidth * 2.0;
             el.style.height = el.clientHeight * 2.0;
         }
         el.style.zoom = xScale;
-    } else if (BrowserName == "FF") {
+    }
+    else if (BrowserName == "IE" && BrowserVersion >= 9) {
+        el.setAttribute('style', style + '-ms-transform: scale(' + xScale + ', ' + yScale + '); -ms-transform-origin: 0px 0px;');
+    }
+    else if (BrowserName == "FF") {
         el.style.transform = 'scale(' + xScale + ', ' + yScale + ')';
         el.style.transformOrigin = '0px 0px';
-    } else {
+    }
+    else if (BrowserName == "Opera") {
+        el.setAttribute('style', style + '-o-transform: scale(' + xScale + ', ' + yScale + '); -o-transform-origin: 0px 0px;');
+    }
+    else {
         el.setAttribute('style', style + '-webkit-transform: scale(' + xScale + ', ' + yScale + '); -webkit-transform-origin: 0px 0px;');
     }
+    //-webkit-transform: scale(0.5);     /* for Chrome || Safari */
+    //-moz-transform: scale(0.5);        /* for Firefox */
+    //-ms-transform: scale(0.5);         /* for IE */
+    //-o-transform: scale(0.5);          /* for Opera */
+    //transform: rotate(45deg);
+    //transform-origin:20% 40%;
+
+    //-ms-transform: rotate(45deg); 		/* IE 9 */
+    //-ms-transform-origin:20% 40%; 		/* IE 9 */
+
+    //-webkit-transform: rotate(45deg);	/* Safari 和 Chrome */
+    //-webkit-transform-origin:20% 40%;	/* Safari 和 Chrome */
+
+    //-moz-transform: rotate(45deg);		/* Firefox */
+    //-moz-transform-origin:20% 40%;		/* Firefox */
+
+    //-o-transform: rotate(45deg);		/* Opera */
+    //-o-transform-origin:20% 40%;		/* Opera */
 }
 //根据组织机构类型，生成左下角页面菜单
 function SetDisplayPageButton() {
