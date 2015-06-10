@@ -7,7 +7,7 @@
 // </自动生成>
 //------------------------------------------------------------------------------
 
-namespace Monitor_byc.web.UI_Monitor.ProcessEnergyMonitor.zc_nxjc_byc_byf {
+namespace Monitor_shell.Web.UI_Monitor.ProcessEnergyMonitor {
     
     
     public partial class test {

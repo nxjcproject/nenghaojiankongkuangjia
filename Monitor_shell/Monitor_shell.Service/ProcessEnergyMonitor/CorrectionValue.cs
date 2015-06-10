@@ -7,6 +7,6 @@ namespace Monitor_shell.Service.ProcessEnergyMonitor
 {
     public class CorrectionValue
     {
-        public static const double OutputCorrectionValue = 0.1;
+        public static decimal OutputCorrectionValue = 0.5m;
     }
 }

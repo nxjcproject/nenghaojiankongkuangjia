@@ -55,9 +55,25 @@ namespace Monitor_shell.Service.ProcessEnergyMonitor.MonitorShell
                 {
                     DataItem dataItem = new DataItem
                     {
-                        ID = organizationId + ">" + item + ">Material",
-                        Value =resultDt.Rows[0][item] is DBNull?"0": Convert.ToDecimal(resultDt.Rows[0][item]).ToString("#.00").Trim()
+                        ID = organizationId + ">" + item + ">Material"//resultDt.Rows[0][item] is DBNull?"0": Convert.ToDecimal(resultDt.Rows[0][item]).ToString("#.00").Trim()
                     };
+                    decimal defaultValue = 0;
+                    if (resultDt.Rows[0][item] is DBNull)
+                    {
+                        defaultValue = 0;
+                    }
+                    else
+                    {
+                        defaultValue = Convert.ToDecimal(resultDt.Rows[0][item]);
+                    }
+                    if (defaultValue < CorrectionValue.OutputCorrectionValue)
+                    {
+                        dataItem.Value = "0";
+                    }
+                    else
+                    {
+                        dataItem.Value = defaultValue.ToString();
+                    }
                     results.Add(dataItem);
                 }
             }

@@ -1,6 +1,7 @@
 ﻿using Monitor_shell.Service.Alarm;
 using Monitor_shell.Service.ProcessEnergyMonitor;
 using Monitor_shell.Service.ProcessEnergyMonitor.MonitorShell;
+using Monitor_shell.Service.ProcessEnergyMonitor.RunningState;
 using Monitor_shell.Service.TrendTool;
 using System;
 using System.Collections.Generic;
@@ -168,6 +169,42 @@ namespace Monitor_shell.Web.UI_Monitor.ProcessEnergyMonitor.MonitorShell
             result.Name = sceneName;
             result.time = DateTime.Now;
             result.DataSet = dataItems;
+
+            return result;
+        }
+
+        [WebMethod]
+        public SceneMonitor GetRunningData(string ids)
+        {
+            string[] iditems = ids.Split(',');
+            int count = iditems.Count();
+
+            Dictionary<string, IList<string>> idDictionary = new Dictionary<string, IList<string>>();
+
+            for (int i = 0; i < count - 1; i++)
+            {
+                string[] itemArry = iditems[i].Split('>');
+                if (itemArry.Count() == 3)
+                {
+                    string key = itemArry[0];
+                    if (!idDictionary.Keys.Contains(key))
+                    {
+                        idDictionary.Add(key, new List<string>());
+                        idDictionary[key].Add(itemArry[1]);
+                    }
+                    else
+                    {
+                        idDictionary[key].Add(itemArry[1]);
+                    }
+                }
+            }
+
+            IEnumerable<DataItem> items = RunningStateService.GetRunningData(idDictionary);
+
+            SceneMonitor result = new SceneMonitor();
+            result.Name = "";
+            result.time = DateTime.Now;
+            result.DataSet = items;
 
             return result;
         }
