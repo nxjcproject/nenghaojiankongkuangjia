@@ -24,6 +24,7 @@
     <script src="/UI_Monitor/js/common/SubMonitorAdapter.js"></script>
     <script src="/UI_Monitor/js/common/alarm.js"></script>
     <script src="/UI_Monitor/js/common/multiTagChart.js"></script>
+    <script src="/UI_Monitor/js/common/RunningState.js"></script>
     <script>
         publicData.organizationId = "zc_nxjc_byc_byf_cementmill01";
         publicData.sceneName = "1#水泥磨";
@@ -144,6 +145,25 @@
             </tr>
         </table>
     </div>
+
+    <!----------------------------运行状态------------------------------------>
+    <!--1#水泥磨主电机运行信号-->
+    <div class="imageContainer" id="zc_nxjc_byc_byf_cementmill01>ProcessVariable01_F_1M13MRN>RunningState" style="position:absolute; top: 513px; left: 742px; height: 20px; width: 19px;"></div>
+    <!--1#磨选粉机变频控制柜运行-->
+    <div class="imageContainer" id="zc_nxjc_byc_byf_cementmill01>ProcessVariable07_1M25ACRN>RunningState" style="position:absolute; height: 20px; width: 19px; top: 336px; left: 695px;"></div>
+    <!--1#磨排风机运行-->
+    <div class="imageContainer" id="zc_nxjc_byc_byf_cementmill01>ProcessVariable07_1M8MRN>RunningState" style="position:absolute; height: 20px; width: 19px; top: 125px; left: 888px;"></div>
+    <!--1#磨辊压机定辊运行-->
+    <div class="imageContainer" id="zc_nxjc_byc_byf_cementmill01>ProcessVariable07_1M17MRN>RunningState" style="position:absolute; height: 20px; width: 19px; top: 386px; left: 453px;"></div>
+    <!--1#磨辊压机动辊运行-->
+    <div class="imageContainer" id="zc_nxjc_byc_byf_cementmill01>ProcessVariable07_1M16MRN>RunningState" style="position:absolute; height: 20px; width: 19px; top: 387px; left: 481px;"></div>
+    <!--熟料储存及熟料汽车胶带机运行-->
+    <div class="imageContainer" id="zc_nxjc_byc_byf_cementmill01>ProcessVariable07_L24MRN>RunningState" style="position:absolute; height: 20px; width: 19px; top: 395px; left: 1050px;"></div>
+    <!--石膏破碎机运行-->
+    <div class="imageContainer" id="zc_nxjc_byc_byf_cementmill01>ProcessVariable07_L26MRN>RunningState" style="position:absolute; top: 134px; left: 104px; height: 20px; width: 19px;"></div>
+    <!--运行状态-->
+    <div class="imageContainer" id="Div7" style="position:absolute; top: 513px; left: 742px; height: 20px; width: 19px;"></div>
+    <!----------------------------运行状态------------------------------------>
 </body>
 </html>
 

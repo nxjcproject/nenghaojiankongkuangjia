@@ -1,4 +1,5 @@
 ﻿using Monitor_shell.Infrastructure.Configuration;
+using Monitor_shell.Service.ProcessEnergyMonitor.EnergyContrast;
 using SqlServerDataAdapter;
 using SqlServerDataAdapter.Infrastruction;
 using System;
@@ -77,21 +78,28 @@ namespace Monitor_shell.Service.ProcessEnergyMonitor.RunningState
         /// <returns></returns>
         private static DataTable GetDataItemTable(IList<string> idInfor)
         {
-            //DataItem result = new DataItem();
-            ComplexQuery cmpquery = new ComplexQuery();
+            IDictionary<string, List<FeildInformation>> feildInfor = new Dictionary<string, List<FeildInformation>>();
             foreach (var item in idInfor)
             {
-                string[] idArry = item.Split('_');
-                cmpquery.AddNeedField("Realtime_" + idArry[0], idArry[1], item);
+                string[] feildArry = item.Split('_');
+                string key = "Realtime_" + feildArry[0];
+                FeildInformation value = new FeildInformation
+                {
+                    FeildName = feildArry[1],
+                    VariableName = item
+                };
+                if (feildInfor.Keys.Contains(key))
+                {
+                    feildInfor[key].Add(value);
+                }
+                else
+                {
+                    feildInfor.Add(key, new List<FeildInformation>());
+                    feildInfor[key].Add(value);
+                }
             }
-            cmpquery.JoinCriterion = new JoinCriterion
-            {
-                DefaultJoinFieldName = "vDate",
-                JoinType = JoinType.FULL_JOIN
-            };
-            cmpquery.TopNumber = 1;
-            //cmpquery.OrderByClause = new OrderByClause("realtime_line_data.v_date", true);
-            DataTable table = _dataFactory.Query(cmpquery);
+            string queryString = EnergyContrast.EnergyContrastHelper.GetSqlString(feildInfor);
+            DataTable table = _dataFactory.Query(queryString);
 
             return table;
         }

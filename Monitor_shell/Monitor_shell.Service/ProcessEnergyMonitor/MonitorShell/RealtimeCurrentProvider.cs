@@ -1,4 +1,5 @@
 ﻿using Monitor_shell.Infrastructure.Configuration;
+using Monitor_shell.Service.ProcessEnergyMonitor.EnergyContrast;
 using SqlServerDataAdapter;
 using SqlServerDataAdapter.Infrastruction;
 using System;
@@ -102,20 +103,28 @@ namespace Monitor_shell.Service.ProcessEnergyMonitor.MonitorShell
         /// <returns></returns>
         private DataTable GetDataItemTable(IEnumerable<DataSetInformation> dataSetInformations)
         {
-            //DataItem result = new DataItem();
-            ComplexQuery cmpquery = new ComplexQuery();
+            IDictionary<string, List<FeildInformation>> feildInfor = new Dictionary<string, List<FeildInformation>>();
             foreach (var item in dataSetInformations)
             {
-                cmpquery.AddNeedField(item.TableName, item.FieldName, item.ViewId);
+                string key = item.TableName;
+                FeildInformation value = new FeildInformation
+                {
+                    FeildName = item.FieldName,
+                    VariableName = item.ViewId
+                };
+                if (feildInfor.Keys.Contains(key))
+                {
+                    feildInfor[key].Add(value);
+                }
+                else
+                {
+                    feildInfor.Add(key, new List<FeildInformation>());
+                    feildInfor[key].Add(value);
+                }
             }
-            cmpquery.JoinCriterion = new JoinCriterion
-            {
-                DefaultJoinFieldName = "vDate",
-                JoinType = JoinType.FULL_JOIN
-            };
-            cmpquery.TopNumber = 1;
-            //cmpquery.OrderByClause = new OrderByClause("realtime_line_data.v_date", true);
-            DataTable table = _dataFactory.Query(cmpquery);
+            string queryString = EnergyContrast.EnergyContrastHelper.GetSqlString(feildInfor);
+
+            DataTable table = _dataFactory.Query(queryString);
 
             return table;
         }

@@ -433,5 +433,24 @@
             </tr>
         </table>
     </div>
+
+    <!----------------------------运行状态------------------------------------>
+    <!--高温风机运行-->
+    <div class="imageContainer" id="zc_nxjc_byc_byf_clinker01>ProcessVariable04_F29ACRN>RunningState" style="position:absolute; height: 20px; width: 19px; top: 191px; left: 1100px;"></div>
+    <!--废气排风机运行-->
+    <div class="imageContainer" id="zc_nxjc_byc_byf_clinker01>ProcessVariable03_E8MRN>RunningState" style="position:absolute; height: 20px; width: 19px; top: 369px; left: 1245px;"></div>
+    <!--1#磨排风机运行-->
+    <div class="imageContainer" id="zc_nxjc_byc_byf_cementmill01>ProcessVariable07_1M8MRN>RunningState" style="position:absolute; height: 20px; width: 19px; top: 125px; left: 888px;"></div>
+    <!--1#磨辊压机定辊运行-->
+    <div class="imageContainer" id="zc_nxjc_byc_byf_cementmill01>ProcessVariable07_1M17MRN>RunningState" style="position:absolute; height: 20px; width: 19px; top: 386px; left: 453px;"></div>
+    <!--1#磨辊压机动辊运行-->
+    <div class="imageContainer" id="zc_nxjc_byc_byf_cementmill01>ProcessVariable07_1M16MRN>RunningState" style="position:absolute; height: 20px; width: 19px; top: 387px; left: 481px;"></div>
+    <!--熟料储存及熟料汽车胶带机运行-->
+    <div class="imageContainer" id="zc_nxjc_byc_byf_cementmill01>ProcessVariable07_L24MRN>RunningState" style="position:absolute; height: 20px; width: 19px; top: 395px; left: 1050px;"></div>
+    <!--石膏破碎机运行-->
+    <div class="imageContainer" id="zc_nxjc_byc_byf_cementmill01>ProcessVariable07_L26MRN>RunningState" style="position:absolute; top: 134px; left: 104px; height: 20px; width: 19px;"></div>
+    <!--运行状态-->
+    <div class="imageContainer" id="Div7" style="position:absolute; top: 513px; left: 742px; height: 20px; width: 19px;"></div>
+    <!----------------------------运行状态------------------------------------>
 </body>
 </html>

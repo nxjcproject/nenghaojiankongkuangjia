@@ -37,6 +37,9 @@
     <Reference Include="SqlServerDataAdapter">
       <HintPath>..\..\Lib\SqlServerDataAdapter.dll</HintPath>
     </Reference>
+    <Reference Include="Standard_GB16780-2012">
+      <HintPath>..\..\Lib\Standard_GB16780-2012.dll</HintPath>
+    </Reference>
     <Reference Include="StatisticalReport.Infrastructure">
       <HintPath>..\..\Lib\StatisticalReport.Infrastructure.dll</HintPath>
     </Reference>
@@ -57,9 +60,12 @@
     <Compile Include="ProcessEnergyMonitor\DataItem.cs" />
     <Compile Include="ProcessEnergyMonitor\DataSetInformation.cs" />
     <Compile Include="ProcessEnergyMonitor\EnergyConsumptionMonitor.cs" />
+    <Compile Include="ProcessEnergyMonitor\EnergyContrast\EnergyContrastHelper.cs" />
+    <Compile Include="ProcessEnergyMonitor\EnergyContrast\FeildInformation.cs" />
     <Compile Include="ProcessEnergyMonitor\MonitorShellService.cs" />
     <Compile Include="ProcessEnergyMonitor\MonitorShell\CDMElectricityConsumptionProvider.cs" />
     <Compile Include="ProcessEnergyMonitor\MonitorShell\CDMElectricityQuantityProvider.cs" />
+    <Compile Include="ProcessEnergyMonitor\MonitorShell\ComprehensiveConsumptionProvider.cs" />
     <Compile Include="ProcessEnergyMonitor\MonitorShell\DataItemProviderFactory.cs" />
     <Compile Include="ProcessEnergyMonitor\MonitorShell\DataItemProviderType.cs" />
     <Compile Include="ProcessEnergyMonitor\MonitorShell\IDataItemProvider.cs" />

@@ -91,7 +91,11 @@ namespace Monitor_shell.Service.ProcessEnergyMonitor.MonitorShell
         /// <summary>
         /// DCS能耗对照表电流
         /// </summary>
-        Current
+        Current,
+        /// <summary>
+        /// 综合电耗、煤耗
+        /// </summary>
+        Comprehensive
 
 
 

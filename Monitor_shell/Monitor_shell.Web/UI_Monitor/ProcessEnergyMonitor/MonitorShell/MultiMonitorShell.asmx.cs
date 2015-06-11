@@ -37,6 +37,7 @@ namespace Monitor_shell.Web.UI_Monitor.ProcessEnergyMonitor.MonitorShell
                 string[] itemArry = iditems[i].Split('>');
                 if (itemArry.Count() == 3)
                 {
+                    #region 单条产线的工序
                     //单条产线的工序
                     if (itemArry[2] == "Class" || itemArry[2] == "Day" || itemArry[2] == "Month")
                     {
@@ -60,6 +61,8 @@ namespace Monitor_shell.Web.UI_Monitor.ProcessEnergyMonitor.MonitorShell
                             idDictionary[key].Add(itemArry[1]);
                         }
                     }
+                    #endregion
+                    #region 如果为分厂级别的工序电耗（各产线工序电量之和/各产线工序产量之和）
                     //如果为分厂级别的工序电耗（各产线工序电量之和/各产线工序产量之和）
                     else if (itemArry[2] == "SumProcessClass" || itemArry[2] == "SumProcessDay" || itemArry[2] == "SumProcessMonth")
                     {
@@ -83,6 +86,24 @@ namespace Monitor_shell.Web.UI_Monitor.ProcessEnergyMonitor.MonitorShell
                             idDictionary[key].Add(itemArry[1]);
                         }
                     }
+                    #endregion
+
+                    #region 亮哥综合电耗、煤耗
+                    else if (itemArry[2] == "Comprehensive")
+                    {
+                        string key = itemArry[0] + ",Comprehensive";
+
+                        if (!idDictionary.Keys.Contains(key))
+                        {
+                            idDictionary.Add(key, new List<string>());
+                            idDictionary[key].Add(itemArry[1]);
+                        }
+                        else
+                        {
+                            idDictionary[key].Add(itemArry[1]);
+                        }
+                    }
+                    #endregion
                     //熟料综合电耗（熟料综合电耗=所有熟料电量之和/所有熟料产量之和）
                     //水泥综合电耗(水泥综合电耗=(所有熟料电量之和+所有水泥产线电量之和)/水泥总产量)
                     else if (itemArry[2] == "SumClass" || itemArry[2] == "SumDay" || itemArry[2] == "SumMonth")

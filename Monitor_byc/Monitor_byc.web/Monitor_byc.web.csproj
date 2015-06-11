@@ -1635,7 +1635,6 @@
     <Content Include="UI_Monitor\js\common\monitorjs.js" />
     <Content Include="UI_Monitor\js\common\MonitorShell.js" />
     <Content Include="UI_Monitor\js\common\multiTagChart.js" />
-    <Content Include="UI_Monitor\js\common\RunningState.js" />
     <Content Include="UI_Monitor\js\common\SubMonitorAdapter.js" />
     <Content Include="UI_Monitor\js\common\trendlineAnalysis_monitorView.js" />
     <Content Include="UI_Monitor\js\common\trendlineAnalysis_template.js" />

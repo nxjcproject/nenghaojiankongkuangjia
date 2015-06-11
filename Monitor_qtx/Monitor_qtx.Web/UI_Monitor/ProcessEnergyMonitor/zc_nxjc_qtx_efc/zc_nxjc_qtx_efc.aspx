@@ -763,18 +763,18 @@
         <%--综合电耗煤耗--%>
         <table class="mytable" style="position: absolute; top: 684px; left: 423px;">
             <tr>
-                <td><span id="zc_nxjc_qtx_efc>clinker_ElectricityConsumption>SumMonth" ></span></td>
+                <td><span id="zc_nxjc_qtx_efc>clinker_ElectricityConsumption_Comprehensive>Comprehensive" ></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_qtx_efc>clinker_CoalConsumption>SumMonth" ></span></td>
+                <td><span id="zc_nxjc_qtx_efc>clinker_CoalConsumption_Comprehensive>Comprehensive" ></span></td>
             </tr>
         </table>
         <table class="mytable" style="position: absolute; top: 684px; left: 493px;">
             <tr>
-                <td><span id="zc_nxjc_qtx_efc>cementmill_ElectricityConsumption>SumMonth" ></span></td>
+                <td><span id="zc_nxjc_qtx_efc>cementmill_ElectricityConsumption_Comprehensive>Comprehensive" ></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_qtx_efc>cementmill_CoalConsumption>SumMonth" ></span></td>
+                <td><span id="zc_nxjc_qtx_efc>cementmill_CoalConsumption_Comprehensive>Comprehensive" ></span></td>
             </tr>
         </table>
         <%--工序电耗（所有产线的该工序电量之和除以所有产线该工序产量之和） --%>

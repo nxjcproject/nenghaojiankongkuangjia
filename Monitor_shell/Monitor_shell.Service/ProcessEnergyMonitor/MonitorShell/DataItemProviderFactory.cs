@@ -71,6 +71,10 @@ namespace Monitor_shell.Service.ProcessEnergyMonitor.MonitorShell
             {
                 result = new RealtimeCurrentProvider();
             }
+            else if (type == DataItemProviderType.Comprehensive)
+            {
+                result = new ComprehensiveConsumptionProvider(connString);
+            }
             else
             {
                 result = new NullProvider();
