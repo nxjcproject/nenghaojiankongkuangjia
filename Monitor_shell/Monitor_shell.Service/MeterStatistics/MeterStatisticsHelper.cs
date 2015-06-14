@@ -150,18 +150,21 @@ namespace Monitor_shell.Service.MeterStatistics
                     string columnName = key + "Energy";
                     decimal vaule = 0m;
                     Decimal.TryParse(row[columnName].ToString().Trim(), out vaule);
-                    if (vaule != 0m)
-                    {
                         if (itemdatas.Keys.Contains(dataKey))
                         {
-                            itemdatas[dataKey].Add(vaule);
+                            if (vaule != 0m)
+                            {
+                                itemdatas[dataKey].Add(vaule);
+                            }
                         }
                         else
                         {
                             itemdatas.Add(dataKey, new List<decimal>());
-                            itemdatas[dataKey].Add(vaule);
+                            if (vaule != 0m)
+                            {
+                                itemdatas[dataKey].Add(vaule);
+                            }
                         }
-                    }
                     if (!currentdatas.Keys.Contains(dataKey))
                     {
                         decimal currentData = 0m;
@@ -174,7 +177,11 @@ namespace Monitor_shell.Service.MeterStatistics
             foreach (string key in itemdatas.Keys)
             {
                 List<decimal> datas = itemdatas[key];
-                decimal averageData = datas.Average();
+                decimal averageData = 0m;
+                if (datas.Count > 0)
+                {
+                    averageData = datas.Average();
+                }
                 decimal varianceData = 0m;
                 foreach (decimal item in datas)
                 {

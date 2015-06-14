@@ -25,7 +25,7 @@ function loadGridData(dataToServer) {
 function InitializeGrid(myData) {
     $('#dg').datagrid({
         data: myData,
-        iconCls: 'icon-edit', singleSelect: true, rownumbers: true, striped: true, toolbar: '#tb',
+        singleSelect: true, rownumbers: true, striped: true,
         columns: [[
             {
                 field: 'AmmeterName', title: '电表名称', width: '37%', align: 'center'

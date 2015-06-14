@@ -7,7 +7,7 @@
 // </自动生成>
 //------------------------------------------------------------------------------
 
-namespace Monitor_shell.Web.UI_Monitor.ProcessEnergyMonitor {
+namespace Monitor_shell.Web.UI_Monitor.ProcessEnergyMonitor.MonitorShell {
     
     
     public partial class test {

@@ -1,26 +1,26 @@
 ﻿$(function () {
     setInterval(setBlink, 500);
-    InitializePage();
+    runningStateInitializePage();
 });
 
 
-var publicData = {
+var runningStatePublicData = {
     ids:'',
     realTimer: {},
     pollingIntervals: 10000
 };
 
-function InitializePage() {
+function runningStateInitializePage() {
     var containers = document.getElementsByClassName("imageContainer");
     for (var i = 0; i < containers.length; i++) {
-        publicData.ids = publicData.ids + containers[i].id + ",";
+        runningStatePublicData.ids = runningStatePublicData.ids + containers[i].id + ",";
     }
-    setTimeout(getLatestData, 1000);
+    setTimeout(runningStateGetLatestData, 1000);
 }
-function getLatestData() {
+function runningStateGetLatestData() {
     //var m_MsgData;
     var dataToServer = {
-        ids: publicData.ids
+        ids: runningStatePublicData.ids
     };
     var urlString = "MultiMonitorShell.asmx/GetRunningData";
     $.ajax({
@@ -30,29 +30,29 @@ function getLatestData() {
         contentType: "application/json; charset=utf-8",
         dataType: "json",
         success: function (data) {
-            serviceSuccessful(data);
+            runningStateserviceSuccessful(data);
         },
         error: function () {
-            setupTimerToPollLatestData();
+            runningStatesetupTimerToPollLatestData();
         }
     });
 }
 
-function serviceSuccessful(resultObject) {
-    AddImage(resultObject.d.DataSet);
-    setupTimerToPollLatestData();
+function runningStateserviceSuccessful(resultObject) {
+    runningStateAddImage(resultObject.d.DataSet);
+    runningStatesetupTimerToPollLatestData();
 }
 
-function setupTimerToPollLatestData() {
+function runningStatesetupTimerToPollLatestData() {
     // 设置获取最新数据定时器
-    clearTimeout(publicData.realTimer);
-    publicData.realTimer = setTimeout(
+    clearTimeout(runningStatePublicData.realTimer);
+    runningStatePublicData.realTimer = setTimeout(
         function () {
-            getLatestData();
-        }, publicData.pollingIntervals);
+            runningStategetLatestData();
+        }, runningStatePublicData.pollingIntervals);
 }
 
-function AddImage(dataSets) {
+function runningStateAddImage(dataSets) {
     $.each(dataSets, function (i, item) {
         var content;
         var basePath = "/UI_Monitor/images/common/";

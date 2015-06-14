@@ -1655,7 +1655,7 @@
     <Content Include="UI_Monitor\js\common\trendlineRenderer.js" />
     <Content Include="UI_Monitor\ProcessEnergyMonitor\MonitorShell\MultiMonitorShell.asmx" />
     <Content Include="UI_Monitor\ProcessEnergyMonitor\MonitorShell\MultiMonitorShell.aspx" />
-    <Content Include="UI_Monitor\ProcessEnergyMonitor\test.aspx" />
+    <Content Include="UI_Monitor\ProcessEnergyMonitor\MonitorShell\test.aspx" />
     <Content Include="UI_Monitor\TrendTool\MultiTrendlineRenderer.aspx" />
     <Content Include="UI_Monitor\TrendTool\TrendlineRenderer.aspx" />
     <Content Include="Web.config" />
@@ -1673,11 +1673,11 @@
     <Compile Include="UI_Monitor\ProcessEnergyMonitor\MonitorShell\MultiMonitorShell.aspx.designer.cs">
       <DependentUpon>MultiMonitorShell.aspx</DependentUpon>
     </Compile>
-    <Compile Include="UI_Monitor\ProcessEnergyMonitor\test.aspx.cs">
+    <Compile Include="UI_Monitor\ProcessEnergyMonitor\MonitorShell\test.aspx.cs">
       <DependentUpon>test.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="UI_Monitor\ProcessEnergyMonitor\test.aspx.designer.cs">
+    <Compile Include="UI_Monitor\ProcessEnergyMonitor\MonitorShell\test.aspx.designer.cs">
       <DependentUpon>test.aspx</DependentUpon>
     </Compile>
     <Compile Include="UI_Monitor\TrendTool\MultiTrendlineRenderer.aspx.cs">

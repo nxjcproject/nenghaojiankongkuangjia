@@ -1,4 +1,5 @@
-﻿using SqlServerDataAdapter;
+﻿using Monitor_shell.Infrastructure.Configuration;
+using SqlServerDataAdapter;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -11,9 +12,9 @@ namespace Monitor_shell.Service.MeterStatistics
     {
         public static StatisticResult GetAmmeterStatisticData(string organizationId, string variableId)
         {
-            string nxjcConn = "Data Source=192.168.186.48;Initial Catalog=NXJC;Integrated Security=False;User Id=sa;Password=111";
+            string nxjcConn = ConnectionStringFactory.NXJCConnectionString;
             ISqlServerDataFactory nxjcFactory = new SqlServerDataFactory(nxjcConn);
-            string ammeterConn = "Data Source=192.168.186.48;Initial Catalog=zc_nxjc_byc_byf;Integrated Security=False;User Id=sa;Password=111";
+            string ammeterConn = ConnectionStringFactory.GetAmmeterConnectionString(organizationId);
             ISqlServerDataFactory ammeterFactory = new SqlServerDataFactory(ammeterConn);
 
             MeterStatisticsHelper meterStatistics = new MeterStatisticsHelper(nxjcFactory, ammeterFactory);

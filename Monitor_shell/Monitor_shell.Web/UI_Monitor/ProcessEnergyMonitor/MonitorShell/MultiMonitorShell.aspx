@@ -56,8 +56,18 @@
     </div>
 
     <div id="mm" class="easyui-menu" style="width: 120px;">
-        <div onclick="javascript:ClassificationId(multiTagCharData.selectedId)">添加到趋势列表</div>
-        <div onclick="javascript:ShowAmmeterStatistics(multiTagCharData.selectedId)">打开电表数据列</div>
+        <div data-options="iconCls:'icon-add'" onclick="javascript:ClassificationId(multiTagCharData.selectedId)">添加到趋势列表</div>
+        <div data-options="iconCls:'icon-search'" onclick="javascript:ShowAmmeterStatistics(multiTagCharData.selectedId)">打开电表数据列</div>
+    </div>
+
+    <div id="ammeterDialog" class="easyui-dialog" title="电表详细信息" data-options="iconCls:'icon-save',closed:true" style="width:600px;height:300px;padding:5px">
+        <div style="padding-bottom:5px;">
+            <div id="ammeterFormula" class="easyui-panel" title="计算公式" style="background:#fafafa;" data-options="fit:true">
+              &nbsp
+            </div>
+       </div>
+        <table id="dg" class="easyui-datagrid" title="电表明细" data-options="fit:true">
+        </table>
     </div>
 
     <form id="form1" runat="server">
