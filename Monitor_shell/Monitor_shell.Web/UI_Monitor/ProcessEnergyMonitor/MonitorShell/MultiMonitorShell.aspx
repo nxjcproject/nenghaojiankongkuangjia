@@ -8,11 +8,13 @@
     <title></title>
     <link rel="stylesheet" type="text/css" href="/lib/ealib/themes/gray/easyui.css" />
     <link rel="stylesheet" type="text/css" href="/lib/ealib/themes/icon.css" />
+    <link rel="stylesheet" type="text/css" href="/lib/ealib/themes/color.css" />
     <link rel="stylesheet" type="text/css" href="/lib/extlib/themes/syExtIcon.css" />
     <link rel="stylesheet" type="text/css" href="/css/common/NormalPage.css" />
 
     <script type="text/javascript" src="/lib/ealib/jquery.min.js" charset="utf-8"></script>
     <script type="text/javascript" src="/js/common/jquery.utility.js" charset="utf-8"></script>
+    <script type="text/javascript" src="/js/common/clientstorage/Cookie.js" charset="utf-8"></script>
 
     <script type="text/javascript" src="/lib/ealib/jquery.easyui.min.js" charset="utf-8"></script>
     <script type="text/javascript" src="/lib/ealib/easyui-lang-zh_CN.js" charset="utf-8"></script>
@@ -42,7 +44,7 @@
                             <a href="#" class="easyui-linkbutton" data-options="iconCls:'ext-icon-shape_square',toggle:false" style="height: 22px;" onclick="HiddenParentTopLeft();"></a>
                         </td>
                         <td style="width: 35px;">
-                            <a href="#" class="easyui-linkbutton" data-options="iconCls:'ext-icon-image',toggle:true" style="height: 22px;" onclick="SetAutoResize();"></a>
+                            <a id ="Button_AutoResize" href="#" class="easyui-linkbutton" data-options="iconCls:'ext-icon-image'" style="height: 22px;" onclick="SetAutoResize();"></a>
                         </td>
                         <td>
                             <input id="slider_MonitorZoom" class="easyui-slider" style="width: 200px; height: 24px;" data-options="showTip:false, reversed:true" />
@@ -52,6 +54,12 @@
             </div>
         </div>
     </div>
+
+    <div id="mm" class="easyui-menu" style="width: 120px;">
+        <div onclick="javascript:ClassificationId(multiTagCharData.selectedId)">添加到趋势列表</div>
+        <div onclick="javascript:ShowAmmeterStatistics(multiTagCharData.selectedId)">打开电表数据列</div>
+    </div>
+
     <form id="form1" runat="server">
         <div>
             <input type="text" style="display: none" id="organizationIdContainerId" runat="server" />

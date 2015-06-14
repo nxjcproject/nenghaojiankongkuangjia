@@ -69,7 +69,7 @@ namespace Monitor_shell.Service.ProcessEnergyMonitor.MonitorShell
             }
             else if (type == DataItemProviderType.Current)
             {
-                result = new RealtimeCurrentProvider();
+                result = new RealtimeCurrentProvider("Current");
             }
             else if (type == DataItemProviderType.Comprehensive)
             {

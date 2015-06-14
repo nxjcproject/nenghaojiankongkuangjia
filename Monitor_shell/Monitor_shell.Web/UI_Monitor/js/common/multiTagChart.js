@@ -6,31 +6,68 @@ $(function () {
     getLableName();
 });
 
+var multiTagCharData = {
+    selectedId:''
+};
 //绑定右键菜单事件
 function BindContextmenu() {
     $(".mchart:not(.nodisplay)").bind('contextmenu', function (e) {
+        multiTagCharData.selectedId = this.id;
         e.preventDefault();
-        var preLableId = this.id;//前台标签ID
-        var fixedId = '';//处理后的标签ID
-        var lableArray = preLableId.split('>');
-        if (lableArray.length != 3)
-            return false;
-        //累计量
-        if (lableArray[2] == 'Class' || lableArray[2] == 'Day' || lableArray[2] == 'Month' || lableArray[2] == 'SumClass' || lableArray[2] == 'SumDay' || lableArray[2] == 'SumMonth'
-            || lableArray[2] == 'SumProcessClass' || lableArray[2] == 'SumProcessDay' || lableArray[2] == 'SumProcessMonth') {
-            var tempArray = lableArray[1].split('_');
-            if (tempArray.length == 2)
-                fixedId = lableArray[0] + '>' + tempArray[0];
-            else
-                return false;
-        }
-        //实时量
-        if (lableArray[2] == 'ElectricityQuantity' || lableArray[2] == 'ElectricityConsumption' || lableArray[2] == 'Current' || lableArray[2] == 'Power') {
-            fixedId=lableArray[0]+'>'+lableArray[1];
-        }
-        AddLableToCookie(fixedId);
+        $('#mm').menu('show', {
+            left: e.pageX,
+            top: e.pageY
+        });
     });
 }
+
+function ClassificationId(id) {
+    var preLableId = id;//前台标签ID
+    var fixedId = '';//处理后的标签ID
+    var lableArray = preLableId.split('>');
+    if (lableArray.length != 3)
+        return false;
+    //累计量
+    if (lableArray[2] == 'Class' || lableArray[2] == 'Day' || lableArray[2] == 'Month' || lableArray[2] == 'SumClass' || lableArray[2] == 'SumDay' || lableArray[2] == 'SumMonth'
+        || lableArray[2] == 'SumProcessClass' || lableArray[2] == 'SumProcessDay' || lableArray[2] == 'SumProcessMonth') {
+        var tempArray = lableArray[1].split('_');
+        if (tempArray.length == 2)
+            fixedId = lableArray[0] + '>' + tempArray[0];
+        else
+            return false;
+    }
+    //实时量
+    if (lableArray[2] == 'ElectricityQuantity' || lableArray[2] == 'ElectricityConsumption' || lableArray[2] == 'Current' || lableArray[2] == 'Power') {
+        fixedId = lableArray[0] + '>' + lableArray[1];
+    }
+    AddLableToCookie(fixedId);
+}
+
+//绑定右键菜单事件
+//function BindContextmenu() {
+//    $(".mchart:not(.nodisplay)").bind('contextmenu', function (e) {
+//        e.preventDefault();
+//        var preLableId = this.id;//前台标签ID
+//        var fixedId = '';//处理后的标签ID
+//        var lableArray = preLableId.split('>');
+//        if (lableArray.length != 3)
+//            return false;
+//        //累计量
+//        if (lableArray[2] == 'Class' || lableArray[2] == 'Day' || lableArray[2] == 'Month' || lableArray[2] == 'SumClass' || lableArray[2] == 'SumDay' || lableArray[2] == 'SumMonth'
+//            || lableArray[2] == 'SumProcessClass' || lableArray[2] == 'SumProcessDay' || lableArray[2] == 'SumProcessMonth') {
+//            var tempArray = lableArray[1].split('_');
+//            if (tempArray.length == 2)
+//                fixedId = lableArray[0] + '>' + tempArray[0];
+//            else
+//                return false;
+//        }
+//        //实时量
+//        if (lableArray[2] == 'ElectricityQuantity' || lableArray[2] == 'ElectricityConsumption' || lableArray[2] == 'Current' || lableArray[2] == 'Power') {
+//            fixedId=lableArray[0]+'>'+lableArray[1];
+//        }
+//        AddLableToCookie(fixedId);
+//    });
+//}
 
 //当点击菜单项（添加标签）时被调用的函数，将标签加入Cookie
 function AddLableToCookie(lableId) {
@@ -89,7 +126,7 @@ function getAllCookie() {
 }
 
 function getLableName() {
-    var urlString = "../MonitorShell/MultiMonitorShell.asmx/GetLableJson";
+    var urlString = "MultiMonitorShell.asmx/GetLableJson";
     var sendData = "";
     $.ajax({
         type: "POST",

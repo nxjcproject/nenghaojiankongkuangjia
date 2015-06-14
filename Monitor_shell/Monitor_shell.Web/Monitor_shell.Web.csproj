@@ -50,6 +50,10 @@
       <HintPath>..\..\Lib\InternalMemeryRestore.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="SqlServerDataAdapter, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\SqlServerDataAdapter.dll</HintPath>
+    </Reference>
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -81,6 +85,8 @@
   <ItemGroup>
     <Content Include="css\common\charts.css" />
     <Content Include="css\common\NormalPage.css" />
+    <Content Include="js\common\clientstorage\Cookie.js" />
+    <Content Include="js\common\clientstorage\WebStorage.js" />
     <Content Include="js\common\components\Charts.js" />
     <Content Include="js\common\components\DataGrid.js" />
     <Content Include="js\common\components\GridChart.js" />
@@ -1636,6 +1642,7 @@
     <Content Include="UI_Monitor\images\page\zc_zcshn_zhuzhouc_zhuzhouf_clinker01.jpg" />
     <Content Include="UI_Monitor\js\common\alarm.js" />
     <Content Include="UI_Monitor\js\common\alarm_old.js" />
+    <Content Include="UI_Monitor\js\common\AmmeterStatistic.js" />
     <Content Include="UI_Monitor\js\common\blink.js" />
     <Content Include="UI_Monitor\js\common\chartjs.js" />
     <Content Include="UI_Monitor\js\common\monitorjs.js" />

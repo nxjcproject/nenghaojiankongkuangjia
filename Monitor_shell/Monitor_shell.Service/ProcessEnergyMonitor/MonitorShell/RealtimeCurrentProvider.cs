@@ -14,6 +14,12 @@ namespace Monitor_shell.Service.ProcessEnergyMonitor.MonitorShell
     public class RealtimeCurrentProvider : IDataItemProvider
     {
         private ISqlServerDataFactory _dataFactory;
+        private string _type;
+
+        public RealtimeCurrentProvider(string type)
+        {
+            _type = type;
+        }
 
         public IEnumerable<DataItem> GetDataItem(string organizationId, params string[] variableIds)
         {
@@ -21,6 +27,13 @@ namespace Monitor_shell.Service.ProcessEnergyMonitor.MonitorShell
 
             string dcsConn = ConnectionStringFactory.GetDCSConnectionString(organizationId);
             _dataFactory = new SqlServerDataFactory(dcsConn);
+
+            EnergyContrastHelper contrastHelper = new EnergyContrastHelper(_type);
+
+            foreach (var item in contrastHelper.GetRealtimeDatas(organizationId,variableIds))
+            {
+                results.Add(item);
+            }
 
             foreach (var item in GetRealtimeDatas(organizationId))
             {
@@ -103,11 +116,11 @@ namespace Monitor_shell.Service.ProcessEnergyMonitor.MonitorShell
         /// <returns></returns>
         private DataTable GetDataItemTable(IEnumerable<DataSetInformation> dataSetInformations)
         {
-            IDictionary<string, List<FeildInformation>> feildInfor = new Dictionary<string, List<FeildInformation>>();
+            IDictionary<string, List<FieldInformation>> feildInfor = new Dictionary<string, List<FieldInformation>>();
             foreach (var item in dataSetInformations)
             {
                 string key = item.TableName;
-                FeildInformation value = new FeildInformation
+                FieldInformation value = new FieldInformation
                 {
                     FeildName = item.FieldName,
                     VariableName = item.ViewId
@@ -118,7 +131,7 @@ namespace Monitor_shell.Service.ProcessEnergyMonitor.MonitorShell
                 }
                 else
                 {
-                    feildInfor.Add(key, new List<FeildInformation>());
+                    feildInfor.Add(key, new List<FieldInformation>());
                     feildInfor[key].Add(value);
                 }
             }

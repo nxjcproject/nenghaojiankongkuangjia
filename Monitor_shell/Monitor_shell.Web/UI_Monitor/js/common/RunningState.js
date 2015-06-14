@@ -22,7 +22,7 @@ function getLatestData() {
     var dataToServer = {
         ids: publicData.ids
     };
-    var urlString = "MonitorShell/MultiMonitorShell.asmx/GetRunningData";
+    var urlString = "MultiMonitorShell.asmx/GetRunningData";
     $.ajax({
         type: "POST",
         url: urlString,

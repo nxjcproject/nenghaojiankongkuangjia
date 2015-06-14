@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Monitor_shell.Service.ProcessEnergyMonitor.EnergyContrast
 {
-    public struct FeildInformation
+    public struct FieldInformation
     {
         public string FeildName;
         public string VariableName;

@@ -1,4 +1,5 @@
 ﻿using Monitor_shell.Service.Alarm;
+using Monitor_shell.Service.MeterStatistics;
 using Monitor_shell.Service.ProcessEnergyMonitor;
 using Monitor_shell.Service.ProcessEnergyMonitor.MonitorShell;
 using Monitor_shell.Service.ProcessEnergyMonitor.RunningState;
@@ -151,6 +152,11 @@ namespace Monitor_shell.Web.UI_Monitor.ProcessEnergyMonitor.MonitorShell
                         if (!idDictionary.Keys.Contains(key))
                         {
                             idDictionary.Add(key, new List<string>());
+                            idDictionary[key].Add(itemArry[1]);
+                        }
+                        else
+                        {
+                            idDictionary[key].Add(itemArry[1]);
                         }
                     }
                     else
@@ -230,6 +236,14 @@ namespace Monitor_shell.Web.UI_Monitor.ProcessEnergyMonitor.MonitorShell
             return result;
         }
 
+        [WebMethod]
+        public string GetAmmeterStatisticData(string organizationId, string variableId)
+        {
+            StatisticResult statisticResult = MeterStatisticsService.GetAmmeterStatisticData(organizationId, variableId);
+            string datajson = EasyUIJsonParser.DataGridJsonParser.DataTableToJson(statisticResult.data);
+            string result = "{\"formula\":\"" + statisticResult.formula + "\",\"data\":" + datajson + "}";
+            return result;
+        }
 
         [WebMethod]
         public string GetAlarmData()
