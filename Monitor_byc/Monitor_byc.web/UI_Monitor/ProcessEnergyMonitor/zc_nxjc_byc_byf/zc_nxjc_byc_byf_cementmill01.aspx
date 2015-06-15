@@ -25,6 +25,7 @@
     <script src="/UI_Monitor/js/common/alarm.js"></script>
     <script src="/UI_Monitor/js/common/multiTagChart.js"></script>
     <script src="/UI_Monitor/js/common/RunningState.js"></script>
+    <script src="/UI_Monitor/js/common/AmmeterStatistic.js"></script>
     <script>
         publicData.organizationId = "zc_nxjc_byc_byf_cementmill01";
         publicData.sceneName = "1#水泥磨";
@@ -146,6 +147,8 @@
         </table>
     </div>
 
+    <div id="htmlContainer"></div>
+
     <!----------------------------运行状态------------------------------------>
     <!--1#水泥磨主电机运行信号-->
     <div class="imageContainer" id="zc_nxjc_byc_byf_cementmill01>F_1M13MRN>RunningState" style="position:absolute; top: 513px; left: 742px; height: 20px; width: 19px;"></div>
@@ -160,7 +163,7 @@
     <!--熟料储存及熟料汽车胶带机运行-->
     <div class="imageContainer" id="zc_nxjc_byc_byf_cementmill01>L24MRN>RunningState" style="position:absolute; height: 20px; width: 19px; top: 395px; left: 1050px;"></div>
     <!--石膏破碎机运行-->
-    <div class="imageContainer" id="zc_nxjc_byc_byf_cementmill01>L26MRN>RunningState" style="position:absolute; top: 134px; left: 104px; height: 20px; width: 19px;"></div>
+    <div class="imageContainer" id="zc_nxjc_byc_byf>L26MRN>RunningState" style="position:absolute; top: 134px; left: 104px; height: 20px; width: 19px;"></div>
     <!--运行状态-->
     <div class="imageContainer" id="Div7" style="position:absolute; top: 513px; left: 742px; height: 20px; width: 19px;"></div>
     <!----------------------------运行状态------------------------------------>

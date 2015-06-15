@@ -1,6 +1,6 @@
 ﻿var PageWidth = 1350;
 var PageHeight = 740;
-function SetBodySize(myZoomRatio, myIframeWidth, myIframeHeight, myIeMessage) {
+function SetBodySize(myZoomRatio, myIframeWidth, myIframeHeight, myIeMessage, myBrowserVersion) {
     var m_BodyDefaultWidth = PageWidth;
     var m_BodyDefaultHeight = PageHeight;
     var m_CurrentBodyWidth = m_BodyDefaultWidth * myZoomRatio;
@@ -13,7 +13,7 @@ function SetBodySize(myZoomRatio, myIframeWidth, myIframeHeight, myIeMessage) {
     }
     else {
         $('#SubMonitorBody').css('overflow', 'hidden');
-        if (myIeMessage == "IE") {
+        if (myIeMessage == "IE" && myBrowserVersion < 9) {
             $('#SubMonitorBody').css('margin-left', (myIframeWidth - m_CurrentBodyWidth) / 2 / myZoomRatio);
         }
         else {

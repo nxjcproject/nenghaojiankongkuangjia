@@ -240,9 +240,16 @@ namespace Monitor_shell.Web.UI_Monitor.ProcessEnergyMonitor.MonitorShell
         public string GetAmmeterStatisticData(string organizationId, string variableId)
         {
             StatisticResult statisticResult = MeterStatisticsService.GetAmmeterStatisticData(organizationId, variableId);
-            string datajson = EasyUIJsonParser.DataGridJsonParser.DataTableToJson(statisticResult.data);
-            string result = "{\"formula\":\"" + statisticResult.formula + "\",\"data\":" + datajson + "}";
-            return result;
+            if (statisticResult.data.Rows.Count > 0)
+            {
+                string datajson = EasyUIJsonParser.DataGridJsonParser.DataTableToJson(statisticResult.data);
+                string result = "{\"formula\":\"" + statisticResult.formula + "\",\"data\":" + datajson + "}";
+                return result;
+            }
+            else
+            {
+                return "{\"formula\":\"\",\"data\":\"\"}";
+            }
         }
 
         [WebMethod]

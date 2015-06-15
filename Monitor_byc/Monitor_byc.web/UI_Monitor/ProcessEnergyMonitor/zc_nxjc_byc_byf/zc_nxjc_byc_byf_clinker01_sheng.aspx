@@ -25,7 +25,7 @@
     <script src="/UI_Monitor/js/common/alarm.js"></script>
     <script src="/UI_Monitor/js/common/multiTagChart.js"></script>
     <script src="/UI_Monitor/js/common/RunningState.js"></script>
-
+    <script src="/UI_Monitor/js/common/AmmeterStatistic.js"></script>
     <script>
         publicData.organizationId = "zc_nxjc_byc_byf_clinker01";
         publicData.sceneName = "1#熟料线";
@@ -191,23 +191,29 @@
         </table>
     </div>
 
+    <div id="htmlContainer"></div>
+
     <!----------------------------运行状态------------------------------------>
-    <!--高温风机运行-->
-    <div class="imageContainer" id="zc_nxjc_byc_byf_clinker01>F29ACRN>RunningState" style="position:absolute; height: 20px; width: 19px; top: 191px; left: 1100px;"></div>
-    <!--废气排风机运行-->
-    <div class="imageContainer" id="zc_nxjc_byc_byf_clinker01>E8MRN>RunningState" style="position:absolute; height: 20px; width: 19px; top: 369px; left: 1245px;"></div>
-    <!--1#磨排风机运行-->
-    <div class="imageContainer" id="zc_nxjc_byc_byf_cementmill01>F_1M8MRN>RunningState" style="position:absolute; height: 20px; width: 19px; top: 125px; left: 888px;"></div>
-    <!--1#磨辊压机定辊运行-->
-    <div class="imageContainer" id="zc_nxjc_byc_byf_cementmill01>F_1M17MRN>RunningState" style="position:absolute; height: 20px; width: 19px; top: 386px; left: 453px;"></div>
-    <!--1#磨辊压机动辊运行-->
-    <div class="imageContainer" id="zc_nxjc_byc_byf_cementmill01>F_1M16MRN>RunningState" style="position:absolute; height: 20px; width: 19px; top: 387px; left: 481px;"></div>
-    <!--熟料储存及熟料汽车胶带机运行-->
-    <div class="imageContainer" id="zc_nxjc_byc_byf_cementmill01>L24MRN>RunningState" style="position:absolute; height: 20px; width: 19px; top: 395px; left: 1050px;"></div>
-    <!--石膏破碎机运行-->
-    <div class="imageContainer" id="zc_nxjc_byc_byf_cementmill01>L26MRN>RunningState" style="position:absolute; top: 134px; left: 104px; height: 20px; width: 19px;"></div>
-    <!--运行状态-->
-    <div class="imageContainer" id="Div7" style="position:absolute; top: 513px; left: 742px; height: 20px; width: 19px;"></div>
+  
+   <!--矿山1号破碎机 -->
+    <div class="imageContainer" id="zc_nxjc_byc_byf>Y5MRN>RunningState" style="position:absolute; height: 20px; width: 19px; top: 64px; left: 122px;"></div>
+    <!--矿山2号破碎机 -->
+    <div class="imageContainer" id="zc_nxjc_byc_byf>Y7MRN>RunningState" style="position:absolute; height: 20px; width: 19px; top: 64px; left: 151px;"></div>
+     <!--砂岩破碎机 -->
+    <div class="imageContainer" id="zc_nxjc_byc_byf_clinker01>X8MRN>RunningState" style="position:absolute; height: 20px; width: 19px; top: 163px; left: 362px;"></div>
+    <!--堆料机-->
+    <div class="imageContainer" id="zc_nxjc_byc_byf_clinker01>Q6AC1RN>RunningState" style="position:absolute; height: 20px; width: 19px; top: 172px; left: 169px;"></div>
+    <!--取料机-->
+    <div class="imageContainer" id="zc_nxjc_byc_byf_clinker01>Q6AC2RN>RunningState" style="position:absolute; height: 20px; width: 19px; top: 172px; left: 196px;"></div>
+    <!--石灰石入库皮带电机-->
+    <div class="imageContainer" id="zc_nxjc_byc_byf_clinker01>Q1MRN>RunningState" style="position:absolute; height: 20px; width: 19px; top: 395px; left: 358px;"></div>
+    <!--原料磨主电机-->
+    <div class="imageContainer" id="zc_nxjc_byc_byf_clinker01>B26M_CUN_M>RunningState" style="position:absolute; height: 20px; width: 19px; top: 564px; left: 545px;"></div>
+    <!--原料磨循环风机-->
+    <div class="imageContainer" id="zc_nxjc_byc_byf_clinker01>B23M_CUN_M>RunningState" style="position:absolute; height: 20px; width: 19px; top: 300px; left: 855px;"></div>
+    <!--原料磨选粉机电机-->
+    <div class="imageContainer" id="zc_nxjc_byc_byf_clinker01>B25M_CUN_M>RunningState" style="position:absolute; height: 20px; width: 19px; top: 488px; left: 544px;"></div>
+  
     <!----------------------------运行状态------------------------------------>
 </body>
 </html>

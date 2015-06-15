@@ -57,7 +57,7 @@ namespace Monitor_shell.Service.ProcessEnergyMonitor.EnergyContrast
             {
                 StringBuilder queryString = new StringBuilder();
                 List<SqlParameter> parameters = new List<SqlParameter>();
-                queryString.Append("select DatabaseName,TableName,FieldName,VariableName from EnergyConsumptionContrast ");
+                queryString.Append("select DatabaseName,TableName,FieldName,VariableName from MonitorContrast ");
                 queryString.Append("where OrganizationID=@organizationId and type=@type and (");
                 parameters.Add(new SqlParameter("@organizationId", organizationId));
                 parameters.Add(new SqlParameter("@type", _type));

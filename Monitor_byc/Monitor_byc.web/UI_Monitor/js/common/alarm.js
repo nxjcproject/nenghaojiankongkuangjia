@@ -1,4 +1,5 @@
-﻿//存储报警标签的ID
+﻿
+//存储报警标签的ID
 var myArray = new Array();
 
 $(function () {

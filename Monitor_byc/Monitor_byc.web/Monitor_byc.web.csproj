@@ -49,7 +49,8 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Lib\Monitor_shell.Infrastructure.dll</HintPath>
     </Reference>
-    <Reference Include="Monitor_shell.Service">
+    <Reference Include="Monitor_shell.Service, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Monitor_shell\Monitor_shell.Web\bin\Monitor_shell.Service.dll</HintPath>
     </Reference>
     <Reference Include="Monitor_shell.Web">
@@ -1630,11 +1631,13 @@
     <Content Include="UI_Monitor\images\page\zc_nxjc_byc_byf_clinker01_shu.png" />
     <Content Include="UI_Monitor\js\common\alarm.js" />
     <Content Include="UI_Monitor\js\common\alarm_old.js" />
+    <Content Include="UI_Monitor\js\common\AmmeterStatistic.js" />
     <Content Include="UI_Monitor\js\common\blink.js" />
     <Content Include="UI_Monitor\js\common\chartjs.js" />
     <Content Include="UI_Monitor\js\common\monitorjs.js" />
     <Content Include="UI_Monitor\js\common\MonitorShell.js" />
     <Content Include="UI_Monitor\js\common\multiTagChart.js" />
+    <Content Include="UI_Monitor\js\common\RunningState.js" />
     <Content Include="UI_Monitor\js\common\SubMonitorAdapter.js" />
     <Content Include="UI_Monitor\js\common\trendlineAnalysis_monitorView.js" />
     <Content Include="UI_Monitor\js\common\trendlineAnalysis_template.js" />
