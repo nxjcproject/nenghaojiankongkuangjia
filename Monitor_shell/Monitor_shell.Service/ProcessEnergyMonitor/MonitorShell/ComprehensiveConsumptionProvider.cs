@@ -96,14 +96,14 @@ namespace Monitor_shell.Service.ProcessEnergyMonitor.MonitorShell
             DataItem clinker_ElectricityConsumption_Comprehensive = new DataItem
             {
                 ID = organizationId + ">clinker_ElectricityConsumption_Comprehensive>Comprehensive",
-                Value = EnergyConsumption_V1.GetClinkerPowerConsumption().ToString()
+                Value = EnergyConsumption_V1.GetClinkerPowerConsumption().ToString("#.00").Trim()
             };
             result.Add(clinker_ElectricityConsumption_Comprehensive);
 
             DataItem clinker_CoalConsumption_Comprehensive = new DataItem
             {
                 ID = organizationId + ">clinker_CoalConsumption_Comprehensive>Comprehensive",
-                Value = EnergyConsumption_V1.GetClinkerCoalConsumption().ToString()
+                Value = EnergyConsumption_V1.GetClinkerCoalConsumption().ToString("#.00").Trim()
             };
             result.Add(clinker_CoalConsumption_Comprehensive);
 
@@ -112,7 +112,7 @@ namespace Monitor_shell.Service.ProcessEnergyMonitor.MonitorShell
             DataItem cementmill_ElectricityConsumption_Comprehensive = new DataItem
             {
                 ID = organizationId + ">cementmill_ElectricityConsumption_Comprehensive>Comprehensive",
-                Value = EnergyConsumption_V1.GetCementPowerConsumption(defaultCE).ToString()
+                Value = EnergyConsumption_V1.GetCementPowerConsumption(defaultCE).ToString("#.00").Trim()
             };
             result.Add(cementmill_ElectricityConsumption_Comprehensive);
 
@@ -121,7 +121,7 @@ namespace Monitor_shell.Service.ProcessEnergyMonitor.MonitorShell
             DataItem cementmill_CoalConsumption_Comprehensive = new DataItem
             {
                 ID = organizationId + ">cementmill_CoalConsumption_Comprehensive>Comprehensive",
-                Value = EnergyConsumption_V1.GetCementCoalConsumption(defaultCC).ToString()
+                Value = EnergyConsumption_V1.GetCementCoalConsumption(defaultCC).ToString("#.00").Trim()
             };
             result.Add(cementmill_CoalConsumption_Comprehensive);
 

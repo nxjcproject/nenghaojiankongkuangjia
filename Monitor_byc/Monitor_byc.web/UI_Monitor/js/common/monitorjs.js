@@ -64,9 +64,10 @@ function displayDataItem(dataSets) {
         var value = Number(item.Value)
         var element = $(document.getElementById(item.ID));
         //if (element.attr("tagName") == "span")
-            element.html(value.toFixed(0));
+        //element.html(value.toFixed(0));
+        element.html(value);
         //else
-            //element.val(value.toFixed(0));
+        //element.val(value.toFixed(0));
     });
 }
 

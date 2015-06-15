@@ -1702,6 +1702,7 @@
     <Content Include="UI_Monitor\css\common\mymonitor.css.orig" />
     <Content Include="UI_Monitor\images\page.rar" />
     <None Include="Properties\PublishProfiles\Monitor_shell.pubxml" />
+    <None Include="Properties\PublishProfiles\shell.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

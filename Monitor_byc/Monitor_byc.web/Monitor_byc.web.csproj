@@ -1702,6 +1702,7 @@
     <Content Include="UI_Monitor\css\common\mymonitor.css.orig" />
     <None Include="Properties\PublishProfiles\Monitor_byc.pubxml" />
     <None Include="Properties\PublishProfiles\new_Monitor_byc.pubxml" />
+    <None Include="Properties\PublishProfiles\nxjc_by.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
