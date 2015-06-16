@@ -1781,6 +1781,7 @@
     <Content Include="UI_Monitor\css\common\mymonitor.css.orig" />
     <None Include="Properties\PublishProfiles\Monitor_qtx.pubxml" />
     <None Include="Properties\PublishProfiles\new_Monitor_qtx.pubxml" />
+    <None Include="Properties\PublishProfiles\tys.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

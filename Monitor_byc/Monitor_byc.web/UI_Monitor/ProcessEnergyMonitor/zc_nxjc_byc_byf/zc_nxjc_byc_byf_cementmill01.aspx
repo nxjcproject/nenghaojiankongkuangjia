@@ -149,24 +149,20 @@
 
     <div id="htmlContainer"></div>
 
-    <!----------------------------运行状态------------------------------------>
     <!--1#水泥磨主电机运行信号-->
-    <div class="imageContainer" id="zc_nxjc_byc_byf_cementmill01>F_1M13MRN>RunningState" style="position:absolute; top: 513px; left: 742px; height: 20px; width: 19px;"></div>
+    <div class="imageContainer" id="zc_nxjc_byc_byf_cementmill01>cementMillMainMotor>RunningState" style="position:absolute; top: 513px; left: 742px; height: 20px; width: 19px;"></div>
     <!--1#磨选粉机变频控制柜运行-->
-    <div class="imageContainer" id="zc_nxjc_byc_byf_cementmill01>F_1M25ACRN>RunningState" style="position:absolute; height: 20px; width: 19px; top: 336px; left: 695px;"></div>
+    <div class="imageContainer" id="zc_nxjc_byc_byf_cementmill01>powderSelectingMachine>RunningState" style="position:absolute; height: 20px; width: 19px; top: 336px; left: 695px;"></div>
     <!--1#磨排风机运行-->
-    <div class="imageContainer" id="zc_nxjc_byc_byf_cementmill01>F_1M8MRN>RunningState" style="position:absolute; height: 20px; width: 19px; top: 125px; left: 888px;"></div>
+    <div class="imageContainer" id="zc_nxjc_byc_byf_cementmill01>mainExhaustFan>RunningState" style="position:absolute; height: 20px; width: 19px; top: 125px; left: 888px;"></div>
     <!--1#磨辊压机定辊运行-->
-    <div class="imageContainer" id="zc_nxjc_byc_byf_cementmill01>F_1M17MRN>RunningState" style="position:absolute; height: 20px; width: 19px; top: 386px; left: 453px;"></div>
+    <div class="imageContainer" id="zc_nxjc_byc_byf_cementmill01>rollingMachineSettledRoller>RunningState" style="position:absolute; height: 20px; width: 19px; top: 386px; left: 453px;"></div>
     <!--1#磨辊压机动辊运行-->
-    <div class="imageContainer" id="zc_nxjc_byc_byf_cementmill01>F_1M16MRN>RunningState" style="position:absolute; height: 20px; width: 19px; top: 387px; left: 481px;"></div>
+    <div class="imageContainer" id="zc_nxjc_byc_byf_cementmill01>rollingMachineActionRoller>RunningState" style="position:absolute; height: 20px; width: 19px; top: 387px; left: 481px;"></div>
     <!--熟料储存及熟料汽车胶带机运行-->
-    <div class="imageContainer" id="zc_nxjc_byc_byf_cementmill01>L24MRN>RunningState" style="position:absolute; height: 20px; width: 19px; top: 395px; left: 1050px;"></div>
+    <div class="imageContainer" id="zc_nxjc_byc_byf_cementmill01>clinkerStorageBeltMachine>RunningState" style="position:absolute; height: 20px; width: 19px; top: 395px; left: 1050px;"></div>
     <!--石膏破碎机运行-->
     <div class="imageContainer" id="zc_nxjc_byc_byf>L26MRN>RunningState" style="position:absolute; top: 134px; left: 104px; height: 20px; width: 19px;"></div>
-    <!--运行状态-->
-    <div class="imageContainer" id="Div7" style="position:absolute; top: 513px; left: 742px; height: 20px; width: 19px;"></div>
-    <!----------------------------运行状态------------------------------------>
 </body>
 </html>
 

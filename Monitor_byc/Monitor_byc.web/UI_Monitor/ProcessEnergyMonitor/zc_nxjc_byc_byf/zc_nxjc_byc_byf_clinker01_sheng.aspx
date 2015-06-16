@@ -196,23 +196,23 @@
     <!----------------------------运行状态------------------------------------>
   
    <!--矿山1号破碎机 -->
-    <div class="imageContainer" id="zc_nxjc_byc_byf>Y5MRN>RunningState" style="position:absolute; height: 20px; width: 19px; top: 64px; left: 122px;"></div>
+    <div class="imageContainer" id="zc_nxjc_byc_byf>limestoneCrusher1>RunningState" style="position:absolute; height: 20px; width: 19px; top: 64px; left: 122px;"></div>
     <!--矿山2号破碎机 -->
-    <div class="imageContainer" id="zc_nxjc_byc_byf>Y7MRN>RunningState" style="position:absolute; height: 20px; width: 19px; top: 64px; left: 151px;"></div>
+    <div class="imageContainer" id="zc_nxjc_byc_byf>limestoneCrusher2>RunningState" style="position:absolute; height: 20px; width: 19px; top: 64px; left: 151px;"></div>
      <!--砂岩破碎机 -->
-    <div class="imageContainer" id="zc_nxjc_byc_byf_clinker01>X8MRN>RunningState" style="position:absolute; height: 20px; width: 19px; top: 163px; left: 362px;"></div>
+    <div class="imageContainer" id="zc_nxjc_byc_byf_clinker01>sandstoneCrusher>RunningState" style="position:absolute; height: 20px; width: 19px; top: 163px; left: 362px;"></div>
     <!--堆料机-->
-    <div class="imageContainer" id="zc_nxjc_byc_byf_clinker01>Q6AC1RN>RunningState" style="position:absolute; height: 20px; width: 19px; top: 172px; left: 169px;"></div>
+    <div class="imageContainer" id="zc_nxjc_byc_byf_clinker01>limestoneStacker1>RunningState" style="position:absolute; height: 20px; width: 19px; top: 172px; left: 169px;"></div>
     <!--取料机-->
-    <div class="imageContainer" id="zc_nxjc_byc_byf_clinker01>Q6AC2RN>RunningState" style="position:absolute; height: 20px; width: 19px; top: 172px; left: 196px;"></div>
+    <div class="imageContainer" id="zc_nxjc_byc_byf_clinker01>limestoneStacker2>RunningState" style="position:absolute; height: 20px; width: 19px; top: 172px; left: 196px;"></div>
     <!--石灰石入库皮带电机-->
-    <div class="imageContainer" id="zc_nxjc_byc_byf_clinker01>Q1MRN>RunningState" style="position:absolute; height: 20px; width: 19px; top: 395px; left: 358px;"></div>
+    <div class="imageContainer" id="zc_nxjc_byc_byf_clinker01>limestoneStorageBeltMachine>RunningState" style="position:absolute; height: 20px; width: 19px; top: 395px; left: 358px;"></div>
     <!--原料磨主电机-->
-    <div class="imageContainer" id="zc_nxjc_byc_byf_clinker01>B26M_CUN_M>RunningState" style="position:absolute; height: 20px; width: 19px; top: 564px; left: 545px;"></div>
+    <div class="imageContainer" id="zc_nxjc_byc_byf_clinker01>rawMealGrindingMainMotor>RunningState" style="position:absolute; height: 20px; width: 19px; top: 564px; left: 545px;"></div>
     <!--原料磨循环风机-->
-    <div class="imageContainer" id="zc_nxjc_byc_byf_clinker01>B23M_CUN_M>RunningState" style="position:absolute; height: 20px; width: 19px; top: 300px; left: 855px;"></div>
+    <div class="imageContainer" id="zc_nxjc_byc_byf_clinker01>circulatingFan>RunningState" style="position:absolute; height: 20px; width: 19px; top: 300px; left: 855px;"></div>
     <!--原料磨选粉机电机-->
-    <div class="imageContainer" id="zc_nxjc_byc_byf_clinker01>B25M_CUN_M>RunningState" style="position:absolute; height: 20px; width: 19px; top: 488px; left: 544px;"></div>
+    <div class="imageContainer" id="zc_nxjc_byc_byf_clinker01>powderSelectingMachine>RunningState" style="position:absolute; height: 20px; width: 19px; top: 488px; left: 544px;"></div>
   
     <!----------------------------运行状态------------------------------------>
 </body>

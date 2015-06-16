@@ -439,57 +439,57 @@
 
     <!----------------------------运行状态------------------------------------>
     <!--高温风机运行-->
-    <div class="imageContainer" id="zc_nxjc_byc_byf_clinker01>F29ACRN>RunningState" style="position:absolute; height: 20px; width: 19px; top: 448px; left: 195px;"></div>
+    <div class="imageContainer" id="zc_nxjc_byc_byf_clinker01>highTemperatureFan>RunningState" style="position:absolute; height: 20px; width: 19px; top: 448px; left: 195px;"></div>
     <!--废气排风机运行-->
-    <div class="imageContainer" id="zc_nxjc_byc_byf_clinker01>E8MRN>RunningState" style="position:absolute; height: 20px; width: 19px; top: 339px; left: 114px;"></div>
+    <div class="imageContainer" id="zc_nxjc_byc_byf_clinker01>kilnTailExhaustFan>RunningState" style="position:absolute; height: 20px; width: 19px; top: 339px; left: 114px;"></div>
     <!--窑主电机-->
-    <div class="imageContainer" id="zc_nxjc_byc_byf_clinker01>F4AC2RN>RunningState" style="position:absolute; height: 20px; width: 19px; top: 441px; left: 407px;"></div>
+    <div class="imageContainer" id="zc_nxjc_byc_byf_clinker01>kilnMainMotor>RunningState" style="position:absolute; height: 20px; width: 19px; top: 441px; left: 407px;"></div>
     <!--窑头排风机-->
-    <div class="imageContainer" id="zc_nxjc_byc_byf_clinker01>G50ACRN>RunningState" style="position:absolute; height: 20px; width: 19px; top: 416px; left: 1163px;"></div>
+    <div class="imageContainer" id="zc_nxjc_byc_byf_clinker01>kilnHeadExhaustFan>RunningState" style="position:absolute; height: 20px; width: 19px; top: 416px; left: 1163px;"></div>
     <!--熟料拉链机-->
-    <div class="imageContainer" id="zc_nxjc_byc_byf_clinker01>G4MRN>RunningState" style="position:absolute; height: 20px; width: 19px; top: 527px; left: 1203px;"></div>
+    <div class="imageContainer" id="zc_nxjc_byc_byf_clinker01>clinkerChainConveyor>RunningState" style="position:absolute; height: 20px; width: 19px; top: 527px; left: 1203px;"></div>
     <!--熟料破碎机-->
-    <div class="imageContainer" id="zc_nxjc_byc_byf_clinker01>G9ACRN>RunningState" style="position:absolute; height: 20px; width: 19px; top: 485px; left: 967px;"></div>
+    <div class="imageContainer" id="zc_nxjc_byc_byf_clinker01>clinkerCrusher>RunningState" style="position:absolute; height: 20px; width: 19px; top: 485px; left: 967px;"></div>
     <!--篦冷机F12-->
-    <div class="imageContainer" id="zc_nxjc_byc_byf_clinker01>G24ACRN>RunningState" style="position:absolute; top: 652px; left: 968px; height: 20px; width: 19px;"></div>
+    <div class="imageContainer" id="zc_nxjc_byc_byf_clinker01>clinkerF12AC>RunningState" style="position:absolute; top: 652px; left: 968px; height: 20px; width: 19px;"></div>
     <!--篦冷机F11-->
-    <div class="imageContainer" id="zc_nxjc_byc_byf_clinker01>G25ACRN>RunningState" style="position:absolute; top: 541px; left: 927px; height: 20px; width: 19px;"></div>
+    <div class="imageContainer" id="zc_nxjc_byc_byf_clinker01>clinkerF11AC>RunningState" style="position:absolute; top: 541px; left: 927px; height: 20px; width: 19px;"></div>
     <!--篦冷机F10-->
-    <div class="imageContainer" id="zc_nxjc_byc_byf_clinker01>G21ACRN>RunningState" style="position:absolute; top: 652px; left: 908px; height: 20px; width: 19px;"></div>
+    <div class="imageContainer" id="zc_nxjc_byc_byf_clinker01>clinkerF10AC>RunningState" style="position:absolute; top: 652px; left: 908px; height: 20px; width: 19px;"></div>
     <!--篦冷机F9-->
-    <div class="imageContainer" id="zc_nxjc_byc_byf_clinker01>G18ACRN>RunningState" style="position:absolute; top: 540px; left: 882px; height: 20px; width: 19px;"></div>
+    <div class="imageContainer" id="zc_nxjc_byc_byf_clinker01>clinkerF9AC>RunningState" style="position:absolute; top: 540px; left: 882px; height: 20px; width: 19px;"></div>
     <!--篦冷机F8-->
-    <div class="imageContainer" id="zc_nxjc_byc_byf_clinker01>G20ACRN>RunningState" style="position:absolute; top: 652px; left: 859px; height: 20px; width: 19px;"></div>
+    <div class="imageContainer" id="zc_nxjc_byc_byf_clinker01>clinkerF8AC>RunningState" style="position:absolute; top: 652px; left: 859px; height: 20px; width: 19px;"></div>
     <!--篦冷机F7-->
-    <div class="imageContainer" id="zc_nxjc_byc_byf_clinker01>G19ACRN>RunningState" style="position:absolute; top: 540px; left: 832px; height: 20px; width: 19px;"></div>
+    <div class="imageContainer" id="zc_nxjc_byc_byf_clinker01>clinkerF7AC>RunningState" style="position:absolute; top: 540px; left: 832px; height: 20px; width: 19px;"></div>
      <!--篦冷机F6-->
-    <div class="imageContainer" id="zc_nxjc_byc_byf_clinker01>G15ACRN>RunningState" style="position:absolute; top: 653px; left: 793px; height: 20px; width: 19px;"></div>
+    <div class="imageContainer" id="zc_nxjc_byc_byf_clinker01>clinkerF6AC>RunningState" style="position:absolute; top: 653px; left: 793px; height: 20px; width: 19px;"></div>
      <!--篦冷机F5-->
-    <div class="imageContainer" id="zc_nxjc_byc_byf_clinker01>G14ACRN>RunningState" style="position:absolute; top: 541px; left: 768px; height: 20px; width: 19px;"></div>
+    <div class="imageContainer" id="zc_nxjc_byc_byf_clinker01>clinkerF5AC>RunningState" style="position:absolute; top: 541px; left: 768px; height: 20px; width: 19px;"></div>
      <!--篦冷机F4-->
-    <div class="imageContainer" id="zc_nxjc_byc_byf_clinker01>G11ACRN>RunningState" style="position:absolute; top: 654px; left: 741px; height: 20px; width: 19px;"></div>
+    <div class="imageContainer" id="zc_nxjc_byc_byf_clinker01>clinkerF4AC>RunningState" style="position:absolute; top: 654px; left: 741px; height: 20px; width: 19px;"></div>
      <!--篦冷机F3-->
-    <div class="imageContainer" id="zc_nxjc_byc_byf_clinker01>G17ACRN>RunningState" style="position:absolute; top: 543px; left: 660px; height: 20px; width: 19px;"></div>
+    <div class="imageContainer" id="zc_nxjc_byc_byf_clinker01>clinkerF3AC>RunningState" style="position:absolute; top: 543px; left: 660px; height: 20px; width: 19px;"></div>
     <!--篦冷机F2-->
-    <div class="imageContainer" id="zc_nxjc_byc_byf_clinker01>G22ACRN>RunningState" style="position:absolute; top: 654px; left: 675px; height: 20px; width: 19px;"></div>
+    <div class="imageContainer" id="zc_nxjc_byc_byf_clinker01>clinkerF2AC>RunningState" style="position:absolute; top: 654px; left: 675px; height: 20px; width: 19px;"></div>
     <!--篦冷机F1-->
-    <div class="imageContainer" id="zc_nxjc_byc_byf_clinker01>G16ACRN>RunningState" style="position:absolute; top: 653px; left: 614px; height: 20px; width: 19px;"></div>
+    <div class="imageContainer" id="zc_nxjc_byc_byf_clinker01>clinkerF1AC>RunningState" style="position:absolute; top: 653px; left: 614px; height: 20px; width: 19px;"></div>
     <!--FVOA-->
-    <div class="imageContainer" id="zc_nxjc_byc_byf_clinker01>G13ACRN>RunningState" style="position:absolute; top: 471px; left: 591px; height: 20px; width: 19px;"></div>
+    <div class="imageContainer" id="zc_nxjc_byc_byf_clinker01>clinkerFVOA>RunningState" style="position:absolute; top: 471px; left: 591px; height: 20px; width: 19px;"></div>
     <!--FVOB-->
-    <div class="imageContainer" id="zc_nxjc_byc_byf_clinker01>G12ACRN>RunningState" style="position:absolute; top: 541px; left: 579px; height: 20px; width: 19px;"></div>
+    <div class="imageContainer" id="zc_nxjc_byc_byf_clinker01>clinkerFVOB>RunningState" style="position:absolute; top: 541px; left: 579px; height: 20px; width: 19px;"></div>
     <!--FVOC-->
-    <div class="imageContainer" id="zc_nxjc_byc_byf_clinker01>G23ACRN>RunningState" style="position:absolute; top: 542px; left: 734px; height: 20px; width: 19px;"></div>
+    <div class="imageContainer" id="zc_nxjc_byc_byf_clinker01>clinkerFVOC>RunningState" style="position:absolute; top: 542px; left: 734px; height: 20px; width: 19px;"></div>
     <!--煤磨三号罗茨风机-->
-    <div class="imageContainer" id="zc_nxjc_byc_byf_clinker01>K16MRN>RunningState" style="position:absolute; top: 335px; left: 1194px; height: 20px; width: 19px;"></div>
+    <div class="imageContainer" id="zc_nxjc_byc_byf_clinker01>coalMilRootsBlower3>RunningState" style="position:absolute; top: 335px; left: 1194px; height: 20px; width: 19px;"></div>
      <!--1#入窑提升机电机运行状态-->
-    <div class="imageContainer" id="zc_nxjc_byc_byf_clinker01>F27M2RN>RunningState" style="position:absolute; top: 15px; left: 170px; height: 20px; width: 19px;"></div>
+    <div class="imageContainer" id="zc_nxjc_byc_byf_clinker01>clinkerHoist>RunningState" style="position:absolute; top: 15px; left: 170px; height: 20px; width: 19px;"></div>
     <!--煤磨主电机运行状态-->
-    <div class="imageContainer" id="zc_nxjc_byc_byf_clinker01>K22MRN>RunningState" style="position:absolute; top: 320px; left: 911px; height: 20px; width: 19px;"></div>
+    <div class="imageContainer" id="zc_nxjc_byc_byf_clinker01>coalMillMainMotor>RunningState" style="position:absolute; top: 320px; left: 911px; height: 20px; width: 19px;"></div>
     <!--煤磨通风机运行状态-->
-    <div class="imageContainer" id="zc_nxjc_byc_byf_clinker01>K4MRN>RunningState" style="position:absolute; top: 94px; left: 1295px; height: 20px; width: 19px;"></div>
+    <div class="imageContainer" id="zc_nxjc_byc_byf_clinker01>coalMillFan>RunningState" style="position:absolute; top: 94px; left: 1295px; height: 20px; width: 19px;"></div>
      <!--煤磨二号罗茨风机运行状态-->
-    <div class="imageContainer" id="zc_nxjc_byc_byf_clinker01>K15MRN>RunningState" style="position:absolute; top: 334px; left: 1104px; height: 20px; width: 19px;"></div>
+    <div class="imageContainer" id="zc_nxjc_byc_byf_clinker01>coalMilRootsBlower2>RunningState" style="position:absolute; top: 334px; left: 1104px; height: 20px; width: 19px;"></div>
     <!----------------------------运行状态------------------------------------>
 </body>
 </html>
