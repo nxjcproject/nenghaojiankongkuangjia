@@ -18,7 +18,7 @@
 	<!-- easyui 脚本结束 -->
 		
 	<!-- jqplot 样式开始 -->
-	<link rel="stylesheet" type="text/css" href="/lib/pllib/jquery.jqplot.min.css" />
+	<link rel="stylesheet" type="text/css" href="/lib/pllib/themes/jquery.jqplot.min.css" />
 	<!-- jqplot 样式结束 -->
 	<!-- jqplot 脚本开始 -->
 	<!--[if lt IE 9]><script language="javascript" type="text/javascript" src="/lib/pllib/excanvas.js"></script><![endif]-->
@@ -64,12 +64,12 @@
 	        $('#endTime').datebox('setValue', endDate.toDateString());
 
 	        getData();
-
+	        //fakeData();
 
 
 	        $('#chartContainer').panel({
 	            onResize: function (w, h) {
-	                plot1.replot({ resetAxes: true });
+	                plot1.replot(chartOptions);
 	            }
 	        });
 
@@ -191,7 +191,7 @@
 	    // chart 选项
 
 	    var chartOptions = {
-	        seriesColors: ["#4bb2c5", "#c5b47f", "#EAA228", "#579575", "#839557", "#958c12",
+	        seriesColors: ["#95ff65", "#c5b47f", "#EAA228", "#579575", "#839557", "#958c12",
 					"#953579", "#4b5de4", "#d8b83f", "#ff5800", "#0085cc"],
 	        seriesDefaults: {
 	            show: true,
@@ -225,16 +225,23 @@
 	        highlighter: {
 	            show: true,
 	            showMarker: true,
-	            useAxesFormatters: true
+	            useAxesFormatters: true,
+	            formatString: '<table class="jqplot-highlighter"> \
+                    <tr><td>时间：</td><td>%s</td></tr> \
+                    <tr><td>数值：</td><td>%s</td></tr> \
+                </table>'
 	        },
 	        axes: {
 	            xaxis: {
 	                renderer: $.jqplot.DateAxisRenderer,
-	                tickRenderer: $.jqplot.CanvasAxisTickRenderer,
+	                tickRenderer: $.jqplot.AxisTickRenderer,
+	                min: '',
+                    max: '',
+	                //tickInterval: '',
 	                tickOptions: {
 	                    showGridline: false,
 	                    //angle: -30,
-	                    formatString: '%m-%d %H:%M'
+	                    formatString: "%F %n %H:%M:%S"
 	                }
 	            },
 	            yaxis: {
@@ -248,6 +255,12 @@
 	    };
 
 	    function plotChart() {
+	        if (plot1)
+	            plot1.destroy();
+
+	        chartOptions.axes.xaxis.min = currentData[0][0];
+	        chartOptions.axes.xaxis.max = currentData[currentData.length - 1][0];
+
 	        plot1 = $.jqplot('chart', [currentData], chartOptions);
 	    }
 
@@ -271,6 +284,39 @@
 	                formatData(msg.d);
 	            }
 	        });
+	    }
+
+	    function fakeData() {
+	        var datetime = new Date();
+
+	        data = [];
+
+	        for (var i = 0; i < 1000; ++i) {
+	            var numDate = datetime.getTime();
+	            datetime.setTime(numDate + 1000 * 5);
+                
+	            data.push([formatDate(datetime), Math.random() * 100]);
+	        }
+
+	        DATA_POINT_PER_SCREEN = data.length / 10;
+	        currentData = data.slice(data.length - DATA_POINT_PER_SCREEN, data.length);
+
+	        // 设置滚动条到最右，防止看不清楚，设置为99
+	        $('#sliderId').slider('setValue', 99);
+
+	        plotChart();
+	    }
+
+	    function formatDate(date) {
+	        if (!date) { return ''; }
+	        var y = date.getFullYear();
+	        var M = date.getMonth() + 1;
+	        var d = date.getDate();
+	        var H = date.getHours();
+	        var m = date.getMinutes();
+	        var s = date.getSeconds();
+
+	        return y + '-' + (m < 10 ? ('0' + M) : M) + '-' + (d < 10 ? ('0' + d) : d) + ' ' + (H < 10 ? ('0' + H) : H) + ':' + (m < 10 ? ('0' + m) : m) + ':' + (s < 10 ? ('0' + s) : s);
 	    }
 
 	    function getBriefData() {
@@ -313,12 +359,9 @@
 
 	        value = (value * (data.length - DATA_POINT_PER_SCREEN) / 100);
 	        currentData = data.slice(value, value + DATA_POINT_PER_SCREEN);
-	        if (plot1) {
-	            plot1.destroy();
-	        }
-	        plot1 = $.jqplot('chart', [currentData], chartOptions);
-	    }
 
+	        plotChart();
+	    }
 	</script>
 </head>
 <body class="easyui-layout">
