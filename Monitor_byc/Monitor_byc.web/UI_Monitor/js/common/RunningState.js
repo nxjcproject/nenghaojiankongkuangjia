@@ -54,22 +54,26 @@ function runningStatesetupTimerToPollLatestData() {
 
 function runningStateAddImage(dataSets) {
     $.each(dataSets, function (i, item) {
-        var content;
-        var basePath = "/UI_Monitor/images/common/";
-        switch (item.Value) {
-            case '0':
-                content = getImgTag(basePath + "redL.png");
-                break;
-
-            case '1':
-                content = getImgTag(basePath + "greenL.png");
-                break;
-
-            default:
-                content = getImgTag(basePath + "redL.png");
-        }
         var element = $(document.getElementById(item.ID));
-        element.html(content);
+        var tempValue = element.attr('data-value');
+        if (tempValue != item.Value) {
+            var content;
+            var basePath = "/UI_Monitor/images/common/";
+            switch (item.Value) {
+                case '0':
+                    content = getImgTag(basePath + "redL.png");
+                    break;
+
+                case '1':
+                    content = getImgTag(basePath + "greenL.png");
+                    break;
+
+                default:
+                    content = getImgTag(basePath + "redL.png");
+            }
+            element.attr('data-value', item.Value);
+            element.html(content);
+        }
     });
 }
 

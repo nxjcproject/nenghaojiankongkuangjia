@@ -70,9 +70,9 @@
     <Compile Include="ProcessEnergyMonitor\MonitorShell\CDMElectricityConsumptionProvider.cs" />
     <Compile Include="ProcessEnergyMonitor\MonitorShell\CDMElectricityQuantityProvider.cs" />
     <Compile Include="ProcessEnergyMonitor\MonitorShell\ComprehensiveConsumptionProvider.cs" />
-    <Compile Include="ProcessEnergyMonitor\MonitorShell\DataItemProviderFactory.cs" />
-    <Compile Include="ProcessEnergyMonitor\MonitorShell\DataItemProviderType.cs" />
-    <Compile Include="ProcessEnergyMonitor\MonitorShell\IDataItemProvider.cs" />
+    <Compile Include="ProcessEnergyMonitor\MonitorShell\Factory\DataItemProviderFactory.cs" />
+    <Compile Include="ProcessEnergyMonitor\MonitorShell\Factory\DataItemProviderType.cs" />
+    <Compile Include="ProcessEnergyMonitor\MonitorShell\Factory\IDataItemProvider.cs" />
     <Compile Include="ProcessEnergyMonitor\MonitorShell\MaterialConsumptionProvider.cs" />
     <Compile Include="ProcessEnergyMonitor\MonitorShell\NullProvider.cs" />
     <Compile Include="ProcessEnergyMonitor\MonitorShell\ParametersHelper.cs" />

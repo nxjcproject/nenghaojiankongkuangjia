@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css" href="/UI_Monitor/css/common/mymonitor.css" />
 
     <script type="text/javascript" src="/lib/ealib/jquery.min.js" charset="utf-8"></script>
+    <script src="../../../js/common/jquery.ajax.js"></script>
     <script type="text/javascript" src="/js/common/jquery.utility.js" charset="utf-8"></script>
     <!--[if lt IE 8 ]><script type="text/javascript" src="/js/common/json2.min.js"></script><![endif]-->
 
@@ -34,24 +35,33 @@
 </head>
 <body>
     <div id="SubMonitorLayout" style="position: relative; background-image: url('../../images/page/zc_nxjc_byc_byf.png'); width: 1350px; height: 740px; overflow: hidden;">
-       <%--<div onclick="getAllCookie()">cookie测试</div>--%>
-        <%--<div onclick="openWindow()">打开趋势窗口</div>--%>
-        <div class="imageContainer" id="zc_nxjc_byc_byf_cementmill01>F_1M25ACRN>RunningState" style="position: absolute; top: 110px; left: 74px; height: 20px; width: 19px;">
-        
-    </div>
-        <div class="imageContainer" id="zc_nxjc_byc_byf_cementmill01>F_1M13MRN>RunningState" style="position:absolute; top: 513px; left: 742px; height: 20px; width: 19px;"></div>
+       
+        <!--1#水泥磨主电机运行信号-->
+    <div class="imageContainer" id="zc_nxjc_byc_byf_cementmill01>cementMillMainMotor>RunningState" style="position:absolute; top: 513px; left: 742px; height: 20px; width: 19px;"></div>
     <!--1#磨选粉机变频控制柜运行-->
-    <div class="imageContainer" id="Div1" style="position:absolute; height: 20px; width: 19px; top: 336px; left: 695px;"></div>
-
+    <div class="imageContainer" id="zc_nxjc_byc_byf_cementmill01>powderSelectingMachine>RunningState" style="position:absolute; height: 20px; width: 19px; top: 336px; left: 695px;"></div>
+    <!--1#磨排风机运行-->
+    <div class="imageContainer" id="zc_nxjc_byc_byf_cementmill01>mainExhaustFan>RunningState" style="position:absolute; height: 20px; width: 19px; top: 125px; left: 888px;"></div>
+    <!--1#磨辊压机定辊运行-->
+    <div class="imageContainer" id="zc_nxjc_byc_byf_cementmill01>rollingMachineSettledRoller>RunningState" style="position:absolute; height: 20px; width: 19px; top: 386px; left: 453px;"></div>
+    <!--1#磨辊压机动辊运行-->
+    <div class="imageContainer" id="zc_nxjc_byc_byf_cementmill01>rollingMachineActionRoller>RunningState" style="position:absolute; height: 20px; width: 19px; top: 387px; left: 481px;"></div>
+    <!--熟料储存及熟料汽车胶带机运行-->
+    <div class="imageContainer" id="zc_nxjc_byc_byf_cementmill01>clinkerStorageBeltMachine>RunningState" style="position:absolute; height: 20px; width: 19px; top: 395px; left: 1050px;"></div>
+    <!--石膏破碎机运行-->
+    <div class="imageContainer" id="zc_nxjc_byc_byf>L26MRN>RunningState" style="position:absolute; top: 134px; left: 104px; height: 20px; width: 19px;"></div>
+        
+        <%--<div onclick="getAllCookie()">cookie测试</div>--%>
+        <%--<div onclick="openWindow()">打开趋势窗口</div>--%>
          <table class="mytable" style="position: absolute; top: 90px; left: 27px;">
             <tr>
-                <td><span id="zc_nxjc_byc_byf_clinker01>rawMaterialsHomogenize_ElectricityQuantity>Class" class="mchart">111</span></td>
+                <td><span id="zc_nxjc_byc_byf_clinker01>rawMaterialsHomogenize_ElectricityQuantity>Class" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_byc_byf_clinker01>rawMaterialsHomogenize_ElectricityQuantity>Day" class="mchart">222</span></td>
+                <td><span id="zc_nxjc_byc_byf_clinker01>rawMaterialsHomogenize_ElectricityQuantity>Day" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_byc_byf_clinker01>rawMaterialsHomogenize_ElectricityQuantity>Month" class="mchart">333</span></td>
+                <td><span id="zc_nxjc_byc_byf_clinker01>rawMaterialsHomogenize_ElectricityQuantity>Month" class="mchart"></span></td>
             </tr>
         </table>
         <table class="mytable" style="position: absolute; top: 91px; left: 92px;">
@@ -85,6 +95,83 @@
             </tr>
             <tr>
                 <td><span id="zc_nxjc_byc_byf_clinker01>coalPreparation_ElectricityQuantity>Month" class="mchart"></span></td>
+            </tr>
+        </table>
+        <table class="mytable" style="position: absolute; top: 321px; left: 586px;">
+            <tr>
+                <td><span id="zc_nxjc_byc_byf_clinker01>coalPreparation_ElectricityConsumption>Class" class="mchart"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_byc_byf_clinker01>coalPreparation_ElectricityConsumption>Day" class="mchart"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_byc_byf_clinker01>coalPreparation_ElectricityConsumption>Month" class="mchart"></span></td>
+            </tr>
+        </table>
+        <table class="mytable" style="position: absolute; top: 59px; left: 385px;">
+            <tr>
+                <td><span id="zc_nxjc_byc_byf_clinker01>kilnSystem_ElectricityQuantity>Class" class="mchart"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_byc_byf_clinker01>kilnSystem_ElectricityQuantity>Day" class="mchart"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_byc_byf_clinker01>kilnSystem_ElectricityQuantity>Month" class="mchart"></span></td>
+            </tr>
+        </table>
+        <table class="mytable" style="position: absolute; top: 58px; left: 451px;">
+            <tr>
+                <td><span id="zc_nxjc_byc_byf_clinker01>kilnSystem_ElectricityConsumption>Class" class="mchart"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_byc_byf_clinker01>kilnSystem_ElectricityConsumption>Day" class="mchart"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_byc_byf_clinker01>kilnSystem_ElectricityConsumption>Month" class="mchart"></span></td>
+            </tr>
+        </table>
+        <table class="mytable" style="position: absolute; top: 410px; left: 26px;">
+            <tr>
+                <td><span id="zc_nxjc_byc_byf_clinker01>rawMaterialsGrind_ElectricityQuantity>Class" class="mchart"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_byc_byf_clinker01>rawMaterialsGrind_ElectricityQuantity>Day" class="mchart"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_byc_byf_clinker01>rawMaterialsGrind_ElectricityQuantity>Month" class="mchart"></span></td>
+            </tr>
+        </table>
+        <table class="mytable" style="position: absolute; top: 411px; left: 91px;">
+            <tr>
+                <td><span id="zc_nxjc_byc_byf_clinker01>rawMaterialsGrind_ElectricityConsumption>Class" class="mchart"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_byc_byf_clinker01>rawMaterialsGrind_ElectricityConsumption>Day" class="mchart"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_byc_byf_clinker01>rawMaterialsGrind_ElectricityConsumption>Month" class="mchart"></span></td>
+            </tr>
+        </table>
+        <table class="mytable" style="position: absolute; top: 407px; left: 528px;">
+            <tr>
+                <td><span id="zc_nxjc_byc_byf_clinker01>clinker_PulverizedCoalOutput>Class" class="mchart nodisplay"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_byc_byf_clinker01>clinker_PulverizedCoalOutput>Day" class="mchart nodisplay"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_byc_byf_clinker01>clinker_PulverizedCoalOutput>Month" class="mchart nodisplay"></span></td>
+            </tr>
+        </table>
+        <table class="mytable" style="position: absolute; top: 56px; left: 976px;">
+            <tr>
+                <td><span id="zc_nxjc_byc_byf_cementmill01>hybridMaterialsPreparation_ElectricityQuantity>Class" class="mchart"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_byc_byf_cementmill01>hybridMaterialsPreparation_ElectricityQuantity>Day" class="mchart"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_byc_byf_cementmill01>hybridMaterialsPreparation_ElectricityQuantity>Month" class="mchart"></span></td>
             </tr>
         </table>
         <table class="mytable" style="position: absolute; top: 56px; left: 1041px;">
@@ -306,21 +393,59 @@
                 <td><span id="zc_nxjc_byc_byf_clinker01>clinkerBurning_ElectricityConsumption>Month" class="mchart"></span></td>
             </tr>
         </table>
-    </div>
-    <div id="mm" class="easyui-menu" style="width: 120px;">
-        <div data-options="iconCls:'icon-add'" onclick="javascript:ClassificationId(multiTagCharData.selectedId)">添加到趋势列表</div>
-        <div data-options="iconCls:'icon-search'" onclick="javascript:ShowAmmeterStatistics(multiTagCharData.selectedId)">打开电表数据列</div>
-    </div>
-
-    <div id="ammeterDialog" class="easyui-dialog" title="电表详细信息" data-options="iconCls:'icon-save',closed:true" style="width:600px;height:300px;padding:5px">
-        <div style="padding-bottom:5px;">
-            <div id="ammeterFormula" class="easyui-panel" title="计算公式" style="background:#fafafa;" data-options="fit:true">
-              &nbsp
-            </div>
-       </div>
-        <table id="dg" class="easyui-datagrid" title="电表明细" data-options="fit:true">
+        <table class="mytable" style="position: absolute; top: 643px; left: 424px;">
+            <tr>
+                <td><span id="zc_nxjc_byc_byf>clinker_ElectricityConsumption_Comprehensive>Comprehensive" ></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_byc_byf>clinker_CoalConsumption_Comprehensive>Comprehensive" ></span></td>
+            </tr>
+        </table>
+        <table class="mytable" style="position: absolute; top: 644px; left: 496px;">
+            <tr>
+                <td><span id="zc_nxjc_byc_byf>cementmill_ElectricityConsumption_Comprehensive>Comprehensive" ></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_byc_byf>cementmill_CoalConsumption_Comprehensive>Comprehensive" ></span></td>
+            </tr>
+        </table>
+        <%--工序电耗（所有产线的该工序电量之和除以所有产线该工序产量之和） --%>
+        <table class="mytable" style="position: absolute; top: 617px; left: 88px;">
+            <tr>
+                <td><span id="zc_nxjc_byc_byf>rawMaterialsPreparation_ElectricityConsumption>SumProcessClass"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_byc_byf>clinkerPreparation_ElectricityConsumption>SumProcessClass"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_byc_byf>cementPreparation_ElectricityConsumption>SumProcessClass" ></span></td>
+            </tr>
+        </table>
+        <table class="mytable" style="position: absolute; top: 616px; left: 161px;">
+            <tr>
+                <td><span id="zc_nxjc_byc_byf>rawMaterialsPreparation_ElectricityConsumption>SumProcessDay" ></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_byc_byf>clinkerPreparation_ElectricityConsumption>SumProcessDay" ></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_byc_byf>cementPreparation_ElectricityConsumption>SumProcessDay"></span></td>
+            </tr>
+        </table>
+        <table class="mytable" style="position: absolute; top: 616px; left: 233px;">
+            <tr>
+                <td><span id="zc_nxjc_byc_byf>rawMaterialsPreparation_ElectricityConsumption>SumProcessMonth" ></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_byc_byf>clinkerPreparation_ElectricityConsumption>SumProcessMonth" ></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_byc_byf>cementPreparation_ElectricityConsumption>SumProcessMonth" ></span></td>
+            </tr>
         </table>
     </div>
-    <%--<span id="ammeterFormula"></span>--%>
+
+    <div id="htmlContainer"></div>
+
 </body>
 </html>

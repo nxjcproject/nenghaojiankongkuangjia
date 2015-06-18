@@ -11,6 +11,9 @@ using System.Threading.Tasks;
 
 namespace Monitor_shell.Service.ProcessEnergyMonitor.MonitorShell
 {
+    /// <summary>
+    /// 实时电流
+    /// </summary>
     public class RealtimeCurrentProvider : IDataItemProvider
     {
         private ISqlServerDataFactory _dataFactory;

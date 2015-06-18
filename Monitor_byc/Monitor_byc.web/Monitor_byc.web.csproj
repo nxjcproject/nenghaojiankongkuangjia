@@ -45,12 +45,10 @@
       <HintPath>..\..\Lib\InternalMemeryRestore.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Monitor_shell.Infrastructure, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Lib\Monitor_shell.Infrastructure.dll</HintPath>
+    <Reference Include="Monitor_shell.Infrastructure">
+      <HintPath>..\..\Monitor_shell\Monitor_shell.Web\bin\Monitor_shell.Infrastructure.dll</HintPath>
     </Reference>
-    <Reference Include="Monitor_shell.Service, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Monitor_shell.Service">
       <HintPath>..\..\Monitor_shell\Monitor_shell.Web\bin\Monitor_shell.Service.dll</HintPath>
     </Reference>
     <Reference Include="Monitor_shell.Web">

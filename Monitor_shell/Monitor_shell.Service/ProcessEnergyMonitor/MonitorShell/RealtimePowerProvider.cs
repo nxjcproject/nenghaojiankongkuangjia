@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 
 namespace Monitor_shell.Service.ProcessEnergyMonitor.MonitorShell
 {
+    /// <summary>
+    /// 实时功率
+    /// </summary>
     public class RealtimePowerProvider : IDataItemProvider
     {
         private ISqlServerDataFactory _companyFactory;
