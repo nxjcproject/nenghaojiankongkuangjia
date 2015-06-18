@@ -72,7 +72,7 @@ namespace Monitor_shell.Service.ProcessEnergyMonitor.MonitorShell
                     }
                     else
                     {
-                        dataItem.Value = defaultValue.ToString();
+                        dataItem.Value = defaultValue.ToString("#.00");
                     }
                     results.Add(dataItem);
                 }

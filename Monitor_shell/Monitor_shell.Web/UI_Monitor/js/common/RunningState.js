@@ -11,7 +11,7 @@ var runningStatePublicData = {
 };
 
 function runningStateInitializePage() {
-    var containers = document.getElementsByClassName("imageContainer");
+    var containers = $(".imageContainer");//document.getElementsByClassName("imageContainer");
     for (var i = 0; i < containers.length; i++) {
         runningStatePublicData.ids = runningStatePublicData.ids + containers[i].id + ",";
     }
