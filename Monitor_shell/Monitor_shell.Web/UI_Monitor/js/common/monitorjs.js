@@ -8,7 +8,7 @@ var publicData = {
 };
 
 function InitializePage() {
-    var spans = document.getElementsByTagName("span");
+    var spans = $("span");//document.getElementsByTagName("span");
     for (var i = 0; i < spans.length; i++) {
         publicData.ids = publicData.ids + spans[i].id + ",";
     }
