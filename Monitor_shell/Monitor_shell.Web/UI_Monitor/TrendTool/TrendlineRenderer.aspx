@@ -68,7 +68,7 @@
 
 	        $('#chartContainer').panel({
 	            onResize: function (w, h) {
-	                plot1.replot(chartOptions);
+	                plotChart();
 	            }
 	        });
 
@@ -241,8 +241,7 @@
                         mark: 'cross',
 	                    showGridline: false,
 	                    //angle: -30,
-	                    formatString: "%F %n %H:%M:%S",
-	                    labelPosition: 'end'
+	                    formatString: "%F\n   %H:%M"
 	                }
 	            },
 	            yaxis: {
