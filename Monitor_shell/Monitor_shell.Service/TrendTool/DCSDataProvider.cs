@@ -112,29 +112,12 @@ namespace Monitor_shell.Service.TrendTool
         {
             VariableParams vp = new VariableParams(variableId);
             string dataBase = "";
-//            using (SqlConnection connection = new SqlConnection(this.connectionString))
-//            {
-//                connection.Open();
-//                string mySql = @"select  a.OrganizationID,a.LevelType, a.LevelCode,a.Name,b.MeterDatabase,b.DCSProcessDatabase
-//                                        from system_Organization a,system_Database b
-//                                        where a.DatabaseID=b.DatabaseID
-//                                        and a.OrganizationID=@OrganizationID";
-//                SqlCommand command = connection.CreateCommand();
-//                command.CommandText = mySql;
-//                command.Parameters.Add(new SqlParameter("OrganizationID", vp.OrganizationId));
-//                using (SqlDataReader reader = command.ExecuteReader())
-//                {
-//                    if (reader.Read() == true)
-//                        dataBase = reader["DCSProcessDatabase"].ToString().Trim();
-
-//                }
-
-//            }
             string commandFormat = @"
-                    SELECT [TableName], [FieldName]
-                      FROM [{0}].[dbo].[EnergyConsumptionContrast]
+                    SELECT [DatabaseName],[TableName], [FieldName]
+                      FROM [{0}].[dbo].[MonitorContrast]
                      WHERE [OrganizationID] = @organizationId AND
-                           [VariableName] = @variableName";
+                           [VariableName] = @variableName
+                            AND type='Current'";
 
 
 
@@ -151,7 +134,7 @@ namespace Monitor_shell.Service.TrendTool
                 using (SqlDataReader reader = command.ExecuteReader())
                 {
                     if (reader.Read() == true)
-                        dataBase = reader["DCSProcessDatabase"].ToString().Trim();
+                        dataBase = reader["MeterDatabase"].ToString().Trim();
 
                 }
                 command.CommandText = string.Format(commandFormat, dataBase);
@@ -166,7 +149,7 @@ namespace Monitor_shell.Service.TrendTool
 
                     // [0]：数据库名  [1]：表格名  [2]：列名
                     if (reader.Read() == true)
-                        return new string[] { dataBase, reader[0].ToString().Replace("Realtime", "History"), reader[1].ToString() };
+                        return new string[] { reader["DatabaseName"].ToString().Trim(), "History_" + reader["TableName"].ToString().Trim(), reader["FieldName"].ToString().Trim() };
                 }
             }
 
