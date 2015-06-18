@@ -21,7 +21,7 @@
 	<link rel="stylesheet" type="text/css" href="/lib/pllib/themes/jquery.jqplot.min.css" />
 	<!-- jqplot 样式结束 -->
 	<!-- jqplot 脚本开始 -->
-	<!--[if lt IE 9]><script language="javascript" type="text/javascript" src="/lib/pllib/excanvas.js"></script><![endif]-->
+	<!--[if lt IE 9]><script language="javascript" type="text/javascript" src="/lib/pllib/excanvas.min.js"></script><![endif]-->
 	<script type="text/javascript" src="/lib/pllib/jquery.jqplot.min.js"></script>
     <script type="text/javascript" src="/lib/pllib/plugins/jqplot.canvasAxisTickRenderer.min.js"></script>
 	<script type="text/javascript" src="/lib/pllib/plugins/jqplot.canvasTextRenderer.min.js"></script>
@@ -59,9 +59,8 @@
 	        var startDate = new Date();
 	        var endDate = new Date();
 	        startDate.setDate(startDate.getDate() - 10);
-	        var dateStr = startDate.getFullYear().toString() + '-' + (startDate.getMonth() + 1).toString() + '-' + startDate.getDate();
-	        $('#startTime').datebox('setValue', dateStr);
-	        $('#endTime').datebox('setValue', endDate.toDateString());
+	        $('#startTime').datetimebox('setValue', formatDate(startDate));
+	        $('#endTime').datetimebox('setValue', formatDate(endDate));
 
 	        getData();
 	        //fakeData();
@@ -238,16 +237,19 @@
 	                min: '',
                     max: '',
 	                //tickInterval: '',
-	                tickOptions: {
+                    tickOptions: {
+                        mark: 'cross',
 	                    showGridline: false,
 	                    //angle: -30,
-	                    formatString: "%F %n %H:%M:%S"
+	                    formatString: "%F %n %H:%M:%S",
+	                    labelPosition: 'end'
 	                }
 	            },
 	            yaxis: {
 	                min: null,      // null means Determined automatically.
 	                max: null,      
 	                tickOptions: {
+	                    mark: 'cross',
 	                    showGridline: false
 	                }
 	            }
@@ -255,6 +257,16 @@
 	    };
 
 	    function plotChart() {
+
+	        // 解决IE8兼容性问题：
+	        // IE8下会出现时间坐标轴换行显示不全的问题，解决思路：
+	        // 当为IE8时，则减少绘制区域，并在绘制后，调高时间坐标轴的高度。
+
+	        var height = parseInt($('#chart').css('height').replace('px', ''));
+	        if ($.browser.version == '8.0') {
+	            $('#chart').css('height', (height - 16) + 'px');
+	        }
+
 	        if (plot1)
 	            plot1.destroy();
 
@@ -262,6 +274,11 @@
 	        chartOptions.axes.xaxis.max = currentData[currentData.length - 1][0];
 
 	        plot1 = $.jqplot('chart', [currentData], chartOptions);
+
+	        if ($.browser.version == '8.0') {
+	            $('.jqplot-xaxis').css('height', '36px');
+	            $('#chart').css('height', height + 'px');
+	        }
 	    }
 
 	    function getData() {
@@ -374,7 +391,7 @@
 		</div>
 		<div class="easyui-panel" style="width:100%;margin-top:-2px;padding:4px;">
 			<input id="startTime" class="easyui-datetimebox" style="width:145px" /> - <input id="endTime" class="easyui-datetimebox" style="width:145px" />
-			<select id="timeSpan" class="easyui-combobox" data-options="editable:false,panelHeight:'auto'" style="width:80px;auto-height:true;">
+			<select id="timeSpan" class="easyui-combobox" data-options="editable:false,panelHeight:'auto'" style="width:80px;">
 				<option value="5">05分钟</option>
                 <option value="15">15分钟</option>
 				<option value="60">01小时</option>
