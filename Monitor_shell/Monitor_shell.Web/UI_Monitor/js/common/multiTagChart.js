@@ -2,6 +2,8 @@
 var myLableArray = new Array();
 var lableName;
 $(function () {
+    $('#htmlContainer').append(GetMenuHtml());
+    $.parser.parse('#htmlContainer');
     BindContextmenu();
     getLableName();
 });
@@ -126,7 +128,7 @@ function getAllCookie() {
 }
 
 function getLableName() {
-    var urlString = "MultiMonitorShell.asmx/GetLableJson";
+    var urlString = "../MonitorShell/MultiMonitorShell.asmx/GetLableJson";
     var sendData = "";
     $.ajax({
         type: "POST",
@@ -143,4 +145,12 @@ function getLableName() {
 function openWindow(){
         var url = "/UI_Monitor/TrendTool/MultiTrendlineRenderer.aspx";
         window.open(url, "WindowChart", "width=1000,height=600,toolbar=no,menubar=no,scrollbars=no,resizable=no,location=no,status=no");
+}
+
+function GetMenuHtml() {
+    var html = '<div id="mm" class="easyui-menu" style="width: 120px;">\
+        <div data-options="iconCls:\'icon-add\'" onclick="javascript:ClassificationId(multiTagCharData.selectedId)">添加到趋势列表</div>\
+        <div data-options="iconCls:\'icon-search\'" onclick="javascript:ShowAmmeterStatistics(multiTagCharData.selectedId)">打开电表数据列</div>\
+    </div>';
+    return html;
 }

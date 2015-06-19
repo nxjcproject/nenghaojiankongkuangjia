@@ -27,6 +27,7 @@
     <script src="/UI_Monitor/js/common/multiTagChart.js"></script>
     <script src="/UI_Monitor/js/common/RunningState.js"></script>
     <script src="/UI_Monitor/js/common/AmmeterStatistic.js"></script>
+    <script src="../../js/common/EquipmentNames.js"></script>
     <script>
         publicData.organizationId = "zc_nxjc_byc_byf";
         publicData.sceneName = "";
@@ -36,6 +37,12 @@
 <body>
     <div id="SubMonitorLayout" style="position: relative; background-image: url('../../images/page/zc_nxjc_byc_byf.png'); width: 1350px; height: 740px; overflow: hidden;">
        
+        <div id="test" class="equipmentName" data-equipmentid="zhudianji" style="position:absolute; top: 382px; left: 127px; height: 68px; width: 102px;">
+        </div>
+        <div id="Div1" class="equipmentName" data-equipmentid="test1" style="position:absolute; top: 447px; left: 371px; height: 68px; width: 102px;">
+        </div>
+        <div id="Div2" class="equipmentName" data-equipmentid="test1" style="position:absolute; top: 336px; left: 263px; height: 68px; width: 102px;">
+        </div>
         <!----------------------------运行状态------------------------------------>
    <!--2#水泥磨主电机运行信号-->
     <div class="imageContainer" id="zc_nxjc_byc_byf_cementmill02>cementMillMainMotor>RunningState" style="position:absolute; top: 513px; left: 742px; height: 20px; width: 19px;"></div>
