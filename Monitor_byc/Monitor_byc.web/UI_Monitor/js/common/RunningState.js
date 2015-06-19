@@ -22,7 +22,7 @@ function runningStateGetLatestData() {
     var dataToServer = {
         ids: runningStatePublicData.ids
     };
-    var urlString = "../MonitorShell/MultiMonitorShell.asmx/GetRunningData";
+    var urlString = "/MonitorShell/MultiMonitorShell.asmx/GetRunningData";
     $.ajax({
         type: "POST",
         url: urlString,
@@ -69,7 +69,7 @@ function runningStateAddImage(dataSets) {
                     break;
 
                 default:
-                    content = getImgTag(basePath + "redL.png");
+                    content = "";//getImgTag(basePath + "redL.png");
             }
             element.attr('data-value', item.Value);
             element.html(content);

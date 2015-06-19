@@ -188,6 +188,15 @@
                 <td><span id="zc_nxjc_qtx_tys_clinker04>rawMaterialsPreparation_ElectricityConsumption>Day" class="mchart"></span></td>
             </tr>
         </table>
+       
+     <!--破碎机 -->
+    <div class="imageContainer" id="zc_nxjc_qtx_tys_clinker04>crusher>RunningState" style="position:absolute; height: 20px; width: 19px; top: 65px; left: 135px;"></div>
+    <!--原料磨主电机-->
+    <div class="imageContainer" id="zc_nxjc_qtx_tys_clinker04>rawMealGrindingMainMotor>RunningState" style="position:absolute; height: 20px; width: 19px; top: 564px; left: 545px;"></div>
+    <!--原料磨循环风机-->
+    <div class="imageContainer" id="zc_nxjc_qtx_tys_clinker04>circulatingFan>RunningState" style="position:absolute; height: 20px; width: 19px; top: 300px; left: 855px;"></div>
+    <!--原料磨选粉机电机-->
+    <div class="imageContainer" id="zc_nxjc_qtx_tys_clinker04>powderSelectingMachine>RunningState" style="position:absolute; height: 20px; width: 19px; top: 488px; left: 544px;"></div>
     </div>
 </body>
 </html>

@@ -27,7 +27,7 @@
     <script src="/UI_Monitor/js/common/RunningState.js"></script>
     <script>
         publicData.organizationId = "zc_nxjc_qtx_tys_cementmill05";
-        publicData.sceneName = "2#水泥磨";
+        publicData.sceneName = "5#水泥磨";
     </script>
     <title></title>
 </head>
@@ -144,6 +144,16 @@
                 <td><span id="zc_nxjc_qtx_tys_cementmill05>cementPreparation_ElectricityConsumption>Day" class="mchart"></span></td>
             </tr>
         </table>
+         <!--5#水泥磨主电机运行信号-->
+    <div class="imageContainer" id="zc_nxjc_qtx_tys_cementmill05>cementMillMainMotor>RunningState" style="position:absolute; top: 513px; left: 742px; height: 20px; width: 19px;"></div>
+    <!--5#磨选粉机变频控制柜运行-->
+    <div class="imageContainer" id="zc_nxjc_qtx_tys_cementmill05>powderSelectingMachine>RunningState" style="position:absolute; height: 20px; width: 19px; top: 336px; left: 695px; right: 636px;"></div>
+    <!--5#磨排风机运行-->
+    <div class="imageContainer" id="zc_nxjc_qtx_tys_cementmill05>mainExhaustFan>RunningState" style="position:absolute; height: 20px; width: 19px; top: 125px; left: 888px;"></div>
+    <!--5#磨辊压机定辊运行-->
+    <div class="imageContainer" id="zc_nxjc_qtx_tys_cementmill05>rollingMachineSettledRoller>RunningState" style="position:absolute; height: 20px; width: 19px; top: 386px; left: 453px;"></div>
+    <!--5#磨辊压机动辊运行-->
+    <div class="imageContainer" id="zc_nxjc_qtx_tys_cementmill05>rollingMachineActionRoller>RunningState" style="position:absolute; height: 20px; width: 19px; top: 387px; left: 481px;"></div>
     </div>
 </body>
 </html>

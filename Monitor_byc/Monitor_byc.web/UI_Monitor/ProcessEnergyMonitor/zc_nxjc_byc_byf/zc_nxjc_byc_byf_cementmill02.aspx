@@ -159,7 +159,7 @@
     <!--2#磨辊压机定辊运行-->
     <div class="imageContainer" id="zc_nxjc_byc_byf_cementmill02>rollingMachineSettledRoller>RunningState" style="position:absolute; height: 20px; width: 19px; top: 386px; left: 453px;"></div>
     <!--2#磨辊压机动辊运行-->
-    <div class="imageContainer" id="zc_nxjc_byc_byf_cementmill02>rollingMachineActionRoller>RunningState>" style="position:absolute; height: 20px; width: 19px; top: 387px; left: 481px;"></div>
+    <div class="imageContainer" id="zc_nxjc_byc_byf_cementmill02>rollingMachineActionRoller>RunningState" style="position:absolute; height: 20px; width: 19px; top: 387px; left: 481px;"></div>
    
     <!----------------------------运行状态------------------------------------>
 </body>

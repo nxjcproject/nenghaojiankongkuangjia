@@ -202,7 +202,7 @@
                 <td><span id="zc_nxjc_qtx_tys_clinker04>clinkerCrusher>Power" class="mchart"></span></td>
             </tr>
         </table>
-        <table class="mytable" style="position: absolute; top: 568px; left: 607px;">
+        <table class="mytable" style="position: absolute; top: 678px; left: 714px;">
             <tr>
                 <td><span id="zc_nxjc_qtx_tys_clinker04>clinkerF3AC>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -213,18 +213,8 @@
                 <td><span id="zc_nxjc_qtx_tys_clinker04>clinkerF3AC>Power" class="mchart"></span></td>
             </tr>
         </table>
-        <table class="mytable" style="position: absolute; top: 567px; left: 669px;">
-            <tr>
-                <td><span id="zc_nxjc_qtx_tys_clinker04>clinkerFVOC>ElectricityConsumption" class="mchart"></span></td>
-            </tr>
-            <tr>
-                <td><span id="zc_nxjc_qtx_tys_clinker04>clinkerFVOC>Current" class="mchart"></span></td>
-            </tr>
-            <tr>
-                <td><span id="zc_nxjc_qtx_tys_clinker04>clinkerFVOC>Power" class="mchart"></span></td>
-            </tr>
-        </table>
-        <table class="mytable" style="position: absolute; top: 569px; left: 735px;">
+       
+        <table class="mytable" style="position: absolute; top: 678px; left: 780px;">
             <tr>
                 <td><span id="zc_nxjc_qtx_tys_clinker04>clinkerF5AC>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -235,40 +225,29 @@
                 <td><span id="zc_nxjc_qtx_tys_clinker04>clinkerF5AC>Power" class="mchart"></span></td>
             </tr>
         </table>
-        <table class="mytable" style="position: absolute; top: 569px; left: 799px;">
-            <tr>
-                <td><span id="zc_nxjc_qtx_tys_clinker04>clinkerF7AC>ElectricityConsumption" class="mchart"></span></td>
-            </tr>
-            <tr>
-                <td><span id="zc_nxjc_qtx_tys_clinker04>clinkerF7AC>Current" class="mchart"></span></td>
-            </tr>
-            <tr>
-                <td><span id="zc_nxjc_qtx_tys_clinker04>clinkerF7AC>Power" class="mchart"></span></td>
-            </tr>
-        </table>
         <table class="mytable" style="position: absolute; top: 569px; left: 864px;">
             <tr>
-                <td><span id="zc_nxjc_qtx_tys_clinker04>clinkerF9AC>ElectricityConsumption" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_tys_clinker04>clinkerF8AC>ElectricityConsumption" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_qtx_tys_clinker04>clinkerF9AC>Current" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_tys_clinker04>clinkerF8AC>Current" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_qtx_tys_clinker04>clinkerF9AC>Power" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_tys_clinker04>clinkerF8AC>Power" class="mchart"></span></td>
             </tr>
         </table>
         <table class="mytable" style="position: absolute; top: 568px; left: 932px;">
             <tr>
-                <td><span id="zc_nxjc_qtx_tys_clinker04>clinkerF11AC>ElectricityConsumption" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_tys_clinker04>clinkerF10AC>ElectricityConsumption" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_qtx_tys_clinker04>clinkerF11AC>Current" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_tys_clinker04>clinkerF10AC>Current" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_qtx_tys_clinker04>clinkerF11AC>Power" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_tys_clinker04>clinkerF10AC>Power" class="mchart"></span></td>
             </tr>
         </table>
-        <table class="mytable" style="position: absolute; top: 677px; left: 585px;">
+        <table class="mytable" style="position: absolute; top: 678px; left: 649px;">
             <tr>
                 <td><span id="zc_nxjc_qtx_tys_clinker04>clinkerF1AC>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -279,7 +258,7 @@
                 <td><span id="zc_nxjc_qtx_tys_clinker04>clinkerF1AC>Power" class="mchart"></span></td>
             </tr>
         </table>
-        <table class="mytable" style="position: absolute; top: 677px; left: 650px;">
+        <table class="mytable" style="position: absolute; top: 570px; left: 669px;">
             <tr>
                 <td><span id="zc_nxjc_qtx_tys_clinker04>clinkerF2AC>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -290,7 +269,7 @@
                 <td><span id="zc_nxjc_qtx_tys_clinker04>clinkerF2AC>Power" class="mchart"></span></td>
             </tr>
         </table>
-        <table class="mytable" style="position: absolute; top: 677px; left: 715px;">
+        <table class="mytable" style="position: absolute; top: 570px; left: 735px;">
             <tr>
                 <td><span id="zc_nxjc_qtx_tys_clinker04>clinkerF4AC>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -301,7 +280,7 @@
                 <td><span id="zc_nxjc_qtx_tys_clinker04>clinkerF4AC>Power" class="mchart"></span></td>
             </tr>
         </table>
-        <table class="mytable" style="position: absolute; top: 677px; left: 780px;">
+        <table class="mytable" style="position: absolute; top: 570px; left: 800px;">
             <tr>
                 <td><span id="zc_nxjc_qtx_tys_clinker04>clinkerF6AC>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -314,36 +293,36 @@
         </table>
         <table class="mytable" style="position: absolute; top: 678px; left: 844px;">
             <tr>
-                <td><span id="zc_nxjc_qtx_tys_clinker04>clinkerF8AC>ElectricityConsumption" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_tys_clinker04>clinkerF7AC>ElectricityConsumption" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_qtx_tys_clinker04>clinkerF8AC>Current" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_tys_clinker04>clinkerF7AC>Current" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_qtx_tys_clinker04>clinkerF8AC>Power" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_tys_clinker04>clinkerF7AC>Power" class="mchart"></span></td>
             </tr>
         </table>
 
         <table class="mytable" style="position: absolute; top: 677px; left: 909px;">
             <tr>
-                <td><span id="zc_nxjc_qtx_tys_clinker04>clinkerF10AC>ElectricityConsumption" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_tys_clinker04>clinkerF9AC>ElectricityConsumption" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_qtx_tys_clinker04>clinkerF10AC>Current" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_tys_clinker04>clinkerF9AC>Current" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_qtx_tys_clinker04>clinkerF10AC>Power" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_tys_clinker04>clinkerF9AC>Power" class="mchart"></span></td>
             </tr>
         </table>
         <table class="mytable" style="position: absolute; top: 677px; left: 975px;">
             <tr>
-                <td><span id="zc_nxjc_qtx_tys_clinker04>clinkerF12AC>ElectricityConsumption" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_tys_clinker04>clinkerF11AC>ElectricityConsumption" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_qtx_tys_clinker04>clinkerF12AC>Current" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_tys_clinker04>clinkerF11AC>Current" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_qtx_tys_clinker04>clinkerF12AC>Power" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_tys_clinker04>clinkerF11AC>Power" class="mchart"></span></td>
             </tr>
         </table>
 
@@ -432,6 +411,49 @@
                 <td><span id="zc_nxjc_qtx_tys_clinker04>clinker_CoalConsumption>Day" class="mchart"></span></td>
             </tr>
         </table>
+     <!--高温风机运行-->
+    <div class="imageContainer" id="zc_nxjc_qtx_tys_clinker04>highTemperatureFan>RunningState" style="position:absolute; height: 20px; width: 19px; top: 448px; left: 195px;"></div>
+    <!--废气排风机运行-->
+    <div class="imageContainer" id="zc_nxjc_qtx_tys_clinker04>kilnTailExhaustFan>RunningState" style="position:absolute; height: 20px; width: 19px; top: 339px; left: 114px;"></div>
+    <!--窑主电机-->
+    <div class="imageContainer" id="zc_nxjc_qtx_tys_clinker04>kilnMainMotor>RunningState" style="position:absolute; height: 20px; width: 19px; top: 441px; left: 407px;"></div>
+    <!--窑头排风机-->
+    <div class="imageContainer" id="zc_nxjc_qtx_tys_clinker04>kilnHeadExhaustFan>RunningState" style="position:absolute; height: 20px; width: 19px; top: 416px; left: 1163px;"></div>
+    <!--熟料拉链机-->
+    <div class="imageContainer" id="zc_nxjc_qtx_tys_clinker04>clinkerChainConveyor>RunningState" style="position:absolute; height: 20px; width: 19px; top: 527px; left: 1203px;"></div>
+    <!--熟料破碎机-->
+    <div class="imageContainer" id="zc_nxjc_qtx_tys_clinker04>clinkerCrusher>RunningState" style="position:absolute; height: 20px; width: 19px; top: 485px; left: 967px;"></div>
+    <!--篦冷机F1-->
+    <div class="imageContainer" id="zc_nxjc_qtx_tys_clinker04>clinkerF12AC>RunningState" style="position:absolute; top: 653px; left: 683px; height: 20px; width: 19px;"></div>
+    <!--篦冷机F11-->
+    <div class="imageContainer" id="zc_nxjc_qtx_tys_clinker04>clinkerF11AC>RunningState" style="position:absolute; top: 649px; left: 996px; height: 20px; width: 19px;"></div>
+    <!--篦冷机F10-->
+    <div class="imageContainer" id="zc_nxjc_qtx_tys_clinker04>clinkerF10AC>RunningState" style="position:absolute; top: 537px; left: 929px; height: 20px; width: 19px;"></div>
+    <!--篦冷机F9-->
+    <div class="imageContainer" id="zc_nxjc_qtx_tys_clinker04>clinkerF9AC>RunningState" style="position:absolute; top: 648px; left: 927px; height: 20px; width: 19px;"></div>
+    <!--篦冷机F8-->
+    <div class="imageContainer" id="zc_nxjc_qtx_tys_clinker04>clinkerF8AC>RunningState" style="position:absolute; top: 539px; left: 882px; height: 20px; width: 19px;"></div>
+    <!--篦冷机F7-->
+    <div class="imageContainer" id="zc_nxjc_qtx_tys_clinker04>clinkerF7AC>RunningState" style="position:absolute; top: 649px; left: 861px; height: 20px; width: 19px;"></div>
+     <!--篦冷机F6-->
+    <div class="imageContainer" id="zc_nxjc_qtx_tys_clinker06>clinkerF6AC>RunningState" style="position:absolute; top: 538px; height: 20px; width: 19px; left: 833px;"></div>
+     <!--篦冷机F5-->
+    <div class="imageContainer" id="zc_nxjc_qtx_tys_clinker04>clinkerF5AC>RunningState" style="position:absolute; top: 653px; left: 799px; height: 20px; width: 19px;"></div>
+     <!--篦冷机F3-->
+    <div class="imageContainer" id="zc_nxjc_qtx_tys_clinker04>clinkerF3AC>RunningState" style="position:absolute; top: 654px; left: 740px; height: 20px; width: 19px; right: 591px;"></div>
+    <!--篦冷机F2-->
+    <div class="imageContainer" id="zc_nxjc_qtx_tys_clinker04>clinkerF21C>RunningState" style="position:absolute; top: 539px; left: 703px; height: 20px; width: 19px;"></div>
+    <!--煤磨三号罗茨风机-->
+    <div class="imageContainer" id="zc_nxjc_qtx_tys_clinker04>coalMilRootsBlower3>RunningState" style="position:absolute; top: 335px; left: 1194px; height: 20px; width: 19px;"></div>
+     <!--1#入窑提升机电机运行状态-->
+    <div class="imageContainer" id="zc_nxjc_qtx_tys_clinker04>clinkerHoist>RunningState" style="position:absolute; top: 21px; left: 172px; height: 20px; width: 19px;"></div>
+    <!--煤磨主电机运行状态-->
+    <div class="imageContainer" id="zc_nxjc_qtx_tys_clinker04>coalMillMainMotor>RunningState" style="position:absolute; top: 320px; left: 911px; height: 20px; width: 19px;"></div>
+    <!--煤磨通风机运行状态-->
+    <div class="imageContainer" id="zc_nxjc_qtx_tys_clinker04>coalMillFan>RunningState" style="position:absolute; top: 94px; left: 1295px; height: 20px; width: 19px;"></div>
+     <!--煤磨二号罗茨风机运行状态-->
+    <div class="imageContainer" id="zc_nxjc_qtx_tys_clinker04>coalMilRootsBlower2>RunningState" style="position:absolute; top: 334px; left: 1104px; height: 20px; width: 19px;"></div>
+    <!----------------------------运行状态------------------------------------>
     </div>
 </body>
 </html>

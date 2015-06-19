@@ -144,6 +144,19 @@
                 <td><span id="zc_nxjc_qtx_tys_cementmill04>cementPreparation_ElectricityConsumption>Day" class="mchart"></span></td>
             </tr>
         </table>
+
+    <!--4#水泥磨主电机运行信号-->
+    <div class="imageContainer" id="zc_nxjc_qtx_tys_cementmill04>cementMillMainMotor>RunningState" style="position:absolute; top: 513px; left: 742px; height: 20px; width: 19px;"></div>
+    <!--4#磨选粉机运行-->
+    <div class="imageContainer" id="zc_nxjc_qtx_tys_cementmill04>powderSelectingMachine>RunningState" style="position:absolute; height: 20px; width: 19px; top: 327px; left: 692px;"></div>
+    <!--4#磨排风机运行-->
+    <div class="imageContainer" id="zc_nxjc_qtx_tys_cementmill04>mainExhaustFan>RunningState" style="position:absolute; height: 20px; width: 19px; top: 126px; left: 889px;"></div>
+    <!--4#磨辊压机定辊运行-->
+    <div class="imageContainer" id="zc_nxjc_qtx_tys_cementmill04>rollingMachineSettledRoller>RunningState" style="position:absolute; height: 20px; width: 19px; top: 386px; left: 453px;"></div>
+    <!--4#磨辊压机动辊运行-->
+    <div class="imageContainer" id="zc_nxjc_qtx_tys_cementmill04>rollingMachineActionRoller>RunningState" style="position:absolute; height: 20px; width: 19px; top: 387px; left: 481px;"></div>
+    
+   
     </div>
 </body>
 </html>
