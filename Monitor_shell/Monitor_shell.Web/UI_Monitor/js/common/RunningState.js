@@ -61,11 +61,11 @@ function runningStateAddImage(dataSets) {
             var basePath = "/UI_Monitor/images/common/";
             switch (item.Value) {
                 case '0':
-                    content = getImgTag(basePath + "redL.png");
+                    content = getImgTag(basePath + "redL.gif");
                     break;
 
                 case '1':
-                    content = getImgTag(basePath + "greenL.png");
+                    content = getImgTag(basePath + "greenL.gif");
                     break;
 
                 default:
