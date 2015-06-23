@@ -37,10 +37,19 @@ namespace Monitor_shell.Service.ProcessEnergyMonitor.EnergyContrast
             string[] idList = GetTableColumnName(table);
             foreach (var item in idList)
             {
+                string t_value="0";
+                if (_type == "RunningState")
+                {
+                    t_value = table.Rows[0][item] is DBNull ? "0" : Convert.ToDecimal(table.Rows[0][item]).ToString().Trim();
+                }
+                else
+                {
+                    t_value = table.Rows[0][item] is DBNull ? "0" : Convert.ToDecimal(table.Rows[0][item]).ToString("#").Trim();
+                }
                 result.Add(new DataItem
                 {
                     ID = organizationId + ">" + item + ">" + _type,
-                    Value = table.Rows[0][item] is DBNull ? "0" : Convert.ToDecimal(table.Rows[0][item]).ToString("#").Trim()
+                    Value = t_value//table.Rows[0][item] is DBNull ? "0" : Convert.ToDecimal(table.Rows[0][item]).ToString("#").Trim()
                 });
             }
             return result;

@@ -11,7 +11,7 @@ namespace Monitor_shell.Web.UI_Monitor.ProcessEnergyMonitor.MonitorShell
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
-        }
+            
+        } 
     }
 }

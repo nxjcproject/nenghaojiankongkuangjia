@@ -267,5 +267,11 @@ namespace Monitor_shell.Web.UI_Monitor.ProcessEnergyMonitor.MonitorShell
             string json = MultiTrendlineRendererService.GetLableName();
             return json;
         }
+
+        //[WebMethod]
+        //public string GetEquipmentInfo()
+        //{
+
+        //}
     }
 }

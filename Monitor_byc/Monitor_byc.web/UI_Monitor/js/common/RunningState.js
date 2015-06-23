@@ -11,7 +11,7 @@ var runningStatePublicData = {
 };
 
 function runningStateInitializePage() {
-    var containers = document.getElementsByClassName("imageContainer");
+    var containers = $(".imageContainer");//document.getElementsByClassName("imageContainer");
     for (var i = 0; i < containers.length; i++) {
         runningStatePublicData.ids = runningStatePublicData.ids + containers[i].id + ",";
     }
@@ -22,7 +22,7 @@ function runningStateGetLatestData() {
     var dataToServer = {
         ids: runningStatePublicData.ids
     };
-    var urlString = "/MonitorShell/MultiMonitorShell.asmx/GetRunningData";
+    var urlString = "/UI_Monitor/ProcessEnergyMonitor/MonitorShell/MultiMonitorShell.asmx/GetRunningData";
     $.ajax({
         type: "POST",
         url: urlString,
@@ -61,11 +61,11 @@ function runningStateAddImage(dataSets) {
             var basePath = "/UI_Monitor/images/common/";
             switch (item.Value) {
                 case '0':
-                    content = getImgTag(basePath + "redL.png");
+                    content = getImgTag(basePath + "redL.gif");
                     break;
 
                 case '1':
-                    content = getImgTag(basePath + "greenL.png");
+                    content = getImgTag(basePath + "greenL.gif");
                     break;
 
                 default:

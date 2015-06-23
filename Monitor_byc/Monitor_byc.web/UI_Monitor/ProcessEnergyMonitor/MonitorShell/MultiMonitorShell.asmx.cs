@@ -1,6 +1,8 @@
 ﻿using Monitor_shell.Service.Alarm;
+using Monitor_shell.Service.MeterStatistics;
 using Monitor_shell.Service.ProcessEnergyMonitor;
 using Monitor_shell.Service.ProcessEnergyMonitor.MonitorShell;
+using Monitor_shell.Service.ProcessEnergyMonitor.RunningState;
 using Monitor_shell.Service.TrendTool;
 using System;
 using System.Collections.Generic;
@@ -18,7 +20,7 @@ namespace Monitor_shell.Web.UI_Monitor.ProcessEnergyMonitor.MonitorShell
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [System.ComponentModel.ToolboxItem(false)]
     // 若要允许使用 ASP.NET AJAX 从脚本中调用此 Web 服务，请取消注释以下行。 
-    [System.Web.Script.Services.ScriptService]
+     [System.Web.Script.Services.ScriptService]
     public class MultiMonitorShell : System.Web.Services.WebService
     {
 
@@ -238,9 +240,16 @@ namespace Monitor_shell.Web.UI_Monitor.ProcessEnergyMonitor.MonitorShell
         public string GetAmmeterStatisticData(string organizationId, string variableId)
         {
             StatisticResult statisticResult = MeterStatisticsService.GetAmmeterStatisticData(organizationId, variableId);
-            string datajson = EasyUIJsonParser.DataGridJsonParser.DataTableToJson(statisticResult.data);
-            string result = "{\"formula\":\"" + statisticResult.formula + "\",\"data\":" + datajson + "}";
-            return result;
+            if (statisticResult.data.Rows.Count > 0)
+            {
+                string datajson = EasyUIJsonParser.DataGridJsonParser.DataTableToJson(statisticResult.data);
+                string result = "{\"formula\":\"" + statisticResult.formula + "\",\"data\":" + datajson + "}";
+                return result;
+            }
+            else
+            {
+                return "{\"formula\":\"\",\"data\":\"\"}";
+            }
         }
 
         [WebMethod]
@@ -253,10 +262,16 @@ namespace Monitor_shell.Web.UI_Monitor.ProcessEnergyMonitor.MonitorShell
 
         //获取标签信息
         [WebMethod]
-        public string GetLableJson()
+        public  string GetLableJson()
         {
             string json = MultiTrendlineRendererService.GetLableName();
             return json;
         }
+
+        //[WebMethod]
+        //public string GetEquipmentInfo()
+        //{
+
+        //}
     }
 }
