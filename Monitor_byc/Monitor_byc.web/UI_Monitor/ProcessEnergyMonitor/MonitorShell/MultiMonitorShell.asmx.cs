@@ -248,7 +248,7 @@ namespace Monitor_shell.Web.UI_Monitor.ProcessEnergyMonitor.MonitorShell
             }
             else
             {
-                return "{\"formula\":\"\",\"data\":\"\"}";
+                return "{\"formula\":\""+statisticResult.formula+"\",\"data\":\"\"}";
             }
         }
 

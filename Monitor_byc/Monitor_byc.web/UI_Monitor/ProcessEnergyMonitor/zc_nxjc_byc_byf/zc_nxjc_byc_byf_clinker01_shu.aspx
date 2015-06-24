@@ -137,7 +137,7 @@
             </tr>
         </table>
         <%--罗茨风机--%>
-        <table class="mytable" style="position: absolute; top: 225px; left: 969px;">
+        <table class="mytable" style="position: absolute; top: 272px; left: 987px;">
             <tr>
                 <td><span id="zc_nxjc_byc_byf_clinker01>coalMilRootsBlower2>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -148,7 +148,7 @@
                 <td><span id="zc_nxjc_byc_byf_clinker01>coalMilRootsBlower2>Power" class="mchart"></span></td>
             </tr>
         </table>
-        <table class="mytable" style="position: absolute; top: 214px; left: 1219px;">
+        <table class="mytable" style="position: absolute; top: 271px; left: 1206px;">
             <tr>
                 <td><span id="zc_nxjc_byc_byf_clinker01>coalMilRootsBlower3>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -159,7 +159,7 @@
                 <td><span id="zc_nxjc_byc_byf_clinker01>coalMilRootsBlower3>Power" class="mchart"></span></td>
             </tr>
         </table>
-        <table class="mytable" style="position: absolute; top: 303px; left: 1106px;">
+        <table class="mytable" style="position: absolute; top: 303px; left: 1104px;">
             <tr>
                 <td><span id="zc_nxjc_byc_byf_clinker01>coalMilRootsBlower1>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -563,7 +563,7 @@
      <!--1#入窑提升机电机运行状态-->
     <div class="imageContainer equipmentInfo" data-equipmentid="clinkerHoist" id="zc_nxjc_byc_byf_clinker01>clinkerHoist>RunningState" style="position:absolute; top: 13px; left: 157px; height: 20px; width: 19px;"></div>
     <!--煤磨主电机运行状态-->
-    <div class="imageContainer equipmentInfo" data-equipmentid="coalMillMainMotor" id="zc_nxjc_byc_byf_clinker01>coalMillMainMotor>RunningState" style="position:absolute; top: 320px; left: 911px; height: 20px; width: 19px;"></div>
+    <div class="imageContainer equipmentInfo" data-equipmentid="coalMillMainMotor" id="zc_nxjc_byc_byf_clinker01>coalMillMainMotor>RunningState" style="position:absolute; top: 302px; left: 897px; height: 20px; width: 19px;"></div>
     <!--煤磨通风机运行状态-->
     <div class="imageContainer equipmentInfo" data-equipmentid="coalMillFan" id="zc_nxjc_byc_byf_clinker01>coalMillFan>RunningState" style="position:absolute; top: 64px; left: 1275px; height: 20px; width: 19px;"></div>
      <!--煤磨一号罗茨风机运行状态-->
