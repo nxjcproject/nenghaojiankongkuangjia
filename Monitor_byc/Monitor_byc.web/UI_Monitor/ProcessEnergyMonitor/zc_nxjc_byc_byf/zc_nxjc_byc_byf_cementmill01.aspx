@@ -161,7 +161,7 @@
     <!--1#磨辊压机动辊运行-->
     <div class="imageContainer equipmentInfo" data-equipmentid="rollingMachineActionRoller" id="zc_nxjc_byc_byf_cementmill01>rollingMachineActionRoller>RunningState" style="position:absolute; height: 20px; width: 19px; top: 387px; left: 481px;"></div>
     <!--熟料储存及熟料汽车胶带机运行-->
-    <div class="imageContainer equipmentInfo" data-equipmentid="clinkerStorageBeltMachine" id="zc_nxjc_byc_byf_cementmill01>clinkerStorageBeltMachine>RunningState" style="position:absolute; height: 20px; width: 19px; top: 395px; left: 1050px;"></div>
+    <div class="imageContainer equipmentInfo" data-equipmentid="clinkerStorageBeltMachine" id="zc_nxjc_byc_byf_cementmill01>clinkerStorageBeltMachine>RunningState" style="position:absolute; height: 20px; width: 19px; top: 266px; left: 12px;"></div>
     <!--石膏破碎机运行-->
     <div class="imageContainer equipmentInfo" data-equipmentid="gypsumCrusher" id="zc_nxjc_byc_byf>gypsumCrusher>RunningState" style="position:absolute; top: 134px; left: 104px; height: 20px; width: 19px;"></div>
 </body>

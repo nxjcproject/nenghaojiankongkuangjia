@@ -39,7 +39,7 @@ function InitializeGrid(myData) {
         singleSelect: true, rownumbers: true, striped: true,
         columns: [[
             {
-                field: 'AmmeterName', title: '电表名称', width: '37%', align: 'center'
+                field: 'Name', title: '电表名称', width: '37%', align: 'center'
             },
             {
                 field: 'CurrentData', title: '当前增量值', width: '20%', align: 'center', formatter: ValueFormatter

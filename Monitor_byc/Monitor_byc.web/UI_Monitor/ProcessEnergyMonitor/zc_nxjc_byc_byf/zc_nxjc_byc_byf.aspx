@@ -148,24 +148,24 @@
         </table>
         <table class="mytable" style="position: absolute; top: 56px; left: 976px;">
             <tr>
-                <td><span id="zc_nxjc_byc_byf_cementmill01>hybridMaterialsPreparation_ElectricityQuantity>Class" class="mchart"></span></td>
+                <td><span id="zc_nxjc_byc_byf>hybridMaterialsPreparation_ElectricityQuantity>Class" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_byc_byf_cementmill01>hybridMaterialsPreparation_ElectricityQuantity>Day" class="mchart"></span></td>
+                <td><span id="zc_nxjc_byc_byf>hybridMaterialsPreparation_ElectricityQuantity>Day" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_byc_byf_cementmill01>hybridMaterialsPreparation_ElectricityQuantity>Month" class="mchart"></span></td>
+                <td><span id="zc_nxjc_byc_byf>hybridMaterialsPreparation_ElectricityQuantity>Month" class="mchart"></span></td>
             </tr>
         </table>
         <table class="mytable" style="position: absolute; top: 56px; left: 1041px;">
             <tr>
-                <td><span id="zc_nxjc_byc_byf_cementmill01>hybridMaterialsPreparation_ElectricityConsumption>Class" class="mchart"></span></td>
+                <td><span id="zc_nxjc_byc_byf>hybridMaterialsPreparation_ElectricityConsumption>Class" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_byc_byf_cementmill01>hybridMaterialsPreparation_ElectricityConsumption>Day" class="mchart"></span></td>
+                <td><span id="zc_nxjc_byc_byf>hybridMaterialsPreparation_ElectricityConsumption>Day" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_byc_byf_cementmill01>hybridMaterialsPreparation_ElectricityConsumption>Month" class="mchart"></span></td>
+                <td><span id="zc_nxjc_byc_byf>hybridMaterialsPreparation_ElectricityConsumption>Month" class="mchart"></span></td>
             </tr>
         </table>
 

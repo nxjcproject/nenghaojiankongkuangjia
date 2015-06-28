@@ -51,6 +51,9 @@
     <Reference Include="Monitor_shell.Service">
       <HintPath>..\..\Monitor_shell\Monitor_shell.Web\bin\Monitor_shell.Service.dll</HintPath>
     </Reference>
+    <Reference Include="Monitor_shell.Web">
+      <HintPath>..\..\Monitor_shell\Monitor_shell.Web\bin\Monitor_shell.Web.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -1638,8 +1641,6 @@
     <Content Include="UI_Monitor\js\common\trendlineAnalysis_monitorView.js" />
     <Content Include="UI_Monitor\js\common\trendlineAnalysis_template.js" />
     <Content Include="UI_Monitor\js\common\trendlineRenderer.js" />
-    <Content Include="UI_Monitor\ProcessEnergyMonitor\MonitorShell\MultiMonitorShell.asmx" />
-    <Content Include="UI_Monitor\ProcessEnergyMonitor\MonitorShell\MultiMonitorShell.aspx" />
     <Content Include="UI_Monitor\ProcessEnergyMonitor\zc_nxjc_byc_byf\test.aspx" />
     <Content Include="UI_Monitor\ProcessEnergyMonitor\zc_nxjc_byc_byf\zc_nxjc_byc_byf.aspx" />
     <Content Include="UI_Monitor\ProcessEnergyMonitor\zc_nxjc_byc_byf\zc_nxjc_byc_byf_cementmill01.aspx" />
@@ -1650,17 +1651,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UI_Monitor\ProcessEnergyMonitor\MonitorShell\MultiMonitorShell.asmx.cs">
-      <DependentUpon>MultiMonitorShell.asmx</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="UI_Monitor\ProcessEnergyMonitor\MonitorShell\MultiMonitorShell.aspx.cs">
-      <DependentUpon>MultiMonitorShell.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="UI_Monitor\ProcessEnergyMonitor\MonitorShell\MultiMonitorShell.aspx.designer.cs">
-      <DependentUpon>MultiMonitorShell.aspx</DependentUpon>
-    </Compile>
     <Compile Include="UI_Monitor\ProcessEnergyMonitor\zc_nxjc_byc_byf\test.aspx.cs">
       <DependentUpon>test.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

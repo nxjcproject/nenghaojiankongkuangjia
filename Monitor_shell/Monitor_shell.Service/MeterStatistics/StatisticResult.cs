@@ -10,5 +10,7 @@ namespace Monitor_shell.Service.MeterStatistics
     {
         public string formula;
         public DataTable data;
+        public IDictionary<string, string> PFormula;
+        public IDictionary<string, string> GFormula;
     }
 }

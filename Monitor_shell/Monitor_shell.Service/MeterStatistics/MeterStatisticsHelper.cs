@@ -1,4 +1,5 @@
-﻿using SqlServerDataAdapter;
+﻿using Monitor_shell.Service.Formula;
+using SqlServerDataAdapter;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -20,20 +21,55 @@ namespace Monitor_shell.Service.MeterStatistics
             _ammeterFactory = ammeterFactory;
         }
 
-        public DataTable GetMeterStatictisticsData(string organization, string variableId, int topNumber)
+        public DataTable GetMeterStatictisticsData(string organization, string variableId, int topNumber, IDictionary<string, string> ammeterDetail, IDictionary<string, string> materialDetail)
         {
-            IDictionary<string, string> ammeterDetail = GetAmmeterFormula(organization, variableId);
+            DataTable result = new DataTable();
+            //FormulaHelper formulaHelper = new FormulaHelper();
+            //string levelCode = GetLevelCodeByOrganizationId(organization, variableId);
+            //formulaHelper.Claculate(organization, levelCode);
+            //IDictionary<string, string> ammeterDetail = formulaHelper.ammeterDictionary;
+            //IDictionary<string, string> materialDetail = formulaHelper.materialDictionary;
+            //IDictionary<string, string> ammeterDetail = GetAmmeterFormula(organization, variableId);
             if (ammeterDetail.Keys.Count > 0)
             {
                 ammeterDetail = GetAmmeterDetail(ammeterDetail);
                 DataTable ammeterData = GetAmmeterIncrement(ammeterDetail, topNumber);
-                DataTable result = CalculateAverageAndVariance(ammeterDetail, ammeterData);
-                return result;
+                result.Merge(CalculateAverageAndVariance(ammeterDetail, ammeterData, "ammeter"));
+            }
+            if (materialDetail.Keys.Count > 0)
+            {
+                materialDetail = GetMaterialDetail(materialDetail, organization);
+                DataTable materialData = GetMaterialIncrement(materialDetail, topNumber);
+                result.Merge(CalculateAverageAndVariance(materialDetail, materialData, "material"));
+            }
+            return result;
+        }
+        /// <summary>
+        /// 根据variableid获得levelcode
+        /// </summary>
+        /// <param name="organizationId"></param>
+        /// <param name="variableId"></param>
+        /// <returns></returns>
+        private string GetLevelCodeByOrganizationId(string organizationId, string variableId)
+        {
+            string levelCode = "";
+            string mySql = @"select B.LevelCode
+                                from tz_Formula A,formula_FormulaDetail B
+                                where A.KeyID=B.KeyID
+                                and A.OrganizationID=@organizationId
+                                and B.VariableId=@variableId";
+            SqlParameter[] parameters ={new SqlParameter("organizationId",organizationId),
+                                          new SqlParameter("variableId",variableId)};
+            DataTable table= _nxjcFactory.Query(mySql, parameters);
+            if (table.Rows.Count == 1)
+            {
+                levelCode = table.Rows[0]["LevelCode"].ToString().Trim();
             }
             else
             {
-                return new DataTable();
+                throw new Exception("没有找到该variableId对应的LevelCode");
             }
+            return levelCode;
         }
         /// <summary>
         /// 获得电表值计算公式，并取得各个子表名称
@@ -97,6 +133,31 @@ namespace Monitor_shell.Service.MeterStatistics
 
             return result;
         }
+        //获得物料名字
+        private IDictionary<string, string> GetMaterialDetail(IDictionary<string, string> materialNames,string organizationId)
+        {
+            IDictionary<string, string> result = materialNames;
+            string mySql = @"select B.Formula,(C.Name+B.Name) as Name
+                            from tz_Material A,material_MaterialDetail B,system_Organization C
+                            where A.KeyID=B.KeyID
+                            and A.OrganizationID=C.OrganizationID
+                            and C.LevelCode like
+                            (SELECT LevelCode FROM system_Organization D where 
+                            CHARINDEX(D.LevelCode,(select LevelCode from system_Organization where OrganizationID=@organizationId))>0 
+                            and D.LevelType='factory')+'%'";
+            SqlParameter parameter = new SqlParameter("organizationId", organizationId);
+            DataTable dt = _nxjcFactory.Query(mySql, parameter);
+            foreach (DataRow row in dt.Rows)
+            {
+                string key = row["Formula"].ToString().Trim();
+                string value = row["Name"].ToString().Trim();
+                if (materialNames.Keys.Contains(key))
+                {
+                    result[key] = value;
+                }
+            }
+            return result;
+        }
         /// <summary>
         /// 获得电表增量值集合
         /// </summary>
@@ -117,16 +178,35 @@ namespace Monitor_shell.Service.MeterStatistics
             return result;
         }
         /// <summary>
+        /// 获得物料增量集合
+        /// </summary>
+        /// <param name="materialDetails"></param>
+        /// <param name="topNumber"></param>
+        /// <returns></returns>
+        private DataTable GetMaterialIncrement(IDictionary<string, string> materialDetails, int topNumber)
+        {
+            StringBuilder queryString = new StringBuilder();
+            queryString.Append("select top ").Append(topNumber).Append(" ");
+            foreach (string key in materialDetails.Keys)
+            {
+                queryString.Append(key).Append(",");
+            }
+            queryString.Remove(queryString.Length - 1, 1).Append(" from HistoryDCSIncrement order by vDate desc");
+            DataTable result = _ammeterFactory.Query(queryString.ToString());
+
+            return result;
+        }
+        /// <summary>
         /// 计算均值方差
         /// </summary>
         /// <param name="ammeterDetail"></param>
         /// <param name="ammeterData"></param>
         /// <returns></returns>
-        private DataTable CalculateAverageAndVariance(IDictionary<string, string> ammeterDetail, DataTable ammeterData)
+        private DataTable CalculateAverageAndVariance(IDictionary<string, string> ammeterDetail, DataTable ammeterData,string type)
         {
             //初始化返回值表
             DataTable result = new DataTable();
-            DataColumn name = new DataColumn("AmmeterName", typeof(string));
+            DataColumn name = new DataColumn("Name", typeof(string));
             result.Columns.Add(name);
             DataColumn current = new DataColumn("CurrentData", typeof(decimal));
             result.Columns.Add(current);
@@ -147,7 +227,15 @@ namespace Monitor_shell.Service.MeterStatistics
                 foreach (string key in ammeterDetail.Keys)
                 {
                     string dataKey = ammeterDetail[key] + "(" + key + ")";
-                    string columnName = key + "Energy";
+                    string columnName;
+                    if (type == "ammeter")
+                    {
+                        columnName = key + "Energy";
+                    }
+                    else
+                    {
+                        columnName = key;
+                    }
                     decimal vaule = 0m;
                     Decimal.TryParse(row[columnName].ToString().Trim(), out vaule);
                         if (itemdatas.Keys.Contains(dataKey))
@@ -190,7 +278,7 @@ namespace Monitor_shell.Service.MeterStatistics
                 varianceData = varianceData / rowCount;
 
                 DataRow newRow = result.NewRow();
-                newRow["AmmeterName"] = key;
+                newRow["Name"] = key;
                 newRow["CurrentData"] = currentdatas[key];
                 newRow["AverageData"] = averageData;
                 newRow["VarianceData"] = varianceData;
@@ -200,5 +288,6 @@ namespace Monitor_shell.Service.MeterStatistics
             return result;
             
         }
+
     }
 }

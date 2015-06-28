@@ -8,6 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Text;
 using System.Web;
 using System.Web.Services;
 
@@ -240,10 +241,19 @@ namespace Monitor_shell.Web.UI_Monitor.ProcessEnergyMonitor.MonitorShell
         public string GetAmmeterStatisticData(string organizationId, string variableId)
         {
             StatisticResult statisticResult = MeterStatisticsService.GetAmmeterStatisticData(organizationId, variableId);
+            StringBuilder formulaBuilder = new StringBuilder();
+            foreach (string item in statisticResult.PFormula.Keys)
+            {
+                formulaBuilder.Append(item).Append("=").Append(statisticResult.PFormula[item]).Append("</br>");
+            }
+            foreach (string item in statisticResult.GFormula.Keys)
+            {
+                formulaBuilder.Append(item).Append("=").Append(statisticResult.GFormula[item]).Append("</br>");
+            }
             if (statisticResult.data.Rows.Count > 0)
             {
                 string datajson = EasyUIJsonParser.DataGridJsonParser.DataTableToJson(statisticResult.data);
-                string result = "{\"formula\":\"" + statisticResult.formula + "\",\"data\":" + datajson + "}";
+                string result = "{\"formula\":\"" + formulaBuilder.ToString().Trim('<','/','b','r','>')+"\",\"data\":" + datajson + "}";
                 return result;
             }
             else
