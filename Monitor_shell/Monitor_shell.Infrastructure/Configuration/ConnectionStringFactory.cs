@@ -6,6 +6,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace Monitor_shell.Infrastructure.Configuration
@@ -24,17 +25,31 @@ namespace Monitor_shell.Infrastructure.Configuration
 
         public static string GetDCSConnectionString(string organizationId)
         {
-            //if (organizationId.Split('_').Count() != 5)
-            //    throw new Exception("组织机构Id格式不正确！");
-            //else
-            //    return ConfigurationManager.ConnectionStrings[organizationId].ToString();
+            string conString = ConfigurationManager.ConnectionStrings["ConnNXJC"].ToString();
+            Regex reg = new Regex(@"Catalog=\w+;");
+            MatchCollection regResults = reg.Matches(conString);
+            string DBName = "";
+            if (regResults.Count == 1)
+            {
+                string t_resultStr = regResults[0].Value;
+                DBName = t_resultStr.Substring(8).Trim(';');
+            }
 
-            return ConfigurationManager.ConnectionStrings["ConnNXJC"].ToString().Replace("NXJC", GetDCSDatabaseName(organizationId));
+            return ConfigurationManager.ConnectionStrings["ConnNXJC"].ToString().Replace(DBName, GetDCSDatabaseName(organizationId));
         }
 
         public static string GetAmmeterConnectionString(string organizationId)
         {
-            return ConfigurationManager.ConnectionStrings["ConnNXJC"].ToString().Replace("NXJC", GetAmmeterDatabaseName(organizationId));
+            string conString = ConfigurationManager.ConnectionStrings["ConnNXJC"].ToString();
+            Regex reg = new Regex(@"Catalog=\w+;");
+            MatchCollection regResults = reg.Matches(conString);
+            string DBName = "";
+            if (regResults.Count == 1)
+            {
+                string t_resultStr = regResults[0].Value;
+                DBName = t_resultStr.Substring(8).Trim(';');
+            }
+            return ConfigurationManager.ConnectionStrings["ConnNXJC"].ToString().Replace(DBName, GetAmmeterDatabaseName(organizationId));
         }
         
 

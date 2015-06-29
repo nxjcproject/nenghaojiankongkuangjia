@@ -22,7 +22,7 @@ namespace Monitor_shell.Service.ProcessEnergyMonitor.MonitorShell
             IList<DataItem> results = new List<DataItem>();
 
             string materialDetailString = @"select A.OrganizationID,B.VariableId,B.TagTableName,B.Formula 
-                                         from [NXJC].[dbo].[tz_Material] as A,[NXJC].[dbo].[material_MaterialDetail] as B
+                                         from [dbo].[tz_Material] as A,[dbo].[material_MaterialDetail] as B
                                          where A.KeyID=B.KeyID and A.OrganizationID=@organizationId";
             StringBuilder materialStringBase = new StringBuilder(materialDetailString);
             IList<SqlParameter> parameters = new List<SqlParameter>();
