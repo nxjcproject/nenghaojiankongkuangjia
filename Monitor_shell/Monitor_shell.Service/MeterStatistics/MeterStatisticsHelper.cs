@@ -21,15 +21,9 @@ namespace Monitor_shell.Service.MeterStatistics
             _ammeterFactory = ammeterFactory;
         }
 
-        public DataTable GetMeterStatictisticsData(string organization, string variableId, int topNumber, IDictionary<string, string> ammeterDetail, IDictionary<string, string> materialDetail)
+        public DataTable GetMeterStatictisticsData(string organization, VariableInfo variableInfo, int topNumber, IDictionary<string, string> ammeterDetail, IDictionary<string, string> materialDetail)
         {
             DataTable result = new DataTable();
-            //FormulaHelper formulaHelper = new FormulaHelper();
-            //string levelCode = GetLevelCodeByOrganizationId(organization, variableId);
-            //formulaHelper.Claculate(organization, levelCode);
-            //IDictionary<string, string> ammeterDetail = formulaHelper.ammeterDictionary;
-            //IDictionary<string, string> materialDetail = formulaHelper.materialDictionary;
-            //IDictionary<string, string> ammeterDetail = GetAmmeterFormula(organization, variableId);
             if (ammeterDetail.Keys.Count > 0)
             {
                 ammeterDetail = GetAmmeterDetail(ammeterDetail);
@@ -43,6 +37,25 @@ namespace Monitor_shell.Service.MeterStatistics
                 result.Merge(CalculateAverageAndVariance(materialDetail, materialData, "material"));
             }
             return result;
+        }
+        /// <summary>
+        /// 获取设备信息
+        /// </summary>
+        /// <param name="organizationId"></param>
+        /// <param name="variableInfo"></param>
+        /// <returns></returns>
+        public DataTable GetEquipmentInfo(string organizationId, VariableInfo variableInfo)
+        {
+            string mySql = @"select
+                            A.VoltageGrade,
+                            (CONVERT(varchar(10),A.Power)+A.Unit) as Power,
+                            A.[Current]
+                            from system_EquipmentAccount A
+                            where A.VariableId=@variableId
+                            and A.OrganizationID=@organizationId";
+            SqlParameter[] parameters ={new SqlParameter("organizationId",organizationId),
+                                         new SqlParameter("variableId",variableInfo.variableId)};
+            return _nxjcFactory.Query(mySql, parameters);
         }
         /// <summary>
         /// 根据variableid获得levelcode

@@ -171,24 +171,24 @@
 
         <table class="mytable" style="position: absolute; top: 104px; left: 721px;">
             <tr>
-                <td><span id="zc_zcshn_zhuzhouc_zhuzhouf_cementmill01>clinkerTransport_ElectricityQuantity>Class" class="mchart"></span></td>
+                <td><span id="zc_zcshn_zhuzhouc_zhuzhouf_clinker01>clinkerTransport_ElectricityQuantity>Class" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_zcshn_zhuzhouc_zhuzhouf_cementmill01>clinkerTransport_ElectricityQuantity>Day" class="mchart"></span></td>
+                <td><span id="zc_zcshn_zhuzhouc_zhuzhouf_clinker01>clinkerTransport_ElectricityQuantity>Day" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_zcshn_zhuzhouc_zhuzhouf_cementmill01>clinkerTransport_ElectricityQuantity>Month" class="mchart"></span></td>
+                <td><span id="zc_zcshn_zhuzhouc_zhuzhouf_clinker01>clinkerTransport_ElectricityQuantity>Month" class="mchart"></span></td>
             </tr>
         </table>
         <table class="mytable" style="position: absolute; top: 104px; left: 785px;">
             <tr>
-                <td><span id="zc_zcshn_zhuzhouc_zhuzhouf_cementmill01>clinkerTransport_ElectricityConsumption>Class" class="mchart"></span></td>
+                <td><span id="zc_zcshn_zhuzhouc_zhuzhouf_clinker01>clinkerTransport_ElectricityConsumption>Class" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_zcshn_zhuzhouc_zhuzhouf_cementmill01>clinkerTransport_ElectricityConsumption>Day" class="mchart"></span></td>
+                <td><span id="zc_zcshn_zhuzhouc_zhuzhouf_clinker01>clinkerTransport_ElectricityConsumption>Day" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_zcshn_zhuzhouc_zhuzhouf_cementmill01>clinkerTransport_ElectricityConsumption>Month" class="mchart"></span></td>
+                <td><span id="zc_zcshn_zhuzhouc_zhuzhouf_clinker01>clinkerTransport_ElectricityConsumption>Month" class="mchart"></span></td>
             </tr>
         </table>
         <table class="mytable" style="position: absolute; top: 223px; left: 655px; right: 566px;">

@@ -22,16 +22,22 @@ namespace Monitor_shell.Service.MeterStatistics
             MeterStatisticsHelper meterStatistics = new MeterStatisticsHelper(nxjcFactory, ammeterFactory);
 
             FormulaHelper formulaHelper = new FormulaHelper();
-            string levelCode = GetLevelCodeByOrganizationId(organizationId, variableId);
-            formulaHelper.Claculate(organizationId, levelCode);
+            VariableInfo variableInfo = GetLevelCodeByOrganizationId(organizationId, variableId);
+            formulaHelper.Claculate(organizationId, variableInfo.levelcode);
             IDictionary<string, string> ammeterDetail = formulaHelper.ammeterDictionary;
             IDictionary<string, string> materialDetail = formulaHelper.materialDictionary;
 
-            DataTable data = meterStatistics.GetMeterStatictisticsData(organizationId, variableId, 10,ammeterDetail,materialDetail);
+            DataTable data = meterStatistics.GetMeterStatictisticsData(organizationId, variableInfo, 10,ammeterDetail,materialDetail);
+            DataTable equipmentInfoTable = new DataTable();
+            if (variableInfo.leveltype == "MainMachine")
+            {
+                equipmentInfoTable = meterStatistics.GetEquipmentInfo(organizationId, variableInfo);
+            }
             StatisticResult result = new StatisticResult
             {
                 formula = meterStatistics.AmmeterFormula,
                 data = data,
+                EquipmentInfoData=equipmentInfoTable,
                 PFormula=formulaHelper.PDictionary,
                 GFormula=formulaHelper.GDictionary
             };
@@ -45,12 +51,13 @@ namespace Monitor_shell.Service.MeterStatistics
         /// <param name="organizationId"></param>
         /// <param name="variableId"></param>
         /// <returns></returns>
-        private static string GetLevelCodeByOrganizationId(string organizationId, string variableId)
+        private static VariableInfo GetLevelCodeByOrganizationId(string organizationId, string variableId)
         {
+            VariableInfo variableInfo = new VariableInfo();//variableid信息
             string nxjcConn = ConnectionStringFactory.NXJCConnectionString;
             ISqlServerDataFactory nxjcFactory = new SqlServerDataFactory(nxjcConn);
             string levelCode = "";
-            string mySql = @"select B.LevelCode
+            string mySql = @"select B.VariableId,B.LevelCode,B.LevelType,B.Formula
                                 from tz_Formula A,formula_FormulaDetail B
                                 where A.KeyID=B.KeyID
                                 and A.OrganizationID=@organizationId
@@ -61,12 +68,16 @@ namespace Monitor_shell.Service.MeterStatistics
             if (table.Rows.Count == 1)
             {
                 levelCode = table.Rows[0]["LevelCode"].ToString().Trim();
+                variableInfo.levelcode = levelCode;
+                variableInfo.leveltype = table.Rows[0]["LevelType"].ToString().Trim();
+                variableInfo.variableId = table.Rows[0]["VariableId"].ToString().Trim();
+                variableInfo.formula = table.Rows[0]["Formula"].ToString().Trim();
             }
             else
             {
                 throw new Exception("没有找到该variableId对应的LevelCode");
             }
-            return levelCode;
+            return variableInfo;
         }
     }
 }

@@ -1655,6 +1655,7 @@
     <Content Include="UI_Monitor\js\common\trendlineAnalysis_monitorView.js" />
     <Content Include="UI_Monitor\js\common\trendlineAnalysis_template.js" />
     <Content Include="UI_Monitor\js\common\trendlineRenderer.js" />
+    <Content Include="UI_Monitor\ProcessEnergyMonitor\MonitorShell\MainMachine.aspx" />
     <Content Include="UI_Monitor\ProcessEnergyMonitor\MonitorShell\MultiMonitorShell.asmx" />
     <Content Include="UI_Monitor\ProcessEnergyMonitor\MonitorShell\MultiMonitorShell.aspx" />
     <Content Include="UI_Monitor\ProcessEnergyMonitor\MonitorShell\test.aspx" />
@@ -1664,6 +1665,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI_Monitor\ProcessEnergyMonitor\MonitorShell\MainMachine.aspx.cs">
+      <DependentUpon>MainMachine.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI_Monitor\ProcessEnergyMonitor\MonitorShell\MainMachine.aspx.designer.cs">
+      <DependentUpon>MainMachine.aspx</DependentUpon>
+    </Compile>
     <Compile Include="UI_Monitor\ProcessEnergyMonitor\MonitorShell\MultiMonitorShell.asmx.cs">
       <DependentUpon>MultiMonitorShell.asmx</DependentUpon>
       <SubType>Component</SubType>

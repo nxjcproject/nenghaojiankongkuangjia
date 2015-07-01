@@ -48,13 +48,13 @@
         </table>
         <table class="mytable" style="position: absolute; top: 175px; left: 22px;">
             <tr>
-                <td><span id="zc_zcshn_zhuzhouc_zhuzhouf>limestoneMineBelt>ElectricityConsumption" class="mchart"></span></td>
+                <td><span id="zc_zcshn_zhuzhouc_zhuzhouf_clinker01>limestoneMineBelt>ElectricityConsumption" class="mchart"></span></td>
             </tr>
             <tr>
                 <td><span id="zc_zcshn_zhuzhouc_zhuzhouf_clinker01>limestoneMineBelt>Current" class="mchart nodisplay"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_zcshn_zhuzhouc_zhuzhouf>limestoneMineBelt>Power" class="mchart"></span></td>
+                <td><span id="zc_zcshn_zhuzhouc_zhuzhouf_clinker01>limestoneMineBelt>Power" class="mchart"></span></td>
             </tr>
         </table>
         <table class="mytable" style="position: absolute; top: 254px; left: 23px;">
@@ -293,11 +293,11 @@
     <!--砂岩破碎机 -->
     <%--<div class="imageContainer equipmentInfo" data-equipmentid="sandstoneCrusher" id="zc_zcshn_zhuzhouc_zhuzhouf_clinker01>sandstoneCrusher>RunningState" style="position: absolute; height: 20px; width: 19px; top: 67px; left: 446px;"></div>--%>
     <!--堆料机-->
-    <div class="imageContainer equipmentInfo" data-equipmentid="limestoneStacker" id="zc_zcshn_zhuzhouc_zhuzhouf_clinker01>limestoneStacker>RunningState" style="position: absolute; height: 20px; width: 19px; top: 233px; left: 180px;"></div>
+    <div class="imageContainer equipmentInfo" data-equipmentid="limestoneStackerMachine" id="zc_zcshn_zhuzhouc_zhuzhouf_clinker01>limestoneStacker>RunningState" style="position: absolute; height: 20px; width: 19px; top: 233px; left: 180px;"></div>
     <!--取料机-->
-    <div class="imageContainer equipmentInfo" data-equipmentid="" id="Div1" style="position: absolute; height: 20px; width: 19px; top: 232px; left: 215px;"></div>
+    <div class="imageContainer equipmentInfo" data-equipmentid="" id="limestoneFetchMachine" style="position: absolute; height: 20px; width: 19px; top: 232px; left: 215px;"></div>
     <!--石灰石入库皮带电机-->
-    <div class="imageContainer equipmentInfo" data-equipmentid="limestoneStorageBeltMachine" id="zc_zcshn_zhuzhouc_zhuzhouf_clinker01>limestoneStorageBeltMachine>RunningState" style="position: absolute; height: 20px; width: 19px; top: 414px; left: 187px;"></div>
+    <div class="imageContainer equipmentInfo" data-equipmentid="limestoneStorageBeltMachine" id="zc_zcshn_zhuzhouc_zhuzhouf_clinker01>limestoneStorageBeltMachine>RunningState" style="position: absolute; height: 20px; width: 19px; top: 275px; left: 181px;"></div>
     <!--原料磨主电机-->
     <div class="imageContainer equipmentInfo" data-equipmentid="rawMealGrindingMainMotor" id="zc_zcshn_zhuzhouc_zhuzhouf_clinker01>rawMealGrindingMainMotor>RunningState" style="position: absolute; height: 20px; width: 19px; top: 558px; left: 554px;"></div>
     <!--原料磨循环风机-->

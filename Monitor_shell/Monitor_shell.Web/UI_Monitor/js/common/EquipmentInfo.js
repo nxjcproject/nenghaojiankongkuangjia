@@ -85,7 +85,9 @@ var equipmentmentNames = {
     bottomDustCollectingFan3: "3#收尘风机",
     clinkerHoist: "1#入窑提升机电机",
     limestoneStacker:"取料机",
-    bagdustcollector:"袋收尘"
+    bagdustcollector: "袋收尘",
+    limestoneStackerMachine: "石灰石堆料机",
+    limestoneFetchMachine: "石灰石取料机"
 }
 //事件绑定
 function bindEquipmentEvent() {

@@ -63,6 +63,7 @@
     <Compile Include="MeterStatistics\MeterStatisticsHelper.cs" />
     <Compile Include="MeterStatistics\MeterStatisticsService.cs" />
     <Compile Include="MeterStatistics\StatisticResult.cs" />
+    <Compile Include="MeterStatistics\VariableInfo.cs" />
     <Compile Include="ProcessEnergyMonitor\CorrectionValue.cs" />
     <Compile Include="ProcessEnergyMonitor\DataBaseHelper.cs" />
     <Compile Include="ProcessEnergyMonitor\DataItem.cs" />

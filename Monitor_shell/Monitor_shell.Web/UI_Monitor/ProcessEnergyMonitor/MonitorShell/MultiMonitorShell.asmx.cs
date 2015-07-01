@@ -240,6 +240,9 @@ namespace Monitor_shell.Web.UI_Monitor.ProcessEnergyMonitor.MonitorShell
         [WebMethod]
         public string GetAmmeterStatisticData(string organizationId, string variableId)
         {
+            string formulaJson = "";//公式
+            string ammeterDataJson = "";//电表信息
+            string equipmentInfoJson = "";//设备信息
             StatisticResult statisticResult = MeterStatisticsService.GetAmmeterStatisticData(organizationId, variableId);
             StringBuilder formulaBuilder = new StringBuilder();
             foreach (string item in statisticResult.PFormula.Keys)
@@ -250,15 +253,27 @@ namespace Monitor_shell.Web.UI_Monitor.ProcessEnergyMonitor.MonitorShell
             {
                 formulaBuilder.Append(item).Append("=").Append(statisticResult.GFormula[item]).Append("</br>");
             }
+            formulaJson = formulaBuilder.ToString().Trim('<', '/', 'b', 'r', '>');
             if (statisticResult.data.Rows.Count > 0)
             {
                 string datajson = EasyUIJsonParser.DataGridJsonParser.DataTableToJson(statisticResult.data);
-                string result = "{\"formula\":\"" + formulaBuilder.ToString().Trim('<','/','b','r','>')+"\",\"data\":" + datajson + "}";
-                return result;
+                ammeterDataJson = datajson;
+                //string result = "{\"formula\":\"" + formulaBuilder.ToString().Trim('<','/','b','r','>')+"\",\"data\":" + datajson + "}";
+                //return result;
+            }
+            if (statisticResult.EquipmentInfoData.Rows.Count > 0)
+            {
+                equipmentInfoJson = EasyUIJsonParser.DataGridJsonParser.DataTableToJson(statisticResult.EquipmentInfoData);
+            }
+            if (equipmentInfoJson == "")
+            {
+                
+                return "{\"formula\":\"" + formulaJson + "\",\"data\":" + ammeterDataJson + ",\"equipmentInfo\":\"\"}";
             }
             else
             {
-                return "{\"formula\":\"" + statisticResult.formula + "\",\"data\":\"\"}";
+                
+                return "{\"formula\":\"" + formulaJson + "\",\"data\":" + ammeterDataJson + ",\"equipmentInfo\":" + equipmentInfoJson + "}";
             }
         }
 

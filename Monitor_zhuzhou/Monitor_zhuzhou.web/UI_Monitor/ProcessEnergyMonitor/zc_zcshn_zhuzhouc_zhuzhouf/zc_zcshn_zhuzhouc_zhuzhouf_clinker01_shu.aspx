@@ -37,13 +37,13 @@
     <div id="SubMonitorLayout" style="position: relative; background-image: url('../../images/page/zc_zcshn_zhuzhouc_zhuzhouf_clinker01_shu.png'); width: 1350px; height: 740px; overflow: hidden;">
         <table class="mytable" style="position: absolute; top: 88px; left: 410px;">
             <tr>
-                <td><span id="zc_zcshn_zhuzhouc_zhuzhouf_clinker01>clinkerHoist1>ElectricityConsumption" class="mchart"></span></td>
+                <td><span id="zc_zcshn_zhuzhouc_zhuzhouf_clinker01>clinkerHoist>ElectricityConsumption" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_zcshn_zhuzhouc_zhuzhouf_clinker01>clinkerHoist1>Current" class="mchart"></span></td>
+                <td><span id="zc_zcshn_zhuzhouc_zhuzhouf_clinker01>clinkerHoist>Current" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_zcshn_zhuzhouc_zhuzhouf_clinker01>clinkerHoist1>Power" class="mchart"></span></td>
+                <td><span id="zc_zcshn_zhuzhouc_zhuzhouf_clinker01>clinkerHoist>Power" class="mchart"></span></td>
             </tr>
         </table>
            <%--新加的窑尾排风机--%>
@@ -108,17 +108,6 @@
         
         <table class="mytable" style="position: absolute; top: 281px; left: 800px;">
             <tr>
-                <td><span id="zc_zcshn_zhuzhouc_zhuzhouf_clinker01>coalMilRootsBlower2>ElectricityConsumption" class="mchart"></span></td>
-            </tr>
-            <tr>
-                <td><span id="zc_zcshn_zhuzhouc_zhuzhouf_clinker01>coalMilRootsBlower2>Current" class="mchart"></span></td>
-            </tr>
-            <tr>
-                <td><span id="zc_zcshn_zhuzhouc_zhuzhouf_clinker01>coalMilRootsBlower2>Power" class="mchart"></span></td>
-            </tr>
-        </table>
-        <table class="mytable" style="position: absolute; top: 280px; left: 925px;">
-            <tr>
                 <td><span id="zc_zcshn_zhuzhouc_zhuzhouf_clinker01>coalMilRootsBlower3>ElectricityConsumption" class="mchart"></span></td>
             </tr>
             <tr>
@@ -128,15 +117,26 @@
                 <td><span id="zc_zcshn_zhuzhouc_zhuzhouf_clinker01>coalMilRootsBlower3>Power" class="mchart"></span></td>
             </tr>
         </table>
+        <table class="mytable" style="position: absolute; top: 280px; left: 925px;">
+            <tr>
+                <td><span id="zc_zcshn_zhuzhouc_zhuzhouf_clinker01>coalMilRootsBlower5>ElectricityConsumption" class="mchart"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_zcshn_zhuzhouc_zhuzhouf_clinker01>coalMilRootsBlower5>Current" class="mchart"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_zcshn_zhuzhouc_zhuzhouf_clinker01>coalMilRootsBlower5>Power" class="mchart"></span></td>
+            </tr>
+        </table>
         <table class="mytable" style="position: absolute; top: 278px; left: 861px;">
             <tr>
-                <td><span id="zc_zcshn_zhuzhouc_zhuzhouf_clinker01>coalMilRootsBlower1>ElectricityConsumption" class="mchart"></span></td>
+                <td><span id="zc_zcshn_zhuzhouc_zhuzhouf_clinker01>coalMilRootsBlower4>ElectricityConsumption" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_zcshn_zhuzhouc_zhuzhouf_clinker01>coalMilRootsBlower1>Current" class="mchart"></span></td>
+                <td><span id="zc_zcshn_zhuzhouc_zhuzhouf_clinker01>coalMilRootsBlower4>Current" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_zcshn_zhuzhouc_zhuzhouf_clinker01>coalMilRootsBlower1>Power" class="mchart"></span></td>
+                <td><span id="zc_zcshn_zhuzhouc_zhuzhouf_clinker01>coalMilRootsBlower4>Power" class="mchart"></span></td>
             </tr>
         </table>
         
@@ -184,7 +184,7 @@
                 <td><span id="zc_zcshn_zhuzhouc_zhuzhouf_clinker01>adhesiveTape2>Power" class="mchart"></span></td>
             </tr>
         </table>--%>
-        <table class="mytable" style="position: absolute; top: 394px; left: 850px;" class="mchart">
+        <table class="mytable" style="position: absolute; top: 394px; left: 850px;" >
             <tr>
                 <td><span id="zc_zcshn_zhuzhouc_zhuzhouf_clinker01>clinkerCrusher>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -275,13 +275,13 @@
         </table>
         <table class="mytable" style="position: absolute; top: 608px; left: 511px;">
             <tr>
-                <td><span id="zc_zcshn_zhuzhouc_zhuzhouf_clinker01>clinker5706>ElectricityConsumption" class="mchart"></span></td>
+                <td><span id="zc_zcshn_zhuzhouc_zhuzhouf_clinker01>clinker06>ElectricityConsumption" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_zcshn_zhuzhouc_zhuzhouf_clinker01>clinker5706>Current" class="mchart"></span></td>
+                <td><span id="zc_zcshn_zhuzhouc_zhuzhouf_clinker01>clinker06>Current" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_zcshn_zhuzhouc_zhuzhouf_clinker01>clinker5706>Power" class="mchart"></span></td>
+                <td><span id="zc_zcshn_zhuzhouc_zhuzhouf_clinker01>clinker06>Power" class="mchart"></span></td>
             </tr>
         </table>
         <table class="mytable" style="position: absolute; top: 606px; left: 574px; height: 59px;">
@@ -509,7 +509,7 @@
     <!--篦冷机07-->
     <div class="imageContainer equipmentInfo" data-equipmentid="clinker07" id="zc_zcshn_zhuzhouc_zhuzhouf_clinker01>clinker07>RunningState" style="position:absolute; top: 477px; left: 647px; height: 20px; width: 19px;"></div>
     <!--篦冷机5706-->
-    <div class="imageContainer equipmentInfo" data-equipmentid="clinker5706" id="zc_zcshn_zhuzhouc_zhuzhouf_clinker01>clinker5706>RunningState" style="position:absolute; top: 579px; left: 537px; height: 20px; width: 19px;"></div>
+    <div class="imageContainer equipmentInfo" data-equipmentid="clinker06" id="zc_zcshn_zhuzhouc_zhuzhouf_clinker01>clinker06>RunningState" style="position:absolute; top: 579px; left: 537px; height: 20px; width: 19px;"></div>
     <!--篦冷机13-->
     <div class="imageContainer equipmentInfo" data-equipmentid="clinker13" id="zc_zcshn_zhuzhouc_zhuzhouf_clinker01>clinker13>RunningState" style="position:absolute; top: 578px; left: 859px; height: 20px; width: 19px;"></div>
     <!--篦冷机15-->
@@ -521,17 +521,17 @@
     <!--篦冷机19-->
     <div class="imageContainer equipmentInfo" data-equipmentid="clinker19" id="zc_zcshn_zhuzhouc_zhuzhouf_clinker01>clinker19>RunningState" style="position:absolute; top: 581px; left: 1117px; height: 20px; width: 19px;"></div>
     <!--煤磨三号罗茨风机-->
-    <div class="imageContainer equipmentInfo" data-equipmentid="coalMilRootsBlower3" id="zc_zcshn_zhuzhouc_zhuzhouf_clinker01>coalMilRootsBlower3>RunningState" style="position:absolute; top: 263px; left: 926px; height: 20px; width: 19px;"></div>
+    <div class="imageContainer equipmentInfo" data-equipmentid="coalMilRootsBlower3" id="zc_zcshn_zhuzhouc_zhuzhouf_clinker01>coalMilRootsBlower5>RunningState" style="position:absolute; top: 263px; left: 926px; height: 20px; width: 19px;"></div>
      <!--1#入窑提升机电机运行状态-->
-    <div class="imageContainer equipmentInfo" data-equipmentid="clinkerHoist" id="zc_zcshn_zhuzhouc_zhuzhouf_clinker01>clinkerHoist>RunningState" style="position:absolute; top: 61px; left: 384px; height: 20px; width: 19px;"></div>
+    <div class="imageContainer equipmentInfo" data-equipmentid="clinkerHoist1" id="zc_zcshn_zhuzhouc_zhuzhouf_clinker01>clinkerHoist1>RunningState" style="position:absolute; top: 61px; left: 384px; height: 20px; width: 19px;"></div>
     <!--煤磨主电机运行状态-->
     <div class="imageContainer equipmentInfo" data-equipmentid="coalMillMainMotor" id="zc_zcshn_zhuzhouc_zhuzhouf_clinker01>coalMillMainMotor>RunningState" style="position:absolute; top: 234px; left: 1127px; height: 20px; width: 19px;"></div>
     <!--煤磨通风机运行状态-->
     <div class="imageContainer equipmentInfo" data-equipmentid="coalMillFan" id="zc_zcshn_zhuzhouc_zhuzhouf_clinker01>coalMillFan>RunningState" style="position:absolute; top: 73px; left: 819px; height: 20px; width: 19px;"></div>
      <!--煤磨一号罗茨风机运行状态-->
-    <div class="imageContainer equipmentInfo" data-equipmentid="coalMilRootsBlower1" id="zc_zcshn_zhuzhouc_zhuzhouf_clinker01>coalMilRootsBlower1>RunningState" style="position:absolute; top: 262px; left: 869px; height: 20px; width: 19px;"></div>
+    <div class="imageContainer equipmentInfo" data-equipmentid="coalMilRootsBlower1" id="zc_zcshn_zhuzhouc_zhuzhouf_clinker01>coalMilRootsBlower4>RunningState" style="position:absolute; top: 262px; left: 869px; height: 20px; width: 19px;"></div>
      <!--煤磨二号罗茨风机运行状态-->
-    <div class="imageContainer equipmentInfo" data-equipmentid="coalMilRootsBlower2" id="zc_zcshn_zhuzhouc_zhuzhouf_clinker01>coalMilRootsBlower2>RunningState" style="position:absolute; top: 261px; left: 814px; height: 20px; width: 19px;"></div>    
+    <div class="imageContainer equipmentInfo" data-equipmentid="coalMilRootsBlower2" id="zc_zcshn_zhuzhouc_zhuzhouf_clinker01>coalMilRootsBlower3>RunningState" style="position:absolute; top: 261px; left: 814px; height: 20px; width: 19px;"></div>    
    
 
     <!----------------------------运行状态------------------------------------>
