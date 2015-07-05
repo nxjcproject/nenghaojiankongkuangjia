@@ -8,7 +8,7 @@ var publicData = {
 };
 
 function InitializePage() {
-    var spans = document.getElementsByTagName("span");
+    var spans = $("span");//document.getElementsByTagName("span");
     for (var i = 0; i < spans.length; i++) {
         publicData.ids = publicData.ids + spans[i].id + ",";
     }
@@ -30,7 +30,11 @@ function getLatestData() {
         dataType: "json",
         success: function (data) {
             serviceSuccessful(data);
+        },
+        error: function () {
+            setupTimerToPollLatestData();
         }
+
     });
 }
 
@@ -60,7 +64,8 @@ function displayDataItem(dataSets) {
         var value = Number(item.Value)
         var element = $(document.getElementById(item.ID));
         //if (element.attr("tagName") == "span")
-            element.html(value);
+        //element.html(value.toFixed(0));
+        element.html(value);
         //else
             //element.val(value.toFixed(0));
     });

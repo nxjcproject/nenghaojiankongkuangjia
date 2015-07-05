@@ -241,6 +241,7 @@ namespace Monitor_shell.Web.UI_Monitor.ProcessEnergyMonitor.MonitorShell
         public string GetAmmeterStatisticData(string organizationId, string variableId)
         {
             string formulaJson = "";//公式
+            string denominatorFormulaJson = "";//分母公式（带描述）
             string ammeterDataJson = "";//电表信息
             string equipmentInfoJson = "";//设备信息
             StatisticResult statisticResult = MeterStatisticsService.GetAmmeterStatisticData(organizationId, variableId);
@@ -254,6 +255,8 @@ namespace Monitor_shell.Web.UI_Monitor.ProcessEnergyMonitor.MonitorShell
                 formulaBuilder.Append(item).Append("=").Append(statisticResult.GFormula[item]).Append("</br>");
             }
             formulaJson = formulaBuilder.ToString().Trim('<', '/', 'b', 'r', '>');
+
+            denominatorFormulaJson = statisticResult.denominatorFormula == "" ? "无" : statisticResult.denominatorFormula;
             if (statisticResult.data.Rows.Count > 0)
             {
                 string datajson = EasyUIJsonParser.DataGridJsonParser.DataTableToJson(statisticResult.data);
@@ -267,13 +270,13 @@ namespace Monitor_shell.Web.UI_Monitor.ProcessEnergyMonitor.MonitorShell
             }
             if (equipmentInfoJson == "")
             {
-                
-                return "{\"formula\":\"" + formulaJson + "\",\"data\":" + ammeterDataJson + ",\"equipmentInfo\":\"\"}";
+
+                return "{\"formula\":\"" + formulaJson + "\",\"denominatorFormula\":\""+denominatorFormulaJson + "\",\"data\":" + ammeterDataJson + ",\"equipmentInfo\":\"\"}";
             }
             else
             {
-                
-                return "{\"formula\":\"" + formulaJson + "\",\"data\":" + ammeterDataJson + ",\"equipmentInfo\":" + equipmentInfoJson + "}";
+
+                return "{\"formula\":\"" + formulaJson + "\",\"denominatorFormula\":\""+denominatorFormulaJson + "\",\"data\":" + ammeterDataJson + ",\"equipmentInfo\":" + equipmentInfoJson + "}";
             }
         }
 

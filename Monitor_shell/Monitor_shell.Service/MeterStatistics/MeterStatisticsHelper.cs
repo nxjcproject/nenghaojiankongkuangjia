@@ -1,4 +1,5 @@
-﻿using Monitor_shell.Service.Formula;
+﻿using Monitor_shell.Infrastructure.Configuration;
+using Monitor_shell.Service.Formula;
 using SqlServerDataAdapter;
 using System;
 using System.Collections.Generic;
@@ -36,7 +37,9 @@ namespace Monitor_shell.Service.MeterStatistics
                 DataTable materialData = GetMaterialIncrement(materialDetail, topNumber);
                 result.Merge(CalculateAverageAndVariance(materialDetail, materialData, "material"));
             }
+            DecorateTableAmmeterInfo(result, organization);
             return result;
+
         }
         /// <summary>
         /// 获取设备信息
@@ -46,16 +49,88 @@ namespace Monitor_shell.Service.MeterStatistics
         /// <returns></returns>
         public DataTable GetEquipmentInfo(string organizationId, VariableInfo variableInfo)
         {
-            string mySql = @"select
-                            A.VoltageGrade,
-                            (CONVERT(varchar(10),A.Power)+A.Unit) as Power,
-                            A.[Current]
-                            from system_EquipmentAccount A
-                            where A.VariableId=@variableId
-                            and A.OrganizationID=@organizationId";
-            SqlParameter[] parameters ={new SqlParameter("organizationId",organizationId),
+            #region
+//            DataTable result = new DataTable();
+//            DataColumn columnV = new DataColumn("VoltageGrade", typeof(string));
+//            DataColumn columnPower = new DataColumn("Power", typeof(string));
+//            DataColumn columnCurrent = new DataColumn("Current", typeof(string));
+//            DataColumn columnCT = new DataColumn("CT", typeof(string));
+//            DataColumn columnPT = new DataColumn("PT", typeof(string));
+//            DataColumn columnAmmeterCode =new DataColumn("AmmeterCode", typeof(string));
+//            DataColumn columnAmmeterValue = new DataColumn("AmmeterValue", typeof(decimal));
+//            result.Columns.Add(columnV);
+//            result.Columns.Add(columnPower);
+//            result.Columns.Add(columnCurrent);
+//            result.Columns.Add(columnCT);
+//            result.Columns.Add(columnPT);
+//            result.Columns.Add(columnAmmeterCode);
+//            result.Columns.Add(columnAmmeterValue);
+//            DataRow resultRow = result.NewRow();
+//            //表号
+//            string ammeterNum="";
+//            //电流互感器变比
+//            int CT = 1;
+//            //电压互感器变比
+//            int PT = 1;
+//            //表码值（没有乘变比）
+//            decimal ammeterValue = -0.0001m;
+//            string ammeterDBName = ConnectionStringFactory.GetAmmeterDatabaseName(organizationId);
+//            string mySql = @"select
+//                            A.VoltageGrade,
+//                            (CONVERT(varchar(10),A.Power)+A.Unit) as Power,
+//                            A.[Current],A.AmmeterCode,C.Formula
+//                            from system_EquipmentAccount A,tz_Formula B,formula_FormulaDetail C
+//                            where A.VariableId=C.VariableId and A.OrganizationID=B.OrganizationID
+//                            and B.KeyID=C.KeyID
+//                            and A.VariableId=@variableId
+//                            and A.OrganizationID=@organizationId";
+//            SqlParameter[] parameters ={new SqlParameter("organizationId",organizationId),
+//                                         new SqlParameter("variableId",variableInfo.variableId)};
+//            DataTable t_table = _nxjcFactory.Query(mySql, parameters);
+//            if (t_table.Rows.Count == 1)
+//            {
+//                resultRow["VoltageGrade"] = t_table.Rows[0]["VoltageGrade"].ToString();
+//                resultRow["Power"] = t_table.Rows[0]["Power"].ToString();
+//                resultRow["Current"] = t_table.Rows[0]["Current"].ToString();
+//                resultRow["AmmeterCode"] = t_table.Rows[0]["AmmeterCode"].ToString();
+//            }
+//            string sql = @"select B.Formula,C.CT,C.PT
+//                            from tz_Formula A,formula_FormulaDetail B
+//                            left join {0}.[dbo].[AmmeterContrast] C
+//                            on B.Formula=C.AmmeterNumber
+//                            where A.KeyID=B.KeyID
+//                            and A.OrganizationID=@organizationId
+//                            and B.VariableId=@variableId";
+//            SqlParameter[] parametersLast ={new SqlParameter("organizationId",organizationId),
+//                                         new SqlParameter("variableId",variableInfo.variableId)};
+//            DataTable auxiliaryTable = _nxjcFactory.Query(string.Format(sql,ammeterDBName), parametersLast);
+//            if (auxiliaryTable.Rows.Count == 1)
+//            {
+//                ammeterNum = auxiliaryTable.Rows[0]["Formula"].ToString().Trim();
+//                CT =int.Parse(auxiliaryTable.Rows[0]["CT"].ToString());
+//                PT = int.Parse(auxiliaryTable.Rows[0]["PT"].ToString());
+//                string ammeterSql = @"select {1}
+//                                       from {0}.[dbo].[RealtimeAmmeter]";
+//                DataTable ammeterTable = _nxjcFactory.Query(string.Format(ammeterSql, ammeterDBName, ammeterNum + "Energy"));
+//                if (ammeterTable.Rows.Count == 1)
+//                {
+//                    ammeterValue =decimal.Parse(ammeterTable.Rows[0][0].ToString())/(CT*PT);
+//                }
+//            }
+//            resultRow["CT"] = CT.ToString();
+//            resultRow["PT"] = PT.ToString();
+//            resultRow["AmmeterValue"] = ammeterValue.ToString();
+//            result.Rows.Add(resultRow);
+//            return result;
+            #endregion
+            string mySql = @"select A.EquipmentName,A.VoltageGrade,A.[Current],(CONVERT(varchar(10),A.Power)+A.Unit) as Power
+                                        from [dbo].[system_EquipmentAccount] A
+                                        where A.OrganizationID=@organizationId
+                                        and A.VariableId=@variableId";
+            SqlParameter[] parameters={new SqlParameter("organizationId",organizationId),
                                          new SqlParameter("variableId",variableInfo.variableId)};
-            return _nxjcFactory.Query(mySql, parameters);
+            DataTable table = _nxjcFactory.Query(mySql, parameters);
+            return table;
         }
         /// <summary>
         /// 根据variableid获得levelcode
@@ -301,6 +376,40 @@ namespace Monitor_shell.Service.MeterStatistics
             return result;
             
         }
-
+        private void DecorateTableAmmeterInfo(DataTable sourceTable, string organizationId)
+        {
+            DataColumn columnAmmeterCode = new DataColumn("AmmeterCode", typeof(string));
+            columnAmmeterCode.DefaultValue = "/";
+            DataColumn columnCT = new DataColumn("CT", typeof(string));
+            columnCT.DefaultValue = "/";
+            DataColumn columnPT = new DataColumn("PT", typeof(string));
+            columnPT.DefaultValue = "/";
+            DataColumn columnAmmeterValue = new DataColumn("AmmeterValue", typeof(string));
+            columnAmmeterValue.DefaultValue = "/";
+            sourceTable.Columns.Add(columnAmmeterCode);
+            sourceTable.Columns.Add(columnCT);
+            sourceTable.Columns.Add(columnPT);
+            sourceTable.Columns.Add(columnAmmeterValue);
+            string ammeterDBName = ConnectionStringFactory.GetAmmeterDatabaseName(organizationId);
+            string infoSql = @"select B.*,A.{0}Energy/(B.CT*B.PT) as AmmeterValue
+                                from [{1}].[dbo].[RealtimeAmmeter] A,(select C.CT,C.PT,C.AmmeterCode,C.ElectricEnergyFieldNameSave
+                                from [{1}].[dbo].[AmmeterContrast] C
+                                where C.AmmeterNumber='{0}') B";
+            foreach (DataRow dr in sourceTable.Rows)
+            {
+                string AmmeterNumber = dr["Name"].ToString().Substring(dr["Name"].ToString().IndexOf('(')+1).TrimEnd(')');
+                if(AmmeterNumber.Contains('A'))
+                {
+                    DataTable t_table = _nxjcFactory.Query(string.Format(infoSql, AmmeterNumber,ammeterDBName));
+                    if (t_table.Rows.Count == 1)
+                    {
+                        dr["AmmeterCode"] = t_table.Rows[0]["AmmeterCode"].ToString();
+                        dr["CT"]=t_table.Rows[0]["CT"].ToString();
+                        dr["PT"] = t_table.Rows[0]["CT"].ToString();
+                        dr["AmmeterValue"] = decimal.Parse(t_table.Rows[0]["AmmeterValue"].ToString()).ToString("#.00");
+                    }
+                }
+            }
+        }
     }
 }

@@ -25,6 +25,7 @@
     <script src="/UI_Monitor/js/common/alarm.js"></script>
     <script src="/UI_Monitor/js/common/multiTagChart.js"></script>
     <script src="/UI_Monitor/js/common/RunningState.js"></script>
+    <script src="/UI_Monitor/js/common/AmmeterStatistic.js"></script>
     <script>
         publicData.organizationId = "zc_nxjc_qtx_tys_clinker04";
         publicData.sceneName = "4#熟料线";
@@ -101,28 +102,6 @@
                 <td><span id="zc_nxjc_qtx_tys_clinker04>kilnMainMotor>Power" class="mchart"></span></td>
             </tr>
         </table>
-        <table class="mytable" style="position: absolute; top: 453px; left: 478px;">
-            <tr>
-                <td><span id="zc_nxjc_qtx_tys_clinker04>clinkerFVOA>ElectricityConsumption" class="mchart"></span></td>
-            </tr>
-            <tr>
-                <td><span id="zc_nxjc_qtx_tys_clinker04>clinkerFVOA>Current" class="mchart"></span></td>
-            </tr>
-            <tr>
-                <td><span id="zc_nxjc_qtx_tys_clinker04>clinkerFVOA>Power" class="mchart"></span></td>
-            </tr>
-        </table>
-        <table class="mytable" style="position: absolute; top: 521px; left: 478px;">
-            <tr>
-                <td><span id="zc_nxjc_qtx_tys_clinker04>clinkerFVOB>ElectricityConsumption" class="mchart"></span></td>
-            </tr>
-            <tr>
-                <td><span id="zc_nxjc_qtx_tys_clinker04>clinkerFVOB>Current" class="mchart"></span></td>
-            </tr>
-            <tr>
-                <td><span id="zc_nxjc_qtx_tys_clinker04>clinkerFVOB>Power" class="mchart"></span></td>
-            </tr>
-        </table>
         <table class="mytable" style="position: absolute; top: 118px; left: 1240px;">
             <tr>
                 <td><span id="zc_nxjc_qtx_tys_clinker04>coalMillFan>ElectricityConsumption" class="mchart"></span></td>
@@ -135,7 +114,7 @@
             </tr>
         </table>
         <%--罗茨风机--%>
-        <table class="mytable" style="position: absolute; top: 352px; left: 1052px;">
+        <table class="mytable" style="position: absolute; top: 355px; left: 1130px;">
             <tr>
                 <td><span id="zc_nxjc_qtx_tys_clinker04>coalMilRootsBlower1>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -146,7 +125,7 @@
                 <td><span id="zc_nxjc_qtx_tys_clinker04>coalMilRootsBlower1>Power" class="mchart"></span></td>
             </tr>
         </table>
-        <table class="mytable" style="position: absolute; top: 276px; left: 994px;">
+        <table class="mytable" style="position: absolute; top: 307px; left: 1004px;">
             <tr>
                 <td><span id="zc_nxjc_qtx_tys_clinker04>coalMilRootsBlower2>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -157,7 +136,7 @@
                 <td><span id="zc_nxjc_qtx_tys_clinker04>coalMilRootsBlower2>Power" class="mchart"></span></td>
             </tr>
         </table>
-        <table class="mytable" style="position: absolute; top: 279px; left: 1227px;">
+        <table class="mytable" style="position: absolute; top: 305px; left: 1210px;">
             <tr>
                 <td><span id="zc_nxjc_qtx_tys_clinker04>coalMilRootsBlower3>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -411,6 +390,9 @@
                 <td><span id="zc_nxjc_qtx_tys_clinker04>clinker_CoalConsumption>Day" class="mchart"></span></td>
             </tr>
         </table>
+        </div>
+
+        <div id="htmlContainer"></div>
      <!--高温风机运行-->
     <div class="imageContainer" id="zc_nxjc_qtx_tys_clinker04>highTemperatureFan>RunningState" style="position:absolute; height: 20px; width: 19px; top: 448px; left: 195px;"></div>
     <!--废气排风机运行-->
@@ -454,7 +436,6 @@
      <!--煤磨二号罗茨风机运行状态-->
     <div class="imageContainer" id="zc_nxjc_qtx_tys_clinker04>coalMilRootsBlower2>RunningState" style="position:absolute; top: 334px; left: 1104px; height: 20px; width: 19px;"></div>
     <!----------------------------运行状态------------------------------------>
-    </div>
 </body>
 </html>
 

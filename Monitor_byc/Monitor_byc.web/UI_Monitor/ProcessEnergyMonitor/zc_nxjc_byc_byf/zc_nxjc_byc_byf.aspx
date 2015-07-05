@@ -36,7 +36,7 @@
     <div id="SubMonitorLayout" style="position: relative; background-image: url('../../images/page/zc_nxjc_byc_byf.png'); width: 1350px; height: 740px; overflow: hidden;">
        <%--<div onclick="getAllCookie()">cookie测试</div>--%>
         <%--<div onclick="openWindow()">打开趋势窗口</div>--%>
-         <table class="mytable" style="position: absolute; top: 90px; left: 27px;">
+         <table class="mytable" style="position: absolute; top: 113px; left: 28px;">
             <tr>
                 <td><span id="zc_nxjc_byc_byf_clinker01>rawMaterialsHomogenize_ElectricityQuantity>Class" class="mchart"></span></td>
             </tr>
@@ -47,7 +47,7 @@
                 <td><span id="zc_nxjc_byc_byf_clinker01>rawMaterialsHomogenize_ElectricityQuantity>Month" class="mchart"></span></td>
             </tr>
         </table>
-        <table class="mytable" style="position: absolute; top: 91px; left: 92px;">
+        <table class="mytable" style="position: absolute; top: 113px; left: 94px;">
             <tr>
                 <td><span id="zc_nxjc_byc_byf_clinker01>rawMaterialsHomogenize_ElectricityConsumption>Class" class="mchart"></span></td>
             </tr>
@@ -239,7 +239,7 @@
                 <td><span id="zc_nxjc_byc_byf_clinker01>clinkerElectricityGeneration_ElectricityQuantity>Class" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_byc_byf_clinker01>clinkerElectricityGeneration_ElectricityConsumption>Class"></span></td>
+                <td><span id="zc_nxjc_byc_byf_clinker01>clinkerElectricityGeneration_ElectricityConsumption>Class" class="mchart"></span></td>
             </tr>
             <tr>
                 <td><span id="zc_nxjc_byc_byf_cogeneration01>electricityOutput_ElectricityQuantity>Class" class="mchart"></span></td>
@@ -253,7 +253,7 @@
                 <td><span id="zc_nxjc_byc_byf_clinker01>clinkerElectricityGeneration_ElectricityQuantity>Day" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_byc_byf_clinker01>clinkerElectricityGeneration_ElectricityConsumption>Day"></span></td>
+                <td><span id="zc_nxjc_byc_byf_clinker01>clinkerElectricityGeneration_ElectricityConsumption>Day" class="mchart"></span></td>
             </tr>
             <tr>
                 <td><span id="zc_nxjc_byc_byf_cogeneration01>electricityOutput_ElectricityQuantity>Day" class="mchart"></span></td>
@@ -467,6 +467,40 @@
             </tr>
             <tr>
                 <td><span id="zc_nxjc_byc_byf>cementPreparation_ElectricityConsumption>SumProcessMonth" ></span></td>
+            </tr>
+        </table>
+        <%--生料均化--%>
+        <table class="mytable" style="position: absolute; top: 503px; left: 220px;">
+            <tr>
+                <td><span id="zc_nxjc_byc_byf_clinker01>rawMealHomogenization_ElectricityQuantity>Class" class="mchart"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_byc_byf_clinker01>rawMealHomogenization_ElectricityQuantity>Day" class="mchart"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_byc_byf_clinker01>rawMealHomogenization_ElectricityQuantity>Month" class="mchart"></span></td>
+            </tr>
+        </table>
+        <table class="mytable" style="position: absolute; top: 503px; left: 285px;">
+            <tr>
+                <td><span id="zc_nxjc_byc_byf_clinker01>rawMealHomogenization_ElectricityConsumption>Class" class="mchart"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_byc_byf_clinker01>rawMealHomogenization_ElectricityConsumption>Day" class="mchart"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_byc_byf_clinker01>rawMealHomogenization_ElectricityConsumption>Month" class="mchart"></span></td>
+            </tr>
+        </table>
+        <table class="mytable" style="position: absolute; top: 66px; left: 198px;">
+            <tr>
+                <td><span id="zc_nxjc_byc_byf_cogeneration01>purchasedElectricity_ElectricityQuantity>Class" class="mchart"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_byc_byf_cogeneration01>purchasedElectricity_ElectricityQuantity>Day" class="mchart"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_byc_byf_cogeneration01>purchasedElectricity_ElectricityQuantity>Month" class="mchart"></span></td>
             </tr>
         </table>
     </div>

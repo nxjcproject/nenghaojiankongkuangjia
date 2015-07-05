@@ -10,6 +10,9 @@ namespace Monitor_shell.Service.ProcessEnergyMonitor.MonitorShell
 {
     public class ComprehensiveConsumptionProvider : IDataItemProvider
     {
+        private const string Company = "Company";
+        private const string Factory = "Factory";
+        private const string ProductionLine = "ProductionLine";
         private ISqlServerDataFactory _connFactory;
         public ComprehensiveConsumptionProvider(string connString)
         {
@@ -37,96 +40,160 @@ namespace Monitor_shell.Service.ProcessEnergyMonitor.MonitorShell
             //                                    or VariableId='clinkerPreparation_ElectricityConsumption'
             //                                    or VariableId='cementPreparation_ElectricityConsumption' or VariableId='clinkerElectricityGeneration_ElectricityConsumption')";
             //            DataTable templateTable = _connFactory.Query(templateString);
-
-            string dataString;
-            if (organizationId == "zc_nxjc")
+            DataTable m_OrganizationInfo = GetOrganizationInfo(organizationId);
+            if (m_OrganizationInfo != null && m_OrganizationInfo.Rows.Count > 0)
             {
-                dataString = @"select E.VariableId,SUM(E.monthBalance) as monthBalance from
-                            (select C.OrganizationID,C.VariableId,
-                            SUM(C.TotalBalance+(case when D.CumulantDay is null then 0 else D.CumulantDay end)) as monthBalance from 
-                            (select A.OrganizationID,
-                            (case when B.VariableId = 'clinker_ClinkerFactoryTransportInput' then 'clinker_ClinkerInput'
-                            when B.VariableId = 'clinker_ClinkerCompanyTransportInput' then 'clinker_ClinkerInput'
-                            else B.VariableId end) as VariableId,B.OrganizationID as detailO,SUM(B.TotalPeakValleyFlatB) as TotalBalance 
-                            from (select BalanceId,OrganizationID,TimeStamp from tz_Balance) as A
-                            right join balance_Energy as B
-                            on A.BalanceId=B.KeyId where (B.ValueType = 'ElectricityQuantity' or B.ValueType = 'MaterialWeight') and
-                            TimeStamp like CONVERT(varchar(7),GETDATE(),20) + '%'
-                            group by A.OrganizationID,B.VariableId,B.OrganizationID) AS C
-                            left join 
-                            (select OrganizationID,
-                            (case when VariableId = 'clinker_ClinkerFactoryTransportInput' then 'clinker_ClinkerInput'
-                            when VariableId = 'clinker_ClinkerCompanyTransportInput' then 'clinker_ClinkerInput'
-                            else VariableId end) as VariableId,
-                            (case when CumulantDay is null then 0 else CumulantDay end) as CumulantDay
-                            from RealtimeIncrementCumulant) AS D
-                            on C.detailO=D.OrganizationID and C.VariableId=D.VariableId group by C.OrganizationID,C.VariableId) AS E
-                            group by E.VariableId";
+                ;
+                string m_OrganizationType = m_OrganizationInfo.Rows[0]["LevelType"].ToString();
+                string m_LevelCode = m_OrganizationInfo.Rows[0]["LevelCode"].ToString();
+                string dataString;
+                if (m_OrganizationType == Company)           //公司级综合能耗
+                {
+                    dataString = @"select D.VariableId as VariableId,
+                                        sum(D.monthBalance) as monthBalance
+                                        from
+                                        (select 
+                                           B.OrganizationID as OrganizationID,
+                                           (case when B.VariableId = 'clinker_ClinkerFactoryTransportInput' then 'clinker_ClinkerInput'
+                                               when B.VariableId = 'clinker_ClinkerCompanyTransportInput' then 'clinker_ClinkerOutsourcingInput'
+                                               else B.VariableId end) as VariableId,
+                                           SUM(B.TotalPeakValleyFlatB) as monthBalance 
+                                        from tz_Balance as A, balance_Energy as B, system_Organization as C 
+                                        where A.BalanceId=B.KeyId
+                                        and (B.ValueType = 'ElectricityQuantity' or B.ValueType = 'MaterialWeight')
+                                        and A.TimeStamp like CONVERT(varchar(7),GETDATE(),20) + '%'
+                                        and A.StaticsCycle = 'day'
+                                        and B.OrganizationID = C.OrganizationID
+                                        and C.LevelCode like @LevelCode + '%'
+                                        group by B.OrganizationID, B.VariableId
+                                        union 
+                                        select 
+                                            A.OrganizationID as OrganizationID,
+                                            (case when A.VariableId = 'clinker_ClinkerFactoryTransportInput' then 'clinker_ClinkerInput'
+                                                 when A.VariableId = 'clinker_ClinkerCompanyTransportInput' then 'clinker_ClinkerOutsourcingInput'
+                                                 else A.VariableId end) as VariableId,
+                                            (case when CumulantDay is null then 0 else CumulantDay end) as monthBalance
+                                        from RealtimeIncrementCumulant AS A, system_Organization B
+                                        where 
+                                        A.OrganizationID = B.OrganizationID
+                                        and B.LevelCode like @LevelCode + '%'
+                                        ) D
+                                        group by D.VariableId";
+                }
+                else if (m_OrganizationType == Factory || m_OrganizationType == ProductionLine)              //分厂级、产线级综合能耗
+                {
+                    dataString = @"select D.VariableId as VariableId,
+                                        sum(D.monthBalance) as monthBalance
+                                        from
+                                        (select 
+                                           B.OrganizationID as OrganizationID,
+                                           (case when B.VariableId = 'clinker_ClinkerFactoryTransportInput' then 'clinker_ClinkerOutsourcingInput'
+                                               when B.VariableId = 'clinker_ClinkerCompanyTransportInput' then 'clinker_ClinkerOutsourcingInput'
+                                               else B.VariableId end) as VariableId,
+                                           SUM(B.TotalPeakValleyFlatB) as monthBalance 
+                                        from tz_Balance as A, balance_Energy as B, system_Organization as C 
+                                        where A.BalanceId=B.KeyId
+                                        and (B.ValueType = 'ElectricityQuantity' or B.ValueType = 'MaterialWeight')
+                                        and A.TimeStamp like CONVERT(varchar(7),GETDATE(),20) + '%'
+                                        and A.StaticsCycle = 'day'
+                                        and B.OrganizationID = C.OrganizationID
+                                        and C.LevelCode like @LevelCode + '%'
+                                        group by B.OrganizationID, B.VariableId
+                                        union 
+                                        select 
+                                            A.OrganizationID as OrganizationID,
+                                            (case when A.VariableId = 'clinker_ClinkerFactoryTransportInput' then 'clinker_ClinkerOutsourcingInput'
+                                                 when A.VariableId = 'clinker_ClinkerCompanyTransportInput' then 'clinker_ClinkerOutsourcingInput'
+                                                 else A.VariableId end) as VariableId,
+                                            (case when CumulantDay is null then 0 else CumulantDay end) as monthBalance
+                                        from RealtimeIncrementCumulant AS A, system_Organization B
+                                        where 
+                                        A.OrganizationID = B.OrganizationID
+                                        and B.LevelCode like @LevelCode + '%'
+                                        ) D
+                                        group by D.VariableId";
+                }
+                else       //其它为集团级综合能耗
+                {
+                    dataString = @"select D.VariableId as VariableId,
+                                        sum(D.monthBalance) as monthBalance
+                                        from
+                                        (select 
+                                           B.OrganizationID as OrganizationID,
+                                           (case when B.VariableId = 'clinker_ClinkerFactoryTransportInput' then 'clinker_ClinkerInput'
+                                               when B.VariableId = 'clinker_ClinkerCompanyTransportInput' then 'clinker_ClinkerInput'
+                                               else B.VariableId end) as VariableId,
+                                           SUM(B.TotalPeakValleyFlatB) as monthBalance 
+                                        from tz_Balance as A, balance_Energy as B, system_Organization as C 
+                                        where A.BalanceId=B.KeyId
+                                        and (B.ValueType = 'ElectricityQuantity' or B.ValueType = 'MaterialWeight')
+                                        and A.TimeStamp like CONVERT(varchar(7),GETDATE(),20) + '%'
+                                        and A.StaticsCycle = 'day'
+                                        and B.OrganizationID = C.OrganizationID
+                                        and C.LevelCode like @LevelCode + '%'
+                                        group by B.OrganizationID, B.VariableId
+                                        union 
+                                        select 
+                                            A.OrganizationID as OrganizationID,
+                                            (case when A.VariableId = 'clinker_ClinkerFactoryTransportInput' then 'clinker_ClinkerInput'
+                                                 when A.VariableId = 'clinker_ClinkerCompanyTransportInput' then 'clinker_ClinkerInput'
+                                                 else A.VariableId end) as VariableId,
+                                            (case when CumulantDay is null then 0 else CumulantDay end) as monthBalance
+                                        from RealtimeIncrementCumulant AS A, system_Organization B
+                                        where 
+                                        A.OrganizationID = B.OrganizationID
+                                        and B.LevelCode like @LevelCode + '%'
+                                        ) D
+                                        group by D.VariableId";
+                }
+                List<SqlParameter> parameters = new List<SqlParameter>();
+                parameters.Add(new SqlParameter("@LevelCode", m_LevelCode));
+                DataTable table = _connFactory.Query(dataString, parameters.ToArray());
+
+                EnergyConsumption_V1.LoadComprehensiveData(table, m_ComprehensiveData, "VariableId", "monthBalance");
+
+                DataItem clinker_ElectricityConsumption_Comprehensive = new DataItem
+                {
+                    ID = organizationId + ">clinker_ElectricityConsumption_Comprehensive>Comprehensive",
+                    Value = EnergyConsumption_V1.GetClinkerPowerConsumption().ToString("#.00").Trim()
+                };
+                result.Add(clinker_ElectricityConsumption_Comprehensive);
+
+                DataItem clinker_CoalConsumption_Comprehensive = new DataItem
+                {
+                    ID = organizationId + ">clinker_CoalConsumption_Comprehensive>Comprehensive",
+                    Value = EnergyConsumption_V1.GetClinkerCoalConsumption().ToString("#.00").Trim()
+                };
+                result.Add(clinker_CoalConsumption_Comprehensive);
+
+                decimal defaultCE = 0;
+                decimal.TryParse(clinker_ElectricityConsumption_Comprehensive.Value, out defaultCE);
+                DataItem cementmill_ElectricityConsumption_Comprehensive = new DataItem
+                {
+                    ID = organizationId + ">cementmill_ElectricityConsumption_Comprehensive>Comprehensive",
+                    Value = EnergyConsumption_V1.GetCementPowerConsumption(defaultCE).ToString("#.00").Trim()
+                };
+                result.Add(cementmill_ElectricityConsumption_Comprehensive);
+
+                decimal defaultCC = 0;
+                decimal.TryParse(clinker_CoalConsumption_Comprehensive.Value, out defaultCC);
+                DataItem cementmill_CoalConsumption_Comprehensive = new DataItem
+                {
+                    ID = organizationId + ">cementmill_CoalConsumption_Comprehensive>Comprehensive",
+                    Value = EnergyConsumption_V1.GetCementCoalConsumption(defaultCC).ToString("#.00").Trim()
+                };
+                result.Add(cementmill_CoalConsumption_Comprehensive);
             }
-            else
-            {
-                dataString = @"select VariableId,SUM(monthBalance) as monthBalance from
-                            (select * from(
-                            select C.OrganizationID,C.VariableId,
-                            SUM(C.TotalBalance+(case when D.CumulantDay is null then 0 else D.CumulantDay end)) as monthBalance from 
-                            (select A.OrganizationID,
-                            (case when B.VariableId = 'clinker_ClinkerFactoryTransportInput' then 'clinker_ClinkerInput'
-                            when B.VariableId = 'clinker_ClinkerCompanyTransportInput' then 'clinker_ClinkerInput'
-                            else B.VariableId end) as VariableId,
-                            B.OrganizationID as detailO,SUM(B.TotalPeakValleyFlatB) as TotalBalance 
-                            from (select BalanceId,OrganizationID,TimeStamp from tz_Balance) as A
-                            right join balance_Energy as B
-                            on A.BalanceId=B.KeyId where (B.ValueType = 'ElectricityQuantity' or B.ValueType = 'MaterialWeight') and
-                            TimeStamp like CONVERT(varchar(7),GETDATE(),20) + '%'
-                            group by A.OrganizationID,B.VariableId,B.OrganizationID) AS C
-                            left join (select OrganizationID,
-                            (case when VariableId = 'clinker_ClinkerFactoryTransportInput' then 'clinker_ClinkerInput'
-                            when VariableId = 'clinker_ClinkerCompanyTransportInput' then 'clinker_ClinkerInput'
-                            else VariableId end) as VariableId,
-                            (case when CumulantDay is null then 0 else CumulantDay end) as CumulantDay
-                            from RealtimeIncrementCumulant) AS D
-                            on C.detailO=D.OrganizationID and C.VariableId=D.VariableId group by C.OrganizationID,C.VariableId) AS E
-                            where OrganizationID like @organizationId) AS F group by VariableId";
-            }
-            List<SqlParameter> parameters = new List<SqlParameter>();
-            parameters.Add(new SqlParameter("@organizationId", organizationId + "%"));
-            DataTable table = _connFactory.Query(dataString, parameters.ToArray());
-
-            EnergyConsumption_V1.LoadComprehensiveData(table, m_ComprehensiveData, "VariableId", "monthBalance");
-
-            DataItem clinker_ElectricityConsumption_Comprehensive = new DataItem
-            {
-                ID = organizationId + ">clinker_ElectricityConsumption_Comprehensive>Comprehensive",
-                Value = EnergyConsumption_V1.GetClinkerPowerConsumption().ToString("#.00").Trim()
-            };
-            result.Add(clinker_ElectricityConsumption_Comprehensive);
-
-            DataItem clinker_CoalConsumption_Comprehensive = new DataItem
-            {
-                ID = organizationId + ">clinker_CoalConsumption_Comprehensive>Comprehensive",
-                Value = EnergyConsumption_V1.GetClinkerCoalConsumption().ToString("#.00").Trim()
-            };
-            result.Add(clinker_CoalConsumption_Comprehensive);
-
-            decimal defaultCE = 0;
-            decimal.TryParse(clinker_ElectricityConsumption_Comprehensive.Value, out defaultCE);
-            DataItem cementmill_ElectricityConsumption_Comprehensive = new DataItem
-            {
-                ID = organizationId + ">cementmill_ElectricityConsumption_Comprehensive>Comprehensive",
-                Value = EnergyConsumption_V1.GetCementPowerConsumption(defaultCE).ToString("#.00").Trim()
-            };
-            result.Add(cementmill_ElectricityConsumption_Comprehensive);
-
-            decimal defaultCC = 0;
-            decimal.TryParse(clinker_CoalConsumption_Comprehensive.Value, out defaultCC);
-            DataItem cementmill_CoalConsumption_Comprehensive = new DataItem
-            {
-                ID = organizationId + ">cementmill_CoalConsumption_Comprehensive>Comprehensive",
-                Value = EnergyConsumption_V1.GetCementCoalConsumption(defaultCC).ToString("#.00").Trim()
-            };
-            result.Add(cementmill_CoalConsumption_Comprehensive);
-
             return result;
+        }
+        private DataTable GetOrganizationInfo(string myOrganizationId)
+        {
+            string m_Sql = @"select A.LevelCode as LevelCode, A.LevelType as LevelType from system_Organization A
+                     where A.OrganizationID = @OrganizationID";
+            List<SqlParameter> m_Parameters = new List<SqlParameter>();
+            m_Parameters.Add(new SqlParameter("@OrganizationID", myOrganizationId));
+            DataTable table = _connFactory.Query(m_Sql, m_Parameters.ToArray());
+            return table;
         }
     }
 }

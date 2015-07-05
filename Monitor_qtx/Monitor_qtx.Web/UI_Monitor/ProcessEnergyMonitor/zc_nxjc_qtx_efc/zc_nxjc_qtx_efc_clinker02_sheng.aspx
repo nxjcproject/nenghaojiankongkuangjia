@@ -25,6 +25,7 @@
     <script src="/UI_Monitor/js/common/alarm.js"></script>
     <script src="/UI_Monitor/js/common/multiTagChart.js"></script>
     <script src="/UI_Monitor/js/common/RunningState.js"></script>
+    <script src="/UI_Monitor/js/common/AmmeterStatistic.js"></script>
     <script>
         publicData.organizationId = "zc_nxjc_qtx_efc_clinker02";
         publicData.sceneName = "2#熟料线";
@@ -44,7 +45,7 @@
                 <td><span id="zc_nxjc_qtx_efc>limestoneCrusher1>Power" class="mchart"></span></td>
             </tr>
         </table>
-        <table class="mytable" style="position: absolute; top: 138px; left: 19px;">
+        <table class="mytable" style="position: absolute; top: 138px; left: 18px;">
             <tr>
                 <td><span id="zc_nxjc_qtx_efc>limestoneMineBelt>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -77,7 +78,7 @@
                 <td><span id="zc_nxjc_qtx_efc_clinker02>limestoneStorageBeltMachine>Power" class="mchart"></span></td>
             </tr>
         </table>
-        <table class="mytable" style="position: absolute; top: 41px; left: 193px;">
+        <table class="mytable" style="position: absolute; top: 41px; left: 191px;">
             <tr>
                 <td><span id="zc_nxjc_qtx_efc>limestoneCrusher2>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -88,7 +89,7 @@
                 <td><span id="zc_nxjc_qtx_efc>limestoneCrusher2>Power" class="mchart"></span></td>
             </tr>
         </table>
-        <table class="mytable" style="position: absolute; top: 141px; left: 406px;">
+        <table class="mytable" style="position: absolute; top: 143px; left: 405px;">
             <tr>
                 <td><span id="zc_nxjc_qtx_efc_clinker02>sandstoneCrusher>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -99,7 +100,7 @@
                 <td><span id="zc_nxjc_qtx_efc_clinker02>sandstoneCrusher>Power" class="mchart"></span></td>
             </tr>
         </table>
-        <table class="mytable" style="position: absolute; top: 358px; left: 502px;">
+        <table class="mytable" style="position: absolute; top: 357px; left: 502px;">
             <tr>
                 <td><span id="zc_nxjc_qtx_efc_clinker02>powderSelectingMachine>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -110,7 +111,7 @@
                 <td><span id="zc_nxjc_qtx_efc_clinker02>powderSelectingMachine>Power" class="mchart"></span></td>
             </tr>
         </table>
-        <table class="mytable" style="position: absolute; top: 232px; left: 873px;">
+        <table class="mytable" style="position: absolute; top: 234px; left: 870px;">
             <tr>
                 <td><span id="zc_nxjc_qtx_efc_clinker02>circulatingFan>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -121,7 +122,7 @@
                 <td><span id="zc_nxjc_qtx_efc_clinker02>circulatingFan>Power" class="mchart"></span></td>
             </tr>
         </table>
-        <table class="mytable" style="position: absolute; top: 221px; left: 1138px;">
+        <table class="mytable" style="position: absolute; top: 222px; left: 1137px;">
             <tr>
                 <td><span id="zc_nxjc_qtx_efc_clinker02>highTemperatureFan>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -143,7 +144,7 @@
                 <td><span id="zc_nxjc_qtx_efc_clinker02>rawMealGrindingMainMotor>Power" class="mchart"></span></td>
             </tr>
         </table>
-        <table class="mytable" style="position: absolute; top: 427px; left: 1196px;">
+        <table class="mytable" style="position: absolute; top: 427px; left: 1197px;">
             <tr>
                 <td><span id="zc_nxjc_qtx_efc_clinker02>kilnTailExhaustFan>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -189,6 +190,8 @@
             </tr>
         </table>
     </div>
+
+    <div id="htmlContainer"></div>
 </body>
 </html>
 

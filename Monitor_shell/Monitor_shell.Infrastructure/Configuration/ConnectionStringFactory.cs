@@ -81,7 +81,7 @@ namespace Monitor_shell.Infrastructure.Configuration
             DataTable dt = dataFactory.Query(queryString, parameters);
             if (dt.Rows.Count == 0)
             {
-                throw new ArgumentException("无该组织机构ID对应的数据");
+                throw new ArgumentException("无该组织机构ID对应的电表数据库");
             }
 
             string ammeterDatabaseName = dt.Rows[0]["MeterDatabase"].ToString().Trim();

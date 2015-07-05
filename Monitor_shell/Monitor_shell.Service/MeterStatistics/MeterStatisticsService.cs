@@ -26,6 +26,8 @@ namespace Monitor_shell.Service.MeterStatistics
             formulaHelper.Claculate(organizationId, variableInfo.levelcode);
             IDictionary<string, string> ammeterDetail = formulaHelper.ammeterDictionary;
             IDictionary<string, string> materialDetail = formulaHelper.materialDictionary;
+            string myDenominatorFormula = formulaHelper.GetDenominatorFormulaJson(organizationId, variableId);
+            //myDenominatorFormula=myDenominatorFormula==""?"无":myDenominatorFormula;
 
             DataTable data = meterStatistics.GetMeterStatictisticsData(organizationId, variableInfo, 10,ammeterDetail,materialDetail);
             DataTable equipmentInfoTable = new DataTable();
@@ -36,6 +38,7 @@ namespace Monitor_shell.Service.MeterStatistics
             StatisticResult result = new StatisticResult
             {
                 formula = meterStatistics.AmmeterFormula,
+                denominatorFormula=myDenominatorFormula,
                 data = data,
                 EquipmentInfoData=equipmentInfoTable,
                 PFormula=formulaHelper.PDictionary,

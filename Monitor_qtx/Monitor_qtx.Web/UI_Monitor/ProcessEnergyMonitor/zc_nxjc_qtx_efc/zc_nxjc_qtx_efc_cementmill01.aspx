@@ -24,6 +24,7 @@
     <script src="/UI_Monitor/js/common/alarm.js"></script>
     <script src="/UI_Monitor/js/common/multiTagChart.js"></script>
     <script src="/UI_Monitor/js/common/RunningState.js"></script>
+    <script src="/UI_Monitor/js/common/AmmeterStatistic.js"></script>
     <script>
         publicData.organizationId = "zc_nxjc_qtx_efc_cementmill01";
         publicData.sceneName = "1#水泥磨";
@@ -144,6 +145,8 @@
             </tr>
         </table>
     </div>
+
+    <div id="htmlContainer"></div>
 </body>
 </html>
 

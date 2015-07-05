@@ -25,6 +25,7 @@
     <script src="/UI_Monitor/js/common/alarm.js"></script>
     <script src="/UI_Monitor/js/common/multiTagChart.js"></script>
     <script src="/UI_Monitor/js/common/RunningState.js"></script>
+    <script src="/UI_Monitor/js/common/AmmeterStatistic.js"></script>
     <script>
         publicData.organizationId = "zc_nxjc_qtx_tys_clinker04";
         publicData.sceneName = "4#熟料线";
@@ -44,7 +45,7 @@
                 <td><span id="zc_nxjc_qtx_tys>limestoneCrusher1>Power" class="mchart"></span></td>
             </tr>
         </table>
-        <table class="mytable" style="position: absolute; top: 138px; left: 19px;">
+        <table class="mytable" style="position: absolute; top: 139px; left: 18px;">
             <tr>
                 <td><span id="zc_nxjc_qtx_tys>limestoneMineBelt>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -66,7 +67,7 @@
                 <td><span id="zc_nxjc_qtx_tys_clinker04>limestoneStacker>Power" class="mchart"></span></td>
             </tr>
         </table>
-        <table class="mytable" style="position: absolute; top: 316px; left: 20px;">
+        <table class="mytable" style="position: absolute; top: 318px; left: 18px;">
             <tr>
                 <td><span id="zc_nxjc_qtx_tys_clinker04>limestoneStorageBeltMachine>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -77,7 +78,7 @@
                 <td><span id="zc_nxjc_qtx_tys_clinker04>limestoneStorageBeltMachine>Power" class="mchart"></span></td>
             </tr>
         </table>
-        <table class="mytable" style="position: absolute; top: 41px; left: 193px;">
+        <table class="mytable" style="position: absolute; top: 41px; left: 191px;">
             <tr>
                 <td><span id="zc_nxjc_qtx_tys>limestoneCrusher2>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -88,7 +89,7 @@
                 <td><span id="zc_nxjc_qtx_tys>limestoneCrusher2>Power" class="mchart"></span></td>
             </tr>
         </table>
-        <table class="mytable" style="position: absolute; top: 141px; left: 406px;">
+        <table class="mytable" style="position: absolute; top: 142px; left: 403px;">
             <tr>
                 <td><span id="zc_nxjc_qtx_tys_clinker04>sandstoneCrusher>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -110,7 +111,7 @@
                 <td><span id="zc_nxjc_qtx_tys_clinker04>powderSelectingMachine>Power" class="mchart"></span></td>
             </tr>
         </table>
-        <table class="mytable" style="position: absolute; top: 232px; left: 873px;">
+        <table class="mytable" style="position: absolute; top: 233px; left: 871px;">
             <tr>
                 <td><span id="zc_nxjc_qtx_tys_clinker04>circulatingFan>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -121,7 +122,7 @@
                 <td><span id="zc_nxjc_qtx_tys_clinker04>circulatingFan>Power" class="mchart"></span></td>
             </tr>
         </table>
-        <table class="mytable" style="position: absolute; top: 221px; left: 1138px;">
+        <table class="mytable" style="position: absolute; top: 220px; left: 1136px;">
             <tr>
                 <td><span id="zc_nxjc_qtx_tys_clinker04>highTemperatureFan>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -143,7 +144,7 @@
                 <td><span id="zc_nxjc_qtx_tys_clinker04>rawMealGrindingMainMotor>Power" class="mchart"></span></td>
             </tr>
         </table>
-        <table class="mytable" style="position: absolute; top: 427px; left: 1196px;">
+        <table class="mytable" style="position: absolute; top: 427px; left: 1197px;">
             <tr>
                 <td><span id="zc_nxjc_qtx_tys_clinker04>kilnTailExhaustFan>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -188,16 +189,19 @@
                 <td><span id="zc_nxjc_qtx_tys_clinker04>rawMaterialsPreparation_ElectricityConsumption>Day" class="mchart"></span></td>
             </tr>
         </table>
-       
-     <!--破碎机 -->
-    <div class="imageContainer" id="zc_nxjc_qtx_tys_clinker04>crusher>RunningState" style="position:absolute; height: 20px; width: 19px; top: 65px; left: 135px;"></div>
-    <!--原料磨主电机-->
-    <div class="imageContainer" id="zc_nxjc_qtx_tys_clinker04>rawMealGrindingMainMotor>RunningState" style="position:absolute; height: 20px; width: 19px; top: 564px; left: 545px;"></div>
-    <!--原料磨循环风机-->
-    <div class="imageContainer" id="zc_nxjc_qtx_tys_clinker04>circulatingFan>RunningState" style="position:absolute; height: 20px; width: 19px; top: 300px; left: 855px;"></div>
-    <!--原料磨选粉机电机-->
-    <div class="imageContainer" id="zc_nxjc_qtx_tys_clinker04>powderSelectingMachine>RunningState" style="position:absolute; height: 20px; width: 19px; top: 488px; left: 544px;"></div>
     </div>
+
+
+    <div id="htmlContainer"></div>
+    <!--破碎机 -->
+    <div class="imageContainer" id="zc_nxjc_qtx_tys_clinker04>crusher>RunningState" style="position: absolute; height: 20px; width: 19px; top: 65px; left: 135px;"></div>
+    <!--原料磨主电机-->
+    <div class="imageContainer" id="zc_nxjc_qtx_tys_clinker04>rawMealGrindingMainMotor>RunningState" style="position: absolute; height: 20px; width: 19px; top: 564px; left: 545px;"></div>
+    <!--原料磨循环风机-->
+    <div class="imageContainer" id="zc_nxjc_qtx_tys_clinker04>circulatingFan>RunningState" style="position: absolute; height: 20px; width: 19px; top: 300px; left: 855px;"></div>
+    <!--原料磨选粉机电机-->
+    <div class="imageContainer" id="zc_nxjc_qtx_tys_clinker04>powderSelectingMachine>RunningState" style="position: absolute; height: 20px; width: 19px; top: 488px; left: 544px;"></div>
+
 </body>
 </html>
 

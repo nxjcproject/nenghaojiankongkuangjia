@@ -23,8 +23,9 @@ function initDialog() {
 }
 //清空上次数据，防止本次数据读不上来后会显示上次数据的问题
 function clearData() {
-    //清空公式
+    //清空电量公式
     $("#ammeterFormula").panel({
+        title:"计算公式",
         content:""
     });
     //清空电表信息
@@ -44,6 +45,7 @@ function loadGridData(dataToServer) {
         success: function (msg) {
             m_MsgData = jQuery.parseJSON(msg.d);
             $("#ammeterFormula").html(m_MsgData.formula);
+            $("#ammeterFormula").panel("setTitle", "计算公式 {分母值:" + m_MsgData.denominatorFormula + "}");
             //InitializeGrid(m_MsgData.data);
             if (m_MsgData.data == "") {
                 $('#dg').datagrid("loadData", []);
@@ -51,6 +53,7 @@ function loadGridData(dataToServer) {
             else {
                 $('#dg').datagrid("loadData", m_MsgData.data);
             }
+            //var myWidth = "12%";
             if (m_MsgData.equipmentInfo != "") {
                 equipmentInfo = m_MsgData.equipmentInfo;
                 $('#ammeterInfo').datagrid({
@@ -58,15 +61,31 @@ function loadGridData(dataToServer) {
                     title: '设备信息',
                     singleSelect: true, rownumbers: true, striped: true,
                     columns: [[
+                        //{
+                        //    field: 'AmmeterCode', title: '电表编号', width: '105px', align: 'center'
+                        //},
+                        //{
+                        //    field: 'AmmeterValue', title: '表码值', width: '100px', align: 'center'
+                        //},
                         {
-                            field: 'VoltageGrade', title: '电压等级', width: '30%', align: 'center'
+                            field: 'EquipmentName', title: '设备名称', width: '200px', align: 'center'
                         },
                         {
-                            field: 'Power', title: '额定功率', width: '30%', align: 'center'
+                            field: 'VoltageGrade', title: '电压等级', width: '150px', align: 'center'
                         },
                         {
-                            field: 'Current', title: '额定电流', width: '30%', align: 'center'
+                            field: 'Power', title: '额定功率', width: '150px', align: 'center'
+                        },
+                        {
+                            field: 'Current', title: '额定电流', width: '150px', align: 'center'
                         }
+                        //,
+                        //{
+                        //    field: 'CT', title: 'CT', width: '80px', align: 'center'
+                        //},
+                        //{
+                        //    field: 'PT', title: 'PT', width: '80px', align: 'center'
+                        //}
                     ]]
                 });
             }
@@ -80,16 +99,28 @@ function InitializeGrid(myData) {
         singleSelect: true, rownumbers: true, striped: true,
         columns: [[
             {
-                field: 'Name', title: '电表名称', width: '37%', align: 'center'
+                field: 'Name', title: '电表名称', width: '180px', align: 'center'
             },
             {
-                field: 'CurrentData', title: '当前增量值', width: '20%', align: 'center', formatter: ValueFormatter
+                field: 'AmmeterCode', title: '电表编号', width: '100px', align: 'center'
             },
             {
-                field: 'AverageData', title: '平均增量值', width: '20%', align: 'center', formatter: ValueFormatter
+                field: 'CT', title: 'CT', width: '50px', align: 'center'
             },
             {
-                field: 'VarianceData', title: '方差', width: '20%', align: 'center', formatter: ValueFormatter
+                field: 'PT', title: 'PT', width: '50px', align: 'center'
+            },
+            {
+                field: 'AmmeterValue', title: '表码值', width: '60px', align: 'center'
+            },
+            {
+                field: 'CurrentData', title: '当前增量值', width: '80px', align: 'center', formatter: ValueFormatter
+            },
+            {
+                field: 'AverageData', title: '平均增量值', width: '80px', align: 'center', formatter: ValueFormatter
+            },
+            {
+                field: 'VarianceData', title: '方差', width: '80px', align: 'center', formatter: ValueFormatter
             }
         ]]
     });
@@ -100,7 +131,7 @@ function ValueFormatter(value, row, index) {
 }
 
 function GetAmmeterDialogHtml() {
-    var html = '<div id="ammeterDialog" class="easyui-dialog" title="电表详细信息" data-options="iconCls:\'icon-save\',closed:true" style="width: 700px; height: 330px; padding: 5px">\
+    var html = '<div id="ammeterDialog" class="easyui-dialog" title="详细信息" data-options="iconCls:\'icon-save\',closed:true" style="width: 750px; height: 330px; padding: 5px">\
             <div id="ammeterFormula" class="easyui-panel" title="计算公式" style="background: #fafafa;padding-bottom:5px;" data-options="border:true">\
                 &nbsp\
             </div>\

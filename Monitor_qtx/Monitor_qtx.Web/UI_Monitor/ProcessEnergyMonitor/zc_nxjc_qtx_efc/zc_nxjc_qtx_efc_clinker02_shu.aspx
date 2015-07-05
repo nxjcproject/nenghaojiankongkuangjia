@@ -25,6 +25,7 @@
     <script src="/UI_Monitor/js/common/alarm.js"></script>
     <script src="/UI_Monitor/js/common/multiTagChart.js"></script>
     <script src="/UI_Monitor/js/common/RunningState.js"></script>
+    <script src="/UI_Monitor/js/common/AmmeterStatistic.js"></script>
     <script>
         publicData.organizationId = "zc_nxjc_qtx_efc_clinker02";
         publicData.sceneName = "2#熟料线";
@@ -112,17 +113,18 @@
                 <td><span id="zc_nxjc_qtx_efc_clinker02>clinkerFVOA>Power" class="mchart"></span></td>
             </tr>
         </table>
-        <table class="mytable" style="position: absolute; top: 521px; left: 478px;">
+        <table class="mytable" style="position: absolute; top: 522px; left: 477px;">
             <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker02>clinkerFVOB>ElectricityConsumption" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_efc_clinker02>clinkerF1AC>ElectricityConsumption" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker02>clinkerFVOB>Current" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_efc_clinker02>clinkerF1AC>Current" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker02>clinkerFVOB>Power" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_efc_clinker02>clinkerF1AC>Power" class="mchart"></span></td>
             </tr>
         </table>
+       
         <table class="mytable" style="position: absolute; top: 118px; left: 1240px;">
             <tr>
                 <td><span id="zc_nxjc_qtx_efc_clinker02>coalMillFan>ElectricityConsumption" class="mchart"></span></td>
@@ -135,7 +137,7 @@
             </tr>
         </table>
         <%--罗茨风机--%>
-        <table class="mytable" style="position: absolute; top: 353px; left: 1052px;">
+        <table class="mytable" style="position: absolute; top: 353px; left: 1126px;">
             <tr>
                 <td><span id="zc_nxjc_qtx_efc_clinker02>coalMilRootsBlower1>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -146,7 +148,7 @@
                 <td><span id="zc_nxjc_qtx_efc_clinker02>coalMilRootsBlower1>Power" class="mchart"></span></td>
             </tr>
         </table>
-        <table class="mytable" style="position: absolute; top: 276px; left: 994px;">
+        <table class="mytable" style="position: absolute; top: 305px; left: 1005px;">
             <tr>
                 <td><span id="zc_nxjc_qtx_efc_clinker02>coalMilRootsBlower2>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -157,7 +159,7 @@
                 <td><span id="zc_nxjc_qtx_efc_clinker02>coalMilRootsBlower2>Power" class="mchart"></span></td>
             </tr>
         </table>
-        <table class="mytable" style="position: absolute; top: 279px; left: 1227px;">
+        <table class="mytable" style="position: absolute; top: 299px; left: 1206px;">
             <tr>
                 <td><span id="zc_nxjc_qtx_efc_clinker02>coalMilRootsBlower3>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -202,7 +204,7 @@
                 <td><span id="zc_nxjc_qtx_efc_clinker02>clinkerCrusher>Power" class="mchart"></span></td>
             </tr>
         </table>
-        <table class="mytable" style="position: absolute; top: 568px; left: 607px;">
+        <table class="mytable" style="position: absolute; top: 659px; left: 479px;">
             <tr>
                 <td><span id="zc_nxjc_qtx_efc_clinker02>clinkerF3AC>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -213,18 +215,7 @@
                 <td><span id="zc_nxjc_qtx_efc_clinker02>clinkerF3AC>Power" class="mchart"></span></td>
             </tr>
         </table>
-        <table class="mytable" style="position: absolute; top: 567px; left: 669px;">
-            <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker02>clinkerFVOC>ElectricityConsumption" class="mchart"></span></td>
-            </tr>
-            <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker02>clinkerFVOC>Current" class="mchart"></span></td>
-            </tr>
-            <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker02>clinkerFVOC>Power" class="mchart"></span></td>
-            </tr>
-        </table>
-        <table class="mytable" style="position: absolute; top: 569px; left: 735px;">
+        <table class="mytable" style="position: absolute; top: 678px; left: 781px;">
             <tr>
                 <td><span id="zc_nxjc_qtx_efc_clinker02>clinkerF5AC>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -246,72 +237,6 @@
                 <td><span id="zc_nxjc_qtx_efc_clinker02>clinkerF7AC>Power" class="mchart"></span></td>
             </tr>
         </table>
-        <table class="mytable" style="position: absolute; top: 569px; left: 864px;">
-            <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker02>clinkerF9AC>ElectricityConsumption" class="mchart"></span></td>
-            </tr>
-            <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker02>clinkerF9AC>Current" class="mchart"></span></td>
-            </tr>
-            <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker02>clinkerF9AC>Power" class="mchart"></span></td>
-            </tr>
-        </table>
-        <table class="mytable" style="position: absolute; top: 568px; left: 932px;">
-            <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker02>clinkerF11AC>ElectricityConsumption" class="mchart"></span></td>
-            </tr>
-            <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker02>clinkerF11AC>Current" class="mchart"></span></td>
-            </tr>
-            <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker02>clinkerF11AC>Power" class="mchart"></span></td>
-            </tr>
-        </table>
-        <table class="mytable" style="position: absolute; top: 677px; left: 585px;">
-            <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker02>clinkerF1AC>ElectricityConsumption" class="mchart"></span></td>
-            </tr>
-            <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker02>clinkerF1AC>Current" class="mchart"></span></td>
-            </tr>
-            <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker02>clinkerF1AC>Power" class="mchart"></span></td>
-            </tr>
-        </table>
-        <table class="mytable" style="position: absolute; top: 677px; left: 650px;">
-            <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker02>clinkerF2AC>ElectricityConsumption" class="mchart"></span></td>
-            </tr>
-            <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker02>clinkerF2AC>Current" class="mchart"></span></td>
-            </tr>
-            <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker02>clinkerF2AC>Power" class="mchart"></span></td>
-            </tr>
-        </table>
-        <table class="mytable" style="position: absolute; top: 677px; left: 715px;">
-            <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker02>clinkerF4AC>ElectricityConsumption" class="mchart"></span></td>
-            </tr>
-            <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker02>clinkerF4AC>Current" class="mchart"></span></td>
-            </tr>
-            <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker02>clinkerF4AC>Power" class="mchart"></span></td>
-            </tr>
-        </table>
-        <table class="mytable" style="position: absolute; top: 677px; left: 780px;">
-            <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker02>clinkerF6AC>ElectricityConsumption" class="mchart"></span></td>
-            </tr>
-            <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker02>clinkerF6AC>Current" class="mchart"></span></td>
-            </tr>
-            <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker02>clinkerF6AC>Power" class="mchart"></span></td>
-            </tr>
-        </table>
         <table class="mytable" style="position: absolute; top: 678px; left: 844px;">
             <tr>
                 <td><span id="zc_nxjc_qtx_efc_clinker02>clinkerF8AC>ElectricityConsumption" class="mchart"></span></td>
@@ -323,8 +248,7 @@
                 <td><span id="zc_nxjc_qtx_efc_clinker02>clinkerF8AC>Power" class="mchart"></span></td>
             </tr>
         </table>
-
-        <table class="mytable" style="position: absolute; top: 677px; left: 909px;">
+        <table class="mytable" style="position: absolute; top: 568px; left: 932px;">
             <tr>
                 <td><span id="zc_nxjc_qtx_efc_clinker02>clinkerF10AC>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -335,15 +259,49 @@
                 <td><span id="zc_nxjc_qtx_efc_clinker02>clinkerF10AC>Power" class="mchart"></span></td>
             </tr>
         </table>
-        <table class="mytable" style="position: absolute; top: 677px; left: 975px;">
+        
+        <table class="mytable" style="position: absolute; top: 589px; left: 478px;">
             <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker02>clinkerF12AC>ElectricityConsumption" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_efc_clinker02>clinkerF2AC>ElectricityConsumption" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker02>clinkerF12AC>Current" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_efc_clinker02>clinkerF2AC>Current" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker02>clinkerF12AC>Power" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_efc_clinker02>clinkerF2AC>Power" class="mchart"></span></td>
+            </tr>
+        </table>
+        <table class="mytable" style="position: absolute; top: 570px; left: 671px;">
+            <tr>
+                <td><span id="zc_nxjc_qtx_efc_clinker02>clinkerF4AC>ElectricityConsumption" class="mchart"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_qtx_efc_clinker02>clinkerF4AC>Current" class="mchart"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_qtx_efc_clinker02>clinkerF4AC>Power" class="mchart"></span></td>
+            </tr>
+        </table>
+        <table class="mytable" style="position: absolute; top: 569px; left: 735px;">
+            <tr>
+                <td><span id="zc_nxjc_qtx_efc_clinker02>clinkerF6AC>ElectricityConsumption" class="mchart"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_qtx_efc_clinker02>clinkerF6AC>Current" class="mchart"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_qtx_efc_clinker02>clinkerF6AC>Power" class="mchart"></span></td>
+            </tr>
+        </table>
+        <table class="mytable" style="position: absolute; top: 569px; left: 868px;">
+            <tr>
+                <td><span id="zc_nxjc_qtx_efc_clinker02>clinkerF9AC>ElectricityConsumption" class="mchart"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_qtx_efc_clinker02>clinkerF9AC>Current" class="mchart"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_qtx_efc_clinker02>clinkerF9AC>Power" class="mchart"></span></td>
             </tr>
         </table>
 
@@ -433,6 +391,8 @@
             </tr>
         </table>
     </div>
+
+    <div id="htmlContainer"></div>
 </body>
 </html>
 
