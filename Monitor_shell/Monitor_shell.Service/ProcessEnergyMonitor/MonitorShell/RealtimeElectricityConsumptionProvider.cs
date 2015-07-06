@@ -47,7 +47,7 @@ namespace Monitor_shell.Service.ProcessEnergyMonitor.MonitorShell
                         DataItem itemElectricityConsumption = new DataItem
                         {
                             ID = item["OrganizationID"].ToString().Trim() + ">" + item["VariableID"].ToString().Trim() + ">" + "ElectricityConsumption",
-                            Value = denominatorValue==0?"0":Convert.ToDecimal(formulaValue / denominatorValue).ToString("#.00").Trim()//产量为0时将电耗置为0
+                            Value = denominatorValue<=0.5m?"0":Convert.ToDecimal(formulaValue / denominatorValue).ToString("#.00").Trim()//产量小于0.5时将电耗置为0
                         };
                         results.Add(itemElectricityConsumption);
                     //}
