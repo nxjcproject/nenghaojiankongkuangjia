@@ -18,6 +18,18 @@ namespace Monitor_shell.Web.UI_Monitor.TrendTool
         [WebMethod]
         public static IDictionary<string, decimal> GetData(string id, string startTime, string endTime, int timeSpan)
         {
+            string m_Id = GetTrendDataId(id);
+            return TrendLineService.GetData(m_Id, DateTime.Parse(startTime), DateTime.Parse(endTime), timeSpan);
+        }
+        [WebMethod]
+        public static string GetTrendName(string id)
+        {
+            string m_Id = GetTrendDataId(id);
+            return TrendLineService.GetTrendName(m_Id);
+        }
+        private static string GetTrendDataId(string myId)
+        {
+            string id = myId;
             string[] myArray = id.Split('>');
             /*
             //标准电量ID为：OrganizationID>VariableId>ElectricityQuantity
@@ -46,7 +58,7 @@ namespace Monitor_shell.Web.UI_Monitor.TrendTool
                     id = myArray[0] + ">" + myArray[1] + ">" + "Material";
                 }
             }
-            return TrendLineService.GetData(id, DateTime.Parse(startTime), DateTime.Parse(endTime), timeSpan);
+            return id;
         }
     }
 }

@@ -40,8 +40,9 @@
     <Reference Include="SqlServerDataAdapter">
       <HintPath>..\..\Lib\SqlServerDataAdapter.dll</HintPath>
     </Reference>
-    <Reference Include="Standard_GB16780-2012">
-      <HintPath>..\..\Lib\Standard_GB16780-2012.dll</HintPath>
+    <Reference Include="Standard_GB16780-2012, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\组件\StandardCalculation\Standard_GB16780-2012\bin\Debug\Standard_GB16780-2012.dll</HintPath>
     </Reference>
     <Reference Include="StatisticalReport.Infrastructure">
       <HintPath>..\..\Lib\StatisticalReport.Infrastructure.dll</HintPath>
@@ -64,6 +65,7 @@
     <Compile Include="MeterStatistics\MeterStatisticsService.cs" />
     <Compile Include="MeterStatistics\StatisticResult.cs" />
     <Compile Include="MeterStatistics\VariableInfo.cs" />
+    <Compile Include="ProcessEnergyMonitor\ComprehensiveConsumptionService.cs" />
     <Compile Include="ProcessEnergyMonitor\CorrectionValue.cs" />
     <Compile Include="ProcessEnergyMonitor\DataBaseHelper.cs" />
     <Compile Include="ProcessEnergyMonitor\DataItem.cs" />

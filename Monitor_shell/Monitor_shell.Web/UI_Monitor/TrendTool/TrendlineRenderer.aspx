@@ -62,6 +62,7 @@
 	        $('#startTime').datetimebox('setValue', formatDate(startDate));
 	        $('#endTime').datetimebox('setValue', formatDate(endDate));
 
+	        getTrendName();
 	        getData();
 	        //fakeData();
 
@@ -301,7 +302,21 @@
 	            }
 	        });
 	    }
+	    function getTrendName() {
+	        var queryUrl = "TrendlineRenderer.aspx/GetTrendName";
+	        var dataToSend = "{id:'" + variableId + "'}";
 
+	        $.ajax({
+	            type: "POST",
+	            url: queryUrl,
+	            data: dataToSend,
+	            contentType: "application/json; charset=utf-8",
+	            dataType: "json",
+	            success: function (msg) {
+	                $(document).attr('title', msg.d);
+	            }
+	        });
+	    }
 	    function fakeData() {
 	        var datetime = new Date();
 

@@ -279,6 +279,25 @@ namespace Monitor_shell.Web.UI_Monitor.ProcessEnergyMonitor.MonitorShell
                 return "{\"formula\":\"" + formulaJson + "\",\"denominatorFormula\":\""+denominatorFormulaJson + "\",\"data\":" + ammeterDataJson + ",\"equipmentInfo\":" + equipmentInfoJson + "}";
             }
         }
+        [WebMethod]
+        public string GetComprehensiveStatisticData(string organizationId, string variableId)
+        {
+            string json = "";
+            DataTable m_DataTable = new DataTable();
+            m_DataTable.Columns.Add("FactorName",typeof(string));
+            m_DataTable.Columns.Add("FactorValue",typeof(decimal));
+            Standard_GB16780_2012.Model_CaculateValue m_Model_CaculateValue = Monitor_shell.Service.ProcessEnergyMonitor.ComprehensiveConsumptionService.GetComprehensiveData(organizationId, variableId);
+            if (m_Model_CaculateValue != null)
+            {
+                for (int i = 0; i < m_Model_CaculateValue.CaculateFactor.Count; i++)
+                {
+                    m_DataTable.Rows.Add(new object[]{ m_Model_CaculateValue.CaculateFactor[i].FactorName, m_Model_CaculateValue.CaculateFactor[i].FactorValue});
+                }
+                string m_DataJson = EasyUIJsonParser.DataGridJsonParser.DataTableToJson(m_DataTable);
+                json = "{\"formula\":\"" + m_Model_CaculateValue.CaculateFormula + "\",\"CaculateName\":\"" + m_Model_CaculateValue.CaculateName + "\",\"data\":" + m_DataJson + "}";
+            }
+            return json;
+        }
 
         [WebMethod]
         public string GetAlarmData()

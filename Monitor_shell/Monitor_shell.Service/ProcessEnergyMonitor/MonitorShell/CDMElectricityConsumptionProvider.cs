@@ -21,28 +21,8 @@ namespace Monitor_shell.Service.ProcessEnergyMonitor.MonitorShell
         {
             IList<DataItem> results = new List<DataItem>();
 
-            string sqlSource = @"select * from (SELECT A.OrganizationID,A.VariableId,(case when A.CumulantClass<=@correctionValue then 0 else A.CumulantClass end) as CumulantClass,
-				(case when A.CumulantLastClass<=@correctionValue then 0 else A.CumulantLastClass end) as CumulantLastClass,
-				(case when A.CumulantDay<=@correctionValue then 0 else A.CumulantDay end) as CumulantDay,
-				(case when (A.CumulantDay+(case when B.MonthValue is null then 0 else B.MonthValue end))<=@correctionValue then 0 
-				else (A.CumulantDay+(case when B.MonthValue is null then 0 else B.MonthValue end)) end) AS CumulantMonth
-                                                    FROM RealtimeIncrementCumulant AS A
-                                                LEFT JOIN  
-                                                    (select D.OrganizationID,D.VariableId,sum(D.TotalPeakValleyFlat) as MonthValue
-	                                                from tz_Balance as C, balance_Energy as D 
-	                                                where C.BalanceId=D.KeyId and TimeStamp>=CONVERT(varchar(8),GETDATE(),20)+'01'
-	                                                group by D.OrganizationID, VariableId) AS B
-                                                ON A.VariableId=B.VariableId and A.OrganizationID=B.OrganizationID) AS E
-                                where E.OrganizationID=@organizationId";
-
-            //cdy修改开始
-
-            //StringBuilder sqlSourceBase = new StringBuilder(sqlSource);
-            IList<SqlParameter> sourceparameters = new List<SqlParameter>();
-            sourceparameters.Add(new SqlParameter("@organizationId", organizationId));
-            sourceparameters.Add(new SqlParameter("@correctionValue", CorrectionValue.OutputCorrectionValue));
             //ParametersHelper.AddParamsCondition(sqlSourceBase, sourceparameters, variableIds);
-            DataTable sourceDt = _nxjcFactory.Query(sqlSource, sourceparameters.ToArray());
+            DataTable sourceDt = ParametersHelper.GetCDMBalanceEnergyValue(organizationId, _nxjcFactory);
             //SqlParameter parameter = new SqlParameter("organizationId",organizationId);
             //DataTable sourceDt = _nxjcFactory.Query(sqlSource, parameter);
             //cdy修改结束

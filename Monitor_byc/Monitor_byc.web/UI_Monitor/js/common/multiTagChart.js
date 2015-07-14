@@ -2,7 +2,8 @@
 var myLableArray = new Array();
 var lableName;
 $(function () {
-    $('#htmlContainer').append(GetMenuHtml());
+    $('#htmlContainer').append(GetMenuHtml()); 
+    $('#htmlContainer').append(GetComprehensiveMenuHtml());
     $.parser.parse('#htmlContainer');
     BindContextmenu();
     getLableName();
@@ -17,6 +18,14 @@ function BindContextmenu() {
         multiTagCharData.selectedId = this.id;
         e.preventDefault();
         $('#mm').menu('show', {
+            left: e.pageX,
+            top: e.pageY
+        });
+    });
+    $(".comprehensive:not(.nodisplay)").bind('contextmenu', function (e) {
+        multiTagCharData.selectedId = this.id;
+        e.preventDefault();
+        $('#Menu_ComprehensiveInfo').menu('show', {
             left: e.pageX,
             top: e.pageY
         });
@@ -151,6 +160,12 @@ function GetMenuHtml() {
     var html = '<div id="mm" class="easyui-menu" style="width: 120px;">\
         <div data-options="iconCls:\'icon-add\'" onclick="javascript:ClassificationId(multiTagCharData.selectedId)">添加到趋势列表</div>\
         <div data-options="iconCls:\'icon-search\'" onclick="javascript:ShowAmmeterStatistics(multiTagCharData.selectedId)">打开电表数据列</div>\
+    </div>';
+    return html;
+}
+function GetComprehensiveMenuHtml() {
+    var html = '<div id="Menu_ComprehensiveInfo" class="easyui-menu" style="width: 120px;">\
+        <div data-options="iconCls:\'icon-search\'" onclick="javascript:ShowComprehensiveStatistics(multiTagCharData.selectedId)">查看计算过程</div>\
     </div>';
     return html;
 }

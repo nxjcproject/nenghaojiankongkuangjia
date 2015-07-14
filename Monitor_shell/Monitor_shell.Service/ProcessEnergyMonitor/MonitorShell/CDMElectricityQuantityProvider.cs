@@ -21,20 +21,20 @@ namespace Monitor_shell.Service.ProcessEnergyMonitor.MonitorShell
         public IEnumerable<DataItem> GetDataItem(string organizationId, params string[] variableIds)
         {
             IList<DataItem> results = new List<DataItem>();
-            string queryString = @"select * from (SELECT A.OrganizationID,A.VariableId,A.CumulantClass,A.CumulantLastClass,A.CumulantDay,(A.CumulantDay+(case when B.MonthValue is null then 0 else B.MonthValue end)) AS CumulantMonth
-                                FROM RealtimeIncrementCumulant AS A
-								left join 
-                                (select D.OrganizationID,D.VariableId,sum(D.TotalPeakValleyFlat) as MonthValue
-	                            from tz_Balance as C, balance_Energy as D 
-	                            where C.BalanceId=D.KeyId and TimeStamp>=CONVERT(varchar(8),GETDATE(),20)+'01'
-	                            group by D.OrganizationID, VariableId) AS B
-                                on A.VariableId=B.VariableId and A.OrganizationID=B.OrganizationID) AS E
-                                where E.OrganizationID=@organizationId";
-            StringBuilder baseString = new StringBuilder(queryString);
-            IList<SqlParameter> parameters = new List<SqlParameter>();
-            parameters.Add(new SqlParameter("@organizationId", organizationId));
-            ParametersHelper.AddParamsCondition(baseString, parameters, variableIds);
-            DataTable dt = _nxjcFactory.Query(baseString.ToString(), parameters.ToArray());
+//            string queryString = @"select * from (SELECT A.OrganizationID,A.VariableId,A.CumulantClass,A.CumulantLastClass,A.CumulantDay,(A.CumulantDay+(case when B.MonthValue is null then 0 else B.MonthValue end)) AS CumulantMonth
+//                                FROM RealtimeIncrementCumulant AS A
+//								left join 
+//                                (select D.OrganizationID,D.VariableId,sum(D.TotalPeakValleyFlat) as MonthValue
+//	                            from tz_Balance as C, balance_Energy as D 
+//	                            where C.BalanceId=D.KeyId and TimeStamp>=CONVERT(varchar(8),GETDATE(),20)+'01'
+//	                            group by D.OrganizationID, VariableId) AS B
+//                                on A.VariableId=B.VariableId and A.OrganizationID=B.OrganizationID) AS E
+//                                where E.OrganizationID=@organizationId";
+//            StringBuilder baseString = new StringBuilder(queryString);
+//            IList<SqlParameter> parameters = new List<SqlParameter>();
+//            parameters.Add(new SqlParameter("@organizationId", organizationId));
+//            ParametersHelper.AddParamsCondition(baseString, parameters, variableIds);
+            DataTable dt = ParametersHelper.GetCDMBalanceEnergyValue(organizationId, _nxjcFactory, variableIds);
 
             foreach (DataRow dr in dt.Rows)
             {
