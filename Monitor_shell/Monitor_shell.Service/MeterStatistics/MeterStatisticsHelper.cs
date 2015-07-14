@@ -405,7 +405,7 @@ namespace Monitor_shell.Service.MeterStatistics
                     {
                         dr["AmmeterCode"] = t_table.Rows[0]["AmmeterCode"].ToString();
                         dr["CT"]=t_table.Rows[0]["CT"].ToString();
-                        dr["PT"] = t_table.Rows[0]["CT"].ToString();
+                        dr["PT"] = t_table.Rows[0]["PT"].ToString();
                         dr["AmmeterValue"] = decimal.Parse(t_table.Rows[0]["AmmeterValue"].ToString()).ToString("#.00");
                     }
                 }
