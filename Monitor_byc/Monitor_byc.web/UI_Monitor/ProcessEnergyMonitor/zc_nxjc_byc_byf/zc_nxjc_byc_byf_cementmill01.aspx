@@ -35,6 +35,7 @@
 </head>
 <body id="SubMonitorBody" style="margin: 0px; padding: 0px; overflow: auto;">
     <div id="SubMonitorLayout" style="position: relative; background-image: url('../../images/page/zc_nxjc_byc_byf_cementmill01.png'); width: 1350px; height: 740px; overflow: hidden;">
+        &nbsp;
         <table class="mytable" style="position: absolute; top: 47px; left: 122px;">
             <tr>
                 <td><span id="zc_nxjc_byc_byf>gypsumCrusher>ElectricityConsumption" class="mchart"></span></td>
@@ -46,7 +47,7 @@
                 <td><span id="zc_nxjc_byc_byf>gypsumCrusher>Power" class="mchart"></span></td>
             </tr>
         </table>
-        <table class="mytable" style="position: absolute; top: 189px; left: 5px;">
+        <table class="mytable" style="position: absolute; top: 157px; left: 4px; height: 53px; right: 1280px;">
             <tr>
                 <td><span id="zc_nxjc_byc_byf>clinkerStorageBeltMachine>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -164,6 +165,9 @@
     <div class="imageContainer equipmentInfo" data-equipmentid="clinkerStorageBeltMachine" id="zc_nxjc_byc_byf_cementmill01>clinkerStorageBeltMachine>RunningState" style="position:absolute; height: 20px; width: 19px; top: 266px; left: 12px;"></div>
     <!--石膏破碎机运行-->
     <div class="imageContainer equipmentInfo" data-equipmentid="gypsumCrusher" id="zc_nxjc_byc_byf>gypsumCrusher>RunningState" style="position:absolute; top: 134px; left: 104px; height: 20px; width: 19px;"></div>
+    <!--熟料储存及熟料汽车胶带机运行-->
+    <div class="imageContainer equipmentInfo" data-equipmentid="clinkerStorageBeltMachine" id="zc_nxjc_byc_byf_cementmill01>clinkerStorageBeltMachine1>RunningState" style="position:absolute; height: 20px; width: 19px; top: 266px; left: 12px;"></div>
+   
 </body>
 </html>
 

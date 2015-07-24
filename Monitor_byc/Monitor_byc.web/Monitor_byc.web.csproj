@@ -1623,6 +1623,7 @@
     <Content Include="UI_Monitor\images\common\greenL.gif" />
     <Content Include="UI_Monitor\images\common\redL.gif" />
     <Content Include="UI_Monitor\images\page\zc_nxjc_byc_byf.png" />
+    <Content Include="UI_Monitor\images\page\zc_nxjc_byc_byf_aircompressor.png" />
     <Content Include="UI_Monitor\images\page\zc_nxjc_byc_byf_cementmill01.png" />
     <Content Include="UI_Monitor\images\page\zc_nxjc_byc_byf_cementmill02.png" />
     <Content Include="UI_Monitor\images\page\zc_nxjc_byc_byf_clinker01_sheng.png" />
@@ -1644,6 +1645,7 @@
     <Content Include="UI_Monitor\js\common\trendlineRenderer.js" />
     <Content Include="UI_Monitor\ProcessEnergyMonitor\zc_nxjc_byc_byf\test.aspx" />
     <Content Include="UI_Monitor\ProcessEnergyMonitor\zc_nxjc_byc_byf\zc_nxjc_byc_byf.aspx" />
+    <Content Include="UI_Monitor\ProcessEnergyMonitor\zc_nxjc_byc_byf\zc_nxjc_byc_byf_aircompressor.aspx" />
     <Content Include="UI_Monitor\ProcessEnergyMonitor\zc_nxjc_byc_byf\zc_nxjc_byc_byf_cementmill01.aspx" />
     <Content Include="UI_Monitor\ProcessEnergyMonitor\zc_nxjc_byc_byf\zc_nxjc_byc_byf_cementmill02.aspx" />
     <Content Include="UI_Monitor\ProcessEnergyMonitor\zc_nxjc_byc_byf\zc_nxjc_byc_byf_clinker01_sheng.aspx" />
@@ -1665,6 +1667,13 @@
     </Compile>
     <Compile Include="UI_Monitor\ProcessEnergyMonitor\zc_nxjc_byc_byf\zc_nxjc_byc_byf.aspx.designer.cs">
       <DependentUpon>zc_nxjc_byc_byf.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Monitor\ProcessEnergyMonitor\zc_nxjc_byc_byf\zc_nxjc_byc_byf_aircompressor.aspx.cs">
+      <DependentUpon>zc_nxjc_byc_byf_aircompressor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI_Monitor\ProcessEnergyMonitor\zc_nxjc_byc_byf\zc_nxjc_byc_byf_aircompressor.aspx.designer.cs">
+      <DependentUpon>zc_nxjc_byc_byf_aircompressor.aspx</DependentUpon>
     </Compile>
     <Compile Include="UI_Monitor\ProcessEnergyMonitor\zc_nxjc_byc_byf\zc_nxjc_byc_byf_cementmill01.aspx.cs">
       <DependentUpon>zc_nxjc_byc_byf_cementmill01.aspx</DependentUpon>

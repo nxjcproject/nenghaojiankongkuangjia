@@ -134,7 +134,7 @@
                 <td><span id="zc_nxjc_byc_byf_clinker01>highTemperatureFan>Power" class="mchart"></span></td>
             </tr>
         </table>
-        <table class="mytable" style="position: absolute; top: 608px; left: 517px;">
+        <table class="mytable" style="position: absolute; top: 608px; left: 515px;">
             <tr>
                 <td><span id="zc_nxjc_byc_byf_clinker01>rawMealGrindingMainMotor>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -145,7 +145,7 @@
                 <td><span id="zc_nxjc_byc_byf_clinker01>rawMealGrindingMainMotor>Power" class="mchart"></span></td>
             </tr>
         </table>
-        <table class="mytable" style="position: absolute; top: 395px; left: 1232px;">
+        <table class="mytable" style="position: absolute; top: 395px; left: 1231px;">
             <tr>
                 <td><span id="zc_nxjc_byc_byf_clinker01>kilnTailExhaustFan>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -192,7 +192,7 @@
         </table>
         <%--废气处理链式输送机--%>
 
-        <table class="mytable" style="position: absolute; top: 430px; left: 1124px;">
+        <table class="mytable" style="position: absolute; top: 427px; left: 1122px;">
             <tr>
                 <td><span id="zc_nxjc_byc_byf_clinker01>wasteGasChainConveyor>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -204,7 +204,7 @@
             </tr>
         </table>
         <%--增湿塔链式输送机--%>
-        <table class="mytable" style="position: absolute; top: 282px; left: 1078px;">
+        <table class="mytable" style="position: absolute; top: 282px; left: 1076px;">
             <tr>
                 <td><span id="zc_nxjc_byc_byf_clinker01>humidifyingTowerChainConveyor>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -431,6 +431,13 @@
     <div class="imageContainer equipmentInfo" data-equipmentid="kilnTailExhaustFan" id="zc_nxjc_byc_byf_clinker01>kilnTailExhaustFan>RunningState" style="position: absolute; height: 20px; width: 19px; top: 351px; left: 1242px;"></div>
     <!--窑尾高温风机运行-->
     <div class="imageContainer equipmentInfo" data-equipmentid="highTemperatureFan" id="zc_nxjc_byc_byf_clinker01>highTemperatureFan>RunningState" style="position: absolute; height: 20px; width: 19px; top: 149px; left: 1099px;"></div>
+    <!--砂岩破碎1#胶带机运行-->
+    <div class="imageContainer equipmentInfo" data-equipmentid="sandstoneBrokenTapeMachine1" id="zc_nxjc_byc_byf_clinker01>sandstoneBrokenTapeMachine1>RunningState" style="position: absolute; height: 20px; width: 19px; top: 142px; left: 368px;"></div>
+    <!--砂岩破碎2#胶带机运行-->
+    <div class="imageContainer equipmentInfo" data-equipmentid="sandstoneBrokenTapeMachine2" id="zc_nxjc_byc_byf_clinker01>sandstoneBrokenTapeMachine2>RunningState" style="position: absolute; height: 20px; width: 19px; top: 158px; left: 308px;"></div>
+    <!--砂岩破碎给料段电动机运行-->
+    <div class="imageContainer equipmentInfo" data-equipmentid="sandstoneBrokenFeedSectionMotor" id="zc_nxjc_byc_byf_clinker01>sandstoneBrokenFeedSectionMotor>RunningState" style="position: absolute; height: 20px; width: 19px; top: 35px; left: 428px;"></div>
+
 
     <!----------------------------运行状态------------------------------------>
 </body>
