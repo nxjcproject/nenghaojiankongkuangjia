@@ -1634,6 +1634,7 @@
     <Content Include="UI_Monitor\js\common\blink.js" />
     <Content Include="UI_Monitor\js\common\chartjs.js" />
     <Content Include="UI_Monitor\js\common\ComprehensiveStatistic.js" />
+    <Content Include="UI_Monitor\js\common\DisplayName.js" />
     <Content Include="UI_Monitor\js\common\EquipmentInfo.js" />
     <Content Include="UI_Monitor\js\common\monitorjs.js" />
     <Content Include="UI_Monitor\js\common\MonitorShell.js" />

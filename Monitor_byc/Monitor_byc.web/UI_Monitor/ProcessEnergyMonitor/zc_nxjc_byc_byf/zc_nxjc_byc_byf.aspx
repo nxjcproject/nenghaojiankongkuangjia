@@ -27,6 +27,7 @@
     <script src="/UI_Monitor/js/common/RunningState.js"></script>
     <script src="/UI_Monitor/js/common/AmmeterStatistic.js"></script>
     <script src="/UI_Monitor/js/common/ComprehensiveStatistic.js"></script>
+    <script src="/UI_Monitor/js/common/DisplayName.js"></script>
     <script>
         publicData.organizationId = "zc_nxjc_byc_byf";
         publicData.sceneName = "";
@@ -431,10 +432,7 @@
         <table class="mytable" style="position: absolute; top: 644px; left: 496px;">
             <tr>
                 <td><span id="zc_nxjc_byc_byf>cementmill_ElectricityConsumption_Comprehensive>Comprehensive" class ="comprehensive"></span></td>
-            </tr>
-            <tr>
-                <td><span id="zc_nxjc_byc_byf>cementmill_CoalConsumption_Comprehensive>Comprehensive" class ="comprehensive"></span></td>
-            </tr>
+            </tr>           
         </table>
         <%--工序电耗（所有产线的该工序电量之和除以所有产线该工序产量之和） --%>
         <table class="mytable" style="position: absolute; top: 617px; left: 88px;">

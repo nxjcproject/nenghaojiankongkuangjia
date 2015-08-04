@@ -84,10 +84,21 @@ var equipmentmentNames = {
     bottomDustCollectingFan2: "2#收尘风机",
     bottomDustCollectingFan3: "3#收尘风机",
     clinkerHoist: "1#入窑提升机电机",
-    limestoneStacker:"取料机",
+    limestoneStacker: "取料机",
     bagdustcollector: "袋收尘",
     limestoneStackerMachine: "石灰石堆料机",
-    limestoneFetchMachine: "石灰石取料机"
+    limestoneFetchMachine: "石灰石取料机",
+
+    //新加
+    sandstoneBrokenTapeMachine1: "砂岩破碎1#胶带机",
+    sandstoneBrokenTapeMachine2: "砂岩破碎2#胶带机",
+    sandstoneBrokeFeedSectionMotor: "砂岩破碎给料段电动机",
+
+    clinkerSiloFeeding: "水泥磨熟料库喂料称",
+    limestoneLibraryFeeding: "石灰石库喂料称",
+    fluorineGypsumFeeding: "氟石膏库喂料称",
+    flyAshLibraryFeeding: "粉煤灰库喂料称",
+    clinkerInTheBelt:"熟料内返皮带"
 }
 //事件绑定
 function bindEquipmentEvent() {

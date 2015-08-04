@@ -35,7 +35,7 @@
 </head>
 <body id="SubMonitorBody" style="margin: 0px; padding: 0px; overflow: auto;">
     <div id="SubMonitorLayout" style="position: relative; background-image: url('../../images/page/zc_nxjc_byc_byf_cementmill02.png'); width: 1350px; height: 740px; overflow: hidden;">
-        <table class="mytable" style="position: absolute; top: 46px; left: 120px;">
+        <table class="mytable" style="position: absolute; top: 90px; left: 142px;">
             <tr>
                 <td><span id="zc_nxjc_byc_byf>gypsumCrusher>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -46,18 +46,54 @@
                 <td><span id="zc_nxjc_byc_byf>gypsumCrusher>Power" class="mchart"></span></td>
             </tr>
         </table>
-        <table class="mytable" style="position: absolute; top: 157px; left: 5px;">
+        <table class="mytable" style="position: absolute; top: 233px; left: 14px; height: 53px; right: 1270px;">
             <tr>
                 <td><span id="zc_nxjc_byc_byf>clinkerStorageBeltMachine>ElectricityConsumption" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_byc_byf_cementmill02>clinkerStorageBeltMachine>Current" class="mchart nodisplay"></span></td>
+                <td><span id="zc_nxjc_byc_byf_cementmill01>clinkerStorageBeltMachine>Current" class="mchart nodisplay"></span></td>
             </tr>
             <tr>
                 <td><span id="zc_nxjc_byc_byf>clinkerStorageBeltMachine>Power" class="mchart"></span></td>
             </tr>
         </table>
-        <table class="mytable" style="position: absolute; top: 321px; left: 355px;">
+        <!--熟料内返皮带 -->
+         <table class="mytable" style="position: absolute; top: 487px; left: 255px; height: 53px; right: 1029px;">
+            <tr>
+                <td><span id="zc_nxjc_byc_byf>clinkerInTheBelt>ElectricityConsumption" class="mchart"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_byc_byf>clinkerInTheBelt>Current" class="mchart nodisplay"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_byc_byf>clinkerInTheBelt>Power" class="mchart"></span></td>
+            </tr>
+        </table>
+         <!--熟料内返收尘风机 -->
+         <table class="mytable" style="position: absolute; top: 524px; left: 147px; height: 53px; right: 1137px;">
+            <tr>
+                <td><span id="zc_nxjc_byc_byf>clinkerInTheBeltCollectingFan>ElectricityConsumption" class="mchart"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_byc_byf>clinkerInTheBeltCollectingFan>Current" class="mchart nodisplay"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_byc_byf>clinkerInTheBeltCollectingFan>Power" class="mchart"></span></td>
+            </tr>
+        </table>
+         <!--混合材通过使皮带 -->
+         <table class="mytable" style="position: absolute; top: 200px; left: 236px; height: 53px; right: 1048px;">
+            <tr>
+                <td><span id="zc_nxjc_byc_byf>mixedMaterialBrokenBeltScale>ElectricityConsumption" class="mchart"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_byc_byf>mixedMaterialBrokenBeltScale>Current" class="mchart nodisplay"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_byc_byf>mixedMaterialBrokenBeltScale>Power" class="mchart"></span></td>
+            </tr>
+        </table>
+        <table class="mytable" style="position: absolute; top: 364px; left: 376px;">
             <tr>
                 <td><span id="zc_nxjc_byc_byf_cementmill02>rollingMachineSettledRoller>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -68,7 +104,7 @@
                 <td><span id="zc_nxjc_byc_byf_cementmill02>rollingMachineSettledRoller>Power" class="mchart"></span></td>
             </tr>
         </table>
-        <table class="mytable" style="position: absolute; top: 367px; left: 540px;">
+        <table class="mytable" style="position: absolute; top: 411px; left: 562px;">
             <tr>
                 <td><span id="zc_nxjc_byc_byf_cementmill02>rollingMachineActionRoller>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -79,7 +115,7 @@
                 <td><span id="zc_nxjc_byc_byf_cementmill02>rollingMachineActionRoller>Power" class="mchart"></span></td>
             </tr>
         </table>
-        <table class="mytable" style="position: absolute; top: 330px; left: 736px;">
+        <table class="mytable" style="position: absolute; top: 374px; left: 757px;">
             <tr>
                 <td><span id="zc_nxjc_byc_byf_cementmill02>powderSelectingStorehouse>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -90,7 +126,7 @@
                 <td><span id="zc_nxjc_byc_byf_cementmill02>powderSelectingStorehouse>Power" class="mchart"></span></td>
             </tr>
         </table>
-        <table class="mytable" style="position: absolute; top: 435px; left: 845px;">
+        <table class="mytable" style="position: absolute; top: 475px; left: 868px;">
             <tr>
                 <td><span id="zc_nxjc_byc_byf_cementmill02>cementMillMainMotor>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -101,7 +137,7 @@
                 <td><span id="zc_nxjc_byc_byf_cementmill02>cementMillMainMotor>Power" class="mchart"></span></td>
             </tr>
         </table>
-        <table class="mytable" style="position: absolute; top: 107px; left: 917px;">
+        <table class="mytable" style="position: absolute; top: 150px; left: 938px;">
             <tr>
                 <td><span id="zc_nxjc_byc_byf_cementmill02>mainExhaustFan>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -113,7 +149,7 @@
             </tr>
         </table>
 
-        <table class="mytable" style="position: absolute; top: 553px; left: 89px;">
+        <table class="mytable" style="position: absolute; top: 661px; left: 79px;">
             <tr>
                 <td><span id="zc_nxjc_byc_byf_cementmill02>cementPreparation>ElectricityQuantity" class="mchart"></span></td>
             </tr>
@@ -124,7 +160,7 @@
                 <td><span id="zc_nxjc_byc_byf_cementmill02>cementPreparation>ElectricityConsumption" class="mchart"></span></td>
             </tr>
         </table>
-        <table class="mytable" style="position: absolute; top: 553px; left: 163px;">
+        <table class="mytable" style="position: absolute; top: 661px; left: 156px;">
             <tr>
                 <td><span id="zc_nxjc_byc_byf_cementmill02>cementPreparation_ElectricityQuantity>Class" class="mchart"></span></td>
             </tr>
@@ -135,7 +171,7 @@
                 <td><span id="zc_nxjc_byc_byf_cementmill02>cementPreparation_ElectricityConsumption>Class" class="mchart"></span></td>
             </tr>
         </table>
-        <table class="mytable" style="position: absolute; top: 555px; left: 237px;">
+        <table class="mytable" style="position: absolute; top: 661px; left: 229px;">
             <tr>
                 <td><span id="zc_nxjc_byc_byf_cementmill02>cementPreparation_ElectricityQuantity>Day" class="mchart"></span></td>
             </tr>
@@ -146,22 +182,57 @@
                 <td><span id="zc_nxjc_byc_byf_cementmill02>cementPreparation_ElectricityConsumption>Day" class="mchart"></span></td>
             </tr>
         </table>
+
+        <%--2#水泥磨喂料称--%>
+        <table class="mytable" style="position: absolute; top: 452px; left: 0px; right: 1284px;">
+            <tr>
+                <td><span id="zc_nxjc_byc_byf_cementmill02>cementMillFeedSaid>ElectricityConsumption" class="mchart"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_byc_byf_cementmill02>cementMillFeedSaid>Current" class="mchart"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_byc_byf_cementmill02>cementMillFeedSaid>Power" class="mchart"></span></td>
+            </tr>
+        </table>
     </div>
 
     <div id="htmlContainer"></div>
 
-    <!----------------------------运行状态------------------------------------>
-   <!--2#水泥磨主电机运行信号-->
-    <div class="imageContainer equipmentInfo" data-equipmentid="cementMillMainMotor" id="zc_nxjc_byc_byf_cementmill02>cementMillMainMotor>RunningState" style="position:absolute; top: 509px; left: 742px; height: 20px; width: 19px;"></div>
+    <!--2#水泥磨主电机运行信号-->
+    <div class="imageContainer equipmentInfo" data-equipmentid="cementMillMainMotor" id="zc_nxjc_byc_byf_cementmill02>cementMillMainMotor>RunningState" style="position:absolute; top: 554px; left: 756px; height: 20px; width: 19px;"></div>
     <!--2#磨选粉机变频控制柜运行-->
-    <div class="imageContainer equipmentInfo" data-equipmentid="powderSelectingMachine" id="zc_nxjc_byc_byf_cementmill02>powderSelectingMachine>RunningState" style="position:absolute; height: 20px; width: 19px; top: 336px; left: 695px;"></div>
+    <div class="imageContainer equipmentInfo" data-equipmentid="powderSelectingMachine" id="zc_nxjc_byc_byf_cementmill02>powderSelectingMachine>RunningState" style="position:absolute; height: 20px; width: 19px; top: 371px; left: 715px;"></div>
     <!--2#磨排风机运行-->
-    <div class="imageContainer equipmentInfo" data-equipmentid="mainExhaustFan" id="zc_nxjc_byc_byf_cementmill02>mainExhaustFan>RunningState" style="position:absolute; height: 20px; width: 19px; top: 125px; left: 888px;"></div>
+    <div class="imageContainer equipmentInfo" data-equipmentid="mainExhaustFan" id="zc_nxjc_byc_byf_cementmill02>mainExhaustFan>RunningState" style="position:absolute; height: 20px; width: 19px; top: 170px; left: 911px;"></div>
     <!--2#磨辊压机定辊运行-->
-    <div class="imageContainer equipmentInfo" data-equipmentid="rollingMachineSettledRoller" id="zc_nxjc_byc_byf_cementmill02>rollingMachineSettledRoller>RunningState" style="position:absolute; height: 20px; width: 19px; top: 386px; left: 453px;"></div>
+    <div class="imageContainer equipmentInfo" data-equipmentid="rollingMachineSettledRoller" id="zc_nxjc_byc_byf_cementmill02>rollingMachineSettledRoller>RunningState" style="position:absolute; height: 20px; width: 19px; top: 431px; left: 476px;"></div>
     <!--2#磨辊压机动辊运行-->
-    <div class="imageContainer equipmentInfo" data-equipmentid="rollingMachineActionRoller" id="zc_nxjc_byc_byf_cementmill02>rollingMachineActionRoller>RunningState>" style="position:absolute; height: 20px; width: 19px; top: 387px; left: 481px;"></div>
-  
+    <div class="imageContainer equipmentInfo" data-equipmentid="rollingMachineActionRoller" id="zc_nxjc_byc_byf_cementmill02>rollingMachineActionRoller>RunningState" style="position:absolute; height: 20px; width: 19px; top: 432px; left: 503px;"></div>
+     <!--石膏破碎机运行-->
+    <div class="imageContainer equipmentInfo" data-equipmentid="gypsumCrusher" id="zc_nxjc_byc_byf>gypsumCrusher>RunningState" style="position:absolute; top: 133px; left: 116px; height: 20px; width: 19px;"></div>
+   
+    
+     <%--熟料内返皮带运行--%>
+     <div class="imageContainer equipmentInfo" data-equipmentid="clinkerInTheBelt" id="zc_nxjc_byc_byf_cementmill02>clinkerInTheBelt>RunningState" style="position:absolute; top: 454px; left: 331px; height: 20px; width: 19px;"></div>
+
+    <%--混合材破碎通过式皮带秤L53ALC--%>
+    <div class="imageContainer equipmentInfo" data-equipmentid="mixedMaterialBrokenBeltScale" id="zc_nxjc_byc_byf_cementmill01>mixedMaterialBrokenThroughTypeBeltScale>RunningState" style="position:absolute; top: 248px; left: 194px; height: 20px; width: 19px;"></div>
+
+    <%--2#水泥磨喂料称--%>
+    <div class="imageContainer equipmentInfo" data-equipmentid="gypsumCrusher" id="zc_nxjc_byc_byf>cementMillFeedSaid2>RunningState" style="position:absolute; top: 465px; left: 104px; height: 20px; width: 19px;"></div>
+     <!--熟料库底5#胶带机运行-->
+    <div class="imageContainer equipmentInfo" data-equipmentid="clinkerStorageBeltMachine" id="zc_nxjc_byc_byf_cementmill01>clinkerStorageBeltMachine>RunningState" style="position:absolute; top: 293px; left: 50px; height: 20px; width: 19px;"></div>
+     <!--2#水泥磨熟料库喂料称-->
+    <div class="imageContainer equipmentInfo" data-equipmentid="clinkerSiloFeeding" id="zc_nxjc_byc_byf_cementmill02>clinkerSiloFeeding>RunningState" style="position:absolute; top: 409px; left: 58px; height: 20px; width: 19px;"></div>
+     <!--2#水泥磨石灰石库喂料称-->
+    <div class="imageContainer equipmentInfo" data-equipmentid="limestoneLibraryFeeding" id="zc_nxjc_byc_byf_cementmill02>limestoneLibraryFeeding>RunningState" style="position:absolute; top: 409px; left: 135px; height: 20px; width: 19px;"></div>
+     <!--2#水泥磨氟石膏库喂料称-->
+    <div class="imageContainer equipmentInfo" data-equipmentid="fluorineGypsumFeeding" id="zc_nxjc_byc_byf_cementmill02>fluorineGypsumFeeding>RunningState" style="position:absolute; top: 409px; left: 178px; height: 20px; width: 19px;"></div>
+     <!--2#水泥磨粉煤灰库喂料称-->
+    <div class="imageContainer equipmentInfo" data-equipmentid="flyAshLibraryFeeding" id="zc_nxjc_byc_byf_cementmill02>flyAshLibraryFeeding>RunningState" style="position:absolute; top: 409px; left: 221px; height: 20px; width: 19px;"></div>
+
+
     <!----------------------------运行状态------------------------------------>
 </body>
 </html>

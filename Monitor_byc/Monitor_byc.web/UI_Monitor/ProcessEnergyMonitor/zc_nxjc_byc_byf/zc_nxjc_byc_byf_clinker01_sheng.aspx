@@ -35,7 +35,7 @@
 </head>
 <body id="SubMonitorBody" style="margin: 0px; padding: 0px; overflow: auto;">
     <div id="SubMonitorLayout" style="position: relative; background-image: url('../../images/page/zc_nxjc_byc_byf_clinker01_sheng.png'); width: 1350px; height: 740px; overflow: hidden;">
-        <table class="mytable" style="position: absolute; top: 45px; left: 17px;">
+        <table class="mytable" style="position: absolute; top: 45px; left: 18px;">
             <tr>
                 <td><span id="zc_nxjc_byc_byf>limestoneCrusher1>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -46,7 +46,7 @@
                 <td><span id="zc_nxjc_byc_byf>limestoneCrusher1>Power" class="mchart"></span></td>
             </tr>
         </table>
-        <table class="mytable" style="position: absolute; top: 133px; left: 16px;">
+        <table class="mytable" style="position: absolute; top: 133px; left: 17px;">
             <tr>
                 <td><span id="zc_nxjc_byc_byf>limestoneMineBelt>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -57,7 +57,7 @@
                 <td><span id="zc_nxjc_byc_byf>limestoneMineBelt>Power" class="mchart"></span></td>
             </tr>
         </table>
-        <table class="mytable" style="position: absolute; top: 215px; left: 18px;">
+        <table class="mytable" style="position: absolute; top: 215px; left: 19px;">
             <tr>
                 <td><span id="zc_nxjc_byc_byf_clinker01>limestoneStacker>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -68,7 +68,7 @@
                 <td><span id="zc_nxjc_byc_byf_clinker01>limestoneStacker>Power" class="mchart"></span></td>
             </tr>
         </table>
-        <table class="mytable" style="position: absolute; top: 380px; left: 18px;">
+        <table class="mytable" style="position: absolute; top: 380px; left: 19px;">
             <tr>
                 <td><span id="zc_nxjc_byc_byf_clinker01>rawMaterialDustCollectingFan01>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -79,7 +79,7 @@
                 <td><span id="zc_nxjc_byc_byf_clinker01>rawMaterialDustCollectingFan01>Power" class="mchart"></span></td>
             </tr>
         </table>
-        <table class="mytable" style="position: absolute; top: 299px; left: 19px;">
+        <table class="mytable" style="position: absolute; top: 299px; left: 18px;">
             <tr>
                 <td><span id="zc_nxjc_byc_byf_clinker01>limestoneStorageBeltMachine>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -90,7 +90,7 @@
                 <td><span id="zc_nxjc_byc_byf_clinker01>limestoneStorageBeltMachine>Power" class="mchart"></span></td>
             </tr>
         </table>
-        <table class="mytable" style="position: absolute; top: 40px; left: 178px;">
+        <table class="mytable" style="position: absolute; top: 40px; left: 179px;">
             <tr>
                 <td><span id="zc_nxjc_byc_byf>limestoneCrusher2>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -101,7 +101,7 @@
                 <td><span id="zc_nxjc_byc_byf>limestoneCrusher2>Power" class="mchart"></span></td>
             </tr>
         </table>
-        <table class="mytable" style="position: absolute; top: 372px; left: 521px;">
+        <table class="mytable" style="position: absolute; top: 372px; left: 522px;">
             <tr>
                 <td><span id="zc_nxjc_byc_byf_clinker01>powderSelectingMachine>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -112,7 +112,7 @@
                 <td><span id="zc_nxjc_byc_byf_clinker01>powderSelectingMachine>Power" class="mchart"></span></td>
             </tr>
         </table>
-        <table class="mytable" style="position: absolute; top: 241px; left: 742px;">
+        <table class="mytable" style="position: absolute; top: 241px; left: 743px;">
             <tr>
                 <td><span id="zc_nxjc_byc_byf_clinker01>circulatingFan>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -123,7 +123,7 @@
                 <td><span id="zc_nxjc_byc_byf_clinker01>circulatingFan>Power" class="mchart"></span></td>
             </tr>
         </table>
-        <table class="mytable" style="position: absolute; top: 73px; left: 1130px;">
+        <table class="mytable" style="position: absolute; top: 73px; left: 1131px;">
             <tr>
                 <td><span id="zc_nxjc_byc_byf_clinker01>highTemperatureFan>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -192,7 +192,7 @@
         </table>
         <%--废气处理链式输送机--%>
 
-        <table class="mytable" style="position: absolute; top: 427px; left: 1122px;">
+        <table class="mytable" style="position: absolute; top: 456px; left: 1130px; width: 66px;">
             <tr>
                 <td><span id="zc_nxjc_byc_byf_clinker01>wasteGasChainConveyor>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -204,7 +204,7 @@
             </tr>
         </table>
         <%--增湿塔链式输送机--%>
-        <table class="mytable" style="position: absolute; top: 282px; left: 1076px;">
+        <table class="mytable" style="position: absolute; top: 282px; left: 1078px;">
             <tr>
                 <td><span id="zc_nxjc_byc_byf_clinker01>humidifyingTowerChainConveyor>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -215,7 +215,7 @@
                 <td><span id="zc_nxjc_byc_byf_clinker01>humidifyingTowerChainConveyor>Power" class="mchart"></span></td>
             </tr>
         </table>
-
+        
         <%--生料库#3罗茨风机电流--%>
         <table class="mytable" style="position: absolute; top: 664px; left: 776px;">
             <tr>
@@ -253,7 +253,7 @@
             </tr>
         </table>
         <%--增湿塔螺旋输送机--%>
-        <table class="mytable" style="position: absolute; top: 200px; left: 1052px; height: 24px;">
+        <table class="mytable" style="position: absolute; top: 200px; left: 1053px; height: 24px;">
             <tr>
                 <td><span id="zc_nxjc_byc_byf_clinker01>humidifyingTowerScrewConveyor>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -265,7 +265,7 @@
             </tr>
         </table>
         <%--原料调配2#收尘风机--%>
-        <table class="mytable" style="position: absolute; top: 191px; left: 415px; height: 24px;">
+        <table class="mytable" style="position: absolute; top: 191px; left: 409px; height: 24px;">
             <tr>
                 <td><span id="zc_nxjc_byc_byf_clinker01>rawMaterialDustCollectingFan2>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -289,7 +289,7 @@
             </tr>
         </table>
         <%--原料调配库顶胶带机--%>
-        <table class="mytable" style="position: absolute; top: 356px; left: 414px; height: 1px;">
+        <table class="mytable" style="position: absolute; top: 356px; left: 413px; height: 1px;">
             <tr>
                 <td><span id="zc_nxjc_byc_byf_clinker01>rawMaterialMixTapeMachine>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -301,7 +301,7 @@
             </tr>
         </table>
         <%--废气处理收尘风机--%>
-        <table class="mytable" style="position: absolute; top: 534px; left: 702px; height: 0px;">
+        <table class="mytable" style="position: absolute; top: 534px; left: 703px; height: 0px;">
             <tr>
                 <td><span id="zc_nxjc_byc_byf_clinker01>wasteGasDustCollectingFan>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -325,7 +325,7 @@
             </tr>
         </table>
         <%--砂岩破碎2#收尘风机--%>
-        <table class="mytable" style="position: absolute; top: 93px; left: 525px; height: 24px;">
+        <table class="mytable" style="position: absolute; top: 93px; left: 527px; height: 24px;">
             <tr>
                 <td><span id="zc_nxjc_byc_byf_clinker01>sandsToneBrokenDustCollectFan2>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -337,7 +337,7 @@
             </tr>
         </table>
         <%--砂岩破碎1#收尘风机--%>
-        <table class="mytable" style="position: absolute; top: 21px; left: 300px; height: 24px;">
+        <table class="mytable" style="position: absolute; top: 22px; left: 300px; height: 24px;">
             <tr>
                 <td><span id="zc_nxjc_byc_byf_clinker01>sandsToneBrokenDustCollectFan1>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -349,7 +349,7 @@
             </tr>
         </table>
         <%--均化库收尘风机--%>
-        <table class="mytable" style="position: absolute; top: 483px; left: 1006px; height: 24px;">
+        <table class="mytable" style="position: absolute; top: 483px; left: 1007px; height: 24px;">
             <tr>
                 <td><span id="zc_nxjc_byc_byf_clinker01>homogenizationDustCollectFan>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -361,7 +361,7 @@
             </tr>
         </table>
         <%--砂岩破碎机--%>
-        <table class="mytable" style="position: absolute; top: 16px; left: 478px;">
+        <table class="mytable" style="position: absolute; top: 15px; left: 479px;">
             <tr>
                 <td><span id="zc_nxjc_byc_byf_clinker01>sandstoneCrusher>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -372,6 +372,43 @@
                 <td><span id="zc_nxjc_byc_byf_clinker01>sandstoneCrusher>Power" class="mchart"></span></td>
             </tr>
         </table>
+         <%--砂岩破碎给料机--%>
+        <table class="mytable" style="position: absolute; top: 18px; left: 587px;">
+            <tr>
+                <td><span id="zc_nxjc_byc_byf_clinker01>sandstoneBrokeFeedSectionMotor>ElectricityConsumption" class="mchart"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_byc_byf_clinker01>sandstoneBrokeFeedSectionMotor>Current" class="mchart"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_byc_byf_clinker01>sandstoneBrokeFeedSectionMotor>Power" class="mchart"></span></td>
+            </tr>
+        </table>
+        <%--砂岩破碎1#胶带机--%>
+        <table class="mytable" style="position: absolute; top: 170px; left: 521px;">
+            <tr>
+                <td><span id="zc_nxjc_byc_byf_clinker01>sandstoneBrokenTapeMachine1>ElectricityConsumption" class="mchart"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_byc_byf_clinker01>sandstoneBrokenTapeMachine1>Current" class="mchart"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_byc_byf_clinker01>sandstoneBrokenTapeMachine1>Power" class="mchart"></span></td>
+            </tr>
+        </table>
+        <%--砂岩破碎2#胶带机--%>
+        <table class="mytable" style="position: absolute; top: 171px; left: 596px;">
+            <tr>
+                <td><span id="zc_nxjc_byc_byf_clinker01>sandstoneBrokenTapeMachine2>ElectricityConsumption" class="mchart"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_byc_byf_clinker01>sandstoneBrokenTapeMachine2>Current" class="mchart"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_byc_byf_clinker01>sandstoneBrokenTapeMachine2>Power" class="mchart"></span></td>
+            </tr>
+        </table>
+
     </div>
     <div id="htmlContainer"></div>
 
@@ -380,7 +417,7 @@
     <!--矿山1号破碎机 -->
     <div class="imageContainer equipmentInfo" data-equipmentid="limestoneCrusher1" id="zc_nxjc_byc_byf>limestoneCrusher1>RunningState" style="position: absolute; height: 20px; width: 19px; top: 65px; left: 120px;"></div>
     <!--矿山2号破碎机 -->
-    <div class="imageContainer equipmentInfo" data-equipmentid="limestoneCrusher2" id="zc_nxjc_byc_byf>limestoneCrusher2>RunningState" style="position: absolute; height: 20px; width: 19px; top: 67px; left: 151px;"></div>
+    <div class="imageContainer equipmentInfo" data-equipmentid="limestoneCrusher2" id="zc_nxjc_byc_byf>limestoneCrusher2>RunningState" style="position: absolute; height: 20px; width: 19px; top: 65px; left: 151px;"></div>
     <!--砂岩破碎机 -->
     <div class="imageContainer equipmentInfo" data-equipmentid="sandstoneCrusher" id="zc_nxjc_byc_byf_clinker01>sandstoneCrusher>RunningState" style="position: absolute; height: 20px; width: 19px; top: 67px; left: 446px;"></div>
     <!--堆料机-->
@@ -426,17 +463,17 @@
     <!--均化库收尘风机运行-->
     <div class="imageContainer equipmentInfo" data-equipmentid="homogenizationDustCollectFan" id="zc_nxjc_byc_byf_clinker01>homogenizationDustCollectFan>RunningState" style="position: absolute; height: 20px; width: 19px; top: 469px; left: 947px;"></div>
     <!--袋收尘运行-->
-    <div class="imageContainer equipmentInfo" data-equipmentid="bagdustcollector" id="zc_nxjc_byc_byf_clinker01>bagdustcollector>RunningState" style="position: absolute; height: 20px; width: 19px; top: 361px; left: 1151px;"></div>
+    <div class="imageContainer equipmentInfo" data-equipmentid="bagdustcollector" id="zc_nxjc_byc_byf_clinker01>bagdustcollector>RunningState" style="position: absolute; height: 20px; width: 19px; top: 353px; left: 1151px;"></div>
     <!--窑尾排风机运行-->
     <div class="imageContainer equipmentInfo" data-equipmentid="kilnTailExhaustFan" id="zc_nxjc_byc_byf_clinker01>kilnTailExhaustFan>RunningState" style="position: absolute; height: 20px; width: 19px; top: 351px; left: 1242px;"></div>
     <!--窑尾高温风机运行-->
-    <div class="imageContainer equipmentInfo" data-equipmentid="highTemperatureFan" id="zc_nxjc_byc_byf_clinker01>highTemperatureFan>RunningState" style="position: absolute; height: 20px; width: 19px; top: 149px; left: 1099px;"></div>
+    <div class="imageContainer equipmentInfo" data-equipmentid="highTemperatureFan" id="zc_nxjc_byc_byf_clinker01>highTemperatureFan>RunningState" style="position: absolute; height: 20px; width: 19px; top: 149px; left: 1095px;"></div>
     <!--砂岩破碎1#胶带机运行-->
     <div class="imageContainer equipmentInfo" data-equipmentid="sandstoneBrokenTapeMachine1" id="zc_nxjc_byc_byf_clinker01>sandstoneBrokenTapeMachine1>RunningState" style="position: absolute; height: 20px; width: 19px; top: 142px; left: 368px;"></div>
     <!--砂岩破碎2#胶带机运行-->
     <div class="imageContainer equipmentInfo" data-equipmentid="sandstoneBrokenTapeMachine2" id="zc_nxjc_byc_byf_clinker01>sandstoneBrokenTapeMachine2>RunningState" style="position: absolute; height: 20px; width: 19px; top: 158px; left: 308px;"></div>
     <!--砂岩破碎给料段电动机运行-->
-    <div class="imageContainer equipmentInfo" data-equipmentid="sandstoneBrokenFeedSectionMotor" id="zc_nxjc_byc_byf_clinker01>sandstoneBrokenFeedSectionMotor>RunningState" style="position: absolute; height: 20px; width: 19px; top: 35px; left: 428px;"></div>
+    <div class="imageContainer equipmentInfo" data-equipmentid="sandstoneBrokeFeedSectionMotor" id="zc_nxjc_byc_byf_clinker01>sandstoneBrokeFeedSectionMotor>RunningState" style="position: absolute; height: 20px; width: 19px; top: 34px; left: 450px;"></div>
 
 
     <!----------------------------运行状态------------------------------------>

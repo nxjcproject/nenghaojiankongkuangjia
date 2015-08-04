@@ -58,7 +58,7 @@
             </tr>
         </table>
         <%--新加的窑尾排风机--%>
-        <table class="mytable" style="position: absolute; top: 253px; left: 12px;">
+        <table class="mytable" style="position: absolute; top: 253px; left: 10px;">
             <tr>
                 <td><span id="zc_nxjc_byc_byf_clinker01>kilnTailExhaustFan>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -70,7 +70,7 @@
             </tr>
         </table>
         <%--新加的窑尾高温风机--%>
-        <table class="mytable" style="position: absolute; top: 407px; left: 50px;">
+        <table class="mytable" style="position: absolute; top: 403px; left: 53px;">
             <tr>
                 <td><span id="zc_nxjc_byc_byf_clinker01>highTemperatureFan>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -239,13 +239,13 @@
         </table>
          <table class="mytable" style="position: absolute; top: 680px; left: 1242px;">
             <tr>
-                <td><span id="zc_nxjc_byc_byf_clinker01>adhesiveTape5>ElectricityConsumption" class="mchart"></span></td>
+                <td><span id="zc_nxjc_byc_byf>clinkerStorageBeltMachine>ElectricityConsumption" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_byc_byf_clinker01>adhesiveTape5>Current" class="mchart"></span></td>
+                <td><span id="zc_nxjc_byc_byf_cementmill01>clinkerStorageBeltMachine>Current" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_byc_byf_clinker01>adhesiveTape5>Power" class="mchart"></span></td>
+                <td><span id="zc_nxjc_byc_byf>clinkerStorageBeltMachine>Power" class="mchart"></span></td>
             </tr>
         </table>
         <table class="mytable" style="position: absolute; top: 539px; left: 1035px;">
@@ -588,9 +588,9 @@
     <!--熟料库底3#胶带机运行-->
     <div class="imageContainer equipmentInfo" data-equipmentid="adhesiveTape3" id="zc_nxjc_byc_byf_clinker01>adhesiveTape3>RunningState" style="position:absolute; top: 613px; left: 1213px; height: 20px; width: 19px;"></div>
     <!--熟料库底4#胶带机运行-->
-    <div class="imageContainer equipmentInfo" data-equipmentid="adhesiveTape4" id="zc_nxjc_byc_byf_clinker01>adhesiveTape4>RunningState" style="position:absolute; top: 650px; left: 1043px; height: 20px; width: 19px;"></div>
+    <div class="imageContainer equipmentInfo" data-equipmentid="adhesiveTape4" id="zc_nxjc_byc_byf_clinker01>adhesiveTape4>RunningState" style="position:absolute; top: 642px; height: 20px; width: 19px; left: 1044px;"></div>
      <!--熟料库底5#胶带机运行-->
-    <div class="imageContainer equipmentInfo" data-equipmentid="adhesiveTape5" id="zc_nxjc_byc_byf_clinker01>adhesiveTape5>RunningState" style="position:absolute; top: 653px; left: 999px; height: 20px; width: 19px;"></div>
+    <div class="imageContainer equipmentInfo" data-equipmentid="adhesiveTape5" id="zc_nxjc_byc_byf_cementmill01>clinkerStorageBeltMachine>RunningState" style="position:absolute; top: 657px; left: 1003px; height: 20px; width: 19px;"></div>
      <!--1#库底收尘风机运行-->
     <div class="imageContainer equipmentInfo" data-equipmentid="bottomDustCollectingFan1" id="zc_nxjc_byc_byf_clinker01>bottomDustCollectingFan1>RunningState" style="position:absolute; top: 613px; left: 1071px; height: 20px; width: 19px;"></div>
      <!--2#库底收尘风机运行-->
