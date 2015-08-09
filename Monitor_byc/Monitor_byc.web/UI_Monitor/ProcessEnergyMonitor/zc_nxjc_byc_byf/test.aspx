@@ -21,6 +21,7 @@
     <script type="text/javascript" src="/lib/ealib/easyui-lang-zh_CN.js" charset="utf-8"></script>
 
     <script src="../../js/common/blink.js"></script>
+
  
 </head>
 <body>

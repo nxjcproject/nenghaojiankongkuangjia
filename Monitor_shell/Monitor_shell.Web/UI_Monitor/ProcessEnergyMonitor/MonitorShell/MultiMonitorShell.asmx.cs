@@ -1,4 +1,5 @@
 ﻿using Monitor_shell.Service.Alarm;
+using Monitor_shell.Service.DisplayName;
 using Monitor_shell.Service.MeterStatistics;
 using Monitor_shell.Service.ProcessEnergyMonitor;
 using Monitor_shell.Service.ProcessEnergyMonitor.MonitorShell;
@@ -315,10 +316,10 @@ namespace Monitor_shell.Web.UI_Monitor.ProcessEnergyMonitor.MonitorShell
             return json;
         }
 
-        //[WebMethod]
-        //public string GetEquipmentInfo()
-        //{
-
-        //}
+        [WebMethod]
+        public Dictionary<string, string> GetNameInfo(string myItemStrings)
+        {
+             return DisplayNameHelper.GetItemName(myItemStrings);
+        }
     }
 }

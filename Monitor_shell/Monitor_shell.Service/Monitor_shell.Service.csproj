@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Alarm\AlarmService.cs" />
+    <Compile Include="DisplayName\DisplayNameHelper.cs" />
     <Compile Include="FormulaEnergy\FormulaEnergyService.cs" />
     <Compile Include="FormulaEnergy\FormulaPowerService.cs" />
     <Compile Include="Formula\FormulaHelper.cs" />
