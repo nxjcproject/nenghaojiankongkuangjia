@@ -27,6 +27,7 @@
     <script src="/UI_Monitor/js/common/RunningState.js"></script>
     <script src="/UI_Monitor/js/common/AmmeterStatistic.js"></script>
     <script src="/UI_Monitor/js/common/EquipmentInfo.js"></script>
+    <script src="/UI_Monitor/js/common/DisplayName.js"></script>
     <script>
         publicData.organizationId = "zc_nxjc_byc_byf_cementmill02";
         publicData.sceneName = "2#水泥磨";
@@ -58,7 +59,7 @@
             </tr>
         </table>
         <!--熟料内返皮带 -->
-         <table class="mytable" style="position: absolute; top: 487px; left: 255px; height: 53px; right: 1029px;">
+         <table class="mytable" style="position: absolute; top: 150px; left: 11px; height: 53px; right: 1273px;">
             <tr>
                 <td><span id="zc_nxjc_byc_byf>clinkerInTheBelt>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -70,7 +71,7 @@
             </tr>
         </table>
          <!--熟料内返收尘风机 -->
-         <table class="mytable" style="position: absolute; top: 524px; left: 147px; height: 53px; right: 1137px;">
+         <table class="mytable" style="position: absolute; top: 66px; left: 12px; height: 53px; right: 1272px;">
             <tr>
                 <td><span id="zc_nxjc_byc_byf>clinkerInTheBeltCollectingFan>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -184,7 +185,7 @@
         </table>
 
         <%--2#水泥磨喂料称--%>
-        <table class="mytable" style="position: absolute; top: 452px; left: 0px; right: 1284px;">
+        <table class="mytable" style="position: absolute; top: 521px; left: 96px; right: 1188px;">
             <tr>
                 <td><span id="zc_nxjc_byc_byf_cementmill02>cementMillFeedSaid>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -214,7 +215,7 @@
    
     
      <%--熟料内返皮带运行--%>
-     <div class="imageContainer equipmentInfo" data-equipmentid="clinkerInTheBelt" id="zc_nxjc_byc_byf_cementmill02>clinkerInTheBelt>RunningState" style="position:absolute; top: 454px; left: 331px; height: 20px; width: 19px;"></div>
+     <div class="imageContainer equipmentInfo" data-equipmentid="clinkerInTheBelt" id="zc_nxjc_byc_byf_cementmill02>clinkerInTheBelt>RunningState" style="position:absolute; top: 298px; left: 89px; height: 20px; width: 19px;"></div>
 
     <%--混合材破碎通过式皮带秤L53ALC--%>
     <div class="imageContainer equipmentInfo" data-equipmentid="mixedMaterialBrokenBeltScale" id="zc_nxjc_byc_byf_cementmill01>mixedMaterialBrokenThroughTypeBeltScale>RunningState" style="position:absolute; top: 248px; left: 194px; height: 20px; width: 19px;"></div>

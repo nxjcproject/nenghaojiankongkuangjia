@@ -27,6 +27,7 @@
     <script src="/UI_Monitor/js/common/RunningState.js"></script>
     <script src="/UI_Monitor/js/common/AmmeterStatistic.js"></script>
     <script src="/UI_Monitor/js/common/EquipmentInfo.js"></script>
+    <script src="/UI_Monitor/js/common/DisplayName.js"></script>
     <script>
         publicData.organizationId = "zc_nxjc_byc_byf_cementmill01";
         publicData.sceneName = "1#水泥磨";
@@ -58,7 +59,7 @@
             </tr>
         </table>
         <!--熟料内返皮带 -->
-         <table class="mytable" style="position: absolute; top: 487px; left: 255px; height: 53px; right: 1029px;">
+         <table class="mytable" style="position: absolute; top: 150px; left: 11px; height: 53px; right: 1273px;">
             <tr>
                 <td><span id="zc_nxjc_byc_byf>clinkerInTheBelt>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -70,7 +71,7 @@
             </tr>
         </table>
          <!--熟料内返收尘风机 -->
-         <table class="mytable" style="position: absolute; top: 524px; left: 147px; height: 53px; right: 1137px;">
+         <table class="mytable" style="position: absolute; top: 67px; left: 12px; height: 53px; right: 1272px;">
             <tr>
                 <td><span id="zc_nxjc_byc_byf>clinkerInTheBeltCollectingFan>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -184,7 +185,7 @@
         </table>
 
         <%--1#水泥磨喂料称--%>
-        <table class="mytable" style="position: absolute; top: 452px; left: 0px; right: 1284px;">
+        <table class="mytable" style="position: absolute; top: 520px; left: 96px; right: 1188px;">
             <tr>
                 <td><span id="zc_nxjc_byc_byf_cementmill01>cementMillFeedSaid>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -210,9 +211,9 @@
     <!--1#磨辊压机动辊运行-->
     <div class="imageContainer equipmentInfo" data-equipmentid="rollingMachineActionRoller" id="zc_nxjc_byc_byf_cementmill01>rollingMachineActionRoller>RunningState" style="position:absolute; height: 20px; width: 19px; top: 432px; left: 503px;"></div>
    <!--石膏破碎机运行-->
-    <div class="imageContainer equipmentInfo" data-equipmentid="gypsumCrusher" id="zc_nxjc_byc_byf>gypsumCrusher>RunningState" style="position:absolute; top: 133px; left: 116px; height: 20px; width: 19px;"></div>
+    <div class="imageContainer equipmentInfo" data-equipmentid="gypsumCrusher" id="zc_nxjc_byc_byf>gypsumCrusher>RunningState" style="position:absolute; top: 180px; left: 129px; height: 20px; width: 19px;"></div>
     <%--熟料内返皮带运行--%>
-     <div class="imageContainer equipmentInfo" data-equipmentid="clinkerInTheBelt" id="zc_nxjc_byc_byf_cementmill01>clinkerInTheBelt>RunningState" style="position:absolute; top: 454px; left: 331px; height: 20px; width: 19px;"></div>
+     <div class="imageContainer equipmentInfo" data-equipmentid="clinkerInTheBelt" id="zc_nxjc_byc_byf_cementmill01>clinkerInTheBelt>RunningState" style="position:absolute; top: 300px; left: 88px; height: 20px; width: 19px;"></div>
     <%--混合材破碎通过式皮带秤L53ALC--%>
     <div class="imageContainer equipmentInfo" data-equipmentid="mixedMaterialBrokenThroughTypeBeltScale" id="zc_nxjc_byc_byf_cementmill01>mixedMaterialBrokenThroughTypeBeltScale>RunningState" style="position:absolute; top: 248px; left: 194px; height: 20px; width: 19px;"></div>
         <%--1#水泥磨喂料称--%>

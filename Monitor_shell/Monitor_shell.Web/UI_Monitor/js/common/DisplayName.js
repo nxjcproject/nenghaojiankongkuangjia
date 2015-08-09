@@ -1,6 +1,7 @@
 ﻿
 var g_array = [];
 var g_nameArray = [];
+var parentsTable;
 $(function () {
     var myLabels = $(".mytable:not(.nodisplay)").find('span');
     var test = $($(".mytable:not(.nodisplay)")[0]).find('span');

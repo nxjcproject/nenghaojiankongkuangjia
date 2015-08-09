@@ -27,6 +27,7 @@
     <script src="/UI_Monitor/js/common/RunningState.js"></script>
     <script src="/UI_Monitor/js/common/AmmeterStatistic.js"></script>
     <script src="/UI_Monitor/js/common/EquipmentInfo.js"></script>
+    <script src="/UI_Monitor/js/common/DisplayName.js"></script>
     <script>
         publicData.organizationId = "zc_nxjc_ychc_lsf_clinker02";
         publicData.sceneName = "2#熟料线";

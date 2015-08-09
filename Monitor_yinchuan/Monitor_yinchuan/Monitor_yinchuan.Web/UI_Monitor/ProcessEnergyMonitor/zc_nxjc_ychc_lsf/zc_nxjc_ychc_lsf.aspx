@@ -27,6 +27,7 @@
     <script src="/UI_Monitor/js/common/RunningState.js"></script>
     <script src="/UI_Monitor/js/common/AmmeterStatistic.js"></script>
     <script src="/UI_Monitor/js/common/ComprehensiveStatistic.js"></script>
+    <script src="/UI_Monitor/js/common/DisplayName.js"></script>
     <script>
         publicData.organizationId = "zc_nxjc_ychc_lsf";
         publicData.sceneName = "";
