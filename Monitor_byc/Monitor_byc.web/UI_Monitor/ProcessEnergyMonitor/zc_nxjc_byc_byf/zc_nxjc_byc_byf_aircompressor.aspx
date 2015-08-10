@@ -50,7 +50,7 @@
             </tr>
         </table>
         <%--2号空压机电源--%>
-        <table class="mytable" style="position: absolute; top: 344px; left: 208px;">
+        <table class="mytable" style="position: absolute; top: 207px; left: 381px;">
           
             <tr>
                 <td><span id="zc_nxjc_byc_byf>clinkerAirCompressorPowerSupply2>Current" class="mchart nodisplay"></span></td>
@@ -60,7 +60,7 @@
             </tr>
         </table>
         <%--3号空压机电源--%>
-        <table class="mytable" style="position: absolute; top: 207px; left: 381px;">
+        <table class="mytable" style="position: absolute; top: 344px; left: 208px;">
             
             <tr>
                 <td><span id="zc_nxjc_byc_byf>clinkerAirCompressorPowerSupply3>Current" class="mchart nodisplay"></span></td>
