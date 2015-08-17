@@ -34,26 +34,15 @@
 </head>
 <body id="SubMonitorBody" style="margin: 0px; padding: 0px; overflow: auto;">
     <div id="SubMonitorLayout" style="position: relative; background-image: url('../../images/page/zc_nxjc_qtx_efc_cementmill01.png'); width: 1350px; height: 740px; overflow: hidden;">
-        <table class="mytable" style="position: absolute; top: 47px; left: 122px;">
+         <table class="mytable" style="position: absolute; top: 47px; left: 106px;">
             <tr>
-                <td><span id="zc_nxjc_qtx_efc>gypsumCrusher>ElectricityConsumption" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_efc_cementmill01>gypsumCrusher>ElectricityConsumption" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_qtx_efc_cementmill01>gypsumCrusher>Current" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_efc_cementmill01>gypsumCrusher>Current" class="mchart nodisplay"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_qtx_efc>gypsumCrusher>Power" class="mchart"></span></td>
-            </tr>
-        </table>
-        <table class="mytable" style="position: absolute; top: 189px; left: 5px;">
-            <tr>
-                <td><span id="zc_nxjc_qtx_efc>clinkerStorageBeltMachine>ElectricityConsumption" class="mchart"></span></td>
-            </tr>
-            <tr>
-                <td><span id="zc_nxjc_qtx_efc_cementmill01>clinkerStorageBeltMachine>Current" class="mchart"></span></td>
-            </tr>
-            <tr>
-                <td><span id="zc_nxjc_qtx_efc>clinkerStorageBeltMachine>Power" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_efc_cementmill01>gypsumCrusher>Power" class="mchart"></span></td>
             </tr>
         </table>
         <table class="mytable" style="position: absolute; top: 320px; left: 355px;">
@@ -67,7 +56,7 @@
                 <td><span id="zc_nxjc_qtx_efc_cementmill01>rollingMachineSettledRoller>Power" class="mchart"></span></td>
             </tr>
         </table>
-        <table class="mytable" style="position: absolute; top: 367px; left: 538px;">
+        <table class="mytable" style="position: absolute; top: 367px; left: 539px;">
             <tr>
                 <td><span id="zc_nxjc_qtx_efc_cementmill01>rollingMachineActionRoller>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -145,8 +134,41 @@
                 <td><span id="zc_nxjc_qtx_efc_cementmill01>cementPreparation_ElectricityConsumption>Day" class="mchart"></span></td>
             </tr>
         </table>
+        <!-- 包机1-->
+         <table class="mytable" style="position: absolute; top: 614px; left: 1248px;">
+            <tr>
+                <td><span id="zc_nxjc_qtx_efc_cementmill01>charter1>ElectricityConsumption" class="mchart"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_qtx_efc_cementmill01>charter1>Current" class="mchart"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_qtx_efc_cementmill01>charter1>Power" class="mchart"></span></td>
+            </tr>
+        </table>
+         <!-- 包机2-->
+         <table class="mytable" style="position: absolute; top: 614px; left: 1144px;">
+            <tr>
+                <td><span id="zc_nxjc_qtx_efc_cementmill01>charter2>ElectricityConsumption" class="mchart"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_qtx_efc_cementmill01>charter2>Current" class="mchart"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_qtx_efc_cementmill01>charter2>Power" class="mchart"></span></td>
+            </tr>
+        </table>
     </div>
-
+  <!--1#水泥磨主电机运行信号-->
+    <div class="imageContainer equipmentInfo" data-equipmentid="cementMillMainMotor" id="zc_nxjc_qtx_efc_cementmill01>cementMillMainMotor>RunningState" style="position:absolute; top: 507px; left: 734px; height: 20px; width: 19px;"></div>
+    <!--1#磨选粉机变频控制柜运行-->
+    <div class="imageContainer equipmentInfo" data-equipmentid="powderSelectingMachine" id="zc_nxjc_qtx_efc_cementmill01>powderSelectingMachine>RunningState" style="position:absolute; height: 20px; width: 19px; top: 328px; left: 692px;"></div>
+    <!--1#磨排风机运行-->
+    <div class="imageContainer equipmentInfo" data-equipmentid="mainExhaustFan" id="zc_nxjc_qtx_efc_cementmill01>mainExhaustFan>RunningState" style="position:absolute; height: 20px; width: 19px; top: 125px; left: 889px;"></div>
+    <!--1#磨辊压机定辊运行-->
+    <div class="imageContainer equipmentInfo" data-equipmentid="rollingMachineSettledRoller" id="zc_nxjc_qtx_efc_cementmill01>rollingMachineSettledRoller>RunningState" style="position:absolute; height: 20px; width: 19px; top: 387px; left: 453px;"></div>
+    <!--1#磨辊压机动辊运行-->
+    <div class="imageContainer equipmentInfo" data-equipmentid="rollingMachineActionRoller" id="zc_nxjc_qtx_efc_cementmill01>rollingMachineActionRoller>RunningState" style="position:absolute; height: 20px; width: 19px; top: 387px; left: 479px;"></div>
     <div id="htmlContainer"></div>
 </body>
 </html>

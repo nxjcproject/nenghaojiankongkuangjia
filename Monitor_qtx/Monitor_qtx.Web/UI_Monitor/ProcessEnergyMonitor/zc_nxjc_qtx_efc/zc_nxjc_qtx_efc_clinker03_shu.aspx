@@ -35,30 +35,22 @@
 </head>
 <body id="SubMonitorBody" style="margin: 0px; padding: 0px; overflow: auto;">
     <div id="SubMonitorLayout" style="position: relative; background-image: url('../../images/page/zc_nxjc_qtx_efc_clinker03_shu.png'); width: 1350px; height: 740px; overflow: hidden;">
-        <table class="mytable" style="position: absolute; top: 76px; left: 36px;">
+       
+          <%--入窑提升机--%>
+         <table class="mytable" style="position: absolute; top: 76px; left: 36px;">
             <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker03>clinkerHoist1>ElectricityConsumption" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_efc_clinker03>clinkerHoist>ElectricityConsumption" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker03>clinkerHoist1>Current" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_efc_clinker03>clinkerHoist>Current" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker03>clinkerHoist1>Power" class="mchart"></span></td>
-            </tr>
-        </table>
-        <table class="mytable" style="position: absolute; top: 144px; left: 37px;">
-            <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker03>clinkerHoist2>ElectricityConsumption" class="mchart"></span></td>
-            </tr>
-            <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker03>clinkerHoist2>Current" class="mchart"></span></td>
-            </tr>
-            <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker03>clinkerHoist2>Power" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_efc_clinker03>clinkerHoist>Power" class="mchart"></span></td>
             </tr>
         </table>
+        
         <%--新加的窑尾排风机--%>
-        <table class="mytable" style="position: absolute; top: 264px; left: 25px;">
+        <table class="mytable" style="position: absolute; top: 287px; left: 25px;">
             <tr>
                 <td><span id="zc_nxjc_qtx_efc_clinker03>kilnTailExhaustFan>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -70,12 +62,15 @@
             </tr>
         </table>
         <%--新加的窑尾高温风机--%>
-        <table class="mytable" style="position: absolute; top: 418px; left: 63px;">
+        <table class="mytable" style="position: absolute; top: 398px; left: 75px;">
             <tr>
                 <td><span id="zc_nxjc_qtx_efc_clinker03>highTemperatureFan>ElectricityConsumption" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker03>highTemperatureFan>Current" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_efc_clinker03>highTemperatureFan1>Current" class="mchart"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_qtx_efc_clinker03>highTemperatureFan2>Current" class="mchart"></span></td>
             </tr>
             <tr>
                 <td><span id="zc_nxjc_qtx_efc_clinker03>highTemperatureFan>Power" class="mchart"></span></td>
@@ -92,7 +87,7 @@
                 <td><span id="zc_nxjc_qtx_efc_clinker03>coalMillMainMotor>Power" class="mchart"></span></td>
             </tr>
         </table>
-        <table class="mytable" style="position: absolute; top: 465px; left: 364px;">
+        <table class="mytable" style="position: absolute; top: 465px; left: 389px;">
             <tr>
                 <td><span id="zc_nxjc_qtx_efc_clinker03>kilnMainMotor>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -185,7 +180,7 @@
         </table>
         <table class="mytable" style="position: absolute; top: 568px; left: 671px;">
             <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker0>clinkerF2AC>ElectricityConsumption" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_efc_clinker03>clinkerF2AC>ElectricityConsumption" class="mchart"></span></td>
             </tr>
             <tr>
                 <td><span id="zc_nxjc_qtx_efc_clinker03>clinkerF2AC>Current" class="mchart"></span></td>
@@ -392,6 +387,67 @@
                 <td><span id="zc_nxjc_qtx_efc_clinker03>clinker_CoalConsumption>Day" class="mchart"></span></td>
             </tr>
         </table>
+
+        
+    <!--高温风机运行-->
+    <div class="imageContainer equipmentInfo" data-equipmentid="highTemperatureFan" id="zc_nxjc_qtx_efc_clinker03>highTemperatureFan>RunningState" style="position:absolute; height: 20px; width: 19px; top: 449px; left: 195px;"></div>
+    <!--废气排风机运行-->
+    <div class="imageContainer equipmentInfo" data-equipmentid="kilnTailExhaustFan" id="zc_nxjc_qtx_efc_clinker03>kilnTailExhaustFan>RunningState" style="position:absolute; height: 20px; width: 19px; top: 338px; left: 116px;"></div>
+    <!--窑主电机-->
+    <div class="imageContainer equipmentInfo" data-equipmentid="kilnMainMotor" id="zc_nxjc_qtx_efc_clinker03>kilnMainMotor>RunningState" style="position:absolute; height: 20px; width: 19px; top: 441px; left: 410px;"></div>
+    <!--窑头排风机-->
+    <div class="imageContainer equipmentInfo" data-equipmentid="kilnHeadExhaustFan" id="zc_nxjc_qtx_efc_clinker03>kilnHeadExhaustFan>RunningState" style="position:absolute; height: 20px; width: 19px; top: 417px; left: 1160px;"></div>
+    <!--熟料拉链机-->
+    <div class="imageContainer equipmentInfo" data-equipmentid="clinkerChainConveyor" id="zc_nxjc_qtx_efc_clinker03>clinkerChainConveyor>RunningState" style="position:absolute; height: 20px; width: 19px; top: 520px; left: 1211px;"></div>
+    <!--熟料破碎机-->
+    <div class="imageContainer equipmentInfo" data-equipmentid="clinkerCrusher" id="zc_nxjc_qtx_efc_clinker03>clinkerCrusher>RunningState" style="position:absolute; height: 20px; width: 19px; top: 482px; left: 964px;"></div>
+    <!--篦冷机F12-->
+    <div class="imageContainer equipmentInfo" data-equipmentid="clinkerF12AC" id="zc_nxjc_qtx_efc_clinker03>clinkerF11AC>RunningState" style="position:absolute; top: 653px; left: 995px; height: 20px; width: 19px;"></div>
+    <!--篦冷机F11-->
+    <div class="imageContainer equipmentInfo" data-equipmentid="clinkerF9AC" id="zc_nxjc_qtx_efc_clinker03>clinkerF9AC>RunningState" style="position:absolute; top: 652px; left: 926px; height: 20px; width: 19px;"></div>
+    <!--篦冷机F10-->
+    <!--篦冷机F9-->
+    <div class="imageContainer equipmentInfo" data-equipmentid="clinkerF8AC" id="zc_nxjc_qtx_efc_clinker03>clinkerF8AC>RunningState" style="position:absolute; top: 539px; left: 881px; height: 20px; width: 19px;"></div>
+    <!--篦冷机F8-->
+    <!--篦冷机F7-->
+    <div class="imageContainer equipmentInfo" data-equipmentid="clinkerF7AC" id="zc_nxjc_qtx_efc_clinker03>clinkerF7AC>RunningState" style="position:absolute; top: 651px; left: 859px; height: 20px; width: 19px;"></div>
+     <!--篦冷机F6-->
+     <!--篦冷机F5-->
+    <div class="imageContainer equipmentInfo" data-equipmentid="clinkerF6AC" id="zc_nxjc_qtx_efc_clinker03>clinkerF6AC>RunningState" style="position:absolute; top: 539px; left: 832px; height: 20px; width: 19px;"></div>   
+     <!--篦冷机F3-->
+    <div class="imageContainer equipmentInfo" data-equipmentid="clinkerF3AC" id="zc_nxjc_qtx_efc_clinker03>clinkerF5AC>RunningState" style="position:absolute; top: 652px; left: 801px; height: 20px; width: 19px;"></div>
+    <!--篦冷机F2-->
+    <div class="imageContainer equipmentInfo" data-equipmentid="clinkerF4AC" id="zc_nxjc_qtx_efc_clinker03>clinkerF4AC>RunningState" style="position:absolute; top: 539px; left: 767px; height: 20px; width: 19px;"></div>
+    <!--篦冷机F1-->
+    <div class="imageContainer equipmentInfo" data-equipmentid="clinkerF3AC" id="zc_nxjc_qtx_efc_clinker03>clinkerF3AC>RunningState" style="position:absolute; top: 652px; left: 740px; height: 20px; width: 19px;"></div>
+    <!--FVOA-->
+    <div class="imageContainer equipmentInfo" data-equipmentid="clinkerF1AC" id="zc_nxjc_qtx_efc_clinker03>clinkerF1AC>RunningState" style="position:absolute; top: 652px; left: 685px; height: 20px; width: 19px;"></div>
+    <!--FVOB-->
+    <div class="imageContainer equipmentInfo" data-equipmentid="clinkerF2AC" id="zc_nxjc_qtx_efc_clinker03>clinkerF2AC>RunningState" style="position:absolute; top: 539px; left: 700px; height: 20px; width: 19px;"></div>
+    <!--FVOC-->
+    <div class="imageContainer equipmentInfo" data-equipmentid="clinkerF10AC" id="zc_nxjc_qtx_efc_clinker03>clinkerF10AC>RunningState" style="position:absolute; top: 539px; left: 928px; height: 20px; width: 19px;"></div>
+    <!--煤磨三号罗茨风机-->
+    <div class="imageContainer equipmentInfo" data-equipmentid="coalMilRootsBlower3" id="zc_nxjc_qtx_efc_clinker03>coalMilRootsBlower3>RunningState" style="position:absolute; top: 333px; left: 1188px; width: 19px;"></div>
+     <!--1#入窑提升机电机运行状态-->
+    <div class="imageContainer equipmentInfo" data-equipmentid="clinkerHoist" id="zc_nxjc_qtx_efc_clinker03>clinkerHoist>RunningState" style="position:absolute; top: 25px; left: 171px; height: 20px; width: 19px;"></div>
+    <!--煤磨主电机运行状态-->
+    <div class="imageContainer equipmentInfo" data-equipmentid="coalMillMainMotor" id="zc_nxjc_qtx_efc_clinker03>coalMillMainMotor>RunningState" style="position:absolute; top: 314px; left: 911px;  width: 19px;"></div>
+    <!--煤磨高温风机运行状态-->
+     <!--煤磨通风机运行状态-->
+    <div class="imageContainer equipmentInfo" data-equipmentid="coalMillFan" id="zc_nxjc_qtx_efc_clinker03>coalMillFan>RunningState" style="position:absolute; top: 91px; left: 1294px; height: 20px; width: 19px;"></div>
+      <!--煤破碎运行状态-->
+    <div class="imageContainer equipmentInfo" data-equipmentid="coalCrusher" id="zc_nxjc_qtx_efc_clinker03>coalCrusher>RunningState" style="position:absolute; top: 26px; left: 740px; height: 20px; width: 19px;"></div>
+     <!--煤堆料运行状态-->
+    <div class="imageContainer equipmentInfo" data-equipmentid="coalPileReclaimer" id="zc_nxjc_qtx_efc_clinker03>coalPileReclaimer>RunningState" style="position:absolute; top: 104px; left: 672px; height: 20px; width: 19px;"></div>
+    
+    <!--煤磨一号罗茨风机运行状态-->
+    <div class="imageContainer equipmentInfo" data-equipmentid="coalMilRootsBlower1" id="zc_nxjc_qtx_efc_clinker03>coalMilRootsBlower1>RunningState" style="position:absolute; top: 331px; left: 1147px; height: 20px; width: 19px;"></div>
+     <!--煤磨二号罗茨风机运行状态-->
+    <div class="imageContainer equipmentInfo" data-equipmentid="coalMilRootsBlower2" id="zc_nxjc_qtx_efc_clinker03>coalMilRootsBlower2>RunningState" style="position:absolute; top: 334px; left: 1101px; height: 20px; width: 19px;"></div>
+   
+
+
+
     </div>
 
 

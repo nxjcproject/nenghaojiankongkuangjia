@@ -40,7 +40,7 @@ namespace Monitor_shell.Service.ProcessEnergyMonitor.EnergyContrast
                 string t_value="0";
                 if (_type == "RunningState")
                 {
-                    t_value = table.Rows[0][item] is DBNull ? "0" : Convert.ToDecimal(table.Rows[0][item]).ToString().Trim();
+                    t_value = table.Rows[0][item] is DBNull ? "NULL" : Convert.ToDecimal(table.Rows[0][item]).ToString().Trim();
                 }
                 else
                 {

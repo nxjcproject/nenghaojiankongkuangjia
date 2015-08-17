@@ -4,6 +4,7 @@ using Monitor_shell.Service.MeterStatistics;
 using SqlServerDataAdapter;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -26,6 +27,23 @@ namespace Monitor_shell.Web.UI_Monitor.ProcessEnergyMonitor.MonitorShell
 
            // formulaService.GetDenominatorFormulaJson("zc_nxjc_byc_byf_cementmill01", "hybridMaterialsPreparation");
             //MeterStatisticsHelper.GetEquipmentInfo("", "");
+
+
+
+
+
+            //DataTable table = new DataTable();//table为从数据库中取出的
+            ////.....
+            //foreach (DataRow dr in table.Rows)
+            //{
+            //    DateTime time = Convert.ToDateTime(dr["时间列"]);//取出当前列的时间
+            //    TimeSpan span = DateTime.Now - time;//时间间隔
+            //    double mimutesSpan = span.TotalMinutes;//将间隔时间转化为分钟
+            //    if (mimutesSpan > 1)//如果间隔时间大于1分钟
+            //    {
+            //        //......
+            //    }
+            //}
         } 
     }
 }

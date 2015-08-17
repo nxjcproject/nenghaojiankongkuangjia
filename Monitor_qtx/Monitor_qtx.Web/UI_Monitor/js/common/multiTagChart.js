@@ -3,13 +3,14 @@ var myLableArray = new Array();
 var lableName;
 $(function () {
     $('#htmlContainer').append(GetMenuHtml());
+    $('#htmlContainer').append(GetComprehensiveMenuHtml());
     $.parser.parse('#htmlContainer');
     BindContextmenu();
     getLableName();
 });
 
 var multiTagCharData = {
-    selectedId:''
+    selectedId: ''
 };
 //绑定右键菜单事件
 function BindContextmenu() {
@@ -17,6 +18,14 @@ function BindContextmenu() {
         multiTagCharData.selectedId = this.id;
         e.preventDefault();
         $('#mm').menu('show', {
+            left: e.pageX,
+            top: e.pageY
+        });
+    });
+    $(".comprehensive:not(.nodisplay)").bind('contextmenu', function (e) {
+        multiTagCharData.selectedId = this.id;
+        e.preventDefault();
+        $('#Menu_ComprehensiveInfo').menu('show', {
             left: e.pageX,
             top: e.pageY
         });
@@ -110,13 +119,13 @@ function getCookie(c_name) {
     return "";
 }
 //该标签是否存在cookie中
-function canAdd(c_name){
+function canAdd(c_name) {
     if (document.cookie.length > 0) {
         var c_start = document.cookie.indexOf(c_name + "=");
         if (c_start != -1) {
             return false;
         }
-        if(c_start==-1)
+        if (c_start == -1)
             return true;
     }
     return true;
@@ -124,7 +133,7 @@ function canAdd(c_name){
 //读取所有的cookie
 function getAllCookie() {
     var strCookie = unescape(document.cookie);
-    alert("cookie的个数为："+strCookie.split(";").length+";所有的cookie如下："+ strCookie);
+    alert("cookie的个数为：" + strCookie.split(";").length + ";所有的cookie如下：" + strCookie);
 }
 
 function getLableName() {
@@ -142,15 +151,21 @@ function getLableName() {
     });
 }
 
-function openWindow(){
-        var url = "/UI_Monitor/TrendTool/MultiTrendlineRenderer.aspx";
-        window.open(url, "WindowChart", "width=1000,height=600,toolbar=no,menubar=no,scrollbars=no,resizable=no,location=no,status=no");
+function openWindow() {
+    var url = "/UI_Monitor/TrendTool/MultiTrendlineRenderer.aspx";
+    window.open(url, "WindowChart", "width=1000,height=600,toolbar=no,menubar=no,scrollbars=no,resizable=no,location=no,status=no");
 }
 
 function GetMenuHtml() {
     var html = '<div id="mm" class="easyui-menu" style="width: 120px;">\
         <div data-options="iconCls:\'icon-add\'" onclick="javascript:ClassificationId(multiTagCharData.selectedId)">添加到趋势列表</div>\
         <div data-options="iconCls:\'icon-search\'" onclick="javascript:ShowAmmeterStatistics(multiTagCharData.selectedId)">打开电表数据列</div>\
+    </div>';
+    return html;
+}
+function GetComprehensiveMenuHtml() {
+    var html = '<div id="Menu_ComprehensiveInfo" class="easyui-menu" style="width: 120px;">\
+        <div data-options="iconCls:\'icon-search\'" onclick="javascript:ShowComprehensiveStatistics(multiTagCharData.selectedId)">查看计算过程</div>\
     </div>';
     return html;
 }

@@ -354,28 +354,6 @@
 
         <%--五号熟料线，五号水泥磨开始--%>
         <%--原料预均化--%>
-        <table class="mytable" style="position: absolute; top: 315px; left: 24px;">
-            <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker03>rawMaterialsHomogenize_ElectricityQuantity>Class" class="mchart"></span></td>
-            </tr>
-            <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker03>rawMaterialsHomogenize_ElectricityQuantity>Day" class="mchart"></span></td>
-            </tr>
-            <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker03>rawMaterialsHomogenize_ElectricityQuantity>Month" class="mchart"></span></td>
-            </tr>
-        </table>
-        <table class="mytable" style="position: absolute; top: 313px; left: 89px;">
-            <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker03>rawMaterialsHomogenize_ElectricityConsumption>Class" class="mchart"></span></td>
-            </tr>
-            <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker03>rawMaterialsHomogenize_ElectricityConsumption>Day" class="mchart"></span></td>
-            </tr>
-            <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker03>rawMaterialsHomogenize_ElectricityConsumption>Month" class="mchart"></span></td>
-            </tr>
-        </table>
         <%--生料产量--%>
         <table class="mytable" style="position: absolute; top: 383px; left: 254px;">
             <tr>

@@ -35,73 +35,9 @@
 </head>
 <body id="SubMonitorBody" style="margin: 0px; padding: 0px; overflow: auto;">
     <div id="SubMonitorLayout" style="position: relative; background-image: url('../../images/page/zc_nxjc_qtx_efc_clinker03_sheng.png'); width: 1350px; height: 740px; overflow: hidden;">
-        <table class="mytable" style="position: absolute; top: 45px; left: 19px;">
-            <tr>
-                <td><span id="zc_nxjc_qtx_efc>limestoneCrusher1>ElectricityConsumption" class="mchart"></span></td>
-            </tr>
-            <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker03>limestoneCrusher1>Current" class="mchart"></span></td>
-            </tr>
-            <tr>
-                <td><span id="zc_nxjc_qtx_efc>limestoneCrusher1>Power" class="mchart"></span></td>
-            </tr>
-        </table>
-        <table class="mytable" style="position: absolute; top: 139px; left: 19px;">
-            <tr>
-                <td><span id="zc_nxjc_qtx_efc>limestoneMineBelt>ElectricityConsumption" class="mchart"></span></td>
-            </tr>
-            <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker03>limestoneMineBelt>Current" class="mchart"></span></td>
-            </tr>
-            <tr>
-                <td><span id="zc_nxjc_qtx_efc>limestoneMineBelt>Power" class="mchart"></span></td>
-            </tr>
-        </table>
-        <table class="mytable" style="position: absolute; top: 217px; left: 19px;">
-            <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker03>limestoneStacker>ElectricityConsumption" class="mchart"></span></td>
-            </tr>
-            <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker03>limestoneStacker>Current" class="mchart"></span></td>
-            </tr>
-            <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker03>limestoneStacker>Power" class="mchart"></span></td>
-            </tr>
-        </table>
-        <table class="mytable" style="position: absolute; top: 316px; left: 18px;">
-            <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker03>limestoneStorageBeltMachine>ElectricityConsumption" class="mchart"></span></td>
-            </tr>
-            <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker03>limestoneStorageBeltMachine>Current" class="mchart"></span></td>
-            </tr>
-            <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker03>limestoneStorageBeltMachine>Power" class="mchart"></span></td>
-            </tr>
-        </table>
-        <table class="mytable" style="position: absolute; top: 40px; left: 191px;">
-            <tr>
-                <td><span id="zc_nxjc_qtx_efc>limestoneCrusher2>ElectricityConsumption" class="mchart"></span></td>
-            </tr>
-            <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker03>limestoneCrusher2>Current" class="mchart"></span></td>
-            </tr>
-            <tr>
-                <td><span id="zc_nxjc_qtx_efc>limestoneCrusher2>Power" class="mchart"></span></td>
-            </tr>
-        </table>
-        <table class="mytable" style="position: absolute; top: 142px; left: 406px;">
-            <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker03>sandstoneCrusher>ElectricityConsumption" class="mchart"></span></td>
-            </tr>
-            <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker03>sandstoneCrusher>Current" class="mchart"></span></td>
-            </tr>
-            <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker03>sandstoneCrusher>Power" class="mchart"></span></td>
-            </tr>
-        </table>
-        <table class="mytable" style="position: absolute; top: 359px; left: 500px;">
+           
+        <!--选粉-->
+        <table class="mytable" style="position: absolute; top: 374px; left: 521px;">
             <tr>
                 <td><span id="zc_nxjc_qtx_efc_clinker03>powderSelectingMachine>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -112,7 +48,8 @@
                 <td><span id="zc_nxjc_qtx_efc_clinker03>powderSelectingMachine>Power" class="mchart"></span></td>
             </tr>
         </table>
-        <table class="mytable" style="position: absolute; top: 235px; left: 872px;">
+        <!--循环-->
+        <table class="mytable" style="position: absolute; top: 240px; left: 743px;">
             <tr>
                 <td><span id="zc_nxjc_qtx_efc_clinker03>circulatingFan>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -123,18 +60,23 @@
                 <td><span id="zc_nxjc_qtx_efc_clinker03>circulatingFan>Power" class="mchart"></span></td>
             </tr>
         </table>
-        <table class="mytable" style="position: absolute; top: 221px; left: 1136px;">
+        <!--高温-->
+        <table class="mytable" style="position: absolute; top: 46px; left: 1126px;">
             <tr>
                 <td><span id="zc_nxjc_qtx_efc_clinker03>highTemperatureFan>ElectricityConsumption" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker03>highTemperatureFan>Current" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_efc_clinker03>highTemperatureFan1>Current" class="mchart"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_qtx_efc_clinker03>highTemperatureFan2>Current" class="mchart"></span></td>
             </tr>
             <tr>
                 <td><span id="zc_nxjc_qtx_efc_clinker03>highTemperatureFan>Power" class="mchart"></span></td>
             </tr>
         </table>
-        <table class="mytable" style="position: absolute; top: 608px; left: 515px;">
+        <!--主电机-->
+        <table class="mytable" style="position: absolute; top: 613px; left: 531px;">
             <tr>
                 <td><span id="zc_nxjc_qtx_efc_clinker03>rawMealGrindingMainMotor>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -145,7 +87,8 @@
                 <td><span id="zc_nxjc_qtx_efc_clinker03>rawMealGrindingMainMotor>Power" class="mchart"></span></td>
             </tr>
         </table>
-        <table class="mytable" style="position: absolute; top: 429px; left: 1196px;">
+        <!--窑尾排风机-->
+        <table class="mytable" style="position: absolute; top: 396px; left: 1231px;">
             <tr>
                 <td><span id="zc_nxjc_qtx_efc_clinker03>kilnTailExhaustFan>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -190,9 +133,63 @@
                 <td><span id="zc_nxjc_qtx_efc_clinker03>rawMaterialsPreparation_ElectricityConsumption>Day" class="mchart"></span></td>
             </tr>
         </table>
+           <%--生料库#3罗茨风机电流--%>
+        <table class="mytable" style="position: absolute; top: 657px; left: 1005px;">
+            <tr>
+                <td><span id="zc_nxjc_qtx_efc_clinker03>rawMaterialLibraryRootsBlower3>ElectricityConsumption" class="mchart"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_qtx_efc_clinker03>rawMaterialLibraryRootsBlower3>Current" class="mchart"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_qtx_efc_clinker03>rawMaterialLibraryRootsBlower3>Power" class="mchart"></span></td>
+            </tr>
+        </table>
+        <%--生料库#2罗茨风机--%>
+        <table class="mytable" style="position: absolute; top: 657px; left: 931px; height: 24px;">
+            <tr>
+                <td><span id="zc_nxjc_qtx_efc_clinker03>rawMaterialLibraryRootsBlower2>ElectricityConsumption" class="mchart"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_qtx_efc_clinker03>rawMaterialLibraryRootsBlower2>Current" class="mchart"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_qtx_efc_clinker03>rawMaterialLibraryRootsBlower2>Power" class="mchart"></span></td>
+            </tr>
+        </table>
+        <%--生料库#1罗茨风机电流--%>
+        <table class="mytable" style="position: absolute; top: 657px; left: 858px; height: 24px;">
+            <tr>
+                <td><span id="zc_nxjc_qtx_efc_clinker03>rawMaterialLibraryRootsBlower1>ElectricityConsumption" class="mchart"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_qtx_efc_clinker03>rawMaterialLibraryRootsBlower1>Current" class="mchart"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_qtx_efc_clinker03>rawMaterialLibraryRootsBlower1>Power" class="mchart"></span></td>
+            </tr>
+        </table>
     </div>
 
 
+
+     <!--循环风机运行-->
+    <div class="imageContainer equipmentInfo" data-equipmentid="circulatingFan" id="zc_nxjc_qtx_efc_clinker03>circulatingFan>RunningState" style="position: absolute; height: 20px; width: 19px; top: 294px; left: 850px;"></div>
+    <!--原料磨主电机-->
+    <div class="imageContainer equipmentInfo" data-equipmentid="rawMealGrindingMainMotor" id="zc_nxjc_qtx_efc_clinker03>rawMealGrindingMainMotor>RunningState" style="position: absolute; height: 20px; width: 19px; top: 561px; left: 545px;"></div>
+    <!--原料磨选粉机电机-->
+    <div class="imageContainer equipmentInfo" data-equipmentid="powderSelectingMachine" id="zc_nxjc_qtx_efc_clinker03>powderSelectingMachine>RunningState" style="position: absolute; height: 20px; width: 19px; top: 497px; left: 542px;"></div>
+     <!--窑尾排风机运行-->
+    <div class="imageContainer equipmentInfo" data-equipmentid="kilnTailExhaustFan" id="zc_nxjc_qtx_efc_clinker03>kilnTailExhaustFan>RunningState" style="position: absolute; height: 20px; width: 19px; top: 351px; left: 1242px;"></div>
+    <!--窑尾高温风机运行-->
+    <div class="imageContainer equipmentInfo" data-equipmentid="highTemperatureFan" id="zc_nxjc_qtx_efc_clinker03>highTemperatureFan>RunningState" style="position: absolute; height: 20px; width: 19px; top: 150px; left: 1098px;"></div>
+   <!--生料库#1罗茨风机运行-->
+    <div class="imageContainer equipmentInfo" data-equipmentid="rawMaterialLibraryRootsBlower1" id="zc_nxjc_qtx_efc_clinker03>rawMaterialLibraryRootsBlower1>RunningState" style="position: absolute; height: 20px; width: 19px; top: 626px; left: 909px;"></div>
+    <!--生料库#2罗茨风机运行-->
+    <div class="imageContainer equipmentInfo" data-equipmentid="rawMaterialLibraryRootsBlower2" id="zc_nxjc_qtx_efc_clinker03>rawMaterialLibraryRootsBlower2>RunningState" style="position: absolute; height: 20px; width: 19px; top: 626px; left: 944px;"></div>
+    <!--生料库#3罗茨风机运行-->
+    <div class="imageContainer equipmentInfo" data-equipmentid="rawMaterialLibraryRootsBlower3" id="zc_nxjc_qtx_efc_clinker03>rawMaterialLibraryRootsBlower3>RunningState" style="position: absolute; height: 20px; width: 19px; top: 626px; left: 981px;"></div>
+    
     <div id="htmlContainer"></div>
 </body>
 </html>

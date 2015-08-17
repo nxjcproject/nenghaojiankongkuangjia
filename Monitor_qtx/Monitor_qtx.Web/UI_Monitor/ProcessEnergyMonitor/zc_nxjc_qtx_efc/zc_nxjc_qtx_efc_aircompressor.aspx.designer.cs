@@ -7,10 +7,10 @@
 // </自动生成>
 //------------------------------------------------------------------------------
 
-namespace Monitor_shell.Web.UI_Monitor.ProcessEnergyMonitor.MonitorShell {
+namespace Monitor_qtx.Web.UI_Monitor.ProcessEnergyMonitor.zc_nxjc_qtx_efc {
     
     
-    public partial class test {
+    public partial class zc_nxjc_byc_byf_aircompressor {
         
         /// <summary>
         /// Head1 控件。

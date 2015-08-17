@@ -1626,6 +1626,7 @@
     <Content Include="UI_Monitor\css\common\mymonitor.css" />
     <Content Include="UI_Monitor\css\common\trendlineAnalysis.css" />
     <Content Include="UI_Monitor\css\common\trendlineRenderer.css" />
+    <Content Include="UI_Monitor\images\common\error.gif" />
     <Content Include="UI_Monitor\images\common\greenL.gif" />
     <Content Include="UI_Monitor\images\common\redL.gif" />
     <Content Include="UI_Monitor\images\page\zc_nxjc_byc_byf.jpg" />
@@ -1650,6 +1651,7 @@
     <Content Include="UI_Monitor\js\common\AmmeterStatistic.js" />
     <Content Include="UI_Monitor\js\common\blink.js" />
     <Content Include="UI_Monitor\js\common\chartjs.js" />
+    <Content Include="UI_Monitor\js\common\ComprehensiveStatistic.js" />
     <Content Include="UI_Monitor\js\common\DisplayName.js" />
     <Content Include="UI_Monitor\js\common\EquipmentInfo.js" />
     <Content Include="UI_Monitor\js\common\monitorjs.js" />

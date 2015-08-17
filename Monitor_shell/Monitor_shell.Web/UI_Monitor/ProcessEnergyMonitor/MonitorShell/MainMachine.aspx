@@ -31,9 +31,35 @@
         publicData.organizationId = "zc_nxjc_byc_byf_clinker01";
         publicData.sceneName = "1#熟料线";
     </script>
+    <script>
+        function myTest() {
+            //获取浏览器显示区域（可视区域）的高度 ：   
+           var t1= $(window).height();   
+            //获取浏览器显示区域（可视区域）的宽度 ：
+           var t2 = $(window).width();
+            //获取页面的文档高度   
+           var t3 = $(document).height();
+            //获取页面的文档宽度 ：
+           var t4 = $(document).width();
+            //浏览器当前窗口文档body的高度：  
+           var t5 = $(document.body).height();
+           // 浏览器当前窗口文档body的宽度： 
+           var t6 = $(document.body).width();
+           // 获取滚动条到顶部的垂直高度 (即网页被卷上去的高度)  
+           var t7 = $(document).scrollTop();
+            //获取滚动条到左边的垂直宽度 ：
+           var t8 = $(document).scrollLeft();
+           // 获取或设置元素的宽度：
+          // var t9 = $(obj).width();
+           // 获取或设置元素的高度：
+          // var t10 = $(obj).height();
+        }
+    </script>
     <title></title>
 </head>
 <body id="SubMonitorBody" style="margin: 0px; padding: 0px; overflow: auto;">
+    <span onclick="myTest()">test0</span>
+    
     <div id="SubMonitorLayout" style="position: relative; background-image: url('../../images/page/zc_nxjc_byc_byf_clinker01_sheng.png'); width: 1350px; height: 740px; overflow: hidden;">
         <table class="mytable" style="position: absolute; top: 45px; left: 17px;">
             <tr>
@@ -277,8 +303,10 @@
             </tr>
         </table>
         <%--原料调配3#收尘风机--%>
+         <span onclick="myTest()" style="position: absolute; top: 288px; left: 544px; height: 24px; width: 61px;">test1</span>
         <table class="mytable" style="position: absolute; top: 276px; left: 416px; height: 24px;">
             <tr>
+               
                 <td><span id="zc_nxjc_byc_byf_clinker01>rawMaterialDustCollectingFan3>ElectricityConsumption" class="mchart"></span></td>
             </tr>
             <tr>

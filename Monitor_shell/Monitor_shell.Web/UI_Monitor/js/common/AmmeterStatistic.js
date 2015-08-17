@@ -1,6 +1,5 @@
 ﻿var equipmentInfo = "";
 
-
 $(function () {
     $('#htmlContainer').append(GetAmmeterDialogHtml());
     InitializeGrid("");
@@ -89,6 +88,16 @@ function loadGridData(dataToServer) {
                     ]]
                 });
             }
+            //获取浏览器显示区域（可视区域）的高度 ：   
+            //$(window).height();   
+            //获取或设置元素的高度：
+            //$(obj).height();
+            //获取滚动条到顶部的垂直高度 (即网页被卷上去的高度)  
+            //$(document).scrollTop();  
+            var  myTop=($(window).height()-$('#ammeterDialog').height())/2+$(document).scrollTop();  
+            $('#ammeterDialog').dialog({
+                top:myTop
+            });
             $('#ammeterDialog').dialog('open');
         }
     });
