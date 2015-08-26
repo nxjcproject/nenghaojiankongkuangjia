@@ -26,7 +26,9 @@
     <script src="/UI_Monitor/js/common/multiTagChart.js"></script>
     <script src="/UI_Monitor/js/common/RunningState.js"></script>
     <script src="/UI_Monitor/js/common/AmmeterStatistic.js"></script>
+    <script src="/UI_Monitor/js/common/EquipmentInfo.js"></script>
     <script src="/UI_Monitor/js/common/DisplayName.js"></script>
+    <script src="/UI_Monitor/js/common/myDrag.js"></script>
     <script>
         publicData.organizationId = "zc_nxjc_qtx_efc";
         publicData.sceneName = "";
@@ -210,7 +212,7 @@
                 <td><span id="zc_nxjc_qtx_efc_clinker02>clinkerElectricityGeneration_ElectricityConsumption>Class" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker02>electricityOutput_ElectricityQuantity>Class" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_efc_cogeneration01>electricityOutput_ElectricityQuantity>Class" class="mchart"></span></td>
             </tr>
             <tr>
                 <td><span id="zc_nxjc_qtx_efc_clinker02>electricityOwnDemand_ElectricityQuantity>Class" class="mchart"></span></td>
@@ -224,7 +226,7 @@
                 <td><span id="zc_nxjc_qtx_efc_clinker02>clinkerElectricityGeneration_ElectricityConsumption>Day" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker02>electricityOutput_ElectricityQuantity>Day" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_efc_cogeneration01>electricityOutput_ElectricityQuantity>Day" class="mchart"></span></td>
             </tr>
             <tr>
                 <td><span id="zc_nxjc_qtx_efc_clinker02>electricityOwnDemand_ElectricityQuantity>Day" class="mchart"></span></td>
@@ -505,7 +507,7 @@
                 <td><span id="zc_nxjc_qtx_efc_clinker03>clinkerElectricityGeneration_ElectricityConsumption>Class" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker03>electricityOutput_ElectricityQuantity>Class" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_efc_cogeneration02>electricityOutput_ElectricityQuantity>Class" class="mchart"></span></td>
             </tr>
             <tr>
                 <td><span id="zc_nxjc_qtx_efc_clinker03>electricityOwnDemand_ElectricityQuantity>Class" class="mchart"></span></td>
@@ -519,7 +521,7 @@
                 <td><span id="zc_nxjc_qtx_efc_clinker03>clinkerElectricityGeneration_ElectricityConsumption>Day" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker03>electricityOutput_ElectricityQuantity>Day" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_efc_cogeneration02>electricityOutput_ElectricityQuantity>Day" class="mchart"></span></td>
             </tr>
             <tr>
                 <td><span id="zc_nxjc_qtx_efc_clinker03>electricityOwnDemand_ElectricityQuantity>Day" class="mchart"></span></td>
@@ -812,9 +814,9 @@
             <tr>
                 <td><span id="zc_nxjc_qtx_efc>cementmill_ElectricityConsumption_Comprehensive>Comprehensive" ></span></td>
             </tr>
-            <tr>
+            <%--<tr>
                 <td><span id="zc_nxjc_qtx_efc>cementmill_CoalConsumption_Comprehensive>Comprehensive" ></span></td>
-            </tr>
+            </tr>--%>
         </table>
         <%--工序电耗（所有产线的该工序电量之和除以所有产线该工序产量之和） --%>
         <table class="mytable" style="position: absolute; top: 675px; left: 92px;">

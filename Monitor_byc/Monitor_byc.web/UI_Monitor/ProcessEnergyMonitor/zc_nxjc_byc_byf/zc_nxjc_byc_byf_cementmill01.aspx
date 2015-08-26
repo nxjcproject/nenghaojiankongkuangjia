@@ -28,6 +28,7 @@
     <script src="/UI_Monitor/js/common/AmmeterStatistic.js"></script>
     <script src="/UI_Monitor/js/common/EquipmentInfo.js"></script>
     <script src="/UI_Monitor/js/common/DisplayName.js"></script>
+    <script src="/UI_Monitor/js/common/myDrag.js"></script>
     <script>
         publicData.organizationId = "zc_nxjc_byc_byf_cementmill01";
         publicData.sceneName = "1#水泥磨";
@@ -229,6 +230,6 @@
      <!--1#水泥磨粉煤灰库喂料称-->
     <div class="imageContainer equipmentInfo" data-equipmentid="flyAshLibraryFeeding" id="zc_nxjc_byc_byf_cementmill01>flyAshLibraryFeeding>RunningState" style="position:absolute; top: 409px; left: 221px; height: 20px; width: 19px;"></div>
 
-
+    </body>
 </html>
 

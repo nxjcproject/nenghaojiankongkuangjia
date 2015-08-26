@@ -29,7 +29,7 @@ namespace Monitor_shell.Web.UI_Monitor.ProcessEnergyMonitor.MonitorShell
             string pageUrl = pageInfoArray[1];
             organizationIdContainerId.Value = organizationId;
             pageUrlId.Value = pageUrl;
-
+            
             DataTable m_OrganzationInfo = Monitor_shell.Service.ProcessEnergyMonitor.MultiMonitorShell.GetOrganizationInfo(organizationId);
             if (m_OrganzationInfo != null)
             {

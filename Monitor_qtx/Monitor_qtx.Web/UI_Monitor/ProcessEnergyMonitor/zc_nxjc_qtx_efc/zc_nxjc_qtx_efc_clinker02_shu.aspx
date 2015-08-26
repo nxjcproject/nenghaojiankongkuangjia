@@ -26,7 +26,9 @@
     <script src="/UI_Monitor/js/common/multiTagChart.js"></script>
     <script src="/UI_Monitor/js/common/RunningState.js"></script>
     <script src="/UI_Monitor/js/common/AmmeterStatistic.js"></script>
+    <script src="/UI_Monitor/js/common/EquipmentInfo.js"></script>
     <script src="/UI_Monitor/js/common/DisplayName.js"></script>
+    <script src="/UI_Monitor/js/common/myDrag.js"></script>
     <script>
         publicData.organizationId = "zc_nxjc_qtx_efc_clinker02";
         publicData.sceneName = "2#熟料线";
@@ -99,13 +101,13 @@
          <%--煤破碎--%>
         <table class="mytable" style="position: absolute; top: 35px; left: 861px;">
             <tr>
-                <td><span id="zc_nxjc_qtx_efc>coalCrusher>ElectricityConsumption" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_efc_clinker02>coalCrusher>ElectricityConsumption" class="mchart"></span></td>
             </tr>
             <tr>
                 <td><span id="zc_nxjc_qtx_efc_clinker02>coalCrusher>Current" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_qtx_efc>coalCrusher>Power" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_efc_clinker02>coalCrusher>Power" class="mchart"></span></td>
             </tr>
         </table>
           <%--煤堆料--%>

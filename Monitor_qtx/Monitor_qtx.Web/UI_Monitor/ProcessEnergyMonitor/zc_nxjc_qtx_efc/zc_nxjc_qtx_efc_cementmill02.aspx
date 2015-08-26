@@ -26,7 +26,9 @@
     <script src="/UI_Monitor/js/common/multiTagChart.js"></script>
     <script src="/UI_Monitor/js/common/RunningState.js"></script>
     <script src="/UI_Monitor/js/common/AmmeterStatistic.js"></script>
+    <script src="/UI_Monitor/js/common/EquipmentInfo.js"></script>
     <script src="/UI_Monitor/js/common/DisplayName.js"></script>
+    <script src="/UI_Monitor/js/common/myDrag.js"></script>
     <script>
         publicData.organizationId = "zc_nxjc_qtx_efc_cementmill02";
         publicData.sceneName = "2#水泥磨";
@@ -51,13 +53,13 @@
            <!--3,4包机 -->  
          <table class="mytable" style="position: absolute; top: 681px; left: 1133px;">
             <tr>
-                <td><span id="zc_nxjc_qtx_efc_cementmill02>packageTransformer>ElectricityConsumption" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_efc>packageTransformer>ElectricityConsumption" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_qtx_efc_cementmill02>packageTransformer>Current" class="mchart nodisplay"></span></td>
+                <td><span id="zc_nxjc_qtx_efc>packageTransformer>Current" class="mchart nodisplay"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_qtx_efc_cementmill02>packageTransformer>Power" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_efc>packageTransformer>Power" class="mchart"></span></td>
             </tr>
         </table>
             <!--辊压机定辊主电机 -->   

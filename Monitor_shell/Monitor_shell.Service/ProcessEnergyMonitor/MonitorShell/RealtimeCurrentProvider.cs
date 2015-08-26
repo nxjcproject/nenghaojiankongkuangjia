@@ -38,10 +38,10 @@ namespace Monitor_shell.Service.ProcessEnergyMonitor.MonitorShell
                 results.Add(item);
             }
 
-            foreach (var item in GetRealtimeDatas(organizationId))
-            {
-                results.Add(item);
-            }
+            //foreach (var item in GetRealtimeDatas(organizationId))
+            //{
+            //    results.Add(item);
+            //}
 
             return results;
         }

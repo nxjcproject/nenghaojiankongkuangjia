@@ -296,6 +296,8 @@ namespace Monitor_shell.Service.MeterStatistics
             DataTable result = new DataTable();
             DataColumn name = new DataColumn("Name", typeof(string));
             result.Columns.Add(name);
+            DataColumn ammeterCode = new DataColumn("AmmeterCode", typeof(string));
+            result.Columns.Add(ammeterCode);
             DataColumn current = new DataColumn("CurrentData", typeof(decimal));
             result.Columns.Add(current);
             DataColumn average = new DataColumn("AverageData", typeof(decimal));
@@ -350,8 +352,15 @@ namespace Monitor_shell.Service.MeterStatistics
                 }
             }
             //计算平均值和方差,并添加到结果表中
-            foreach (string key in itemdatas.Keys)
+            for (int i = 0; i < itemdatas.Keys.Count; i++)
             {
+                string t_ammeterCode = "/";
+                if (i < ammeterDetail.Keys.Count)
+                {
+                    //获取电表编号
+                    t_ammeterCode = ammeterDetail.Keys.ToArray()[i];
+                }
+                string key = itemdatas.Keys.ToArray()[i];
                 List<decimal> datas = itemdatas[key];
                 decimal averageData = 0m;
                 if (datas.Count > 0)
@@ -367,11 +376,34 @@ namespace Monitor_shell.Service.MeterStatistics
 
                 DataRow newRow = result.NewRow();
                 newRow["Name"] = key;
+                newRow["AmmeterCode"] = t_ammeterCode;
                 newRow["CurrentData"] = currentdatas[key];
                 newRow["AverageData"] = averageData;
                 newRow["VarianceData"] = varianceData;
                 result.Rows.Add(newRow);
             }
+            //foreach (string key in itemdatas.Keys)
+            //{
+            //    List<decimal> datas = itemdatas[key];
+            //    decimal averageData = 0m;
+            //    if (datas.Count > 0)
+            //    {
+            //        averageData = datas.Average();
+            //    }
+            //    decimal varianceData = 0m;
+            //    foreach (decimal item in datas)
+            //    {
+            //        varianceData = varianceData + (item - averageData) * (item - averageData);
+            //    }
+            //    varianceData = varianceData / rowCount;
+
+            //    DataRow newRow = result.NewRow();
+            //    newRow["Name"] = key;
+            //    newRow["CurrentData"] = currentdatas[key];
+            //    newRow["AverageData"] = averageData;
+            //    newRow["VarianceData"] = varianceData;
+            //    result.Rows.Add(newRow);
+            //}
 
             return result;
             
@@ -386,7 +418,7 @@ namespace Monitor_shell.Service.MeterStatistics
             columnPT.DefaultValue = "/";
             DataColumn columnAmmeterValue = new DataColumn("AmmeterValue", typeof(string));
             columnAmmeterValue.DefaultValue = "/";
-            sourceTable.Columns.Add(columnAmmeterCode);
+            //sourceTable.Columns.Add(columnAmmeterCode);
             sourceTable.Columns.Add(columnCT);
             sourceTable.Columns.Add(columnPT);
             sourceTable.Columns.Add(columnAmmeterValue);
@@ -397,7 +429,8 @@ namespace Monitor_shell.Service.MeterStatistics
                                 where C.AmmeterNumber='{0}') B";
             foreach (DataRow dr in sourceTable.Rows)
             {
-                string AmmeterNumber = dr["Name"].ToString().Substring(dr["Name"].ToString().IndexOf('(')+1).TrimEnd(')');
+                //string AmmeterNumber = dr["Name"].ToString().Substring(dr["Name"].ToString().IndexOf('A')).TrimEnd(')');
+                string AmmeterNumber = dr["AmmeterCode"].ToString().Trim();
                 if(AmmeterNumber.Contains('A'))
                 {
                     DataTable t_table = _nxjcFactory.Query(string.Format(infoSql, AmmeterNumber,ammeterDBName));

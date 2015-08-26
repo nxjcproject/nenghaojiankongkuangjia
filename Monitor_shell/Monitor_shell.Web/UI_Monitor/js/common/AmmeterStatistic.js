@@ -5,6 +5,7 @@ $(function () {
     InitializeGrid("");
     $.parser.parse('#htmlContainer');
     initDialog();
+    drag('ammeterDialog');
 });
 function ShowAmmeterStatistics(id) {
     var idArray = id.split('>');
@@ -140,7 +141,7 @@ function ValueFormatter(value, row, index) {
 }
 
 function GetAmmeterDialogHtml() {
-    var html = '<div id="ammeterDialog" class="easyui-dialog" title="详细信息" data-options="iconCls:\'icon-save\',closed:true" style="width: 750px; height: 330px; padding: 5px">\
+    var html = '<div id="ammeterDialog" class="easyui-dialog" title="详细信息" data-options="iconCls:\'icon-save\',closed:true" style="width: 750px; height: 330px; padding: 5px;">\
             <div id="ammeterFormula" class="easyui-panel" title="计算公式" style="background: #fafafa;padding-bottom:5px;" data-options="border:true">\
                 &nbsp\
             </div>\

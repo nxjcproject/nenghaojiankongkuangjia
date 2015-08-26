@@ -3,6 +3,8 @@
     InitializeComprehensiveGrid([]);
     $.parser.parse('#htmlContainer');
     initComprehensiveDialog();
+    //dialog拖动
+    drag("ComprehensiveDialog");
 });
 function ShowComprehensiveStatistics(id) {
     var idArray = id.split('>');

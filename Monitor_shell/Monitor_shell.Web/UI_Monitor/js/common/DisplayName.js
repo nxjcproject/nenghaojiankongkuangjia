@@ -23,16 +23,23 @@ $(function () {
             g_nameArray = msg.d;
         }
     });
-    bindEquipmentEvent();
+    myBindEvent();
 });
 
 
 //事件绑定
-function bindEquipmentEvent() {
+function myBindEvent() {
     $('span').mouseenter(function (e) {
         var itemId = this.id;
         var t_array = itemId.split('>');
-        var itemKey = t_array[0] + ">" + t_array[1].split('_')[0];
+        var variableId_array = t_array[1].split('_');
+        if (variableId_array.length == 2) {
+            if (variableId_array[1] == "ElectricityQuantity" || variableId_array[1] == "ElectricityConsumption") {
+                //电量/电耗值要去掉后缀
+                t_array[1] = t_array[1].split('_')[0];
+            }
+        }
+        var itemKey = t_array[0] + ">" + t_array[1];
         var myContent = g_nameArray[itemKey];
         
         var parentsTable = $(this).parents(".mytable");

@@ -25,7 +25,9 @@
     <script src="/UI_Monitor/js/common/multiTagChart.js"></script>
     <script src="/UI_Monitor/js/common/RunningState.js"></script>
     <script src="/UI_Monitor/js/common/AmmeterStatistic.js"></script>
+    <script src="/UI_Monitor/js/common/EquipmentInfo.js"></script>
     <script src="/UI_Monitor/js/common/DisplayName.js"></script>
+    <script src="/UI_Monitor/js/common/myDrag.js"></script>
     <script>
         publicData.organizationId = "zc_nxjc_qtx_efc_cementmill01";
         publicData.sceneName = "1#水泥磨";
@@ -137,25 +139,25 @@
         <!-- 包机1-->
          <table class="mytable" style="position: absolute; top: 614px; left: 1248px;">
             <tr>
-                <td><span id="zc_nxjc_qtx_efc_cementmill01>charter1>ElectricityConsumption" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_efc>charter1>ElectricityConsumption" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_qtx_efc_cementmill01>charter1>Current" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_efc>charter1>Current" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_qtx_efc_cementmill01>charter1>Power" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_efc>charter1>Power" class="mchart"></span></td>
             </tr>
         </table>
          <!-- 包机2-->
          <table class="mytable" style="position: absolute; top: 614px; left: 1144px;">
             <tr>
-                <td><span id="zc_nxjc_qtx_efc_cementmill01>charter2>ElectricityConsumption" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_efc>charter2>ElectricityConsumption" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_qtx_efc_cementmill01>charter2>Current" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_efc>charter2>Current" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_qtx_efc_cementmill01>charter2>Power" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_efc>charter2>Power" class="mchart"></span></td>
             </tr>
         </table>
     </div>

@@ -1,6 +1,4 @@
-﻿$(function () {
-    bindEquipmentEvent();
-});
+﻿
 var equipmentmentNames = {
     cementMaillAirCompressorPowerSupply1: "水泥磨1号空压机电源",
     rollingMachineActionRoller: "磨活动辊",
@@ -100,6 +98,10 @@ var equipmentmentNames = {
     flyAshLibraryFeeding: "粉煤灰库喂料称",
     clinkerInTheBelt:"熟料内返皮带"
 }
+
+$(function () {
+    bindEquipmentEvent();
+});
 //事件绑定
 function bindEquipmentEvent() {
     $('.equipmentInfo').mouseenter(function (e) {

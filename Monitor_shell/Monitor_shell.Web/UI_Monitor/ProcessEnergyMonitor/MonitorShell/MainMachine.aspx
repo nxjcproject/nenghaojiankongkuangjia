@@ -27,6 +27,7 @@
     <script src="/UI_Monitor/js/common/RunningState.js"></script>
     <script src="/UI_Monitor/js/common/AmmeterStatistic.js"></script>
     <script src="/UI_Monitor/js/common/EquipmentInfo.js"></script>
+    <script src="/UI_Monitor/js/common/myDrag.js"></script>
     <script>
         publicData.organizationId = "zc_nxjc_byc_byf_clinker01";
         publicData.sceneName = "1#熟料线";
@@ -58,9 +59,10 @@
     <title></title>
 </head>
 <body id="SubMonitorBody" style="margin: 0px; padding: 0px; overflow: auto;">
-    <span onclick="myTest()">test0</span>
     
-    <div id="SubMonitorLayout" style="position: relative; background-image: url('../../images/page/zc_nxjc_byc_byf_clinker01_sheng.png'); width: 1350px; height: 740px; overflow: hidden;">
+    <div id="SubMonitorLayout" style="position: relative; background-image: url('../../images/page/zc_nxjc_byc_byf_clinker01_sheng.png'); width: 1350px; height: 740px; overflow: hidden;" >
+        <span id="test" style="position:absolute;left:300px;top:200px;">test0</span>
+    
         <table class="mytable" style="position: absolute; top: 45px; left: 17px;">
             <tr>
                 <td><span id="zc_nxjc_byc_byf>limestoneCrusher1>ElectricityConsumption" class="mchart"></span></td>
