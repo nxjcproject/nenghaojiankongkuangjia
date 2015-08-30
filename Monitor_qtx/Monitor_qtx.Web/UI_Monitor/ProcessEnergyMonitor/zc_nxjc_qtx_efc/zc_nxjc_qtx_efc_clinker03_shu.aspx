@@ -115,17 +115,6 @@
         <%--罗茨风机--%>
         <table class="mytable" style="position: absolute; top: 352px; left: 1120px;">
             <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker03>coalMilRootsBlower1>ElectricityConsumption" class="mchart"></span></td>
-            </tr>
-            <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker03>coalMilRootsBlower1>Current" class="mchart"></span></td>
-            </tr>
-            <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker03>coalMilRootsBlower1>Power" class="mchart"></span></td>
-            </tr>
-        </table>
-        <table class="mytable" style="position: absolute; top: 304px; left: 1005px;">
-            <tr>
                 <td><span id="zc_nxjc_qtx_efc_clinker03>coalMilRootsBlower2>ElectricityConsumption" class="mchart"></span></td>
             </tr>
             <tr>
@@ -133,6 +122,17 @@
             </tr>
             <tr>
                 <td><span id="zc_nxjc_qtx_efc_clinker03>coalMilRootsBlower2>Power" class="mchart"></span></td>
+            </tr>
+        </table>
+        <table class="mytable" style="position: absolute; top: 304px; left: 1005px;">
+            <tr>
+                <td><span id="zc_nxjc_qtx_efc_clinker03>coalMilRootsBlower1>ElectricityConsumption" class="mchart"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_qtx_efc_clinker03>coalMilRootsBlower1>Current" class="mchart"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_qtx_efc_clinker03>coalMilRootsBlower1>Power" class="mchart"></span></td>
             </tr>
         </table>
         <table class="mytable" style="position: absolute; top: 302px; left: 1211px;">
@@ -443,9 +443,9 @@
     <div class="imageContainer equipmentInfo" data-equipmentid="coalPileReclaimer" id="zc_nxjc_qtx_efc_clinker03>coalPileReclaimer>RunningState" style="position:absolute; top: 104px; left: 672px; height: 20px; width: 19px;"></div>
     
     <!--煤磨一号罗茨风机运行状态-->
-    <div class="imageContainer equipmentInfo" data-equipmentid="coalMilRootsBlower1" id="zc_nxjc_qtx_efc_clinker03>coalMilRootsBlower1>RunningState" style="position:absolute; top: 331px; left: 1147px; height: 20px; width: 19px;"></div>
+    <div class="imageContainer equipmentInfo" data-equipmentid="coalMilRootsBlower1" id="zc_nxjc_qtx_efc_clinker03>coalMilRootsBlower2>RunningState" style="position:absolute; top: 331px; left: 1147px; height: 20px; width: 19px;"></div>
      <!--煤磨二号罗茨风机运行状态-->
-    <div class="imageContainer equipmentInfo" data-equipmentid="coalMilRootsBlower2" id="zc_nxjc_qtx_efc_clinker03>coalMilRootsBlower2>RunningState" style="position:absolute; top: 334px; left: 1101px; height: 20px; width: 19px;"></div>
+    <div class="imageContainer equipmentInfo" data-equipmentid="coalMilRootsBlower2" id="zc_nxjc_qtx_efc_clinker03>coalMilRootsBlower1>RunningState" style="position:absolute; top: 334px; left: 1101px; height: 20px; width: 19px;"></div>
    
 
 

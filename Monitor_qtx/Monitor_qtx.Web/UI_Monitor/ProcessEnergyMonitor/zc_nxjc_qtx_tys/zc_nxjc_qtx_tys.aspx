@@ -26,6 +26,7 @@
     <script src="/UI_Monitor/js/common/multiTagChart.js"></script>
     <script src="/UI_Monitor/js/common/RunningState.js"></script>
     <script src="/UI_Monitor/js/common/AmmeterStatistic.js"></script>
+    <script src="/UI_Monitor/js/common/ComprehensiveStatistic.js"></script>
     <script src="/UI_Monitor/js/common/EquipmentInfo.js"></script>
     <script src="/UI_Monitor/js/common/DisplayName.js"></script>
     <script src="/UI_Monitor/js/common/myDrag.js"></script>
@@ -743,15 +744,15 @@
         <%--综合电耗煤耗--%>
         <table class="mytable" style="position: absolute; top: 684px; left: 423px;">
             <tr>
-                <td><span id="zc_nxjc_qtx_tys>clinker_ElectricityConsumption_Comprehensive>Comprehensive" ></span></td>
+                <td><span id="zc_nxjc_qtx_tys>clinker_ElectricityConsumption_Comprehensive>Comprehensive" class ="comprehensive"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_qtx_tys>clinker_CoalConsumption_Comprehensive>Comprehensive" ></span></td>
+                <td><span id="zc_nxjc_qtx_tys>clinker_CoalConsumption_Comprehensive>Comprehensive" class ="comprehensive"></span></td>
             </tr>
         </table>
         <table class="mytable" style="position: absolute; top: 684px; left: 493px;">
             <tr>
-                <td><span id="zc_nxjc_qtx_tys>cementmill_ElectricityConsumption_Comprehensive>Comprehensive" ></span></td>
+                <td><span id="zc_nxjc_qtx_tys>cementmill_ElectricityConsumption_Comprehensive>Comprehensive" class ="comprehensive"></span></td>
             </tr>
             <%--<tr>
                 <td><span id="zc_nxjc_qtx_tys>cementmill_CoalConsumption_Comprehensive>Comprehensive" ></span></td>

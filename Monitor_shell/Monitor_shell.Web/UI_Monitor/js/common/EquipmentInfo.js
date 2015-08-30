@@ -96,7 +96,9 @@ var equipmentmentNames = {
     limestoneLibraryFeeding: "石灰石库喂料称",
     fluorineGypsumFeeding: "氟石膏库喂料称",
     flyAshLibraryFeeding: "粉煤灰库喂料称",
-    clinkerInTheBelt:"熟料内返皮带"
+    clinkerInTheBelt: "熟料内返皮带",
+    limestoneFeeder: "石灰石给料",
+    limestoneCrusher:"石灰石破碎"
 }
 
 $(function () {
@@ -105,8 +107,23 @@ $(function () {
 //事件绑定
 function bindEquipmentEvent() {
     $('.equipmentInfo').mouseenter(function (e) {
-        var equipmentId = $(this).attr('data-equipmentid');
-        var myContent = equipmentmentNames[equipmentId];
+        //var equipmentId = $(this).attr('data-equipmentid');       
+        var id_array = $(this).attr('id').split('>');
+        if(id_array.length != 3){
+            return;
+        }
+        var equipmentId = id_array[0] + ">" + id_array[1];
+        var myContent = "";
+        //var myContent = equipmentmentNames[equipmentId];
+
+        //判断是否在从公式中获得的名字信息内
+        if (equipmentId in g_nameArray) {//设备在公式用有
+            myContent = g_nameArray[equipmentId];
+        }
+        else {//在公式中没有
+            equipmentId = $(this).attr('data-equipmentid');
+            myContent = equipmentmentNames[equipmentId];
+        }
         $(this).tooltip({
             position:'top',
             content: myContent
