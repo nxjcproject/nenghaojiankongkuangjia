@@ -40,7 +40,7 @@
     <div id="SubMonitorLayout" style="position: relative; background-image: url('../../images/page/zc_nxjc_qtx_efc.png'); width: 1350px; height: 740px; overflow: hidden;">
         <%--4号熟料线，4号水泥磨开始--%>
         <%--原料预均化--%>
-        <table class="mytable" style="position: absolute; top: 17px; left: 43px;">
+        <table class="mytable" style="position: absolute; top: 31px; left: 43px;">
             <tr>
                 <td><span id="zc_nxjc_qtx_efc_clinker02>rawMaterialsHomogenize_ElectricityQuantity>Class" class="mchart"></span></td>
             </tr>
@@ -51,7 +51,7 @@
                 <td><span id="zc_nxjc_qtx_efc_clinker02>rawMaterialsHomogenize_ElectricityQuantity>Month" class="mchart"></span></td>
             </tr>
         </table>
-        <table class="mytable" style="position: absolute; top: 16px; left: 105px;">
+        <table class="mytable" style="position: absolute; top: 30px; left: 105px;">
             <tr>
                 <td><span id="zc_nxjc_qtx_efc_clinker02>rawMaterialsHomogenize_ElectricityConsumption>Class" class="mchart"></span></td>
             </tr>
@@ -62,6 +62,7 @@
                 <td><span id="zc_nxjc_qtx_efc_clinker02>rawMaterialsHomogenize_ElectricityConsumption>Month" class="mchart"></span></td>
             </tr>
         </table>
+      
           <%--3原料预均化--%>
         <table class="mytable" style="position: absolute; top: 308px; left: 38px;">
             <tr>
@@ -595,21 +596,31 @@
                 <td><span id="zc_nxjc_qtx_efc>auxiliaryProduction_ElectricityQuantity>Month" class="mchart"></span></td>
             </tr>
         </table>
-         <%--供电用电--%>
-        <table class="mytable" style="position: absolute; top: 29px; left: 244px;">
+         <%--312供电用电--%>
+        <table class="mytable" style="position: absolute; top: 32px; left: 199px;">
             <tr>
-                <td><span id="zc_nxjc_qtx_efc>purchasedElectricity_ElectricityQuantity>Class" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_efc>totalElectric312_ElectricityQuantity>Class" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_qtx_efc>purchasedElectricity_ElectricityQuantity>Day" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_efc>totalElectric312_ElectricityQuantity>Day" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_qtx_efc>purchasedElectricity_ElectricityQuantity>Month" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_efc>totalElectric312_ElectricityQuantity>Month" class="mchart"></span></td>
             </tr>
         </table>
-          <%--生料均化01--%>
-            <%--生料均化02--%>
-        <%--水泥粉磨 --%>
+           <%--318供电用电--%>
+        <table class="mytable" style="position: absolute; top: 32px; left: 268px;">
+            <tr>
+                <td><span id="zc_nxjc_qtx_efc>totalElectric318_ElectricityQuantity>Class" class="mchart"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_qtx_efc>totalElectric318_ElectricityQuantity>Day" class="mchart"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_qtx_efc>totalElectric318_ElectricityQuantity>Month" class="mchart"></span></td>
+            </tr>
+        </table>
+       
         <%--水泥产量--%>
         <table class="mytable" style="position: absolute; top: 448px; left: 1223px; height: 50px;">
             <tr>
@@ -622,7 +633,7 @@
                 <td><span id="zc_nxjc_qtx_efc_cementmill02>cement_CementOutput>Month" class="mchart nodisplay"></span></td>
             </tr>
         </table>
-        <%--水泥粉磨--%>
+      
         <%--熟料产量--%>
         <table class="mytable" style="position: absolute; top: 676px; left: 652px;">
             <tr>
@@ -635,7 +646,7 @@
                 <td><span id="zc_nxjc_qtx_efc_clinker03>clinker_ClinkerOutput>Month" class="mchart nodisplay"></span></td>
             </tr>
         </table>
-        <%--水泥包装--%>
+     
        <%--煤粉消耗量--%>
         <table class="mytable" style="position: absolute; top: 677px; left: 905px; right: 379px;">
             <tr>
