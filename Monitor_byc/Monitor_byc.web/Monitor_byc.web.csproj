@@ -1651,7 +1651,9 @@
     <Content Include="UI_Monitor\ProcessEnergyMonitor\zc_nxjc_byc_byf\zc_nxjc_byc_byf_cementmill02.aspx" />
     <Content Include="UI_Monitor\ProcessEnergyMonitor\zc_nxjc_byc_byf\zc_nxjc_byc_byf_clinker01_sheng.aspx" />
     <Content Include="UI_Monitor\ProcessEnergyMonitor\zc_nxjc_byc_byf\zc_nxjc_byc_byf_clinker01_shu.aspx" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />

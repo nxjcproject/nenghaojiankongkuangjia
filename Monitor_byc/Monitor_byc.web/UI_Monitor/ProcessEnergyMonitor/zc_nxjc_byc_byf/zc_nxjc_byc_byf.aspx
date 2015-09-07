@@ -37,8 +37,19 @@
 </head>
 <body id="SubMonitorBody" style="margin: 0px; padding: 0px; overflow: auto;">   
     <div id="SubMonitorLayout" style="position: relative; background-image: url('../../images/page/zc_nxjc_byc_byf.png'); width: 1350px; height: 740px; overflow: hidden;">
-       <%--<div onclick="getAllCookie()">cookie测试</div>--%>
-        <%--<div onclick="openWindow()">打开趋势窗口</div>--%>
+  
+         <!--矿山 -->
+         <table class="mytable" style="position: absolute; top: 35px; left: 46px;">
+            <tr>
+                <td><span id="zc_nxjc_byc_byf>limestoneMine_ElectricityQuantity>Class" class="mchart"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_byc_byf>limestoneMine_ElectricityQuantity>Day" class="mchart"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_byc_byf>limestoneMine_ElectricityQuantity>Month" class="mchart"></span></td>
+            </tr>
+        </table>
          <table class="mytable" style="position: absolute; top: 113px; left: 28px;">
             <tr>
                 <td><span id="zc_nxjc_byc_byf_clinker01>rawMaterialsHomogenize_ElectricityQuantity>Class" class="mchart"></span></td>

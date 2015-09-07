@@ -168,21 +168,23 @@
     <%--1号空压机电源--%>
         <div class="imageContainer equipmentInfo" data-equipmentid="clinkerAirCompressorPower1" id="zc_nxjc_byc_byf_clinker01>clinkerAirCompressorPower1>RunningState" style="position:absolute; top: 209px; left: 167px; height: 20px; width: 19px;"></div>
     <%--2号空压机电源--%>
-     <div class="imageContainer equipmentInfo" data-equipmentid="clinkerAirCompressorPower2" id="zc_nxjc_byc_byf_clinker01>clinkerAirCompressorPower2>RunningState" style="position:absolute; top: 215px; left: 337px; height: 20px; width: 19px;"></div>
+     <div class="imageContainer equipmentInfo" data-equipmentid="clinkerAirCompressorPower2" id="zc_nxjc_byc_byf_clinker01>clinkerAirCompressorPower2>RunningState" style="position:absolute; top: 215px; left: 336px; height: 20px; width: 19px;"></div>
     <%--3号空压机电源--%>
     <div class="imageContainer equipmentInfo" data-equipmentid="clinkerAirCompressorPower3" id="zc_nxjc_byc_byf_clinker01>clinkerAirCompressorPower3>RunningState" style="position:absolute; top: 352px; left: 165px; height: 20px; width: 19px;"></div>
    <%--4号空压机电源--%>
-    <div class="imageContainer equipmentInfo" data-equipmentid="clinkerAirCompressorPower4" id="zc_nxjc_byc_byf_clinker01>clinkerAirCompressorPower4>RunningState" style="position:absolute; top: 354px; left: 340px; height: 20px; width: 19px;"></div>
+    <div class="imageContainer equipmentInfo" data-equipmentid="clinkerAirCompressorPower4" id="zc_nxjc_byc_byf_clinker01>clinkerAirCompressorPower4>RunningState" style="position:absolute; top: 355px; left: 341px; height: 20px; width: 19px;"></div>
    <%--水泥磨1号空压机电源--%>
-     <div class="imageContainer equipmentInfo" data-equipmentid="cementMaillAirCompressorPower1" id="zc_nxjc_byc_byf_cementmill01>cementMaillAirCompressorPower1>RunningState" style="position:absolute; top: 212px; left: 544px; height: 20px; width: 19px;"></div>
+     <div class="imageContainer equipmentInfo" data-equipmentid="cementMaillAirCompressorPower1" id="zc_nxjc_byc_byf_cementmill01>cementMaillAirCompressorPower1>RunningState" style="position:absolute; top: 212px; left: 541px; height: 20px; width: 19px;"></div>
   <%--水泥磨2号空压机电源--%>
-     <div class="imageContainer equipmentInfo" data-equipmentid="cementMaillAirCompressorPower2" id="zc_nxjc_byc_byf_cementmill01>cementMaillAirCompressorPower2>RunningState" style="position:absolute; height: 20px; width: 19px; top: 213px; left: 715px;"></div>
+     <div class="imageContainer equipmentInfo" data-equipmentid="cementMaillAirCompressorPower2" id="zc_nxjc_byc_byf_cementmill01>cementMaillAirCompressorPower2>RunningState" style="position:absolute; height: 20px; width: 19px; top: 215px; left: 716px;"></div>
   <%--水泥磨3号空压机电源--%>
-     <div class="imageContainer equipmentInfo" data-equipmentid="cementMaillAirCompressorPower3" id="zc_nxjc_byc_byf_cementmill01>cementMaillAirCompressorPower3>RunningState" style="position:absolute; height: 20px; width: 19px; top: 357px; left: 543px;"></div>
+     <div class="imageContainer equipmentInfo" data-equipmentid="cementMaillAirCompressorPower3" id="zc_nxjc_byc_byf_cementmill01>cementMaillAirCompressorPower3>RunningState" style="position:absolute; height: 20px; width: 19px; top: 360px; left: 542px;"></div>
   <%--水泥磨4号空压机电源--%>
-     <div class="imageContainer equipmentInfo"data-equipmentid="cementMaillAirCompressorPower4"  id="zc_nxjc_byc_byf_cementmill01>cementMaillAirCompressorPower4>RunningState" style="position:absolute; height: 20px; width: 19px; top: 357px; left: 716px;"></div>
+     <div class="imageContainer equipmentInfo"data-equipmentid="cementMaillAirCompressorPower4"  id="zc_nxjc_byc_byf_cementmill01>cementMaillAirCompressorPower4>RunningState" style="position:absolute; height: 20px; width: 19px; top: 358px; left: 716px;"></div>
   <%--窑中空压机--%>
      <div class="imageContainer equipmentInfo" data-equipmentid="cementMaillAirCompressorPower1" id="zc_nxjc_byc_byf>YWKYAYX>RunningState" style="position:absolute; height: 20px; width: 19px; top: 277px; left: 978px;"></div>
+   <%--水泵房--%>
+     <div class="imageContainer equipmentInfo" data-equipmentid="waterPumpHouse" id="zc_nxjc_byc_byf_clinker01>waterPumpHouse>RunningState" style="position:absolute; height: 20px; width: 19px; top: 481px; left: 356px;"></div>
   
   
     
