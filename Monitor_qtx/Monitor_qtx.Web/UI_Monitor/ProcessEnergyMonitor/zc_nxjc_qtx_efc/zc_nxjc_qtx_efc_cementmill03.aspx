@@ -38,7 +38,7 @@
 <body id="SubMonitorBody" style="margin: 0px; padding: 0px; overflow: auto;">
     <div id="SubMonitorLayout" style="position: relative; background-image: url('../../images/page/zc_nxjc_qtx_efc_cementmill03.png'); width: 1350px; height: 740px; overflow: hidden;">
          <!--石膏破碎电机 -->  
-             <table class="mytable" style="position: absolute; top: 4px; left: 183px;">
+             <table class="mytable" style="position: absolute; top: 7px; left: 239px;">
             <tr>
                 <td><span id="zc_nxjc_qtx_efc_cementmill03>gypsumCrusher>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -49,11 +49,72 @@
                 <td><span id="zc_nxjc_qtx_efc_cementmill03>gypsumCrusher>Power" class="mchart"></span></td>
             </tr>
         </table>
-           <!--3,4包机 -->  
-         <table class="mytable" style="position: absolute; top: 681px; left: 1129px;">
+         <!--石膏提升机 -->  
+             <table class="mytable" style="position: absolute; top: 107px; left: 281px;">
             <tr>
-                <td><span id="zc_nxjc_qtx_efc>packageTransformer>ElectricityConsumption" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_efc_cementmill03>gypsumHoist>ElectricityConsumption" class="mchart"></span></td>
             </tr>
+            <tr>
+                <td><span id="zc_nxjc_qtx_efc_cementmill03>gypsumHoist>Current" class="mchart nodisplay"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_qtx_efc_cementmill03>gypsumHoist>Power" class="mchart"></span></td>
+            </tr>
+        </table>
+         <!--熟料输送01 -->  
+             <table class="mytable" style="position: absolute; top: 194px; left: 7px;">
+            <%--<tr>
+                <td><span id="zc_nxjc_qtx_efc_cementmill03>clinkerConveyorBelt01>ElectricityConsumption" class="mchart"></span></td>
+            </tr>--%>
+            <tr>
+                <td><span id="zc_nxjc_qtx_efc>clinkerConveyorBelt01>Current" class="mchart nodisplay"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_qtx_efc>clinkerConveyorBelt01>Power" class="mchart"></span></td>
+            </tr>
+        </table>
+         <!--熟料输送02 -->  
+             <table class="mytable" style="position: absolute; top: 240px; left: 8px;">
+            <tr>
+                <td><span id="zc_nxjc_qtx_efc_cementmill03>clinkerConveyorBelt02>ElectricityConsumption" class="mchart"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_qtx_efc_cementmill03>clinkerConveyorBelt02>Current" class="mchart nodisplay"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_qtx_efc_cementmill03>clinkerConveyorBelt02>Power" class="mchart"></span></td>
+            </tr>
+        </table>
+
+         <!--熟料输送风机 -->  
+             <table class="mytable" style="position: absolute; top: 122px; left: 106px;">
+            <%--<tr>
+                <td><span id="zc_nxjc_qtx_efc>clinkerTapeCollectingFan>ElectricityConsumption" class="mchart"></span></td>
+            </tr>--%>
+            <tr>
+                <td><span id="zc_nxjc_qtx_efc>clinkerTapeCollectingFan>Current" class="mchart nodisplay"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_qtx_efc>clinkerTapeCollectingFan>Power" class="mchart"></span></td>
+            </tr>
+        </table>
+         <!--辊压机上风机 -->  
+             <table class="mytable" style="position: absolute; top: 297px; left: 10px;">
+            <tr>
+                <td><span id="zc_nxjc_qtx_efc_cementmill03>rawMaterialDustCollectingFan>ElectricityConsumption" class="mchart"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_qtx_efc_cementmill03>rawMaterialDustCollectingFan>Current" class="mchart nodisplay"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_qtx_efc_cementmill03>rawMaterialDustCollectingFan>Power" class="mchart"></span></td>
+            </tr>
+        </table>
+           <!--3,4包机 -->  
+         <table class="mytable" style="position: absolute; top: 683px; left: 1133px;">
+            <%--<tr>
+                <td><span id="zc_nxjc_qtx_efc>packageTransformer>ElectricityConsumption" class="mchart"></span></td>
+            </tr>--%>
             <tr>
                 <td><span id="zc_nxjc_qtx_efc>packageTransformer>Current" class="mchart nodisplay"></span></td>
             </tr>
@@ -86,7 +147,7 @@
             </tr>
         </table>
         <!--选粉电机 -->
-        <table class="mytable" style="position: absolute; top: 226px; left: 686px;">
+        <table class="mytable" style="position: absolute; top: 217px; left: 686px;">
             <tr>
                 <td><span id="zc_nxjc_qtx_efc_cementmill03>powderSelectingStorehouse>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -98,7 +159,7 @@
             </tr>
         </table>
          <!--水泥磨主电机 -->
-        <table class="mytable" style="position: absolute; top: 436px; left: 673px;">
+        <table class="mytable" style="position: absolute; top: 435px; left: 674px;">
             <tr>
                 <td><span id="zc_nxjc_qtx_efc_cementmill03>cementMillMainMotor>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -183,7 +244,22 @@
     <div class="imageContainer equipmentInfo" data-equipmentid="rollingMachineActionRoller" id="zc_nxjc_qtx_efc_cementmill03>rollingMachineActionRoller>RunningState" style="position:absolute; height: 20px; width: 19px; top: 334px; left: 447px;"></div>
    <!--打散分级运行-->
     <div class="imageContainer equipmentInfo" data-equipmentid="brokenMotor" id="zc_nxjc_qtx_efc_cementmill03>brokenMotor>RunningState" style="position:absolute; top: 237px; left: 431px; height: 20px; width: 19px;"></div>
-
+    <!--石膏破碎-->
+    <div class="imageContainer equipmentInfo" data-equipmentid="gypsumCrusher" id="zc_nxjc_qtx_efc_cementmill03>gypsumCrusher>RunningState" style="position:absolute; top: 90px; left: 202px; height: 20px; width: 19px;"></div>
+    <!--石膏提升机-->
+    <div class="imageContainer equipmentInfo" data-equipmentid="gypsumHoist" id="zc_nxjc_qtx_efc_cementmill03>gypsumHoist>RunningState" style="position:absolute; top: 111px; left: 256px; height: 20px; width: 19px;"></div>
+     <!--熟料输送01 --> 
+     <div class="imageContainer equipmentInfo" data-equipmentid="clinkerConveyorBelt01" id="zc_nxjc_qtx_efc_cementmill03>clinkerConveyorBelt01>RunningState" style="position:absolute; top: 171px; left: 92px; height: 20px; width: 19px;"></div>   
+     <!--熟料输送02 --> 
+    <div class="imageContainer equipmentInfo" data-equipmentid="clinkerConveyorBelt02" id="zc_nxjc_qtx_efc_cementmill03>clinkerConveyorBelt02>RunningState" style="position:absolute; top: 208px; left: 134px; height: 20px; width: 19px;"></div>   
+     <!--熟料输送风机 -->
+     <div class="imageContainer equipmentInfo" data-equipmentid="clinkerTapeCollectingFan" id="zc_nxjc_qtx_efc>clinkerTapeCollectingFan>RunningState" style="position:absolute; top: 180px; left: 135px; height: 20px; width: 19px;"></div>    
+      <!--石灰石库上输送风机 -->
+     <div class="imageContainer equipmentInfo" data-equipmentid="rawMaterialDustCollectingFan" id="zc_nxjc_qtx_efc_cementmill03>rawMaterialDustCollectingFan>RunningState" style="position:absolute; top: 197px; left: 207px; width: 19px;"></div>    
+   
+        <!--辊压机上风机 -->
+     <div class="imageContainer equipmentInfo" data-equipmentid="rollerPressCollectingFan" id="zc_nxjc_qtx_efc_cementmill03>rollerPressCollectingFan>RunningState" style="position:absolute; top: 190px; left: 481px; height: 20px; width: 19px;"></div>    
+    
     </div>
 
     <div id="htmlContainer"></div>

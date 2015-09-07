@@ -424,7 +424,7 @@ namespace Monitor_shell.Service.MeterStatistics
             sourceTable.Columns.Add(columnAmmeterValue);
             string ammeterDBName = ConnectionStringFactory.GetAmmeterDatabaseName(organizationId);
             string infoSql = @"select B.*,A.{0}Energy/(B.CT*B.PT) as AmmeterValue
-                                from [{1}].[dbo].[RealtimeAmmeter] A,(select C.CT,C.PT,C.AmmeterCode,C.ElectricEnergyFieldNameSave
+                                from [{1}].[dbo].[RealtimeAmmeter] A,(select C.AmmeterAddress,C.CT,C.PT,C.AmmeterCode,C.ElectricEnergyFieldNameSave
                                 from [{1}].[dbo].[AmmeterContrast] C
                                 where C.AmmeterNumber='{0}') B";
             foreach (DataRow dr in sourceTable.Rows)
@@ -436,7 +436,7 @@ namespace Monitor_shell.Service.MeterStatistics
                     DataTable t_table = _nxjcFactory.Query(string.Format(infoSql, AmmeterNumber,ammeterDBName));
                     if (t_table.Rows.Count == 1)
                     {
-                        dr["AmmeterCode"] = t_table.Rows[0]["AmmeterCode"].ToString();
+                        dr["AmmeterCode"] = t_table.Rows[0]["AmmeterAddress"].ToString();
                         dr["CT"]=t_table.Rows[0]["CT"].ToString();
                         dr["PT"] = t_table.Rows[0]["PT"].ToString();
                         dr["AmmeterValue"] = decimal.Parse(t_table.Rows[0]["AmmeterValue"].ToString()).ToString("#.00");

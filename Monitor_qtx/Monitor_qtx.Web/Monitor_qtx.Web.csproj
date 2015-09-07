@@ -1625,6 +1625,7 @@
     <Content Include="UI_Monitor\images\common\greenL.gif" />
     <Content Include="UI_Monitor\images\common\redL.gif" />
     <Content Include="UI_Monitor\images\page\zc_nxjc_qtx_efc.png" />
+    <Content Include="UI_Monitor\images\page\zc_nxjc_qtx_efc_aircompressor.png" />
     <Content Include="UI_Monitor\images\page\zc_nxjc_qtx_efc_cementmill01.png" />
     <Content Include="UI_Monitor\images\page\zc_nxjc_qtx_efc_cementmill02.png" />
     <Content Include="UI_Monitor\images\page\zc_nxjc_qtx_efc_cementmill03.png" />

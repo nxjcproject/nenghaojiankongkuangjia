@@ -36,17 +36,43 @@
 </head>
 <body id="SubMonitorBody" style="margin: 0px; padding: 0px; overflow: auto;">
     <div id="SubMonitorLayout" style="position: relative; background-image: url('../../images/page/zc_nxjc_qtx_efc_cementmill01.png'); width: 1350px; height: 740px; overflow: hidden;">
-         <table class="mytable" style="position: absolute; top: 47px; left: 106px;">
+         <!--石膏破碎-->
+        <%--<table class="mytable" style="position: absolute; top: 47px; left: 106px;">
             <tr>
-                <td><span id="zc_nxjc_qtx_efc_cementmill01>gypsumCrusher>ElectricityConsumption" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_efc>gypsumCrusher>ElectricityConsumption" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_qtx_efc_cementmill01>gypsumCrusher>Current" class="mchart nodisplay"></span></td>
+                <td><span id="zc_nxjc_qtx_efc_cementmill01>gypsumCrusher>Current" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_qtx_efc_cementmill01>gypsumCrusher>Power" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_efc>gypsumCrusher>Power" class="mchart"></span></td>
+            </tr>
+        </table>--%>
+        <!--爬坡-->
+        <table class="mytable" style="position: absolute; top: 52px; left: 225px;">
+            <%--<tr>
+                <td><span id="zc_nxjc_qtx_efc>climbingBelt>ElectricityConsumption" class="mchart"></span></td>
+            </tr>--%>
+            <tr>
+                <td><span id="zc_nxjc_qtx_efc>climbingBelt>Current" class="mchart"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_qtx_efc>climbingBelt>Power" class="mchart"></span></td>
             </tr>
         </table>
+        <!--地沟-->
+        <table class="mytable" style="position: absolute; top: 106px; left: 225px;">
+            <%--<tr>
+                <td><span id="zc_nxjc_qtx_efc>wasteBelt>ElectricityConsumption" class="mchart"></span></td>
+            </tr>--%>
+            <tr>
+                <td><span id="zc_nxjc_qtx_efc>wasteBelt>Current" class="mchart"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_qtx_efc>wasteBelt>Power" class="mchart"></span></td>
+            </tr>
+        </table>
+         <!--固定-->
         <table class="mytable" style="position: absolute; top: 320px; left: 355px;">
             <tr>
                 <td><span id="zc_nxjc_qtx_efc_cementmill01>rollingMachineSettledRoller>ElectricityConsumption" class="mchart"></span></td>
@@ -137,10 +163,10 @@
             </tr>
         </table>
         <!-- 包机1-->
-         <table class="mytable" style="position: absolute; top: 614px; left: 1248px;">
-            <tr>
+         <table class="mytable" style="position: absolute; top: 642px; left: 1223px;">
+            <%--<tr>
                 <td><span id="zc_nxjc_qtx_efc>charter1>ElectricityConsumption" class="mchart"></span></td>
-            </tr>
+            </tr>--%>
             <tr>
                 <td><span id="zc_nxjc_qtx_efc>charter1>Current" class="mchart"></span></td>
             </tr>
@@ -149,10 +175,10 @@
             </tr>
         </table>
          <!-- 包机2-->
-         <table class="mytable" style="position: absolute; top: 614px; left: 1144px;">
-            <tr>
+         <table class="mytable" style="position: absolute; top: 640px; left: 1121px;">
+           <%-- <tr>
                 <td><span id="zc_nxjc_qtx_efc>charter2>ElectricityConsumption" class="mchart"></span></td>
-            </tr>
+            </tr>--%>
             <tr>
                 <td><span id="zc_nxjc_qtx_efc>charter2>Current" class="mchart"></span></td>
             </tr>

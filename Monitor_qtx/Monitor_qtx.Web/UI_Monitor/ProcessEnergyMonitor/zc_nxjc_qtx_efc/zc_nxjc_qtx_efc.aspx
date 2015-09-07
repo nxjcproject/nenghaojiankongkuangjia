@@ -40,7 +40,7 @@
     <div id="SubMonitorLayout" style="position: relative; background-image: url('../../images/page/zc_nxjc_qtx_efc.png'); width: 1350px; height: 740px; overflow: hidden;">
         <%--4号熟料线，4号水泥磨开始--%>
         <%--原料预均化--%>
-        <table class="mytable" style="position: absolute; top: 26px; left: 72px;">
+        <table class="mytable" style="position: absolute; top: 17px; left: 43px;">
             <tr>
                 <td><span id="zc_nxjc_qtx_efc_clinker02>rawMaterialsHomogenize_ElectricityQuantity>Class" class="mchart"></span></td>
             </tr>
@@ -51,7 +51,7 @@
                 <td><span id="zc_nxjc_qtx_efc_clinker02>rawMaterialsHomogenize_ElectricityQuantity>Month" class="mchart"></span></td>
             </tr>
         </table>
-        <table class="mytable" style="position: absolute; top: 26px; left: 140px;">
+        <table class="mytable" style="position: absolute; top: 16px; left: 105px;">
             <tr>
                 <td><span id="zc_nxjc_qtx_efc_clinker02>rawMaterialsHomogenize_ElectricityConsumption>Class" class="mchart"></span></td>
             </tr>
@@ -63,7 +63,7 @@
             </tr>
         </table>
           <%--3原料预均化--%>
-        <table class="mytable" style="position: absolute; top: 336px; left: 31px;">
+        <table class="mytable" style="position: absolute; top: 308px; left: 38px;">
             <tr>
                 <td><span id="zc_nxjc_qtx_efc_clinker03>rawMaterialsHomogenize_ElectricityQuantity>Class" class="mchart"></span></td>
             </tr>
@@ -74,7 +74,7 @@
                 <td><span id="zc_nxjc_qtx_efc_clinker03>rawMaterialsHomogenize_ElectricityQuantity>Month" class="mchart"></span></td>
             </tr>
         </table>
-        <table class="mytable" style="position: absolute; top: 338px; left: 95px;">
+        <table class="mytable" style="position: absolute; top: 308px; left: 103px;">
             <tr>
                 <td><span id="zc_nxjc_qtx_efc_clinker03>rawMaterialsHomogenize_ElectricityConsumption>Class" class="mchart"></span></td>
             </tr>
@@ -153,7 +153,7 @@
             </tr>
         </table>
         <%--生料制备--%>
-        <table class="mytable" style="position: absolute; top: 245px; left: 49px;">
+        <table class="mytable" style="position: absolute; top: 231px; left: 39px;">
             <tr>
                 <td><span id="zc_nxjc_qtx_efc_clinker02>rawMaterialsGrind_ElectricityQuantity>Class" class="mchart"></span></td>
             </tr>
@@ -165,7 +165,7 @@
             </tr>
         </table>
         <%--原料粉磨--%>
-        <table class="mytable" style="position: absolute; top: 247px; left: 117px;">
+        <table class="mytable" style="position: absolute; top: 230px; left: 103px;">
             <tr>
                 <td><span id="zc_nxjc_qtx_efc_clinker02>rawMaterialsGrind_ElectricityConsumption>Class" class="mchart"></span></td>
             </tr>
@@ -265,7 +265,7 @@
                 <td><span id="zc_nxjc_qtx_efc_clinker02>electricityOwnDemand_ElectricityQuantity>Day" class="mchart"></span></td>
             </tr>
         </table>
-        <%--水泥粉磨 --%>
+        <%--1#水泥粉磨 --%>
         <table class="mytable" style="position: absolute; top: 78px; left: 1043px;">
             <tr>
                 <td><span id="zc_nxjc_qtx_efc_cementmill01>cementGrind_ElectricityQuantity>Class" class="mchart"></span></td>
@@ -277,7 +277,7 @@
                 <td><span id="zc_nxjc_qtx_efc_cementmill01>cementGrind_ElectricityQuantity>Month" class="mchart"></span></td>
             </tr>
         </table>
-        <table class="mytable" style="position: absolute; top: 78px; left: 1108px;">
+        <table class="mytable" style="position: absolute; top: 78px; left: 1110px;">
             <tr>
                 <td><span id="zc_nxjc_qtx_efc_cementmill01>cementGrind_ElectricityConsumption>Class" class="mchart"></span></td>
             </tr>
@@ -286,6 +286,29 @@
             </tr>
             <tr>
                 <td><span id="zc_nxjc_qtx_efc_cementmill01>cementGrind_ElectricityConsumption>Month" class="mchart"></span></td>
+            </tr>
+        </table>
+         <%--2#水泥粉磨 --%>
+        <table class="mytable" style="position: absolute; top: 522px; left: 1217px;">
+            <tr>
+                <td><span id="zc_nxjc_qtx_efc_cementmill02>cementGrind_ElectricityQuantity>Class" class="mchart"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_qtx_efc_cementmill02>cementGrind_ElectricityQuantity>Day" class="mchart"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_qtx_efc_cementmill02>cementGrind_ElectricityQuantity>Month" class="mchart"></span></td>
+            </tr>
+        </table>
+        <table class="mytable" style="position: absolute; top: 521px; left: 1280px;">
+            <tr>
+                <td><span id="zc_nxjc_qtx_efc_cementmill02>cementGrind_ElectricityConsumption>Class" class="mchart"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_qtx_efc_cementmill02>cementGrind_ElectricityConsumption>Day" class="mchart"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_qtx_efc_cementmill02>cementGrind_ElectricityConsumption>Month" class="mchart"></span></td>
             </tr>
         </table>
         <%--水泥产量--%>
@@ -507,7 +530,7 @@
             </tr>
         </table>
         <%--熟料输送--%>
-        <table class="mytable" style="position: absolute; top: 403px; left: 1052px;">
+        <table class="mytable" style="position: absolute; top: 411px; left: 1052px;">
             <tr>
                 <td><span id="zc_nxjc_qtx_efc_cementmill02>clinkerTransport_ElectricityQuantity>Class" class="mchart"></span></td>
             </tr>
@@ -518,7 +541,7 @@
                 <td><span id="zc_nxjc_qtx_efc_cementmill02>clinkerTransport_ElectricityQuantity>Month" class="mchart"></span></td>
             </tr>
         </table>
-        <table class="mytable" style="position: absolute; top: 403px; left: 1116px;">
+        <table class="mytable" style="position: absolute; top: 411px; left: 1115px;">
             <tr>
                 <td><span id="zc_nxjc_qtx_efc_cementmill02>clinkerTransport_ElectricityConsumption>Class" class="mchart"></span></td>
             </tr>
@@ -585,54 +608,10 @@
             </tr>
         </table>
           <%--生料均化01--%>
-        <table class="mytable" style="position: absolute; top: 308px; left: 178px;">
-            <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker02>rawMealHomogenization_ElectricityQuantity>Class" class="mchart"></span></td>
-            </tr>
-            <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker02>rawMealHomogenization_ElectricityQuantity>Day" class="mchart"></span></td>
-            </tr>
-            <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker02>rawMealHomogenization_ElectricityQuantity>Month" class="mchart"></span></td>
-            </tr>
-        </table>
-         <table class="mytable" style="position: absolute; top: 308px; left: 242px;">
-            <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker02>rawMealHomogenization_ElectricityConsumption>Class" class="mchart"></span></td>
-            </tr>
-            <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker02>rawMealHomogenization_ElectricityConsumption>Day" class="mchart"></span></td>
-            </tr>
-            <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker02>rawMealHomogenization_ElectricityConsumption>Month" class="mchart"></span></td>
-            </tr>
-        </table>
             <%--生料均化02--%>
-        <table class="mytable" style="position: absolute; top: 578px; left: 238px;">
-            <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker03>rawMealHomogenization_ElectricityQuantity>Class" class="mchart"></span></td>
-            </tr>
-            <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker03>rawMealHomogenization_ElectricityQuantity>Day" class="mchart"></span></td>
-            </tr>
-            <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker03>rawMealHomogenization_ElectricityQuantity>Month" class="mchart"></span></td>
-            </tr>
-        </table>
-         <table class="mytable" style="position: absolute; top: 577px; left: 304px;">
-            <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker03>rawMealHomogenization_ElectricityConsumption>Class" class="mchart"></span></td>
-            </tr>
-            <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker03>rawMealHomogenization_ElectricityConsumption>Day" class="mchart"></span></td>
-            </tr>
-            <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker03>rawMealHomogenization_ElectricityConsumption>Month" class="mchart"></span></td>
-            </tr>
-        </table>
         <%--水泥粉磨 --%>
         <%--水泥产量--%>
-        <table class="mytable" style="position: absolute; top: 349px; left: 1220px; height: 50px;">
+        <table class="mytable" style="position: absolute; top: 448px; left: 1223px; height: 50px;">
             <tr>
                 <td><span id="zc_nxjc_qtx_efc_cementmill02>cement_CementOutput>Class" class="mchart nodisplay"></span></td>
             </tr>
@@ -754,7 +733,7 @@
             </tr>
         </table>
 		<%--水泥粉磨 --%>
-        <table class="mytable" style="position: absolute; top: 616px; left: 1048px;">
+        <table class="mytable" style="position: absolute; top: 639px; left: 1076px;">
             <tr>
                 <td><span id="zc_nxjc_qtx_efc_cementmill03>cementGrind_ElectricityQuantity>Class" class="mchart"></span></td>
             </tr>
@@ -765,7 +744,7 @@
                 <td><span id="zc_nxjc_qtx_efc_cementmill03>cementGrind_ElectricityQuantity>Month" class="mchart"></span></td>
             </tr>
         </table>
-        <table class="mytable" style="position: absolute; top: 615px; left: 1111px;">
+        <table class="mytable" style="position: absolute; top: 639px; left: 1140px;">
             <tr>
                 <td><span id="zc_nxjc_qtx_efc_cementmill03>cementGrind_ElectricityConsumption>Class" class="mchart"></span></td>
             </tr>
@@ -777,7 +756,7 @@
             </tr>
         </table>
         <%--水泥产量--%>
-        <table class="mytable" style="position: absolute; top: 544px; left: 1082px; height: 50px;">
+        <table class="mytable" style="position: absolute; top: 562px; left: 1070px; height: 50px;">
             <tr>
                 <td><span id="zc_nxjc_qtx_efc_cementmill03>cement_CementOutput>Class" class="mchart nodisplay"></span></td>
             </tr>

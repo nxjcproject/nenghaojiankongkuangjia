@@ -10,9 +10,9 @@ namespace Monitor_shell.Service.DisplayName
 {
     public class DisplayNameHelper
     {
-        public static Dictionary<string,string> GetItemName(string myItemStrings)
+        public static Dictionary<string,string[]> GetItemName(string myItemStrings)
         {
-            Dictionary<string, string> resultDictionary = new Dictionary<string, string>();
+            Dictionary<string, string[]> resultDictionary = new Dictionary<string, string[]>();
             //获取前台ID
             string[] itemList = myItemStrings.Split(',');
             ISqlServerDataFactory dataFactory = new SqlServerDataFactory(ConnectionStringFactory.NXJCConnectionString);
@@ -51,19 +51,19 @@ namespace Monitor_shell.Service.DisplayName
                 }
             }
             sqlBuilder.Remove(sqlBuilder.Length - 4, 4);
-            string mySql=@"select A.OrganizationID+'>'+B.VariableId as ItemId,A.Name+B.Name as Name
+            string mySql= @"select A.OrganizationID+'>'+B.VariableId as ItemId,A.Name as TzName,B.Name as Name
                                 from tz_Formula A,formula_FormulaDetail B
                                 where A.KeyID=B.KeyID
                                 and ({0})
                             union
-                            select A.OrganizationID+'>'+B.VariableId as ItemId,A.Name+B.Name as Name
+                            select A.OrganizationID+'>'+B.VariableId as ItemId,A.Name as TzName,B.Name as Name
                                 from tz_Material A,material_MaterialDetail B
                                 where A.KeyID=B.KeyID
                                 and ({0})";
             DataTable table = dataFactory.Query(string.Format(mySql, sqlBuilder.ToString()));
 
             //添加煤耗
-            string coalConsumptionStr = @"select A.OrganizationID+'>clinker_CoalConsumption' as ItemId,A.Name+'煤耗' as Name
+            string coalConsumptionStr = @"select A.OrganizationID+'>clinker_CoalConsumption' as ItemId,A.Name as TzName,'煤耗' as Name
                                             from system_Organization A
                                             where A.LevelType='ProductionLine'
                                             and A.Type='熟料'";
@@ -73,7 +73,8 @@ namespace Monitor_shell.Service.DisplayName
             {
                 if(!resultDictionary.Keys.Contains(dr["ItemId"].ToString().Trim()))
                 {
-                    resultDictionary.Add(dr["ItemId"].ToString().Trim(), dr["Name"].ToString().Trim());
+                    resultDictionary.Add(dr["ItemId"].ToString().Trim(),
+                        new string[] { dr["TzName"].ToString().Trim(), dr["Name"].ToString().Trim() });
                 }
             }
             return resultDictionary;

@@ -1670,7 +1670,9 @@
     <Content Include="UI_Monitor\ProcessEnergyMonitor\MonitorShell\test.aspx" />
     <Content Include="UI_Monitor\TrendTool\MultiTrendlineRenderer.aspx" />
     <Content Include="UI_Monitor\TrendTool\TrendlineRenderer.aspx" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -317,7 +317,7 @@ namespace Monitor_shell.Web.UI_Monitor.ProcessEnergyMonitor.MonitorShell
         }
 
         [WebMethod]
-        public Dictionary<string, string> GetNameInfo(string myItemStrings)
+        public Dictionary<string, string[]> GetNameInfo(string myItemStrings)
         {
              return DisplayNameHelper.GetItemName(myItemStrings);
         }
