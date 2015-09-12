@@ -43,7 +43,7 @@ namespace Monitor_shell.Service.ProcessEnergyMonitor.MonitorShell
                 DataItem itemPower = new DataItem
                 {
                     ID = dr["OrganizationID"].ToString().Trim() + ">" + dr["VariableID"].ToString().Trim() + ">Power",
-                    Value = dr["Power"] is DBNull ? "0" : Convert.ToDecimal(dr["Power"]).ToString("#").Trim()
+                    Value = dr["Power"] is DBNull ? "0" : Convert.ToDecimal(dr["Power"]).ToString("#.00").Trim()
                 };
                 results.Add(itemPower);                
             }
