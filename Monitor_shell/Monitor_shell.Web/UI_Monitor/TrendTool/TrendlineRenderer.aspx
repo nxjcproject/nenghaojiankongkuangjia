@@ -333,7 +333,7 @@
 	        currentData = data.slice(data.length - DATA_POINT_PER_SCREEN, data.length);
 
 	        // 设置滚动条到最右，防止看不清楚，设置为99
-	        $('#sliderId').slider('setValue', 100);
+	        $('#sliderId').slider('setValue', 99);
 
 	        plotChart();
 	    }
@@ -379,7 +379,7 @@
 	        currentData = data.slice(data.length - DATA_POINT_PER_SCREEN, data.length);
             
             // 设置滚动条到最右，防止看不清楚，设置为99
-	        $('#sliderId').slider('setValue', 99);
+	        $('#sliderId').slider('setValue', 100);
 
 	        plotChart();
 	    }
@@ -440,8 +440,8 @@
 			</div>
 			<div id="sliderContainer" data-options="region:'south',border:false" style="height:20px;overflow:hidden;background-color:black;">
 				<input id="sliderId" class="easyui-slider" data-options="onChange:sliderChanged" style="margin-bottom:0px;width:99%" />
-			</div>
-		</div>
+			<div>
+		<div>
 	</div>
 
     <!-- 配置窗口开始 -->
@@ -460,7 +460,7 @@
         <div>
             <b>背景颜色：</b>
             <ul>
-                <li><input name="backgroundColor" value="black" type="radio" checked="checked" />黑色（默认）</li>
+                <li><input name="backgroundColor" value="black" type="radio" checked />黑色（默认）</li>
                 <li><input name="backgroundColor" value="white" type="radio" />白色</li>
             </ul>
         </div>
@@ -474,14 +474,14 @@
         <div>
             <b>线宽：</b>
             <ul>
-                <li><input name="lineWidth" value="1" type="radio" checked="checked" />细（默认）</li>
+                <li><input name="lineWidth" value="1" type="radio" checked />细（默认）</li>
                 <li><input name="lineWidth" value="2" type="radio" />粗</li>
             </ul>
         </div>
         <div>
             <b>曲线选项：</b>
             <ul>
-                <li><input name="lineSmooth" value="1" type="radio" checked="checked" />光滑（默认）</li>
+                <li><input name="lineSmooth" value="1" type="radio" checked />光滑（默认）</li>
                 <li><input name="lineSmooth" value="2" type="radio" />折线</li>
             </ul>
         </div>
