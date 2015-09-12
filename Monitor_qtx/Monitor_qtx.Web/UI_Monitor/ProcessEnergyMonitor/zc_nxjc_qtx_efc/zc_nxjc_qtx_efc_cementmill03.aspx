@@ -38,7 +38,7 @@
 <body id="SubMonitorBody" style="margin: 0px; padding: 0px; overflow: auto;">
     <div id="SubMonitorLayout" style="position: relative; background-image: url('../../images/page/zc_nxjc_qtx_efc_cementmill03.png'); width: 1350px; height: 740px; overflow: hidden;">
          <!--石膏破碎电机 -->  
-             <table class="mytable" style="position: absolute; top: 7px; left: 239px;">
+             <table class="mytable" style="position: absolute; top: 7px; left: 237px;">
             <tr>
                 <td><span id="zc_nxjc_qtx_efc_cementmill03>gypsumCrusher>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -50,7 +50,7 @@
             </tr>
         </table>
          <!--石膏提升机 -->  
-             <table class="mytable" style="position: absolute; top: 107px; left: 281px;">
+             <table class="mytable" style="position: absolute; top: 83px; left: 268px;">
             <tr>
                 <td><span id="zc_nxjc_qtx_efc_cementmill03>gypsumHoist>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -123,7 +123,7 @@
             </tr>
         </table>
          <!--辊压机定辊主电机 -->   
-        <table class="mytable" style="position: absolute; top: 434px; left: 262px;">
+        <table class="mytable" style="position: absolute; top: 407px; left: 353px;">
             <tr>
                 <td><span id="zc_nxjc_qtx_efc_cementmill03>rollingMachineSettledRoller>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -135,7 +135,7 @@
             </tr>
         </table>
         <!--辊压机动辊主电机 -->
-        <table class="mytable" style="position: absolute; top: 436px; left: 361px;">
+        <table class="mytable" style="position: absolute; top: 408px; left: 418px;">
             <tr>
                 <td><span id="zc_nxjc_qtx_efc_cementmill03>rollingMachineActionRoller>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -239,26 +239,26 @@
     <!--1#磨排风机运行-->
     <div class="imageContainer equipmentInfo" data-equipmentid="mainExhaustFan" id="zc_nxjc_qtx_efc_cementmill03>mainExhaustFan>RunningState" style="position:absolute; height: 20px; width: 19px; top: 72px; left: 823px;"></div>
     <!--1#磨辊压机定辊运行-->
-    <div class="imageContainer equipmentInfo" data-equipmentid="rollingMachineSettledRoller" id="zc_nxjc_qtx_efc_cementmill03>rollingMachineSettledRoller>RunningState" style="position:absolute; height: 20px; width: 19px; top: 334px; left: 417px;"></div>
+    <div class="imageContainer equipmentInfo" data-equipmentid="rollingMachineSettledRoller" id="zc_nxjc_qtx_efc_cementmill03>rollingMachineSettledRoller>RunningState" style="position:absolute; height: 20px; width: 19px; top: 334px; left: 397px;"></div>
     <!--1#磨辊压机动辊运行-->
-    <div class="imageContainer equipmentInfo" data-equipmentid="rollingMachineActionRoller" id="zc_nxjc_qtx_efc_cementmill03>rollingMachineActionRoller>RunningState" style="position:absolute; height: 20px; width: 19px; top: 334px; left: 447px;"></div>
+    <div class="imageContainer equipmentInfo" data-equipmentid="rollingMachineActionRoller" id="zc_nxjc_qtx_efc_cementmill03>rollingMachineActionRoller>RunningState" style="position:absolute; height: 20px; width: 19px; top: 333px; left: 428px;"></div>
    <!--打散分级运行-->
-    <div class="imageContainer equipmentInfo" data-equipmentid="brokenMotor" id="zc_nxjc_qtx_efc_cementmill03>brokenMotor>RunningState" style="position:absolute; top: 237px; left: 431px; height: 20px; width: 19px;"></div>
+    <div class="imageContainer equipmentInfo" data-equipmentid="brokenMotor" id="zc_nxjc_qtx_efc_cementmill03>brokenMotor>RunningState" style="position:absolute; top: 237px; left: 414px; height: 20px; width: 19px;"></div>
     <!--石膏破碎-->
-    <div class="imageContainer equipmentInfo" data-equipmentid="gypsumCrusher" id="zc_nxjc_qtx_efc_cementmill03>gypsumCrusher>RunningState" style="position:absolute; top: 90px; left: 202px; height: 20px; width: 19px;"></div>
+    <div class="imageContainer equipmentInfo" data-equipmentid="gypsumCrusher" id="zc_nxjc_qtx_efc_cementmill03>gypsumCrusher>RunningState" style="position:absolute; top: 83px; left: 188px; height: 20px; width: 19px;"></div>
     <!--石膏提升机-->
-    <div class="imageContainer equipmentInfo" data-equipmentid="gypsumHoist" id="zc_nxjc_qtx_efc_cementmill03>gypsumHoist>RunningState" style="position:absolute; top: 111px; left: 256px; height: 20px; width: 19px;"></div>
+    <div class="imageContainer equipmentInfo" data-equipmentid="gypsumHoist" id="zc_nxjc_qtx_efc_cementmill03>gypsumHoist>RunningState" style="position:absolute; top: 110px; left: 245px; height: 20px; width: 19px;"></div>
      <!--熟料输送01 --> 
-     <div class="imageContainer equipmentInfo" data-equipmentid="clinkerConveyorBelt01" id="zc_nxjc_qtx_efc_cementmill03>clinkerConveyorBelt01>RunningState" style="position:absolute; top: 171px; left: 92px; height: 20px; width: 19px;"></div>   
+     <div class="imageContainer equipmentInfo" data-equipmentid="clinkerConveyorBelt01" id="zc_nxjc_qtx_efc>clinkerConveyorBelt01>RunningState" style="position:absolute; top: 171px; left: 92px; height: 20px; width: 19px;"></div>   
      <!--熟料输送02 --> 
     <div class="imageContainer equipmentInfo" data-equipmentid="clinkerConveyorBelt02" id="zc_nxjc_qtx_efc_cementmill03>clinkerConveyorBelt02>RunningState" style="position:absolute; top: 208px; left: 134px; height: 20px; width: 19px;"></div>   
      <!--熟料输送风机 -->
-     <div class="imageContainer equipmentInfo" data-equipmentid="clinkerTapeCollectingFan" id="zc_nxjc_qtx_efc>clinkerTapeCollectingFan>RunningState" style="position:absolute; top: 180px; left: 135px; height: 20px; width: 19px;"></div>    
+     <div class="imageContainer equipmentInfo" data-equipmentid="clinkerTapeCollectingFan" id="zc_nxjc_qtx_efc>clinkerTapeCollectingFan>RunningState" style="position:absolute; top: 180px; left: 146px; height: 20px; width: 19px;"></div>    
       <!--石灰石库上输送风机 -->
      <div class="imageContainer equipmentInfo" data-equipmentid="rawMaterialDustCollectingFan" id="zc_nxjc_qtx_efc_cementmill03>rawMaterialDustCollectingFan>RunningState" style="position:absolute; top: 197px; left: 207px; width: 19px;"></div>    
    
         <!--辊压机上风机 -->
-     <div class="imageContainer equipmentInfo" data-equipmentid="rollerPressCollectingFan" id="zc_nxjc_qtx_efc_cementmill03>rollerPressCollectingFan>RunningState" style="position:absolute; top: 190px; left: 481px; height: 20px; width: 19px;"></div>    
+     <div class="imageContainer equipmentInfo" data-equipmentid="rollerPressCollectingFan" id="zc_nxjc_qtx_efc_cementmill03>rollerPressCollectingFan>RunningState" style="position:absolute; top: 187px; left: 467px; height: 20px; width: 19px;"></div>    
     
     </div>
 

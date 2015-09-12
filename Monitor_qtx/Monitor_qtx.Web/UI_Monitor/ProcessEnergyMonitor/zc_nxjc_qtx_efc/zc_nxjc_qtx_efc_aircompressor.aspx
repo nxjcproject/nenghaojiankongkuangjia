@@ -44,7 +44,7 @@
         <table class="mytable" style="position: absolute; top: 205px; left: 213px;">
             
             <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker02>clinkerAirCompressorPowerSupply1>Current" class="mchart nodisplay"></span></td>
+                <td><span id="zc_nxjc_qtx_efc_clinker02>clinkerAirCompressorPowerSupply1>Current" class="mchart"></span></td>
             </tr>
             <tr>
             <td><span id="zc_nxjc_qtx_efc_clinker02>clinkerAirCompressorPowerSupply1>Power" class="mchart"></span></td>
@@ -54,7 +54,7 @@
         <table class="mytable" style="position: absolute; top: 207px; left: 381px;">
           
             <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker02>clinkerAirCompressorPowerSupply2>Current" class="mchart nodisplay"></span></td>
+                <td><span id="zc_nxjc_qtx_efc_clinker02>clinkerAirCompressorPowerSupply2>Current" class="mchart"></span></td>
             </tr>
             <tr>
                 <td><span id="zc_nxjc_qtx_efc_clinker02>clinkerAirCompressorPowerSupply2>Power" class="mchart"></span></td>
@@ -64,7 +64,7 @@
         <table class="mytable" style="position: absolute; top: 344px; left: 208px;">
             
             <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker02>clinkerAirCompressorPowerSupply3>Current" class="mchart nodisplay"></span></td>
+                <td><span id="zc_nxjc_qtx_efc_clinker02>clinkerAirCompressorPowerSupply3>Current" class="mchart"></span></td>
             </tr>
             <tr>
                 <td><span id="zc_nxjc_qtx_efc_clinker02>clinkerAirCompressorPowerSupply3>Power" class="mchart"></span></td>
@@ -74,7 +74,7 @@
         <table class="mytable" style="position: absolute; top: 344px; left: 382px;">
             
             <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker02>clinkerAirCompressorPowerSupply4>Current" class="mchart nodisplay"></span></td>
+                <td><span id="zc_nxjc_qtx_efc_clinker02>clinkerAirCompressorPowerSupply4>Current" class="mchart"></span></td>
             </tr>
             <tr>
                 <td><span id="zc_nxjc_qtx_efc_clinker02>clinkerAirCompressorPowerSupply4>Power" class="mchart"></span></td>
@@ -84,7 +84,7 @@
         <table class="mytable" style="position: absolute; top: 469px; left: 214px;">
            
             <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker02>clinkerAirCompressorPowerSupply5>Current" class="mchart nodisplay"></span></td>
+                <td><span id="zc_nxjc_qtx_efc_clinker02>clinkerAirCompressorPowerSupply5>Current" class="mchart"></span></td>
             </tr>
             <tr>
                 <td><span id="zc_nxjc_qtx_efc_clinker02>clinkerAirCompressorPowerSupply5>Power" class="mchart"></span></td>
@@ -94,7 +94,7 @@
         <table class="mytable" style="position: absolute; top: 470px; left: 387px;">
            
             <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker02>compressorPowerBox>Current" class="mchart nodisplay"></span></td>
+                <td><span id="zc_nxjc_qtx_efc_clinker02>compressorPowerBox>Current" class="mchart"></span></td>
             </tr>
             <tr>
                 <td><span id="zc_nxjc_qtx_efc_clinker02>compressorPowerBox>Power" class="mchart"></span></td>
@@ -104,7 +104,7 @@
         <table class="mytable" style="position: absolute; top: 203px; left: 589px; ">
             
             <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker03>clinkerAirCompressorPowerSupply1>Current" class="mchart nodisplay"></span></td>
+                <td><span id="zc_nxjc_qtx_efc_clinker03>clinkerAirCompressorPowerSupply1>Current" class="mchart"></span></td>
             </tr>
             <tr>
                 <td><span id="zc_nxjc_qtx_efc_clinker03>clinkerAirCompressorPowerSupply1>Power" class="mchart"></span></td>
@@ -114,7 +114,7 @@
         <table class="mytable" style="position: absolute; top: 203px; left: 752px;">
             
             <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker03>clinkerAirCompressorPowerSupply2>Current" class="mchart nodisplay"></span></td>
+                <td><span id="zc_nxjc_qtx_efc_clinker03>clinkerAirCompressorPowerSupply2>Current" class="mchart"></span></td>
             </tr>
             <tr>
                 <td><span id="zc_nxjc_qtx_efc_clinker03>clinkerAirCompressorPowerSupply2>Power" class="mchart"></span></td>
@@ -124,7 +124,7 @@
         <table class="mytable" style="position: absolute; top: 344px; left: 587px;">
            
             <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker03>clinkerAirCompressorPowerSupply3>Current" class="mchart nodisplay"></span></td>
+                <td><span id="zc_nxjc_qtx_efc_clinker03>clinkerAirCompressorPowerSupply3>Current" class="mchart"></span></td>
             </tr>
             <tr>
                 <td><span id="zc_nxjc_qtx_efc_clinker03>clinkerAirCompressorPowerSupply3>Power" class="mchart"></span></td>
@@ -134,7 +134,7 @@
         <table class="mytable" style="position: absolute; top: 344px; left: 759px;">
             
             <tr>
-                <td><span id="zc_nxjc_qtx_efc_clinker03>jointPump>Current" class="mchart nodisplay"></span></td>
+                <td><span id="zc_nxjc_qtx_efc_clinker03>jointPump>Current" class="mchart"></span></td>
             </tr>
             <tr>
                 <td><span id="zc_nxjc_qtx_efc_clinker03>jointPump>Power" class="mchart"></span></td>
@@ -144,7 +144,7 @@
         <%--矿山采区1--%>
         <table class="mytable" style="position: absolute; top: 181px; left: 1009px;">           
             <tr>
-                <td><span id="zc_nxjc_qtx_efc>mineMiningDistrict1>Current" class="mchart nodisplay"></span></td>
+                <td><span id="zc_nxjc_qtx_efc>mineMiningDistrict1>Current" class="mchart"></span></td>
             </tr>
             <tr>
                 <td><span id="zc_nxjc_qtx_efc>mineMiningDistrict1>Power" class="mchart"></span></td>
@@ -154,13 +154,14 @@
         <table class="mytable" style="position: absolute; top: 265px; left: 1009px;">
            
             <tr>
-                <td><span id="zc_nxjc_qtx_efc>mineMiningDistrict2>Current" class="mchart nodisplay"></span></td>
+                <td><span id="zc_nxjc_qtx_efc>mineMiningDistrict2>Current" class="mchart"></span></td>
             </tr>
             <tr>
                 <td><span id="zc_nxjc_qtx_efc>mineMiningDistrict2>Power" class="mchart"></span></td>
             </tr>
         </table>
         </div>
+    <div id="htmlContainer"></div>
 
  
 </body>

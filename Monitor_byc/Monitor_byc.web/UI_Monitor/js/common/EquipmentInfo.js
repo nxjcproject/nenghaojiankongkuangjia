@@ -1,6 +1,4 @@
-﻿$(function () {
-    bindEquipmentEvent();
-});
+﻿
 var equipmentmentNames = {
     cementMaillAirCompressorPowerSupply1: "水泥磨1号空压机电源",
     rollingMachineActionRoller: "磨活动辊",
@@ -84,24 +82,55 @@ var equipmentmentNames = {
     bottomDustCollectingFan2: "2#收尘风机",
     bottomDustCollectingFan3: "3#收尘风机",
     clinkerHoist: "1#入窑提升机电机",
-    limestoneStacker:"取料机",
+    limestoneStacker: "取料机",
     bagdustcollector: "袋收尘",
     limestoneStackerMachine: "石灰石堆料机",
     limestoneFetchMachine: "石灰石取料机",
-    
+
     //新加
-    sandstoneBrokenTapeMachine1:"砂岩破碎1#胶带机",
+    sandstoneBrokenTapeMachine1: "砂岩破碎1#胶带机",
     sandstoneBrokenTapeMachine2: "砂岩破碎2#胶带机",
-    sandstoneBrokeFeedSectionMotor: "砂岩破碎给料段电动机"
+    sandstoneBrokeFeedSectionMotor: "砂岩破碎给料段电动机",
 
+    clinkerSiloFeeding: "水泥磨熟料库喂料称",
+    limestoneLibraryFeeding: "石灰石库喂料称",
+    fluorineGypsumFeeding: "氟石膏库喂料称",
+    flyAshLibraryFeeding: "粉煤灰库喂料称",
+    clinkerInTheBelt: "熟料内返皮带",
+    limestoneFeeder: "石灰石给料",
+    limestoneCrusher: "石灰石破碎",
+    rawMaterialDustCollecting: "入石灰石库收尘收尘器",
+    rawMaterialDustCollectingFan: "入石灰石库收尘风机",
+    sulfuricAcidCollecting: "配料库底收尘器",
+    sulfuricAcidCollectingFan: "配料库底收尘风机",
+    rawMaterialStorageBeltMachine: "入磨配料库底胶带输送机",
+    rawMaterialCollecting: "辅料库收尘收尘器",
+    rawMaterialCollectingFan: "辅料库收尘风机"
+}
 
-
-    }
+$(function () {
+    bindEquipmentEvent();
+});
 //事件绑定
 function bindEquipmentEvent() {
     $('.equipmentInfo').mouseenter(function (e) {
-        var equipmentId = $(this).attr('data-equipmentid');
-        var myContent = equipmentmentNames[equipmentId];
+        //var equipmentId = $(this).attr('data-equipmentid');       
+        var id_array = $(this).attr('id').split('>');
+        if(id_array.length != 3){
+            return;
+        }
+        var equipmentId = id_array[0] + ">" + id_array[1];
+        var myContent = "";
+        //var myContent = equipmentmentNames[equipmentId];
+
+        //判断是否在从公式中获得的名字信息内
+        if (equipmentId in g_nameArray) {//设备在公式用有
+            myContent = g_nameArray[equipmentId][1];
+        }
+        else {//在公式中没有
+            equipmentId = $(this).attr('data-equipmentid');
+            myContent = equipmentmentNames[equipmentId];
+        }
         $(this).tooltip({
             position:'top',
             content: myContent

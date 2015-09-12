@@ -67,7 +67,9 @@ function runningStateAddImage(dataSets) {
                 case '1':
                     content = getImgTag(basePath + "greenL.gif");
                     break;
-
+                case 'NULL':
+                    content = getImgTag(basePath + "error.gif");
+                    break;
                 default:
                     content = "";//getImgTag(basePath + "redL.png");
             }

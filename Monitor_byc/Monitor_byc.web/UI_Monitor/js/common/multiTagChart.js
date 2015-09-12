@@ -2,7 +2,7 @@
 var myLableArray = new Array();
 var lableName;
 $(function () {
-    $('#htmlContainer').append(GetMenuHtml()); 
+    $('#htmlContainer').append(GetMenuHtml());
     $('#htmlContainer').append(GetComprehensiveMenuHtml());
     $.parser.parse('#htmlContainer');
     BindContextmenu();
@@ -10,7 +10,7 @@ $(function () {
 });
 
 var multiTagCharData = {
-    selectedId:''
+    selectedId: ''
 };
 //绑定右键菜单事件
 function BindContextmenu() {
@@ -119,13 +119,13 @@ function getCookie(c_name) {
     return "";
 }
 //该标签是否存在cookie中
-function canAdd(c_name){
+function canAdd(c_name) {
     if (document.cookie.length > 0) {
         var c_start = document.cookie.indexOf(c_name + "=");
         if (c_start != -1) {
             return false;
         }
-        if(c_start==-1)
+        if (c_start == -1)
             return true;
     }
     return true;
@@ -133,7 +133,7 @@ function canAdd(c_name){
 //读取所有的cookie
 function getAllCookie() {
     var strCookie = unescape(document.cookie);
-    alert("cookie的个数为："+strCookie.split(";").length+";所有的cookie如下："+ strCookie);
+    alert("cookie的个数为：" + strCookie.split(";").length + ";所有的cookie如下：" + strCookie);
 }
 
 function getLableName() {
@@ -151,9 +151,9 @@ function getLableName() {
     });
 }
 
-function openWindow(){
-        var url = "/UI_Monitor/TrendTool/MultiTrendlineRenderer.aspx";
-        window.open(url, "WindowChart", "width=1000,height=600,toolbar=no,menubar=no,scrollbars=no,resizable=no,location=no,status=no");
+function openWindow() {
+    var url = "/UI_Monitor/TrendTool/MultiTrendlineRenderer.aspx";
+    window.open(url, "WindowChart", "width=1000,height=600,toolbar=no,menubar=no,scrollbars=no,resizable=no,location=no,status=no");
 }
 
 function GetMenuHtml() {

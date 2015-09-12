@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" type="text/css" href="/lib/ealib/themes/gray/easyui.css" />
     <link rel="stylesheet" type="text/css" href="/lib/ealib/themes/icon.css" />
     <link rel="stylesheet" type="text/css" href="/lib/extlib/themes/syExtIcon.css" />
@@ -26,7 +26,6 @@
     <script src="/UI_Monitor/js/common/multiTagChart.js"></script>
     <script src="/UI_Monitor/js/common/RunningState.js"></script>
     <script src="/UI_Monitor/js/common/AmmeterStatistic.js"></script>
-    <script src="/UI_Monitor/js/common/ComprehensiveStatistic.js"></script>
     <script src="/UI_Monitor/js/common/EquipmentInfo.js"></script>
     <script src="/UI_Monitor/js/common/DisplayName.js"></script>
     <script src="/UI_Monitor/js/common/myDrag.js"></script>
@@ -38,14 +37,11 @@
 </head>
 <body id="SubMonitorBody" style="margin: 0px; padding: 0px; overflow: auto;">
     <div id="SubMonitorLayout" style="position: relative; background-image: url('../../images/page/zc_nxjc_byc_byf_aircompressor.png'); width: 1350px; height: 740px; overflow: hidden;">
-        <%--<div onclick="getAllCookie()">cookie测试</div>--%>
-        <%--<div onclick="openWindow()">打开趋势窗口</div>--%>
-
-        <%--1号空压机电源--%>
+               <%--1号空压机电源--%>
         <table class="mytable" style="position: absolute; top: 205px; left: 213px;">
             
             <tr>
-                <td><span id="zc_nxjc_byc_byf>clinkerAirCompressorPowerSupply1>Current" class="mchart nodisplay"></span></td>
+                <td><span id="zc_nxjc_byc_byf>clinkerAirCompressorPowerSupply1>Current" class="mchart"></span></td>
             </tr>
             <tr>
             <td><span id="zc_nxjc_byc_byf>clinkerAirCompressorPowerSupply1>Power" class="mchart"></span></td>
@@ -55,7 +51,7 @@
         <table class="mytable" style="position: absolute; top: 207px; left: 381px;">
           
             <tr>
-                <td><span id="zc_nxjc_byc_byf>clinkerAirCompressorPowerSupply2>Current" class="mchart nodisplay"></span></td>
+                <td><span id="zc_nxjc_byc_byf>clinkerAirCompressorPowerSupply2>Current" class="mchart"></span></td>
             </tr>
             <tr>
                 <td><span id="zc_nxjc_byc_byf>clinkerAirCompressorPowerSupply2>Power" class="mchart"></span></td>
@@ -65,7 +61,7 @@
         <table class="mytable" style="position: absolute; top: 344px; left: 208px;">
             
             <tr>
-                <td><span id="zc_nxjc_byc_byf>clinkerAirCompressorPowerSupply3>Current" class="mchart nodisplay"></span></td>
+                <td><span id="zc_nxjc_byc_byf>clinkerAirCompressorPowerSupply3>Current" class="mchart"></span></td>
             </tr>
             <tr>
                 <td><span id="zc_nxjc_byc_byf>clinkerAirCompressorPowerSupply3>Power" class="mchart"></span></td>
@@ -75,7 +71,7 @@
         <table class="mytable" style="position: absolute; top: 344px; left: 382px;">
             
             <tr>
-                <td><span id="zc_nxjc_byc_byf>clinkerAirCompressorPowerSupply4>Current" class="mchart nodisplay"></span></td>
+                <td><span id="zc_nxjc_byc_byf>clinkerAirCompressorPowerSupply4>Current" class="mchart"></span></td>
             </tr>
             <tr>
                 <td><span id="zc_nxjc_byc_byf>clinkerAirCompressorPowerSupply4>Power" class="mchart"></span></td>
@@ -85,7 +81,7 @@
         <table class="mytable" style="position: absolute; top: 469px; left: 214px;">
            
             <tr>
-                <td><span id="zc_nxjc_byc_byf>rawMaterialCompressedAirStation>Current" class="mchart nodisplay"></span></td>
+                <td><span id="zc_nxjc_byc_byf>rawMaterialCompressedAirStation>Current" class="mchart"></span></td>
             </tr>
             <tr>
                 <td><span id="zc_nxjc_byc_byf>rawMaterialCompressedAirStation>Power" class="mchart"></span></td>
@@ -95,7 +91,7 @@
         <table class="mytable" style="position: absolute; top: 203px; left: 590px; ">
             
             <tr>
-                <td><span id="zc_nxjc_byc_byf>cementMaillAirCompressorPowerSupply1>Current" class="mchart nodisplay"></span></td>
+                <td><span id="zc_nxjc_byc_byf>cementMaillAirCompressorPowerSupply1>Current" class="mchart"></span></td>
             </tr>
             <tr>
                 <td><span id="zc_nxjc_byc_byf>cementMaillAirCompressorPowerSupply1>Power" class="mchart"></span></td>
@@ -105,7 +101,7 @@
         <table class="mytable" style="position: absolute; top: 203px; left: 752px;">
             
             <tr>
-                <td><span id="zc_nxjc_byc_byf>cementMaillAirCompressorPowerSupply2>Current" class="mchart nodisplay"></span></td>
+                <td><span id="zc_nxjc_byc_byf>cementMaillAirCompressorPowerSupply2>Current" class="mchart"></span></td>
             </tr>
             <tr>
                 <td><span id="zc_nxjc_byc_byf>cementMaillAirCompressorPowerSupply2>Power" class="mchart"></span></td>
@@ -115,7 +111,7 @@
         <table class="mytable" style="position: absolute; top: 344px; left: 589px;">
            
             <tr>
-                <td><span id="zc_nxjc_byc_byf>cementMaillAirCompressorPowerSupply3>Current" class="mchart nodisplay"></span></td>
+                <td><span id="zc_nxjc_byc_byf>cementMaillAirCompressorPowerSupply3>Current" class="mchart"></span></td>
             </tr>
             <tr>
                 <td><span id="zc_nxjc_byc_byf>cementMaillAirCompressorPowerSupply3>Power" class="mchart"></span></td>
@@ -125,7 +121,7 @@
         <table class="mytable" style="position: absolute; top: 344px; left: 759px;">
             
             <tr>
-                <td><span id="zc_nxjc_byc_byf>cementMaillAirCompressorPowerSupply4>Current" class="mchart nodisplay"></span></td>
+                <td><span id="zc_nxjc_byc_byf>cementMaillAirCompressorPowerSupply4>Current" class="mchart"></span></td>
             </tr>
             <tr>
                 <td><span id="zc_nxjc_byc_byf>cementMaillAirCompressorPowerSupply4>Power" class="mchart"></span></td>
@@ -135,7 +131,7 @@
         <table class="mytable" style="position: absolute; top: 467px; left: 590px;">
             
             <tr>
-                <td><span id="zc_nxjc_byc_byf>cementCompressedAirStation>Current" class="mchart nodisplay"></span></td>
+                <td><span id="zc_nxjc_byc_byf>cementCompressedAirStation>Current" class="mchart"></span></td>
             </tr>
             <tr>
                 <td><span id="zc_nxjc_byc_byf>cementCompressedAirStation>Power" class="mchart"></span></td>
@@ -145,7 +141,7 @@
         <table class="mytable" style="position: absolute; top: 265px; left: 1015px;">
            
             <tr>
-                <td><span id="zc_nxjc_byc_byf>clinkerInAirCompressorPowerSupply>Current" class="mchart nodisplay"></span></td>
+                <td><span id="zc_nxjc_byc_byf>clinkerInAirCompressorPowerSupply>Current" class="mchart"></span></td>
             </tr>
             <tr>
                 <td><span id="zc_nxjc_byc_byf>clinkerInAirCompressorPowerSupply>Power" class="mchart"></span></td>
@@ -155,7 +151,7 @@
         <table class="mytable" style="position: absolute; top: 470px; left: 388px;">
            
             <tr>
-                <td><span id="zc_nxjc_byc_byf>waterPumpHouse>Current" class="mchart nodisplay"></span></td>
+                <td><span id="zc_nxjc_byc_byf>waterPumpHouse>Current" class="mchart"></span></td>
             </tr>
             <tr>
                 <td><span id="zc_nxjc_byc_byf>waterPumpHouse>Power" class="mchart"></span></td>
@@ -163,29 +159,29 @@
         </table>
         </div>
 
-     <div id="htmlContainer"></div>
+    
 
     <%--1号空压机电源--%>
-        <div class="imageContainer equipmentInfo" data-equipmentid="clinkerAirCompressorPower1" id="zc_nxjc_byc_byf_clinker01>clinkerAirCompressorPower1>RunningState" style="position:absolute; top: 209px; left: 167px; height: 20px; width: 19px;"></div>
+        <div class="imageContainer equipmentInfo" data-equipmentid="clinkerAirCompressorPower1" id="zc_nxjc_byc_byf>clinkerAirCompressorPower1>RunningState" style="position:absolute; top: 209px; left: 167px; height: 20px; width: 19px;"></div>
     <%--2号空压机电源--%>
-     <div class="imageContainer equipmentInfo" data-equipmentid="clinkerAirCompressorPower2" id="zc_nxjc_byc_byf_clinker01>clinkerAirCompressorPower2>RunningState" style="position:absolute; top: 215px; left: 336px; height: 20px; width: 19px;"></div>
+     <div class="imageContainer equipmentInfo" data-equipmentid="clinkerAirCompressorPower2" id="zc_nxjc_byc_byf>clinkerAirCompressorPower2>RunningState" style="position:absolute; top: 355px; left: 341px; height: 20px; width: 19px;"></div>
     <%--3号空压机电源--%>
-    <div class="imageContainer equipmentInfo" data-equipmentid="clinkerAirCompressorPower3" id="zc_nxjc_byc_byf_clinker01>clinkerAirCompressorPower3>RunningState" style="position:absolute; top: 352px; left: 165px; height: 20px; width: 19px;"></div>
+    <div class="imageContainer equipmentInfo" data-equipmentid="clinkerAirCompressorPower3" id="zc_nxjc_byc_byf>clinkerAirCompressorPower3>RunningState" style="position:absolute; top: 352px; left: 165px; height: 20px; width: 19px;"></div>
    <%--4号空压机电源--%>
-    <div class="imageContainer equipmentInfo" data-equipmentid="clinkerAirCompressorPower4" id="zc_nxjc_byc_byf_clinker01>clinkerAirCompressorPower4>RunningState" style="position:absolute; top: 355px; left: 341px; height: 20px; width: 19px;"></div>
+    <div class="imageContainer equipmentInfo" data-equipmentid="clinkerAirCompressorPower4" id="zc_nxjc_byc_byf>clinkerAirCompressorPower4>RunningState" style="position:absolute; top: 214px; left: 337px; height: 20px; width: 19px;"></div>
    <%--水泥磨1号空压机电源--%>
-     <div class="imageContainer equipmentInfo" data-equipmentid="cementMaillAirCompressorPower1" id="zc_nxjc_byc_byf_cementmill01>cementMaillAirCompressorPower1>RunningState" style="position:absolute; top: 212px; left: 541px; height: 20px; width: 19px;"></div>
+     <div class="imageContainer equipmentInfo" data-equipmentid="cementMaillAirCompressorPower1" id="zc_nxjc_byc_byf>cementMaillAirCompressorPower1>RunningState" style="position:absolute; top: 212px; left: 541px; height: 20px; width: 19px;"></div>
   <%--水泥磨2号空压机电源--%>
-     <div class="imageContainer equipmentInfo" data-equipmentid="cementMaillAirCompressorPower2" id="zc_nxjc_byc_byf_cementmill01>cementMaillAirCompressorPower2>RunningState" style="position:absolute; height: 20px; width: 19px; top: 215px; left: 716px;"></div>
+     <div class="imageContainer equipmentInfo" data-equipmentid="cementMaillAirCompressorPower2" id="zc_nxjc_byc_byf>cementMaillAirCompressorPower2>RunningState" style="position:absolute; height: 20px; width: 19px; top: 215px; left: 716px;"></div>
   <%--水泥磨3号空压机电源--%>
-     <div class="imageContainer equipmentInfo" data-equipmentid="cementMaillAirCompressorPower3" id="zc_nxjc_byc_byf_cementmill01>cementMaillAirCompressorPower3>RunningState" style="position:absolute; height: 20px; width: 19px; top: 360px; left: 542px;"></div>
+     <div class="imageContainer equipmentInfo" data-equipmentid="cementMaillAirCompressorPower3" id="zc_nxjc_byc_byf>cementMaillAirCompressorPower3>RunningState" style="position:absolute; height: 20px; width: 19px; top: 360px; left: 542px;"></div>
   <%--水泥磨4号空压机电源--%>
-     <div class="imageContainer equipmentInfo"data-equipmentid="cementMaillAirCompressorPower4"  id="zc_nxjc_byc_byf_cementmill01>cementMaillAirCompressorPower4>RunningState" style="position:absolute; height: 20px; width: 19px; top: 358px; left: 716px;"></div>
+     <div class="imageContainer equipmentInfo"data-equipmentid="cementMaillAirCompressorPower4"  id="zc_nxjc_byc_byf>cementMaillAirCompressorPower4>RunningState" style="position:absolute; height: 20px; width: 19px; top: 358px; left: 716px;"></div>
   <%--窑中空压机--%>
      <div class="imageContainer equipmentInfo" data-equipmentid="cementMaillAirCompressorPower1" id="zc_nxjc_byc_byf>YWKYAYX>RunningState" style="position:absolute; height: 20px; width: 19px; top: 277px; left: 978px;"></div>
    <%--水泵房--%>
-     <div class="imageContainer equipmentInfo" data-equipmentid="waterPumpHouse" id="zc_nxjc_byc_byf_clinker01>waterPumpHouse>RunningState" style="position:absolute; height: 20px; width: 19px; top: 481px; left: 356px;"></div>
-  
+     <div class="imageContainer equipmentInfo" data-equipmentid="waterPumpHouse" id="zc_nxjc_byc_byf>waterPumpHouse>RunningState" style="position:absolute; height: 20px; width: 19px; top: 481px; left: 356px;"></div>
+   <div id="htmlContainer"></div>
   
     
   

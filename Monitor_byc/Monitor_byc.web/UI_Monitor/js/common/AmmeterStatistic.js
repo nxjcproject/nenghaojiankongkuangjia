@@ -1,11 +1,11 @@
 ﻿var equipmentInfo = "";
 
-
 $(function () {
     $('#htmlContainer').append(GetAmmeterDialogHtml());
     InitializeGrid("");
     $.parser.parse('#htmlContainer');
     initDialog();
+    drag('ammeterDialog');
 });
 function ShowAmmeterStatistics(id) {
     var idArray = id.split('>');
@@ -89,6 +89,16 @@ function loadGridData(dataToServer) {
                     ]]
                 });
             }
+            //获取浏览器显示区域（可视区域）的高度 ：   
+            //$(window).height();   
+            //获取或设置元素的高度：
+            //$(obj).height();
+            //获取滚动条到顶部的垂直高度 (即网页被卷上去的高度)  
+            //$(document).scrollTop();  
+            var  myTop=($(window).height()-$('#ammeterDialog').height())/2+$(document).scrollTop();  
+            $('#ammeterDialog').dialog({
+                top:myTop
+            });
             $('#ammeterDialog').dialog('open');
         }
     });
@@ -131,7 +141,7 @@ function ValueFormatter(value, row, index) {
 }
 
 function GetAmmeterDialogHtml() {
-    var html = '<div id="ammeterDialog" class="easyui-dialog" title="详细信息" data-options="iconCls:\'icon-save\',closed:true" style="width: 750px; height: 330px; padding: 5px">\
+    var html = '<div id="ammeterDialog" class="easyui-dialog" title="详细信息" data-options="iconCls:\'icon-save\',closed:true" style="width: 750px; height: 330px; padding: 5px;">\
             <div id="ammeterFormula" class="easyui-panel" title="计算公式" style="background: #fafafa;padding-bottom:5px;" data-options="border:true">\
                 &nbsp\
             </div>\
