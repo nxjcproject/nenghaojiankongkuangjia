@@ -736,7 +736,7 @@
      <!--1#入窑提升机电机运行状态-->
     <div class="imageContainer equipmentInfo" data-equipmentid="clinkerHoist" id="zc_nxjc_qtx_efc_clinker03>clinkerHoist>RunningState" style="position:absolute; top: 25px; left: 171px; height: 20px; width: 19px;"></div>
     <!--煤磨主电机运行状态-->
-    <div class="imageContainer equipmentInfo" data-equipmentid="coalMillMainMotor" id="zc_nxjc_qtx_efc_clinker03>coalMillMainMotor>RunningState" style="position:absolute; top: 274px; left: 835px;  width: 19px;"></div>
+    <div class="imageContainer equipmentInfo" data-equipmentid="coalMillMainMotor" id="zc_nxjc_qtx_efc_clinker03>coalMillMainMotor>RunningState" style="position:absolute; top: 315px; left: 837px;  width: 19px;"></div>
     <!--煤磨高温风机运行状态-->
      <!--煤磨通风机运行状态-->
     <div class="imageContainer equipmentInfo" data-equipmentid="coalMillFan" id="zc_nxjc_qtx_efc_clinker03>coalMillFan>RunningState" style="position:absolute; top: 75px; left: 1221px; height: 20px; width: 19px;"></div>

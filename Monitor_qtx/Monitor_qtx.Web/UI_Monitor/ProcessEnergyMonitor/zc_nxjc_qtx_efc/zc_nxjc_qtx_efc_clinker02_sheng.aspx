@@ -37,8 +37,49 @@
 </head>
 <body id="SubMonitorBody" style="margin: 0px; padding: 0px; overflow: auto;">
     <div id="SubMonitorLayout" style="position: relative; background-image: url('../../images/page/zc_nxjc_qtx_efc_clinker02_sheng.png'); width: 1350px; height: 740px; overflow: hidden;">
+          <%--矿山采区1--%>
+        <table class="mytable" style="position: absolute; top: 2px; left: 226px;">           
+            <tr>
+                <td><span id="zc_nxjc_qtx_efc>mineMiningDistrict1>Current" class="mchart"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_qtx_efc>mineMiningDistrict1>Power" class="mchart"></span></td>
+            </tr>
+        </table>
+        <%--矿山采区2--%>
+        <table class="mytable" style="position: absolute; top: 44px; left: 226px;">
+           
+            <tr>
+                <td><span id="zc_nxjc_qtx_efc>mineMiningDistrict2>Current" class="mchart"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_qtx_efc>mineMiningDistrict2>Power" class="mchart"></span></td>
+            </tr>
+        </table>
+         <%--堆取料机--%>
+        <table class="mytable" style="position: absolute; top: 93px; left: 226px; height: 0px;">
+           
+            <tr>
+                <td><span id="zc_nxjc_qtx_efc>limestoneStacker>Current" class="mchart"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_qtx_efc>limestoneStacker>Power" class="mchart"></span></td>
+            </tr>
+        </table>
+         <!--辅助皮带-->
+        <table class="mytable" style="position: absolute; top: 82px; left: 376px;">
+            <tr>
+                <td><span id="zc_nxjc_qtx_efc_clinker02>auxiliaryBeltPower>ElectricityConsumption" class="mchart"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_qtx_efc_clinker02>auxiliaryBeltPower>Current" class="mchart"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_qtx_efc_clinker02>auxiliaryBeltPower>Power" class="mchart"></span></td>
+            </tr>
+        </table>
         <!--石灰石给料-->
-        <table class="mytable" style="position: absolute; top: 70px; left: 14px;">
+        <table class="mytable" style="position: absolute; top: 70px; left: 17px;">
             <%--<tr>
                 <td><span id="zc_nxjc_qtx_efc>limestoneFeeder>ElectricityConsumption" class="mchart"></span></td>
             </tr>--%>
@@ -50,7 +91,7 @@
             </tr>
         </table>
         <!--石灰石破碎-->
-        <table class="mytable" style="position: absolute; top: 137px; left: 14px;">
+        <table class="mytable" style="position: absolute; top: 137px; left: 17px;">
             <%--<tr>
                 <td><span id="zc_nxjc_qtx_efc>limestoneCrusher>ElectricityConsumption" class="mchart"></span></td>
             </tr>--%>

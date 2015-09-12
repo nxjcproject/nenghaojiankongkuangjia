@@ -140,24 +140,22 @@
                 <td><span id="zc_nxjc_qtx_efc_clinker03>jointPump>Power" class="mchart"></span></td>
             </tr>
         </table>
-   
-        <%--矿山采区1--%>
-        <table class="mytable" style="position: absolute; top: 181px; left: 1009px;">           
+       <%--水泥磨空压机--%>
+        <table class="mytable" style="position: absolute; top: 200px; left: 995px;">           
             <tr>
-                <td><span id="zc_nxjc_qtx_efc>mineMiningDistrict1>Current" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_efc>cementMaillAirCompressorPowerSupply1>Current" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_qtx_efc>mineMiningDistrict1>Power" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_efc>cementMaillAirCompressorPowerSupply1>Power" class="mchart"></span></td>
             </tr>
         </table>
-        <%--矿山采区2--%>
-        <table class="mytable" style="position: absolute; top: 265px; left: 1009px;">
-           
+       <%--压缩空气站电源--%>
+        <table class="mytable" style="position: absolute; top: 468px; left: 591px;">           
             <tr>
-                <td><span id="zc_nxjc_qtx_efc>mineMiningDistrict2>Current" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_efc>rawMaterialCompressedAirStation>Current" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_qtx_efc>mineMiningDistrict2>Power" class="mchart"></span></td>
+                <td><span id="zc_nxjc_qtx_efc>rawMaterialCompressedAirStation>Power" class="mchart"></span></td>
             </tr>
         </table>
         </div>

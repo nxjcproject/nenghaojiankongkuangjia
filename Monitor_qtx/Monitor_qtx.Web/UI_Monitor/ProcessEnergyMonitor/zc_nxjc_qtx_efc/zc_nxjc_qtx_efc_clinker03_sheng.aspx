@@ -37,9 +37,18 @@
 </head>
 <body id="SubMonitorBody" style="margin: 0px; padding: 0px; overflow: auto;">
     <div id="SubMonitorLayout" style="position: relative; background-image: url('../../images/page/zc_nxjc_qtx_efc_clinker03_sheng.png'); width: 1350px; height: 740px; overflow: hidden;">
-         
+           <!--板喂机-->
+        <table class="mytable" style="position: absolute; top: 48px; left: 452px;">
+           
+            <tr>
+                <td><span id="zc_nxjc_qtx_efc>rawMaterialFeeder>Current" class="mchart"></span></td>
+            </tr>
+            <tr>
+                <td><span id="zc_nxjc_qtx_efc>rawMaterialFeeder>Power" class="mchart"></span></td>
+            </tr>
+        </table>
          <!--原料调配输送1-->
-        <table class="mytable" style="position: absolute; top: 58px; left: 452px;">
+        <table class="mytable" style="position: absolute; top: 95px; left: 452px;">
            
             <tr>
                 <td><span id="zc_nxjc_qtx_efc>feedstockAllocationcConveyor01>Current" class="mchart"></span></td>
@@ -49,7 +58,7 @@
             </tr>
         </table>
          <!--原料调配输送2-->
-        <table class="mytable" style="position: absolute; top: 105px; left: 452px;">
+        <table class="mytable" style="position: absolute; top: 143px; left: 452px;">
             
             <tr>
                 <td><span id="zc_nxjc_qtx_efc>feedstockAllocationcConveyor02>Current" class="mchart"></span></td>
@@ -59,7 +68,7 @@
             </tr>
         </table>
          <!--原料调配输送收尘-->
-        <table class="mytable" style="position: absolute; top: 95px; left: 224px;">
+        <table class="mytable" style="position: absolute; top: 95px; left: 217px;">
             <tr>
                 <td><span id="zc_nxjc_qtx_efc_clinker03>feedstockAllocationCentrifugalFan>ElectricityConsumption" class="mchart"></span></td>
             </tr>

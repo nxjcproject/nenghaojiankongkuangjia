@@ -290,7 +290,7 @@
             </tr>
         </table>
          <%--2#水泥粉磨 --%>
-        <table class="mytable" style="position: absolute; top: 522px; left: 1217px;">
+        <table class="mytable" style="position: absolute; top: 519px; left: 1197px;">
             <tr>
                 <td><span id="zc_nxjc_qtx_efc_cementmill02>cementGrind_ElectricityQuantity>Class" class="mchart"></span></td>
             </tr>
@@ -301,7 +301,7 @@
                 <td><span id="zc_nxjc_qtx_efc_cementmill02>cementGrind_ElectricityQuantity>Month" class="mchart"></span></td>
             </tr>
         </table>
-        <table class="mytable" style="position: absolute; top: 521px; left: 1280px;">
+        <table class="mytable" style="position: absolute; top: 518px; left: 1263px;">
             <tr>
                 <td><span id="zc_nxjc_qtx_efc_cementmill02>cementGrind_ElectricityConsumption>Class" class="mchart"></span></td>
             </tr>
