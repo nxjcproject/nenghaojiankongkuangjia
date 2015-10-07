@@ -98,7 +98,16 @@ var equipmentmentNames = {
     flyAshLibraryFeeding: "粉煤灰库喂料称",
     clinkerInTheBelt: "熟料内返皮带",
     limestoneFeeder: "石灰石给料",
-    limestoneCrusher:"石灰石破碎"
+    limestoneCrusher: "石灰石破碎",
+    rawMaterialDustCollecting: "入石灰石库收尘收尘器",
+    rawMaterialDustCollectingFan: "入石灰石库收尘风机",
+    sulfuricAcidCollecting: "配料库底收尘器",
+    sulfuricAcidCollectingFan: "配料库底收尘风机",
+    rawMaterialStorageBeltMachine: "入磨配料库底胶带输送机",
+    rawMaterialCollecting: "辅料库收尘收尘器",
+    rawMaterialCollectingFan: "辅料库收尘风机"
+    //新加
+
 }
 
 $(function () {
@@ -118,7 +127,7 @@ function bindEquipmentEvent() {
 
         //判断是否在从公式中获得的名字信息内
         if (equipmentId in g_nameArray) {//设备在公式用有
-            myContent = g_nameArray[equipmentId];
+            myContent = g_nameArray[equipmentId][1];
         }
         else {//在公式中没有
             equipmentId = $(this).attr('data-equipmentid');

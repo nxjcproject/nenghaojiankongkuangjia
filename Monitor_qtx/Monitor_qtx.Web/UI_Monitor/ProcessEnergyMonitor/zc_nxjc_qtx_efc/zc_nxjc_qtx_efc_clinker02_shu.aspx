@@ -158,7 +158,7 @@
                 <td><span id="zc_nxjc_qtx_efc_clinker02>coalHighTemperatureFan>Power" class="mchart"></span></td>
             </tr>
         </table>
-         <%--煤破碎--%>
+         <%--煤破碎
         <table class="mytable" style="position: absolute; top: 37px; left: 483px;">
             <tr>
                 <td><span id="zc_nxjc_qtx_efc_clinker02>coalCrusher>ElectricityConsumption" class="mchart"></span></td>
@@ -169,7 +169,7 @@
             <tr>
                 <td><span id="zc_nxjc_qtx_efc_clinker02>coalCrusher>Power" class="mchart"></span></td>
             </tr>
-        </table>
+        </table>--%>
           <%--煤堆料--%>
         <table class="mytable" style="position: absolute; top: 37px; left: 547px;">
             <tr>
@@ -666,7 +666,6 @@
      <!--煤磨通风机运行状态-->
     <div class="imageContainer equipmentInfo" data-equipmentid="coalMillFan" id="zc_nxjc_qtx_efc_clinker02>coalMillFan>RunningState" style="position:absolute; top: 90px; left: 1258px; height: 20px; width: 19px;"></div>
       <!--煤破碎运行状态-->
-    <div class="imageContainer equipmentInfo" data-equipmentid="coalCrusher" id="zc_nxjc_qtx_efc_clinker02>coalCrusher>RunningState" style="position:absolute; top: 9px; left: 688px; height: 20px; width: 19px;"></div>
      <!--煤堆料运行状态-->
    <div class="imageContainer equipmentInfo" data-equipmentid="coalPileReclaimer" id="zc_nxjc_qtx_efc>coalPileReclaimer>RunningState" style="position:absolute; top: 97px; left: 645px; height: 20px; width: 19px;"></div>
     <!--煤磨一号罗茨风机运行状态-->

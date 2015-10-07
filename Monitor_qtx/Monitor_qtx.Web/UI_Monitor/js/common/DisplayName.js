@@ -40,7 +40,15 @@ function myBindEvent() {
             }
         }
         var itemKey = t_array[0] + ">" + t_array[1];
-        var myContent = g_nameArray[itemKey];
+        //各产线页面的监控不需要显示产线名，只显示设备名称即可
+        if (t_array.length == 3 &&
+            (t_array[2] == 'ElectricityConsumption' || t_array[2] == 'Current' || t_array[2] == 'Power')
+            ) {
+            var myContent = g_nameArray[itemKey][1];
+        }
+        else {
+            var myContent = g_nameArray[itemKey]
+        }
         
         var parentsTable = $(this).parents(".mytable");
         if (typeof (myContent) == 'undefined') {

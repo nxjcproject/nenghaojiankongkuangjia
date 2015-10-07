@@ -1,6 +1,7 @@
 ﻿using Monitor_shell.Infrastructure.Configuration;
 using Monitor_shell.Service.Formula;
 using Monitor_shell.Service.MeterStatistics;
+using Monitor_shell.Web.UI_Monitor.TrendTool;
 using SqlServerDataAdapter;
 using System;
 using System.Collections.Generic;
@@ -16,6 +17,7 @@ namespace Monitor_shell.Web.UI_Monitor.ProcessEnergyMonitor.MonitorShell
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //TrendlineRenderer.GetData("zc_nxjc_byc_byf_clinker01%3EkilnSystem_ElectricityQuantity%3EDay", "2015-09-25 22:53:12", "2015-10-05 22:53:12", 5);
             //FormulaHelper formulaService = new FormulaHelper();
             //formulaService.Claculate("zc_nxjc_byc_byf_cementmill01", "P0102");
             //string nxjcConn = ConnectionStringFactory.NXJCConnectionString;

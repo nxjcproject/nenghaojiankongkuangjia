@@ -63,7 +63,7 @@
                 </tr>
             </table>
             <!--水泥胶带输送机-->
-            <table class="mytable" style="position: absolute; top: 349px; left: 203px;">
+            <table class="mytable" style="position: absolute; top: 164px; left: 20px;">
                 <tr>
                     <td><span id="zc_nxjc_qtx_efc_cementmill02>cementMilltape>ElectricityConsumption" class="mchart"></span></td>
                 </tr>

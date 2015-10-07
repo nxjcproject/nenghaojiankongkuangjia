@@ -1664,6 +1664,7 @@
     <Content Include="UI_Monitor\ProcessEnergyMonitor\zc_nxjc_qtx_efc\zc_nxjc_qtx_efc_clinker02_shu.aspx" />
     <Content Include="UI_Monitor\ProcessEnergyMonitor\zc_nxjc_qtx_efc\zc_nxjc_qtx_efc_clinker03_sheng.aspx" />
     <Content Include="UI_Monitor\ProcessEnergyMonitor\zc_nxjc_qtx_efc\zc_nxjc_qtx_efc_clinker03_shu.aspx" />
+    <Content Include="UI_Monitor\ProcessEnergyMonitor\zc_nxjc_qtx_tys\zc_nxjc_qtx_tys_aircompressor.aspx" />
     <Content Include="UI_Monitor\ProcessEnergyMonitor\zc_nxjc_qtx_tys\zc_nxjc_qtx_tys.aspx" />
     <Content Include="UI_Monitor\ProcessEnergyMonitor\zc_nxjc_qtx_tys\zc_nxjc_qtx_tys_cementmill04.aspx" />
     <Content Include="UI_Monitor\ProcessEnergyMonitor\zc_nxjc_qtx_tys\zc_nxjc_qtx_tys_cementmill05.aspx" />
@@ -1671,7 +1672,9 @@
     <Content Include="UI_Monitor\ProcessEnergyMonitor\zc_nxjc_qtx_tys\zc_nxjc_qtx_tys_clinker04_shu.aspx" />
     <Content Include="UI_Monitor\ProcessEnergyMonitor\zc_nxjc_qtx_tys\zc_nxjc_qtx_tys_clinker05_sheng.aspx" />
     <Content Include="UI_Monitor\ProcessEnergyMonitor\zc_nxjc_qtx_tys\zc_nxjc_qtx_tys_clinker05_shu.aspx" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -1737,6 +1740,13 @@
     </Compile>
     <Compile Include="UI_Monitor\ProcessEnergyMonitor\zc_nxjc_qtx_efc\zc_nxjc_qtx_efc_clinker03_shu.aspx.designer.cs">
       <DependentUpon>zc_nxjc_qtx_efc_clinker03_shu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Monitor\ProcessEnergyMonitor\zc_nxjc_qtx_tys\zc_nxjc_qtx_tys_aircompressor.aspx.cs">
+      <DependentUpon>zc_nxjc_qtx_tys_aircompressor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI_Monitor\ProcessEnergyMonitor\zc_nxjc_qtx_tys\zc_nxjc_qtx_tys_aircompressor.aspx.designer.cs">
+      <DependentUpon>zc_nxjc_qtx_tys_aircompressor.aspx</DependentUpon>
     </Compile>
     <Compile Include="UI_Monitor\ProcessEnergyMonitor\zc_nxjc_qtx_tys\zc_nxjc_qtx_tys.aspx.cs">
       <DependentUpon>zc_nxjc_qtx_tys.aspx</DependentUpon>
