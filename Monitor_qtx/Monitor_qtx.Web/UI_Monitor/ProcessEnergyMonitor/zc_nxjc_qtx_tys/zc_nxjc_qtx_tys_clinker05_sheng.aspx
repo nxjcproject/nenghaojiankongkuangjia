@@ -28,7 +28,7 @@
     <script src="/UI_Monitor/js/common/AmmeterStatistic.js"></script>
     <script src="/UI_Monitor/js/common/EquipmentInfo.js"></script>
     <script src="/UI_Monitor/js/common/DisplayName.js"></script>
-    <script src="/UI_Monitor/js/common/myDrag.js"></script>
+    <script src="/lib/ealib/extend/easyUI.WindowsOverrange.js"></script>
     <script>
         publicData.organizationId = "zc_nxjc_qtx_tys_clinker05";
         publicData.sceneName = "5#熟料线";

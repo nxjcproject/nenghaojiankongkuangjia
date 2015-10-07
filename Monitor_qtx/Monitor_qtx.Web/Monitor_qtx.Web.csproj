@@ -118,6 +118,7 @@
     <Content Include="lib\ealib\changelog.txt" />
     <Content Include="lib\ealib\easyloader.js" />
     <Content Include="lib\ealib\easyui-lang-zh_CN.js" />
+    <Content Include="lib\ealib\extend\easyUI.WindowsOverrange.js" />
     <Content Include="lib\ealib\extend\jquery.jqprint.js" />
     <Content Include="lib\ealib\extend\jquery.PrintArea.js" />
     <Content Include="lib\ealib\extend\layout.js" />
@@ -1645,11 +1646,13 @@
     <Content Include="UI_Monitor\js\common\AmmeterStatistic.js" />
     <Content Include="UI_Monitor\js\common\blink.js" />
     <Content Include="UI_Monitor\js\common\chartjs.js" />
+    <Content Include="UI_Monitor\js\common\ComprehensiveStatistic.js" />
     <Content Include="UI_Monitor\js\common\DisplayName.js" />
     <Content Include="UI_Monitor\js\common\EquipmentInfo.js" />
     <Content Include="UI_Monitor\js\common\monitorjs.js" />
     <Content Include="UI_Monitor\js\common\MonitorShell.js" />
     <Content Include="UI_Monitor\js\common\multiTagChart.js" />
+    <Content Include="UI_Monitor\js\common\myDrag.js" />
     <Content Include="UI_Monitor\js\common\RunningState.js" />
     <Content Include="UI_Monitor\js\common\SubMonitorAdapter.js" />
     <Content Include="UI_Monitor\js\common\trendlineAnalysis_monitorView.js" />

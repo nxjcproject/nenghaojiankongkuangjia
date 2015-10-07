@@ -4,7 +4,7 @@
     $.parser.parse('#htmlContainer');
     initComprehensiveDialog();
     //dialog拖动
-    drag("ComprehensiveDialog");
+    //drag("ComprehensiveDialog");
 });
 function ShowComprehensiveStatistics(id) {
     var idArray = id.split('>');

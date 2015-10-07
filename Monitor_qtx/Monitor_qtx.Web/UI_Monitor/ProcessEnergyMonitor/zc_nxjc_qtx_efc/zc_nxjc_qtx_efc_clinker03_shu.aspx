@@ -28,7 +28,7 @@
     <script src="/UI_Monitor/js/common/AmmeterStatistic.js"></script>
     <script src="/UI_Monitor/js/common/EquipmentInfo.js"></script>
     <script src="/UI_Monitor/js/common/DisplayName.js"></script>
-    <script src="/UI_Monitor/js/common/myDrag.js"></script>
+    <script src="/lib/ealib/extend/easyUI.WindowsOverrange.js"></script>
     <script>
         publicData.organizationId = "zc_nxjc_qtx_efc_clinker03";
         publicData.sceneName = "3#熟料线";
@@ -472,7 +472,7 @@
                 <td><span id="zc_nxjc_qtx_efc>bottomClinkerHoist>Power" class="mchart"></span></td>
             </tr>
         </table>
-        <table class="mytable" style="position: absolute; top: 440px; left: 859px;" class="mchart">
+        <table class="mytable" style="position: absolute; top: 440px; left: 859px;">
             <tr>
                 <td><span id="zc_nxjc_qtx_efc_clinker03>clinkerCrusher>ElectricityConsumption" class="mchart"></span></td>
             </tr>

@@ -122,6 +122,7 @@
     <Content Include="lib\ealib\changelog.txt" />
     <Content Include="lib\ealib\easyloader.js" />
     <Content Include="lib\ealib\easyui-lang-zh_CN.js" />
+    <Content Include="lib\ealib\extend\easyUI.WindowsOverrange.js" />
     <Content Include="lib\ealib\extend\jquery.jqprint.js" />
     <Content Include="lib\ealib\extend\jquery.PrintArea.js" />
     <Content Include="lib\ealib\extend\layout.js" />

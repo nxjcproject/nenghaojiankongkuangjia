@@ -5,7 +5,7 @@ $(function () {
     InitializeGrid("");
     $.parser.parse('#htmlContainer');
     initDialog();
-    drag('ammeterDialog');
+    //drag('ammeterDialog');
 });
 function ShowAmmeterStatistics(id) {
     var idArray = id.split('>');
