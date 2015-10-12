@@ -43,7 +43,7 @@
     <link rel="stylesheet" type="text/css" href="/UI_Monitor/css/common/trendlineRenderer.css" />
 	<!-- trendlineRenderer 样式结束 -->
 
-	<script >
+	<script>
 	    var DATA_POINT_PER_SCREEN = 5;
 
 	    var variableId = '';

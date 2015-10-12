@@ -30,7 +30,6 @@ namespace Monitor_shell.Web.UI_Monitor.TrendTool
         private static string GetTrendDataId(string myId)
         {
             string id = myId;
-            id=id.Replace("%3E", ">");
             string[] myArray = id.Split('>');
             /*
             //标准电量ID为：OrganizationID>VariableId>ElectricityQuantity

@@ -1635,6 +1635,7 @@
     <Content Include="UI_Monitor\images\page\zc_nxjc_qtx_efc_clinker03_sheng.png" />
     <Content Include="UI_Monitor\images\page\zc_nxjc_qtx_efc_clinker03_shu.png" />
     <Content Include="UI_Monitor\images\page\zc_nxjc_qtx_tys.png" />
+    <Content Include="UI_Monitor\images\page\zc_nxjc_qtx_tys_aircompressor.png" />
     <Content Include="UI_Monitor\images\page\zc_nxjc_qtx_tys_cementmill04.png" />
     <Content Include="UI_Monitor\images\page\zc_nxjc_qtx_tys_cementmill05.png" />
     <Content Include="UI_Monitor\images\page\zc_nxjc_qtx_tys_clinker04_sheng.png" />

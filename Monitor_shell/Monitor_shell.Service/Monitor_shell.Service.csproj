@@ -31,8 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AutoSetParameters">
-      <HintPath>..\..\Lib\AutoSetParameters.dll</HintPath>
+    <Reference Include="AutoSetParameters, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\组件\StandardCalculation\AutoSetParameters\bin\Debug\AutoSetParameters.dll</HintPath>
     </Reference>
     <Reference Include="EnergyConsumption">
       <HintPath>..\..\Lib\EnergyConsumption.dll</HintPath>
@@ -42,7 +43,7 @@
     </Reference>
     <Reference Include="Standard_GB16780-2012, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Lib\Standard_GB16780-2012.dll</HintPath>
+      <HintPath>..\..\..\组件\StandardCalculation\Standard_GB16780-2012\bin\Release\Dotfuscated\Standard_GB16780-2012.dll</HintPath>
     </Reference>
     <Reference Include="StatisticalReport.Infrastructure">
       <HintPath>..\..\Lib\StatisticalReport.Infrastructure.dll</HintPath>
