@@ -105,7 +105,17 @@ var equipmentmentNames = {
     sulfuricAcidCollectingFan: "配料库底收尘风机",
     rawMaterialStorageBeltMachine: "入磨配料库底胶带输送机",
     rawMaterialCollecting: "辅料库收尘收尘器",
-    rawMaterialCollectingFan: "辅料库收尘风机"
+    rawMaterialCollectingFan: "辅料库收尘风机",
+	desulfurizationGypsumFeeding: "脱硫石膏库喂料称",
+    wasteRockFeeding: "废石库喂料称",
+    backupFeeding: "备用库喂料称",
+	gypsumLibraryFeeding: "石膏库喂料称",
+    slaglibraryFeeding: "矿渣库喂料称",
+    flyCinderLibraryFeeding: "粉煤渣库喂料称",
+    alagLibraryFeeding: "炉渣库喂料称",
+    flyAshLibraryFeeding2: "粉煤灰II运行喂料称",
+    wetFlyAsh: "湿粉煤灰喂料称",
+    fluorineGypsum: "氟石膏喂料称"
 }
 
 $(function () {

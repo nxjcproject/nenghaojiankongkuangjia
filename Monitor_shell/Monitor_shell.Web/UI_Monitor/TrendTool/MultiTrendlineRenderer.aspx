@@ -53,7 +53,7 @@
         $(document).ready(function () {
             //初始化Datagrid
             initDataGrid('first');
-            variableId = window.location.hash;
+            variableId = decodeURI(window.location.hash);//decodeURI() 函数可对 encodeURI() 函数编码过的 URI 进行解码。
             if (variableId != "" && variableId != undefined) {
                 variableId = variableId.substr(1, variableId.length - 1);
             }

@@ -43,13 +43,13 @@
     <link rel="stylesheet" type="text/css" href="/UI_Monitor/css/common/trendlineRenderer.css" />
 	<!-- trendlineRenderer 样式结束 -->
 
-	<script>
+	<script charset="utf-8">
 	    var DATA_POINT_PER_SCREEN = 5;
 
 	    var variableId = '';
 
 	    $(document).ready(function () {
-	        variableId = window.location.hash;
+	        variableId = decodeURI(window.location.hash);//decodeURI() 函数可对 encodeURI() 函数编码过的 URI 进行解码。
 	        if (variableId != "" && variableId != undefined) {
 	            variableId = variableId.substr(1, variableId.length - 1);
 	        }

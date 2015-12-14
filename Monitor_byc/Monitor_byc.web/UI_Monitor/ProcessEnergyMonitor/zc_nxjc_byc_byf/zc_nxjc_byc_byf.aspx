@@ -19,16 +19,16 @@
     <script type="text/javascript" src="/lib/ealib/jquery.easyui.min.js" charset="utf-8"></script>
     <script type="text/javascript" src="/lib/ealib/easyui-lang-zh_CN.js" charset="utf-8"></script>
 
-    <script src="/UI_Monitor/js/common/monitorjs.js"></script>
-    <script src="/UI_Monitor/js/common/chartjs.js"></script>
-    <script src="/UI_Monitor/js/common/SubMonitorAdapter.js"></script>
-    <script src="/UI_Monitor/js/common/alarm.js"></script>
-    <script src="/UI_Monitor/js/common/multiTagChart.js"></script>
-    <script src="/UI_Monitor/js/common/RunningState.js"></script>
-    <script src="/UI_Monitor/js/common/AmmeterStatistic.js"></script>
-    <script src="/UI_Monitor/js/common/ComprehensiveStatistic.js"></script>
-    <script src="/UI_Monitor/js/common/DisplayName.js"></script>
-    <script src="/UI_Monitor/js/common/myDrag.js"></script>
+    <script src="/UI_Monitor/js/common/monitorjs.js" charset="utf-8"></script>
+    <script src="/UI_Monitor/js/common/chartjs.js" charset="utf-8"></script>
+    <script src="/UI_Monitor/js/common/SubMonitorAdapter.js" charset="utf-8"></script>
+    <script src="/UI_Monitor/js/common/alarm.js" charset="utf-8"></script>
+    <script src="/UI_Monitor/js/common/multiTagChart.js" charset="utf-8"></script>
+    <script src="/UI_Monitor/js/common/RunningState.js" charset="utf-8"></script>
+    <script src="/UI_Monitor/js/common/AmmeterStatistic.js" charset="utf-8"></script>
+    <script src="/UI_Monitor/js/common/ComprehensiveStatistic.js" charset="utf-8"></script>
+    <script src="/UI_Monitor/js/common/DisplayName.js" charset="utf-8"></script>
+    <script src="/UI_Monitor/js/common/myDrag.js" charset="utf-8"></script>
     <script>
         publicData.organizationId = "zc_nxjc_byc_byf";
         publicData.sceneName = "";
