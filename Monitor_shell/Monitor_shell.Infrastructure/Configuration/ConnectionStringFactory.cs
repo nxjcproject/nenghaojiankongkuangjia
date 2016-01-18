@@ -18,6 +18,7 @@ namespace Monitor_shell.Infrastructure.Configuration
         //private static string _connString = "Data Source=Lenovo-PC;Initial Catalog=Db_01_YFC;User Id=sa;Password=jsh123+";
         //public static string NXJCConnectionString { get { return _connString; } }
 
+        public static string ConnString { get { return ConfigurationManager.ConnectionStrings["Conn"].ToString(); } }
         public static string NXJCConnectionString { get { return ConfigurationManager.ConnectionStrings["ConnNXJC"].ToString(); } }
         public static string zc_nxjc_qtx_efc_cementmill01 { get { return ConfigurationManager.ConnectionStrings["zc_nxjc_qtx_efc_cementmill01"].ToString(); } }
         public static string zc_nxjc_qtx_efc_clinker02 { get { return ConfigurationManager.ConnectionStrings["zc_nxjc_qtx_efc_clinker02"].ToString(); } }

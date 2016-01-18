@@ -29,15 +29,21 @@
     <script src="/UI_Monitor/js/common/EquipmentInfo.js"></script>
     <script src="/UI_Monitor/js/common/DisplayName.js"></script>
     <script src="/UI_Monitor/js/common/myDrag.js"></script>
+    <script src="../../DCSMonitor/js/common/OptionHelper.js"></script>
+    <script src="../../js/common/DCSMonitorShell.js"></script>
+    
     <script>
-        publicData.organizationId = "zc_nxjc_qtx_efc_cementmill02";
+        publicData.organizationId = "zc_nxjc_byc_byf_clinker01";
         publicData.sceneName = "2#水泥磨";
     </script>
     <title></title>
 </head>
 <body id="SubMonitorBody" style="margin: 0px; padding: 0px; overflow: auto;">
     <div id="SubMonitorLayout" style="position: relative; background-image: url('../../images/page/zc_nxjc_qtx_efc_cementmill02.png'); width: 1350px; height: 740px; overflow: hidden;">
-        <div id="Div1" style="position: relative; background-image: url('../../images/page/zc_nxjc_qtx_efc_cementmill02.png'); width: 1350px; height: 740px; overflow: hidden;">
+            <span id="zc_nxjc_byc_byf>F_1N10MRD>DCS" data-option="DataSources = 'DCS',ElementType ='AnlogSignal',Alarm='HH,H,LL,L',Range='Max,Min'" style="width:40px;display:block"></span>
+        <div class="BarGraph" id="zc_nxjc_byc_byf>F_1N10MRD>BarGraph"  style="border-style: solid; border-color: inherit; border-width: 1px; width:10px;height:75px; position:absolute; top: 146px; left: 756px;">
+            <div style="width:10px;margin-bottom:0px;padding-bottom:0px"></div>
+        </div>
             <!--石膏破碎电机 -->
             <table class="mytable" style="position: absolute; top: 13px; left: 245px;">
                 <tr>
@@ -200,6 +206,9 @@
             <div class="imageContainer equipmentInfo" data-equipmentid="gypsumHoist" id="zc_nxjc_qtx_efc_cementmill02>gypsumHoist>RunningState" style="position: absolute; top: 78px; left: 316px; height: 20px; width: 19px;"></div>
             <!--水泥胶带-->
             <div class="imageContainer equipmentInfo" data-equipmentid="cementMilltape" id="zc_nxjc_qtx_efc_cementmill02>cementMilltape>RunningState" style="position: absolute; top: 348px; left: 357px; height: 20px; width: 19px;"></div>
+            
+        <div class="BoolSignal" id="F_1M13MRN" style="position: absolute; top: 40px; left: 40px; height: 20px; width: 19px;" data-option="DataSources = 'DCS',ElementType ='BoolSignal',RelatedTags='F_1M13MRN,F_1N10MRD  ,F_1N11MRD,F_1N12MRD,F_1N13ALCRD,F_1N14MRD,F_1N15ALCRD'"></div>
+        <div class="BoolSignal" id="1M10MRN" style="position: absolute; top: 100px; left: 100px; height: 20px; width: 19px;" data-option="DataSources = 'DCS',ElementType ='BoolSignal',RelatedTags='1M10MRN,1M10MRD,1M12MRD,1M12MRN,1M13MRD,1M15EHRD,1M15EHRN'"></div>
             <div id="htmlContainer"></div>
         </div>
 </body>

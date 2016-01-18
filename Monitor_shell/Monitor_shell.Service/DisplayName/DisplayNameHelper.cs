@@ -14,7 +14,12 @@ namespace Monitor_shell.Service.DisplayName
         {
             Dictionary<string, string[]> resultDictionary = new Dictionary<string, string[]>();
             //获取前台ID
+            if (myItemStrings.Trim() == "")
+            {
+                return new Dictionary<string, string[]>();
+            }
             string[] itemList = myItemStrings.Split(',');
+            
             ISqlServerDataFactory dataFactory = new SqlServerDataFactory(ConnectionStringFactory.NXJCConnectionString);
 
             List<string> resultList = new List<string>();

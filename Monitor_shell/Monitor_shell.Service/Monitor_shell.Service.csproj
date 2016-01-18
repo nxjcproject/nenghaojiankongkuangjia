@@ -72,6 +72,11 @@
     <Compile Include="ProcessEnergyMonitor\DataBaseHelper.cs" />
     <Compile Include="ProcessEnergyMonitor\DataItem.cs" />
     <Compile Include="ProcessEnergyMonitor\DataSetInformation.cs" />
+    <Compile Include="ProcessEnergyMonitor\DCSMonitorShell\RunningStatus.cs" />
+    <Compile Include="ProcessEnergyMonitor\DCSMonitorShell\SyetemColor.cs" />
+    <Compile Include="ProcessEnergyMonitor\DCSMonitorShell\DCSMonitorHelper.cs" />
+    <Compile Include="ProcessEnergyMonitor\DCSMonitorShell\GaugesInfo.cs" />
+    <Compile Include="ProcessEnergyMonitor\DCSMonitorShell\ViewInfoValue.cs" />
     <Compile Include="ProcessEnergyMonitor\EnergyConsumptionMonitor.cs" />
     <Compile Include="ProcessEnergyMonitor\EnergyContrast\EnergyContrastHelper.cs" />
     <Compile Include="ProcessEnergyMonitor\EnergyContrast\FieldInformation.cs" />
@@ -87,6 +92,7 @@
     <Compile Include="ProcessEnergyMonitor\MonitorShell\ParametersHelper.cs" />
     <Compile Include="ProcessEnergyMonitor\MonitorShell\RealtimeCoalConsumptionProvider.cs" />
     <Compile Include="ProcessEnergyMonitor\MonitorShell\RealtimeCurrentProvider.cs" />
+    <Compile Include="ProcessEnergyMonitor\MonitorShell\RealtimeDCSProvider.cs" />
     <Compile Include="ProcessEnergyMonitor\MonitorShell\RealtimeElectricityConsumptionProvider.cs" />
     <Compile Include="ProcessEnergyMonitor\MonitorShell\RealtimeElectricityQuantityProvider.cs" />
     <Compile Include="ProcessEnergyMonitor\MonitorShell\RealtimePowerProvider.cs" />

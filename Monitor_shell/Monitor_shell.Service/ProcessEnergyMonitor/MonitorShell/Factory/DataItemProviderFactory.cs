@@ -75,6 +75,10 @@ namespace Monitor_shell.Service.ProcessEnergyMonitor.MonitorShell
             {
                 result = new ComprehensiveConsumptionProvider(connString);
             }
+            else if (type == DataItemProviderType.DCS)
+            {
+                result = new RealtimeDCSProvider("DCS");
+            }
             else
             {
                 result = new NullProvider();

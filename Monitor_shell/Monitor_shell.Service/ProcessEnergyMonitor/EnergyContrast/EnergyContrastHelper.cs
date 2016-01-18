@@ -58,11 +58,49 @@ namespace Monitor_shell.Service.ProcessEnergyMonitor.EnergyContrast
         /// 获得FeildInformation
         /// </summary>
         /// <param name="viewName"></param>
-        /// <returns></returns>
+        /// <returns>键为表名，值为字段列表</returns>
         private IDictionary<string, List<FieldInformation>> GetFeildInformation(string organizationId, IList<string> variableNames)
         {
             Dictionary<string, List<FieldInformation>> fieldInformations = new Dictionary<string, List<FieldInformation>>();
-            if (variableNames.Count > 0)
+            if (variableNames.Count < 0)
+            {
+                return fieldInformations;
+            }
+            //DCS的处理方法
+            if ("DCS" == _type)
+            {
+                StringBuilder queryString = new StringBuilder();
+                List<SqlParameter> parameters = new List<SqlParameter>();
+                queryString.Append("select * from View_DCSContrast where ");
+                //queryString.Append("where OrganizationID=@organizationId and type=@type and Enabled=@enabled and (");
+                //parameters.Add(new SqlParameter("@enabled", 1));
+                //parameters.Add(new SqlParameter("@organizationId", organizationId));
+                //parameters.Add(new SqlParameter("@type", _type));
+                foreach (var item in variableNames)
+                {
+                    queryString.Append("FieldName=@" + item + " or ");
+                    parameters.Add(new SqlParameter("@" + item, item));
+                }
+                queryString.Remove(queryString.Length - 4, 4);
+                DataTable table = _dataFactory.Query(queryString.ToString(), parameters.ToArray());
+                foreach (DataRow row in table.Rows)
+                {
+                    FieldInformation fieldInfor = new FieldInformation();
+                    string key = row["DBName"].ToString().Trim() + ".dbo.Realtime_" + row["TableName"].ToString().Trim();
+                    fieldInfor.FeildName = row["FieldName"].ToString().Trim();
+                    fieldInfor.VariableName = row["FieldName"].ToString().Trim();
+                    if (fieldInformations.Keys.Contains(key))
+                    {
+                        fieldInformations[key].Add(fieldInfor);
+                    }
+                    else
+                    {
+                        fieldInformations.Add(key, new List<FieldInformation>());
+                        fieldInformations[key].Add(fieldInfor);
+                    }
+                }
+            }
+            else
             {
                 StringBuilder queryString = new StringBuilder();
                 List<SqlParameter> parameters = new List<SqlParameter>();
@@ -95,6 +133,7 @@ namespace Monitor_shell.Service.ProcessEnergyMonitor.EnergyContrast
                     }
                 }
             }
+
             return fieldInformations;
         }
 

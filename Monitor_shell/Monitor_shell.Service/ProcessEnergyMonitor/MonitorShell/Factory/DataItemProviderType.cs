@@ -95,9 +95,11 @@ namespace Monitor_shell.Service.ProcessEnergyMonitor.MonitorShell
         /// <summary>
         /// 综合电耗、煤耗
         /// </summary>
-        Comprehensive
-
-
+        Comprehensive,
+        /// <summary>
+        /// dcs标签
+        /// </summary>
+        DCS
 
         //ClassDayMonthElectricity,
         //RealtimePowerElectricityCoalDust,

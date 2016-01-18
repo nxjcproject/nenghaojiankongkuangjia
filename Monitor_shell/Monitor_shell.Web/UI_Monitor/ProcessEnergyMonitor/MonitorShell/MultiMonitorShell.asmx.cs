@@ -161,6 +161,24 @@ namespace Monitor_shell.Web.UI_Monitor.ProcessEnergyMonitor.MonitorShell
                             idDictionary[key].Add(itemArry[1]);
                         }
                     }
+                    //如果为DCS标签
+                    else if (itemArry[2] == "DCS")
+                    {
+                        string providerType = "DCS";
+                        string key = itemArry[0] + "," + providerType;
+                        if (!idDictionary.Keys.Contains(key))
+                        {
+                            idDictionary.Add(key, new List<string>());
+                            idDictionary[key].Add(itemArry[1]);
+                        }
+                        else
+                        {
+                            if (!idDictionary[key].Contains(itemArry[1]))//去除重复的标签
+                            {
+                                idDictionary[key].Add(itemArry[1]);
+                            }
+                        }
+                    }
                     else
                     {
                         string providerType = "Realtime" + itemArry[2];

@@ -1,6 +1,7 @@
 ﻿using Monitor_shell.Infrastructure.Configuration;
 using Monitor_shell.Service.Formula;
 using Monitor_shell.Service.MeterStatistics;
+using Monitor_shell.Service.ProcessEnergyMonitor.DCSMonitorShell;
 using Monitor_shell.Web.UI_Monitor.TrendTool;
 using SqlServerDataAdapter;
 using System;
@@ -46,6 +47,9 @@ namespace Monitor_shell.Web.UI_Monitor.ProcessEnergyMonitor.MonitorShell
             //        //......
             //    }
             //}
+
+            //DCSMonitorHelper.GetViewPageInfosMethod("027fd8ff-0f99-4af7-b554-8eb9099019a1");
+            DCSMonitorHelper.GetRelatedTags("zc_nxjc_byc_byf", "F_1M13MRN,F_1N10MRD  ,F_1N11MRD,F_1N12MRD,F_1N13ALCRD,F_1N14MRD,F_1N15ALCRD;");
         } 
     }
 }
