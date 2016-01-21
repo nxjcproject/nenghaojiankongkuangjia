@@ -111,7 +111,9 @@
     <Compile Include="ProcessEnergyMonitor\SingletonForDataBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TrendTool\DataProviderFactory.cs" />
+    <Compile Include="TrendTool\DCSBoolSignalTagsDataProvider.cs" />
     <Compile Include="TrendTool\DCSDataProvider.cs" />
+    <Compile Include="TrendTool\DCSAnlogSignalTagsDataProvider.cs" />
     <Compile Include="TrendTool\HistoryFormulaValueDataProvider.cs" />
     <Compile Include="TrendTool\IDataProvider.cs" />
     <Compile Include="TrendTool\MultiTrendlineRendererService.cs" />

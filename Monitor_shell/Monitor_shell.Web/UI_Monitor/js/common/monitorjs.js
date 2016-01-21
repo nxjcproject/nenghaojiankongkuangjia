@@ -218,11 +218,23 @@ function displayDataItem(dataSets) {
     $.each(dataSets, function (i, item) {
         var value = Number(item.Value)
         var element = $(document.getElementById(item.ID));
-        //if (element.attr("tagName") == "span")
-        //element.html(value.toFixed(0));
-        element.html(value);
-        //else
+        //如果为汉字隐藏
+        if (element.attr("class") == "TextDisplay") {
+            //SearchValue(dataSets, FactoryId + ">" + element.attr("id").split('>')[1] + ">DCS")
+            if (1 == value) {
+                element.css("visibility", "hidden");
+            }
+            else {
+                element.css("visibility", "visible");
+            }
+        }
+        else {
+            //if (element.attr("tagName") == "span")
+            //element.html(value.toFixed(0));
+            element.html(value);
+            //else
             //element.val(value.toFixed(0));
+        }
     });
 }
 

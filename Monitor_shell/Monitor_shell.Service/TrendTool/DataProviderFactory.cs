@@ -20,6 +20,8 @@ namespace Monitor_shell.Service.TrendTool
             dataProviders.Add(new DCSDataProvider(connectionString));
             dataProviders.Add(new HistoryFormulaValueDataProvider(connectionString));
             dataProviders.Add(new MaterialDataProvider(connectionString));
+            dataProviders.Add(new DCSAnlogSignalTagsDataProvider(connectionString));
+            dataProviders.Add(new DCSBoolSignalTagsDataProvider(connectionString));
         }
 
         /// <summary>

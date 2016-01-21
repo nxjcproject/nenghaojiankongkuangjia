@@ -4,24 +4,19 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Monitor_shell.Service.TrendTool
 {
-    public class DCSDataProvider : IDataProvider
+    /// <summary>
+    /// DCS模拟量标签处理
+    /// </summary>
+    public class DCSAnlogSignalTagsDataProvider : IDataProvider
     {
-        // todo: 应在web.config中配置
-        //private static List<string> DCS_DATABASES = new List<string>();
-        //= new string[] {
-        //    "zc_nxjc_byc_byf_dcs01",
-        //    "zc_nxjc_byc_byf_dcs02"
-        //};
-
         /// <summary>
         /// 可以处理的变量类型
         /// </summary>
         private readonly string[] TYPES_CAN_HANDLE = new string[] { 
-            "Current",              // 电流
+            "AnlogSignal",              // 电流
         };
 
         // 连接字符串
@@ -44,8 +39,9 @@ namespace Monitor_shell.Service.TrendTool
             GROUP BY DATEADD(MI,(DATEDIFF(MI,CONVERT(varchar(10),DATEADD(SS,1,[vDate]),120),DATEADD(SS,1,[vDate]))/{1})*{1},CONVERT(varchar(10),[vDate],120))
             ORDER BY DATEADD(MI,(DATEDIFF(MI,CONVERT(varchar(10),DATEADD(SS,1,[vDate]),120),DATEADD(SS,1,[vDate]))/{1})*{1},CONVERT(varchar(10),[vDate],120))";
 
+
         // 构造函数
-        public DCSDataProvider(string connectionString)
+        public DCSAnlogSignalTagsDataProvider(string connectionString)
         {
             this.connectionString = connectionString;
         }
@@ -65,6 +61,7 @@ namespace Monitor_shell.Service.TrendTool
 
             return false;
         }
+
 
         /// <summary>
         /// 获取数据
@@ -103,6 +100,7 @@ namespace Monitor_shell.Service.TrendTool
             return Utility.ConvertData(dt);
         }
 
+
         /// <summary>
         /// 
         /// </summary>
@@ -113,11 +111,9 @@ namespace Monitor_shell.Service.TrendTool
             VariableParams vp = new VariableParams(variableId);
             string dataBase = "";
             string commandFormat = @"
-                    SELECT [DatabaseName],[TableName], [FieldName]
-                      FROM [{0}].[dbo].[MonitorContrast]
-                     WHERE [OrganizationID] = @organizationId AND
-                           [VariableName] = @variableName
-                            AND type='Current'";
+                    SELECT [DBName],[TableName], [FieldName]
+                      FROM [{0}].[dbo].[View_DCSContrast]
+                     WHERE TagName=@variableName";
 
 
 
@@ -139,7 +135,7 @@ namespace Monitor_shell.Service.TrendTool
                 }
                 command.CommandText = string.Format(commandFormat, dataBase);
 
-                command.Parameters.Add(new SqlParameter("organizationId", vp.OrganizationId));
+                //command.Parameters.Add(new SqlParameter("organizationId", vp.OrganizationId));
                 command.Parameters.Add(new SqlParameter("variableName", vp.VariableName));
 
                 using (SqlDataReader reader = command.ExecuteReader())
@@ -148,7 +144,7 @@ namespace Monitor_shell.Service.TrendTool
                     //    continue;
                     // [0]：数据库名  [1]：表格名  [2]：列名 
                     if (reader.Read() == true)
-                        return new string[] { reader["DatabaseName"].ToString().Trim(), "History_" + reader["TableName"].ToString().Trim(), reader["FieldName"].ToString().Trim() };
+                        return new string[] { reader["DBName"].ToString().Trim(), "History_" + reader["TableName"].ToString().Trim(), reader["FieldName"].ToString().Trim() };
                 }
             }
 

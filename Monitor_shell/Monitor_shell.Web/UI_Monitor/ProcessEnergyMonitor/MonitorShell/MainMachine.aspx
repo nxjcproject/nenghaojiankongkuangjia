@@ -44,6 +44,7 @@
         <div class="BarGraph" id="zc_nxjc_byc_byf>F_1N10MRD>BarGraph"  style="border-style: solid; border-color: inherit; border-width: 1px; width:10px;height:75px; position:absolute; top: 146px; left: 756px;">
             <div style="width:10px;margin-bottom:0px;padding-bottom:0px"></div>
         </div>
+        <div style="position: absolute; top: 97px; left: 43px;"><span id="zc_nxjc_byc_byf>F_1N18MRD>DCS" class="TextDisplay">跑偏</span></div>
             <!--石膏破碎电机 -->
             <table class="mytable" style="position: absolute; top: 13px; left: 245px;">
                 <tr>
