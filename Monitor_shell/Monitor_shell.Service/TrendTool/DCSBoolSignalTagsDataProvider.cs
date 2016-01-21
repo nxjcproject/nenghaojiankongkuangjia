@@ -75,10 +75,25 @@ namespace Monitor_shell.Service.TrendTool
         /// <returns></returns>
         public IDictionary<string, decimal> GetData(string variableId, DateTime startTime, DateTime stopTime, int timeSpanInMin)
         {
-            DataTable dt = new DataTable();
+            DataTable dt = new DataTable();                      
+
             SqlServerDataFactory dataFactory = new SqlServerDataFactory(ConnectionStringFactory.NXJCConnectionString);
             VariableParams vp = new VariableParams(variableId);
-
+            string[] tagsArray = vp.VariableName.Split(',');//相关标签没有的空中，格式：tag1,tag2,,tag4,tag5,tag6,tag7
+            //去掉标签的dcs前缀
+            for (int i = 0; i < tagsArray.Length;i++ )
+            {
+                if (tagsArray[i].Trim() == "")
+                {
+                    continue;
+                }
+                int index = tagsArray[i].IndexOf('_');
+                tagsArray[i] = tagsArray[i].Substring(index+1);
+            }
+            if (tagsArray.Length != 7)
+            {
+                throw new Exception("RelatedTags标签不规范！");
+            }
             string mySql = @"select {3}.vDate,{0} from {1} Where ({2}) and {3}.vDate>@startTime and {3}.vDate<@stopTime";
             StringBuilder sqlBuilder = new StringBuilder(mySql);
             StringBuilder fieldBuilder = new StringBuilder();
@@ -115,6 +130,45 @@ namespace Monitor_shell.Service.TrendTool
             innerBuilder.Remove(innerBuilder.Length - 4, 4);
             SqlParameter[] parameters = { new SqlParameter("startTime", startTime), new SqlParameter("stopTime", stopTime) };
             dt=dataFactory.Query(string.Format(mySql,fieldBuilder.ToString(),tableBuilder.ToString(),innerBuilder.ToString(),tableList[0]),parameters);
+            
+            DataColumn resultColumn = new DataColumn("Result", typeof(int));
+            dt.Columns.Add(resultColumn);
+
+            foreach (DataRow dr in dt.Rows)
+            {
+                if (tagsArray[5].Trim() != "" && Convert.ToBoolean(dr[tagsArray[5].Trim()]) == true)
+                {
+                    dr["Result"] = 5;
+                }
+                else if (tagsArray[1].Trim() != "" && Convert.ToBoolean(dr[tagsArray[1].Trim()]) == true)
+                {
+                    dr["Result"] = 1;
+                }
+                else if (tagsArray[2].Trim() != "" && Convert.ToBoolean(dr[tagsArray[2].Trim()]) == true)
+                {
+                    dr["Result"] = 2;
+                }
+                else if (tagsArray[3].Trim() != "" && Convert.ToBoolean(dr[tagsArray[3].Trim()]) == true)
+                {
+                    dr["Result"] = 3;
+                }
+                else if (tagsArray[4].Trim() != "" && Convert.ToBoolean(dr[tagsArray[4].Trim()]) == true)
+                {
+                    dr["Result"] = 4;
+                }
+                else if (tagsArray[0].Trim() != "" && Convert.ToBoolean(dr[tagsArray[0].Trim()]) == true)
+                {
+                    dr["Result"] = 0;
+                }
+                else if (tagsArray[6].Trim() != "" && Convert.ToBoolean(dr[tagsArray[6].Trim()]) == true)
+                {
+                    dr["Result"] = 6;
+                }
+                else
+                {
+                    dr["Result"] = 6;
+                }
+            }
             //using (SqlConnection connection = new SqlConnection(this.connectionString))
             //{
             //    SqlCommand command = connection.CreateCommand();
@@ -130,11 +184,11 @@ namespace Monitor_shell.Service.TrendTool
             //        adapter.Fill(dt);
             //    }
             //}
-            
-            
-            return Utility.ConvertData(dt);
-        }
+            DataTable resultTable = dt.DefaultView.ToTable(false, "vDate", "Result");
 
+            return Utility.ConvertData(resultTable);
+        }
+        
 
         /// <summary>
         /// 

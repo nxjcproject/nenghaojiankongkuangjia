@@ -52,7 +52,7 @@ namespace Monitor_shell.Web.UI_Monitor.ProcessEnergyMonitor.MonitorShell
             //DCSMonitorHelper.GetViewPageInfosMethod("027fd8ff-0f99-4af7-b554-8eb9099019a1");
             //DCSMonitorHelper.GetRelatedTags("zc_nxjc_byc_byf", "F_1M13MRN,F_1N10MRD  ,F_1N11MRD,F_1N12MRD,F_1N13ALCRD,F_1N14MRD,F_1N15ALCRD;");
             //DCSBoolSignalTagsDataProvider
-            TrendlineRenderer.GetData("zc_nxjc_byc_byf>dcs01_K19MRN,dcs01_K24AC_FF_M>BoolSignal", "2015-02-05 14:15:33.000", "2015-02-06 14:25:33.000", 5);
+            TrendlineRenderer.GetData("zc_nxjc_byc_byf>dcs01_K19MRN,dcs01_F_1N11MRD,dcs01_F_1N10MRD,dcs01_F_1N10MRN,,dcs01_F_1N16ALCRD,>BoolSignal", "2015-02-05 14:15:33.000", "2015-02-06 14:25:33.000", 5);
             //ISqlServerDataFactory dataFactory = new SqlServerDataFactory(ConnectionStringFactory.NXJCConnectionString);
             //string mysql = @"select * from [zc_nxjc_byc_byf_dcs01].[dbo].[Realtime_ProcessVariable01]";
             //DataTable table = dataFactory.Query(mysql);
