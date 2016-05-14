@@ -90,15 +90,15 @@ namespace Monitor_shell.Service.TrendTool
                 int index = tagsArray[i].IndexOf('_');
                 tagsArray[i] = tagsArray[i].Substring(index+1);
             }
-            if (tagsArray.Length != 7)
-            {
-                throw new Exception("RelatedTags标签不规范！");
-            }
-            string mySql = @"select {3}.vDate,{0} from {1} Where ({2}) and {3}.vDate>@startTime and {3}.vDate<@stopTime";
+            //if (tagsArray.Length != 7)
+            //{
+            //    throw new Exception("RelatedTags标签不规范！");
+            //}
+            string mySql = @"select {3}.vDate,{0} from {1} Where {2}  {3}.vDate>@startTime and {3}.vDate<@stopTime";
             StringBuilder sqlBuilder = new StringBuilder(mySql);
             StringBuilder fieldBuilder = new StringBuilder();
             StringBuilder tableBuilder = new StringBuilder();
-            StringBuilder innerBuilder = new StringBuilder();
+            StringBuilder innerBuilder = new StringBuilder("(");
 
             // 获取变量对应的表名与列名
             // [0]：数据库名  [1]：表格名  [2]：列名
@@ -106,13 +106,13 @@ namespace Monitor_shell.Service.TrendTool
             List<string> tableList = new List<string>();
             string template = "[{0}].[dbo].[{1}]";
             foreach (TagInfo tagItem in tableNameAndFieldName)
-            {
+            {                                                                                         
                 string temp = string.Format(template, tagItem.DBName, tagItem.TableName);
                 if (!tableList.Contains(temp))
                 {
                     tableList.Add(temp);
                 }
-                fieldBuilder.Append(temp + "." + tagItem.FieldName+",");
+                fieldBuilder.Append(temp + ".[" + tagItem.FieldName+"],");
             }
             fieldBuilder.Remove(fieldBuilder.Length-1,1);
             for (int i=0;i<tableList.Count;i++)
@@ -126,8 +126,13 @@ namespace Monitor_shell.Service.TrendTool
                     innerBuilder.Append(" or ");
                 }
             }
+            
             tableBuilder.Remove(tableBuilder.Length - 1, 1);
-            innerBuilder.Remove(innerBuilder.Length - 4, 4);
+            if (tableList.Count >1)
+            {
+                innerBuilder.Remove(innerBuilder.Length - 4, 4);
+            }
+            innerBuilder.Append(") and");
             SqlParameter[] parameters = { new SqlParameter("startTime", startTime), new SqlParameter("stopTime", stopTime) };
             dt=dataFactory.Query(string.Format(mySql,fieldBuilder.ToString(),tableBuilder.ToString(),innerBuilder.ToString(),tableList[0]),parameters);
             
@@ -136,38 +141,50 @@ namespace Monitor_shell.Service.TrendTool
 
             foreach (DataRow dr in dt.Rows)
             {
-                if (tagsArray[5].Trim() != "" && Convert.ToBoolean(dr[tagsArray[5].Trim()]) == true)
+                int num = tagsArray.Length;
+                int resultStatus = 0;
+                for (int i = 0; i < num; i++)
                 {
-                    dr["Result"] = 5;
+                    if (Convert.ToBoolean(dr[tagsArray[i].Trim()]))
+                    {
+                        resultStatus += (int)Math.Pow(2, num - 1 - i);
+                    }
                 }
-                else if (tagsArray[1].Trim() != "" && Convert.ToBoolean(dr[tagsArray[1].Trim()]) == true)
-                {
-                    dr["Result"] = 1;
-                }
-                else if (tagsArray[2].Trim() != "" && Convert.ToBoolean(dr[tagsArray[2].Trim()]) == true)
-                {
-                    dr["Result"] = 2;
-                }
-                else if (tagsArray[3].Trim() != "" && Convert.ToBoolean(dr[tagsArray[3].Trim()]) == true)
-                {
-                    dr["Result"] = 3;
-                }
-                else if (tagsArray[4].Trim() != "" && Convert.ToBoolean(dr[tagsArray[4].Trim()]) == true)
-                {
-                    dr["Result"] = 4;
-                }
-                else if (tagsArray[0].Trim() != "" && Convert.ToBoolean(dr[tagsArray[0].Trim()]) == true)
-                {
-                    dr["Result"] = 0;
-                }
-                else if (tagsArray[6].Trim() != "" && Convert.ToBoolean(dr[tagsArray[6].Trim()]) == true)
-                {
-                    dr["Result"] = 6;
-                }
-                else
-                {
-                    dr["Result"] = 6;
-                }
+                dr["Result"] = resultStatus;
+                #region
+                //if (tagsArray[5].Trim() != "" && Convert.ToBoolean(dr[tagsArray[5].Trim()]) == true)
+                //{
+                //    dr["Result"] = 5;
+                //}
+                //else if (tagsArray[1].Trim() != "" && Convert.ToBoolean(dr[tagsArray[1].Trim()]) == true)
+                //{
+                //    dr["Result"] = 1;
+                //}
+                //else if (tagsArray[2].Trim() != "" && Convert.ToBoolean(dr[tagsArray[2].Trim()]) == true)
+                //{
+                //    dr["Result"] = 2;
+                //}
+                //else if (tagsArray[3].Trim() != "" && Convert.ToBoolean(dr[tagsArray[3].Trim()]) == true)
+                //{
+                //    dr["Result"] = 3;
+                //}
+                //else if (tagsArray[4].Trim() != "" && Convert.ToBoolean(dr[tagsArray[4].Trim()]) == true)
+                //{
+                //    dr["Result"] = 4;
+                //}
+                //else if (tagsArray[0].Trim() != "" && Convert.ToBoolean(dr[tagsArray[0].Trim()]) == true)
+                //{
+                //    dr["Result"] = 0;
+                //}
+                //else if (tagsArray[6].Trim() != "" && Convert.ToBoolean(dr[tagsArray[6].Trim()]) == true)
+                //{
+                //    dr["Result"] = 6;
+                //}
+                //else
+                //{
+                //    dr["Result"] = 6;
+                //}
+                #endregion
             }
             //using (SqlConnection connection = new SqlConnection(this.connectionString))
             //{
@@ -202,7 +219,7 @@ namespace Monitor_shell.Service.TrendTool
             string[] tagArray = vp.VariableName.Split(',');
             string dataBase = "";
             string commandFormat = @"
-                    SELECT [DBName],[TableName], [FieldName]
+                    SELECT [DBName],[TableName], [FieldName],[DCSName]
                       FROM [{0}].[dbo].[View_DCSContrast]";
             StringBuilder sqlBuilder = new StringBuilder(commandFormat);
             sqlBuilder.Append(" where (");
@@ -271,6 +288,7 @@ namespace Monitor_shell.Service.TrendTool
                     infoObj.DBName = dr["DBName"].ToString().Trim();
                     infoObj.TableName ="History_"+ dr["TableName"].ToString().Trim();
                     infoObj.FieldName = dr["FieldName"].ToString().Trim();
+                    infoObj.DCSName = dr["DCSName"].ToString().Trim();
                     if (!infoList.Contains(infoObj))
                     {
                         infoList.Add(infoObj);
@@ -286,5 +304,6 @@ namespace Monitor_shell.Service.TrendTool
         public string DBName { get; set; }
         public string TableName { get; set; }
         public string FieldName { get; set; }
+        public string DCSName { get; set; }
     }
 }

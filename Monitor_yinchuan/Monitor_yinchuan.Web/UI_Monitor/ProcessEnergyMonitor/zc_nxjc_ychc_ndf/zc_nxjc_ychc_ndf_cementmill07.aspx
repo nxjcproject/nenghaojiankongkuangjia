@@ -18,7 +18,6 @@
 
     <script type="text/javascript" src="/lib/ealib/jquery.easyui.min.js" charset="utf-8"></script>
     <script type="text/javascript" src="/lib/ealib/easyui-lang-zh_CN.js" charset="utf-8"></script>
-
     <script src="/UI_Monitor/js/common/monitorjs.js"></script>
     <script src="/UI_Monitor/js/common/chartjs.js"></script>
     <script src="/UI_Monitor/js/common/SubMonitorAdapter.js"></script>
@@ -28,6 +27,7 @@
     <script src="/UI_Monitor/js/common/AmmeterStatistic.js"></script>
     <script src="/UI_Monitor/js/common/EquipmentInfo.js"></script>
     <script src="/UI_Monitor/js/common/DisplayName.js"></script>
+    <script src="/lib/ealib/extend/easyUI.WindowsOverrange.js"></script>
     <script>
         publicData.organizationId = "zc_nxjc_ychc_ndf_cementmill07";
         publicData.sceneName = "7#水泥磨";
@@ -49,7 +49,7 @@
             </tr>
         </table>  
          <!--6#磨小收尘风机-->
-        <table class="mytable" style="position: absolute; top: 193px; left: 227px;">
+        <table class="mytable" style="position: absolute; top: 179px; left: 224px;">
             <tr>
                 <td><span id="zc_nxjc_ychc_ndf_cementmill07>dustCollectingFan>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -63,13 +63,13 @@
 	<!--入库长皮带电机-->
         <table class="mytable" style="position: absolute; top: 348px; left: 46px;">
             <tr>
-                <td><span id="zc_nxjc_ychc_ndf_cementmill07>warehousingLongBeltMotor>ElectricityConsumption" class="mchart"></span></td>
+                <td><span id="zc_nxjc_ychc_ndf>warehousingLongBeltMotor>ElectricityConsumption" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_ychc_ndf_cementmill07>warehousingLongBeltMotor>Current" class="mchart"></span></td>
+                <td><span id="zc_nxjc_ychc_ndf>warehousingLongBeltMotor>Current" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_ychc_ndf_cementmill07>warehousingLongBeltMotor>Power" class="mchart"></span></td>
+                <td><span id="zc_nxjc_ychc_ndf>warehousingLongBeltMotor>Power" class="mchart"></span></td>
             </tr>
         </table>
          <!--6#入磨提升机-->
@@ -181,25 +181,25 @@
          <!--包机6#收尘风机-->
         <table class="mytable" style="position: absolute; top: 403px; left: 1245px;">
             <tr>
-                <td><span id="zc_nxjc_ychc_ndf_cementmill07>packDustCollectingFan1>ElectricityConsumption" class="mchart"></span></td>
+                <td><span id="zc_nxjc_ychc_ndf>packDustCollectingFan1>ElectricityConsumption" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_ychc_ndf_cementmill07>packDustCollectingFan1>Current" class="mchart"></span></td>
+                <td><span id="zc_nxjc_ychc_ndf>packDustCollectingFan1>Current" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_ychc_ndf_cementmill07>packDustCollectingFan1>Power" class="mchart"></span></td>
+                <td><span id="zc_nxjc_ychc_ndf>packDustCollectingFan1>Power" class="mchart"></span></td>
             </tr>
         </table>
          <!--包机空压机电机-->
-        <table class="mytable" style="position: absolute; top: 604px; left: 1158px;">
+        <table class="mytable" style="position: absolute; top: 594px; left: 1187px;">
             <tr>
-                <td><span id="zc_nxjc_ychc_ndf_cementmill07>packAirCompressorPowerSupply>ElectricityConsumption" class="mchart"></span></td>
+                <td><span id="zc_nxjc_ychc_ndf>packAirCompressorPowerSupply>ElectricityConsumption" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_ychc_ndf_cementmill07>packAirCompressorPowerSupply>Current" class="mchart"></span></td>
+                <td><span id="zc_nxjc_ychc_ndf>packAirCompressorPowerSupply>Current" class="mchart"></span></td>
             </tr>
             <tr>
-                <td><span id="zc_nxjc_ychc_ndf_cementmill07>packAirCompressorPowerSupply>Power" class="mchart"></span></td>
+                <td><span id="zc_nxjc_ychc_ndf>packAirCompressorPowerSupply>Power" class="mchart"></span></td>
             </tr>
         </table>
          <!--水泥制备-->

@@ -50,6 +50,8 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -76,6 +78,8 @@
     <Compile Include="ProcessEnergyMonitor\DCSMonitorShell\SyetemColor.cs" />
     <Compile Include="ProcessEnergyMonitor\DCSMonitorShell\DCSMonitorHelper.cs" />
     <Compile Include="ProcessEnergyMonitor\DCSMonitorShell\GaugesInfo.cs" />
+    <Compile Include="ProcessEnergyMonitor\DCSMonitorShell\TagInfo.cs" />
+    <Compile Include="ProcessEnergyMonitor\DCSMonitorShell\TagsHelper.cs" />
     <Compile Include="ProcessEnergyMonitor\DCSMonitorShell\ViewInfoValue.cs" />
     <Compile Include="ProcessEnergyMonitor\EnergyConsumptionMonitor.cs" />
     <Compile Include="ProcessEnergyMonitor\EnergyContrast\EnergyContrastHelper.cs" />
@@ -87,6 +91,7 @@
     <Compile Include="ProcessEnergyMonitor\MonitorShell\Factory\DataItemProviderFactory.cs" />
     <Compile Include="ProcessEnergyMonitor\MonitorShell\Factory\DataItemProviderType.cs" />
     <Compile Include="ProcessEnergyMonitor\MonitorShell\Factory\IDataItemProvider.cs" />
+    <Compile Include="ProcessEnergyMonitor\MonitorShell\Factory\IPlaybackDataItemProvider.cs" />
     <Compile Include="ProcessEnergyMonitor\MonitorShell\MaterialConsumptionProvider.cs" />
     <Compile Include="ProcessEnergyMonitor\MonitorShell\NullProvider.cs" />
     <Compile Include="ProcessEnergyMonitor\MonitorShell\ParametersHelper.cs" />
@@ -110,6 +115,13 @@
     <Compile Include="ProcessEnergyMonitor\SceneMonitor.cs" />
     <Compile Include="ProcessEnergyMonitor\SingletonForDataBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\ITagValueRepository.cs" />
+    <Compile Include="Repository\RealtimeTagValueService.cs" />
+    <Compile Include="Service References\ServiceReference_RealTimeTagValue\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="TrendTool\DataProviderFactory.cs" />
     <Compile Include="TrendTool\DCSBoolSignalTagsDataProvider.cs" />
     <Compile Include="TrendTool\DCSDataProvider.cs" />
@@ -128,7 +140,40 @@
       <Name>Monitor_shell.Infrastructure</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Service References\ServiceReference_RealTimeTagValue\Monitor_shell.Service.ServiceReference_RealTimeTagValue.AnalogDataGroup_Serialization.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_RealTimeTagValue\Monitor_shell.Service.ServiceReference_RealTimeTagValue.DigitalDataGroup_Serialization.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_RealTimeTagValue\Monitor_shell.Service.ServiceReference_RealTimeTagValue.ObjectDataGroup_Serialization.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReference_RealTimeTagValue\RealTimeData.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ServiceReference_RealTimeTagValue\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceReference_RealTimeTagValue\RealTimeData.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceReference_RealTimeTagValue\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceReference_RealTimeTagValue\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceReference_RealTimeTagValue\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

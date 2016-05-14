@@ -1620,8 +1620,64 @@
     <Content Include="UI_Monitor\css\common\mymonitor.css" />
     <Content Include="UI_Monitor\css\common\trendlineAnalysis.css" />
     <Content Include="UI_Monitor\css\common\trendlineRenderer.css" />
+    <Content Include="UI_Monitor\DCSMonitor\js\common\OptionHelper.js" />
+    <Content Include="UI_Monitor\DCSMonitor\js\common\Playback.js" />
+    <Content Include="UI_Monitor\DCSMonitor\zc_nxjc_ychc_yfcf\zc_nxjc_ychc_yfcf_clinker01_meifenzhibei.aspx" />
+    <Content Include="UI_Monitor\DCSMonitor\zc_nxjc_ychc_yfcf\zc_nxjc_ychc_yfcf_clinker01_meimoyouzhan.aspx" />
+    <Content Include="UI_Monitor\DCSMonitor\zc_nxjc_ychc_yfcf\zc_nxjc_ychc_yfcf_clinker01_shaochengyaotouyaowei.aspx" />
+    <Content Include="UI_Monitor\DCSMonitor\zc_nxjc_ychc_yfcf\zc_nxjc_ychc_yfcf_clinker01_shengliaojunhuaku.aspx" />
+    <Content Include="UI_Monitor\DCSMonitor\zc_nxjc_ychc_yfcf\zc_nxjc_ychc_yfcf_clinker01_shengliaoxieliao.aspx" />
+    <Content Include="UI_Monitor\DCSMonitor\zc_nxjc_ychc_yfcf\zc_nxjc_ychc_yfcf_clinker01_shengliaoxieliaojipeiliao.aspx" />
+    <Content Include="UI_Monitor\DCSMonitor\zc_nxjc_ychc_yfcf\zc_nxjc_ychc_yfcf_clinker01_shuliaocunchu.aspx" />
+    <Content Include="UI_Monitor\DCSMonitor\zc_nxjc_ychc_yfcf\zc_nxjc_ychc_yfcf_clinker01_yaotoubilengji.aspx" />
+    <Content Include="UI_Monitor\DCSMonitor\zc_nxjc_ychc_yfcf\zc_nxjc_ychc_yfcf_clinker01_yaoxunhuanshuibeng.aspx" />
+    <Content Include="UI_Monitor\DCSMonitor\zc_nxjc_ychc_yfcf\zc_nxjc_ychc_yfcf_clinker01_yuanliaofenmojifiqichuli.aspx" />
+    <Content Include="UI_Monitor\images\common\arrowGreenDownS.gif" />
+    <Content Include="UI_Monitor\images\common\arrowGreenLeft.gif" />
+    <Content Include="UI_Monitor\images\common\arrowGreenLeftS.gif" />
+    <Content Include="UI_Monitor\images\common\arrowGreenRight.gif" />
+    <Content Include="UI_Monitor\images\common\arrowGreenRightS.gif" />
+    <Content Include="UI_Monitor\images\common\arrowGreenUp.gif" />
+    <Content Include="UI_Monitor\images\common\arrowGreenUpS.gif" />
+    <Content Include="UI_Monitor\images\common\arrowYellowDownS.gif" />
+    <Content Include="UI_Monitor\images\common\arrowYellowLeft.gif" />
+    <Content Include="UI_Monitor\images\common\arrowYellowLeftS.gif" />
+    <Content Include="UI_Monitor\images\common\arrowYellowRight.gif" />
+    <Content Include="UI_Monitor\images\common\arrowYellowRightS.gif" />
+    <Content Include="UI_Monitor\images\common\arrowYellowUp.gif" />
+    <Content Include="UI_Monitor\images\common\arrowYellowUpS.gif" />
+    <Content Include="UI_Monitor\images\common\blueC.gif" />
+    <Content Include="UI_Monitor\images\common\blueS.gif" />
+    <Content Include="UI_Monitor\images\common\error.gif" />
+    <Content Include="UI_Monitor\images\common\grayC.gif" />
+    <Content Include="UI_Monitor\images\common\grayS.gif" />
+    <Content Include="UI_Monitor\images\common\greenC.gif" />
+    <Content Include="UI_Monitor\images\common\greenCB.gif" />
     <Content Include="UI_Monitor\images\common\greenL.gif" />
+    <Content Include="UI_Monitor\images\common\greenS.gif" />
+    <Content Include="UI_Monitor\images\common\greenSB.gif" />
+    <Content Include="UI_Monitor\images\common\NULL.gif" />
+    <Content Include="UI_Monitor\images\common\redC.gif" />
+    <Content Include="UI_Monitor\images\common\redCB.gif" />
     <Content Include="UI_Monitor\images\common\redL.gif" />
+    <Content Include="UI_Monitor\images\common\arrowYellowDown.gif" />
+    <Content Include="UI_Monitor\images\common\arrowGreenDown.gif" />
+    <Content Include="UI_Monitor\images\common\redS.gif" />
+    <Content Include="UI_Monitor\images\common\redSB.gif" />
+    <Content Include="UI_Monitor\images\common\yellowC.gif" />
+    <Content Include="UI_Monitor\images\common\yellowCB.gif" />
+    <Content Include="UI_Monitor\images\common\yellowS.gif" />
+    <Content Include="UI_Monitor\images\common\yellowSB.gif" />
+    <Content Include="UI_Monitor\images\page\DCS\zc_nxjc_ychc_yfcf\zc_nxjc_ychc_yfcf_clinker01_shengliaoxieliao.bmp" />
+    <Content Include="UI_Monitor\images\page\DCS\zc_nxjc_ychc_yfcf\zc_nxjc_ychc_yfcf_clinker01_yuanliaofenmojifiqichuli.bmp" />
+    <Content Include="UI_Monitor\images\page\DCS\zc_nxjc_ychc_yfcf\zc_nxjc_ychc_yfcf_clinker01_yaotoubilengji.bmp" />
+    <Content Include="UI_Monitor\images\page\DCS\zc_nxjc_ychc_yfcf\zc_nxjc_ychc_yfcf_clinker01_yaoxunhuanshuibeng.bmp" />
+    <Content Include="UI_Monitor\images\page\DCS\zc_nxjc_ychc_yfcf\zc_nxjc_ychc_yfcf_clinker01_shaochengyaotouyaowei.bmp" />
+    <Content Include="UI_Monitor\images\page\DCS\zc_nxjc_ychc_yfcf\zc_nxjc_ychc_yfcf_clinker01_meimoyouzhan.bmp" />
+    <Content Include="UI_Monitor\images\page\DCS\zc_nxjc_ychc_yfcf\zc_nxjc_ychc_yfcf_clinker01_meifenzhibei.bmp" />
+    <Content Include="UI_Monitor\images\page\DCS\zc_nxjc_ychc_yfcf\zc_nxjc_ychc_yfcf_clinker01_shuliaocunchu.bmp" />
+    <Content Include="UI_Monitor\images\page\DCS\zc_nxjc_ychc_yfcf\zc_nxjc_ychc_yfcf_clinker01_shengliaoxieliaojipeiliao.bmp" />
+    <Content Include="UI_Monitor\images\page\DCS\zc_nxjc_ychc_yfcf\zc_nxjc_ychc_yfcf_clinker01_shengliaojunhuaku.bmp" />
     <Content Include="UI_Monitor\images\page\zc_nxjc_ychc_lsf.png" />
     <Content Include="UI_Monitor\images\page\zc_nxjc_ychc_lsf_cementmill08.png" />
     <Content Include="UI_Monitor\images\page\zc_nxjc_ychc_lsf_cementmill09.png" />
@@ -1647,6 +1703,8 @@
     <Content Include="UI_Monitor\js\common\blink.js" />
     <Content Include="UI_Monitor\js\common\chartjs.js" />
     <Content Include="UI_Monitor\js\common\ComprehensiveStatistic.js" />
+    <Content Include="UI_Monitor\js\common\DCSMonitorShell.js" />
+    <Content Include="UI_Monitor\js\common\DCSTagInfo.js" />
     <Content Include="UI_Monitor\js\common\DisplayName.js" />
     <Content Include="UI_Monitor\js\common\EquipmentInfo.js" />
     <Content Include="UI_Monitor\js\common\monitorjs.js" />
@@ -1681,6 +1739,76 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI_Monitor\DCSMonitor\zc_nxjc_ychc_yfcf\zc_nxjc_ychc_yfcf_clinker01_meifenzhibei.aspx.cs">
+      <DependentUpon>zc_nxjc_ychc_yfcf_clinker01_meifenzhibei.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI_Monitor\DCSMonitor\zc_nxjc_ychc_yfcf\zc_nxjc_ychc_yfcf_clinker01_meifenzhibei.aspx.designer.cs">
+      <DependentUpon>zc_nxjc_ychc_yfcf_clinker01_meifenzhibei.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Monitor\DCSMonitor\zc_nxjc_ychc_yfcf\zc_nxjc_ychc_yfcf_clinker01_meimoyouzhan.aspx.cs">
+      <DependentUpon>zc_nxjc_ychc_yfcf_clinker01_meimoyouzhan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI_Monitor\DCSMonitor\zc_nxjc_ychc_yfcf\zc_nxjc_ychc_yfcf_clinker01_meimoyouzhan.aspx.designer.cs">
+      <DependentUpon>zc_nxjc_ychc_yfcf_clinker01_meimoyouzhan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Monitor\DCSMonitor\zc_nxjc_ychc_yfcf\zc_nxjc_ychc_yfcf_clinker01_shaochengyaotouyaowei.aspx.cs">
+      <DependentUpon>zc_nxjc_ychc_yfcf_clinker01_shaochengyaotouyaowei.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI_Monitor\DCSMonitor\zc_nxjc_ychc_yfcf\zc_nxjc_ychc_yfcf_clinker01_shaochengyaotouyaowei.aspx.designer.cs">
+      <DependentUpon>zc_nxjc_ychc_yfcf_clinker01_shaochengyaotouyaowei.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Monitor\DCSMonitor\zc_nxjc_ychc_yfcf\zc_nxjc_ychc_yfcf_clinker01_shengliaojunhuaku.aspx.cs">
+      <DependentUpon>zc_nxjc_ychc_yfcf_clinker01_shengliaojunhuaku.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI_Monitor\DCSMonitor\zc_nxjc_ychc_yfcf\zc_nxjc_ychc_yfcf_clinker01_shengliaojunhuaku.aspx.designer.cs">
+      <DependentUpon>zc_nxjc_ychc_yfcf_clinker01_shengliaojunhuaku.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Monitor\DCSMonitor\zc_nxjc_ychc_yfcf\zc_nxjc_ychc_yfcf_clinker01_shengliaoxieliao.aspx.cs">
+      <DependentUpon>zc_nxjc_ychc_yfcf_clinker01_shengliaoxieliao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI_Monitor\DCSMonitor\zc_nxjc_ychc_yfcf\zc_nxjc_ychc_yfcf_clinker01_shengliaoxieliao.aspx.designer.cs">
+      <DependentUpon>zc_nxjc_ychc_yfcf_clinker01_shengliaoxieliao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Monitor\DCSMonitor\zc_nxjc_ychc_yfcf\zc_nxjc_ychc_yfcf_clinker01_shengliaoxieliaojipeiliao.aspx.cs">
+      <DependentUpon>zc_nxjc_ychc_yfcf_clinker01_shengliaoxieliaojipeiliao.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI_Monitor\DCSMonitor\zc_nxjc_ychc_yfcf\zc_nxjc_ychc_yfcf_clinker01_shengliaoxieliaojipeiliao.aspx.designer.cs">
+      <DependentUpon>zc_nxjc_ychc_yfcf_clinker01_shengliaoxieliaojipeiliao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Monitor\DCSMonitor\zc_nxjc_ychc_yfcf\zc_nxjc_ychc_yfcf_clinker01_shuliaocunchu.aspx.cs">
+      <DependentUpon>zc_nxjc_ychc_yfcf_clinker01_shuliaocunchu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI_Monitor\DCSMonitor\zc_nxjc_ychc_yfcf\zc_nxjc_ychc_yfcf_clinker01_shuliaocunchu.aspx.designer.cs">
+      <DependentUpon>zc_nxjc_ychc_yfcf_clinker01_shuliaocunchu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Monitor\DCSMonitor\zc_nxjc_ychc_yfcf\zc_nxjc_ychc_yfcf_clinker01_yaotoubilengji.aspx.cs">
+      <DependentUpon>zc_nxjc_ychc_yfcf_clinker01_yaotoubilengji.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI_Monitor\DCSMonitor\zc_nxjc_ychc_yfcf\zc_nxjc_ychc_yfcf_clinker01_yaotoubilengji.aspx.designer.cs">
+      <DependentUpon>zc_nxjc_ychc_yfcf_clinker01_yaotoubilengji.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Monitor\DCSMonitor\zc_nxjc_ychc_yfcf\zc_nxjc_ychc_yfcf_clinker01_yaoxunhuanshuibeng.aspx.cs">
+      <DependentUpon>zc_nxjc_ychc_yfcf_clinker01_yaoxunhuanshuibeng.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI_Monitor\DCSMonitor\zc_nxjc_ychc_yfcf\zc_nxjc_ychc_yfcf_clinker01_yaoxunhuanshuibeng.aspx.designer.cs">
+      <DependentUpon>zc_nxjc_ychc_yfcf_clinker01_yaoxunhuanshuibeng.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Monitor\DCSMonitor\zc_nxjc_ychc_yfcf\zc_nxjc_ychc_yfcf_clinker01_yuanliaofenmojifiqichuli.aspx.cs">
+      <DependentUpon>zc_nxjc_ychc_yfcf_clinker01_yuanliaofenmojifiqichuli.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI_Monitor\DCSMonitor\zc_nxjc_ychc_yfcf\zc_nxjc_ychc_yfcf_clinker01_yuanliaofenmojifiqichuli.aspx.designer.cs">
+      <DependentUpon>zc_nxjc_ychc_yfcf_clinker01_yuanliaofenmojifiqichuli.aspx</DependentUpon>
+    </Compile>
     <Compile Include="UI_Monitor\ProcessEnergyMonitor\zc_nxjc_ychc_lsf\zc_nxjc_ychc_lsf.aspx.cs">
       <DependentUpon>zc_nxjc_ychc_lsf.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1834,6 +1962,7 @@
     <Folder Include="Images\Page\" />
     <Folder Include="js\page\" />
     <Folder Include="UI_Monitor\css\page\" />
+    <Folder Include="UI_Monitor\DCSMonitor\js\page\" />
     <Folder Include="UI_Monitor\js\page\" />
   </ItemGroup>
   <PropertyGroup>

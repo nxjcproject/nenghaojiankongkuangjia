@@ -28,6 +28,7 @@
     <script src="/UI_Monitor/js/common/AmmeterStatistic.js"></script>
     <script src="/UI_Monitor/js/common/EquipmentInfo.js"></script>
     <script src="/UI_Monitor/js/common/DisplayName.js"></script>
+    <script src="/lib/ealib/extend/easyUI.WindowsOverrange.js"></script>
     <script>
         publicData.organizationId = "zc_nxjc_ychc_lsf_clinker04";
         publicData.sceneName = "4#熟料线";
@@ -450,7 +451,7 @@
      <!--库下3#罗茨风机F48M-->
     <div class="imageContainer equipmentInfo" data-equipmentid="rawMaterialLibraryRootsBlower3" id="zc_nxjc_ychc_lsf_clinker04>rawMaterialLibraryRootsBlower3>RunningState" style="position: absolute; height: 20px; width: 19px; top: 568px; left: 1204px;"></div>
      <!--生料库下2#收尘风机F50M-->
-    <div class="imageContainer equipmentInfo" data-equipmentid="homogenizationDustCollectFan1" id="zc_nxjc_ychc_lsf_clinker04>homogenizationDustCollectFan1>RunningState" style="position: absolute; height: 20px; width: 19px; top: 476px; left: 1197px;"></div>
+    <div class="imageContainer equipmentInfo" data-equipmentid="homogenizationDustCollectFan1" id="zc_nxjc_ychc_lsf_clinker04>homogenizationDustCollectFan1>RunningState" style="position: absolute; height: 20px; width: 19px; top: 472px; left: 1172px;"></div>
      <!--均化库下斜槽风机F45M-->
     <div class="imageContainer equipmentInfo" data-equipmentid="homogenizationDustCollectFan2" id="zc_nxjc_ychc_lsf_clinker04>homogenizationDustCollectFan2>RunningState" style="position: absolute; height: 20px; width: 19px; top: 564px; left: 1116px;"></div>
   

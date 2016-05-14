@@ -1,4 +1,7 @@
-img {	cursor: pointer; }
+img {	cursor: pointer;
+    height: 151px;
+    width: 18px;
+}
 
 .logo {	background: url('images/sshe.png') no-repeat; }
 

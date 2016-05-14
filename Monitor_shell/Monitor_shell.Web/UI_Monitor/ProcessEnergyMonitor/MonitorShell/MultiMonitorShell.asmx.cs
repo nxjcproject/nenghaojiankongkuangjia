@@ -8,6 +8,7 @@ using Monitor_shell.Service.TrendTool;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Web;
@@ -29,8 +30,10 @@ namespace Monitor_shell.Web.UI_Monitor.ProcessEnergyMonitor.MonitorShell
         [WebMethod]
         public SceneMonitor GetRealTimeData(string ids, string organizationId, string sceneName)
         {
-            IList<DataItem> dataItems = new List<DataItem>();
+            //Monitor_shell.Infrastructure.Utility.DebugHelper.TestStart();
 
+            IList<DataItem> dataItems = new List<DataItem>();
+           
             string[] iditems = ids.Split(',');
             int count = iditems.Count();
 
@@ -162,7 +165,7 @@ namespace Monitor_shell.Web.UI_Monitor.ProcessEnergyMonitor.MonitorShell
                         }
                     }
                     //如果为DCS标签
-                    else if (itemArry[2] == "DCS")
+                    else if ( itemArry[2] == "DCS" || itemArry[2] == "BarGraph")
                     {
                         string providerType = "DCS";
                         string key = itemArry[0] + "," + providerType;
@@ -196,7 +199,7 @@ namespace Monitor_shell.Web.UI_Monitor.ProcessEnergyMonitor.MonitorShell
                     }
                 }
             }
-
+            //Monitor_shell.Infrastructure.Utility.DebugHelper.TestStop("准备工作花费时间：" );
             foreach (var keyitem in idDictionary.Keys)
             {
                 string[] keyArry = keyitem.Split(',');

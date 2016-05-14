@@ -16,7 +16,7 @@ namespace Monitor_shell.Service.TrendTool
         /// 可以处理的变量类型
         /// </summary>
         private readonly string[] TYPES_CAN_HANDLE = new string[] { 
-            "AnlogSignal",              // 电流
+            "DCS",              // 电流
         };
 
         // 连接字符串
@@ -31,13 +31,13 @@ namespace Monitor_shell.Service.TrendTool
         // @stopTime：终止时间（包含）
         // @variableName：变量名称
         private const string COMMAND_FORMAT = @"
-              SELECT DATEADD(MI,(DATEDIFF(MI,CONVERT(varchar(10),DATEADD(SS,1,[vDate]),120),DATEADD(SS,1,[vDate]))/{1})*{1},CONVERT(varchar(10),[vDate],120)) AS [Time],
+              SELECT DATEADD(SS,(DATEDIFF(SS,CONVERT(varchar(10),DATEADD(SS,1,[vDate]),120),DATEADD(SS,1,[vDate]))/{1})*{1},CONVERT(varchar(10),[vDate],120)) AS [Time],
                      SUM([{0}]) / COUNT([{0}]) as [Average],
                      COUNT([{0}]) as [Count]
                 FROM [{2}].[dbo].[{3}]
                WHERE [vDate] > @startTime AND [vDate] <= @stopTime
-            GROUP BY DATEADD(MI,(DATEDIFF(MI,CONVERT(varchar(10),DATEADD(SS,1,[vDate]),120),DATEADD(SS,1,[vDate]))/{1})*{1},CONVERT(varchar(10),[vDate],120))
-            ORDER BY DATEADD(MI,(DATEDIFF(MI,CONVERT(varchar(10),DATEADD(SS,1,[vDate]),120),DATEADD(SS,1,[vDate]))/{1})*{1},CONVERT(varchar(10),[vDate],120))";
+            GROUP BY DATEADD(SS,(DATEDIFF(SS,CONVERT(varchar(10),DATEADD(SS,1,[vDate]),120),DATEADD(SS,1,[vDate]))/{1})*{1},CONVERT(varchar(10),[vDate],120))
+            ORDER BY DATEADD(SS,(DATEDIFF(SS,CONVERT(varchar(10),DATEADD(SS,1,[vDate]),120),DATEADD(SS,1,[vDate]))/{1})*{1},CONVERT(varchar(10),[vDate],120))";
 
 
         // 构造函数

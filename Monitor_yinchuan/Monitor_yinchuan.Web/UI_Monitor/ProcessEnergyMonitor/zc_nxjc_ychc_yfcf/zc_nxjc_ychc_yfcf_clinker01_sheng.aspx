@@ -28,6 +28,7 @@
     <script src="/UI_Monitor/js/common/AmmeterStatistic.js"></script>
     <script src="/UI_Monitor/js/common/EquipmentInfo.js"></script>
     <script src="/UI_Monitor/js/common/DisplayName.js"></script>
+    <script src="/lib/ealib/extend/easyUI.WindowsOverrange.js"></script>
     <script>
         publicData.organizationId = "zc_nxjc_ychc_yfcf_clinker01";
         publicData.sceneName = "1#熟料线";
@@ -37,7 +38,7 @@
 <body id="SubMonitorBody" style="margin: 0px; padding: 0px; overflow: auto;">
     <div id="SubMonitorLayout" style="position: relative; background-image: url('../../images/page/zc_nxjc_ychc_yfcf_clinker01_sheng.png'); width: 1350px; height: 740px; overflow: hidden;">
         <%--112.05M皮带--%>
-        <table class="mytable" style="position: absolute; top: 22px; left: 216px;">
+        <table class="mytable" style="position: absolute; top: 22px; left: 219px;">
             <tr>
                 <td><span id="zc_nxjc_ychc_yfcf>rawMaterialMixTapeMachine>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -49,7 +50,7 @@
             </tr>
         </table>
         <%--6401AH 进线柜--%>
-        <table class="mytable" style="position: absolute; top: 23px; left: 286px;">
+        <table class="mytable" style="position: absolute; top: 23px; left: 291px;">
             <tr>
                 <td><span id="zc_nxjc_ychc_yfcf_clinker01>incomingCabinet>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -61,7 +62,7 @@
             </tr>
         </table>
         <%--131.04皮带--%>
-        <table class="mytable" style="position: absolute; top: 175px; left: 258px;">
+        <table class="mytable" style="position: absolute; top: 175px; left: 259px;">
             <tr>
                 <td><span id="zc_nxjc_ychc_yfcf_clinker01>ingredientsTapeMachine2>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -73,7 +74,7 @@
             </tr>
         </table>
         <%--211.09M生料选粉机--%>
-        <table class="mytable" style="position: absolute; top: 342px; left: 254px;">
+        <table class="mytable" style="position: absolute; top: 343px; left: 261px;">
             <tr>
                 <td><span id="zc_nxjc_ychc_yfcf_clinker01>powderSelectingMachine>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -97,7 +98,7 @@
             </tr>
         </table>
         <%--211.03提升机--%>
-        <table class="mytable" style="position: absolute; top: 382px; left: 467px;">
+        <table class="mytable" style="position: absolute; top: 383px; left: 472px;">
             <tr>
                 <td><span id="zc_nxjc_ychc_yfcf_clinker01>rollerHoist1>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -109,7 +110,7 @@
             </tr>
         </table>
         <%--6406AH 高温风机--%>
-        <table class="mytable" style="position: absolute; top: 156px; left: 1109px;">
+        <table class="mytable" style="position: absolute; top: 154px; left: 1111px;">
             <tr>
                 <td><span id="zc_nxjc_ychc_yfcf_clinker01>highTemperatureFan>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -121,7 +122,7 @@
             </tr>
         </table>
         <%--6108AH 生料循环风机--%>
-        <table class="mytable" style="position: absolute; top: 340px; left: 787px;">
+        <table class="mytable" style="position: absolute; top: 339px; left: 791px;">
             <tr>
                 <td><span id="zc_nxjc_ychc_yfcf_clinker01>circulatingFan>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -133,7 +134,7 @@
             </tr>
         </table>
         <%--220.01提升机--%>
-        <table class="mytable" style="position: absolute; top: 467px; left: 723px;">
+        <table class="mytable" style="position: absolute; top: 468px; left: 726px;">
             <tr>
                 <td><span id="zc_nxjc_ychc_yfcf_clinker01>homogenizationLibraryHoist>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -145,7 +146,7 @@
             </tr>
         </table>
         <%--210.29皮带--%>
-        <table class="mytable" style="position: absolute; top: 482px; left: 65px;">
+        <table class="mytable" style="position: absolute; top: 480px; left: 71px;">
             <tr>
                 <td><span id="zc_nxjc_ychc_yfcf_clinker01>ingredientsTapeMachine1>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -157,7 +158,7 @@
             </tr>
         </table>
                <%--均化库内收尘风机221.03--%>
-        <table class="mytable" style="position: absolute; top: 488px; left: 963px;">
+        <table class="mytable" style="position: absolute; top: 487px; left: 967px;">
             <tr>
                 <td><span id="zc_nxjc_ychc_yfcf_clinker01>homogenizationDustCollectFan>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -169,7 +170,7 @@
             </tr>
         </table>
                <%--增湿塔喷水装置--%>
-        <table class="mytable" style="position: absolute; top: 294px; left: 1025px;">
+        <table class="mytable" style="position: absolute; top: 293px; left: 1026px;">
             <tr>
                 <td><span id="zc_nxjc_ychc_yfcf_clinker01>humidifyingWaterTower>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -181,7 +182,7 @@
             </tr>
         </table>
                <%--220.15罗茨风机--%>
-        <table class="mytable" style="position: absolute; top: 487px; left: 1109px;">
+        <table class="mytable" style="position: absolute; top: 483px; left: 1112px;">
             <tr>
                 <td><span id="zc_nxjc_ychc_yfcf_clinker01>rawMaterialLibraryRootsBlower1>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -193,7 +194,7 @@
             </tr>
         </table>
                <%--220.16罗茨风机--%>
-        <table class="mytable" style="position: absolute; top: 568px; left: 1110px;">
+        <table class="mytable" style="position: absolute; top: 568px; left: 1115px;">
             <tr>
                 <td><span id="zc_nxjc_ychc_yfcf_clinker01>rawMaterialLibraryRootsBlower2>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -205,7 +206,7 @@
             </tr>
         </table>
                <%--221.18罗茨风机--%>
-        <table class="mytable" style="position: absolute; top: 649px; left: 1110px; height: 3px;">
+        <table class="mytable" style="position: absolute; top: 650px; left: 1113px; height: 3px;">
             <tr>
                 <td><span id="zc_nxjc_ychc_yfcf_clinker01>rawMaterialLibraryRootsBlower3>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -217,7 +218,7 @@
             </tr>
         </table>
                <%--6405AH 窑尾排风机--%>
-        <table class="mytable" style="position: absolute; top: 447px; left: 1226px;">
+        <table class="mytable" style="position: absolute; top: 447px; left: 1230px;">
             <tr>
                 <td><span id="zc_nxjc_ychc_yfcf_clinker01>kilnTailExhaustFan>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -265,7 +266,7 @@
             </tr>
         </table>
                <%--窑尾袋收尘--%>
-        <table class="mytable" style="position: absolute; top: 295px; left: 1099px;">
+        <table class="mytable" style="position: absolute; top: 293px; left: 1102px;">
             <tr>
                 <td><span id="zc_nxjc_ychc_yfcf_clinker01>bagdustcollector>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -277,7 +278,7 @@
             </tr>
         </table>
                <%--动辊--%>
-        <table class="mytable" style="position: absolute; top: 611px; left: 531px;">
+        <table class="mytable" style="position: absolute; top: 612px; left: 533px;">
             <tr>
                 <td><span id="zc_nxjc_ychc_yfcf_clinker01>rollingMachineActionRoller>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -289,7 +290,7 @@
             </tr>
         </table>
                <%--定辊--%>
-        <table class="mytable" style="position: absolute; top: 612px; left: 456px;">
+        <table class="mytable" style="position: absolute; top: 613px; left: 462px;">
             <tr>
                 <td><span id="zc_nxjc_ychc_yfcf_clinker01>rollingMachineSettledRoller>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -301,7 +302,7 @@
             </tr>
         </table>
                <%--收尘风机--%>
-        <table class="mytable" style="position: absolute; top: 255px; left: 257px;">
+        <table class="mytable" style="position: absolute; top: 253px; left: 261px;">
             <tr>
                 <td><span id="zc_nxjc_ychc_yfcf_clinker01>rawMaterialDustCollectingFan>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -312,19 +313,20 @@
                 <td><span id="zc_nxjc_ychc_yfcf_clinker01>rawMaterialDustCollectingFan>Power" class="mchart"></span></td>
             </tr>
         </table>
-  <div id="htmlContainer"></div>
+        <div id="htmlContainer"></div>
+
     <!--原料磨系统风机-->
-    <div class="imageContainer equipmentInfo" data-equipmentid="rawMealGrindinSystemFan" id="zc_nxjc_ychc_yfcf_clinker01>circulatingFan>RunningState" style="position: absolute; height: 20px; width: 19px; top: 291px; left: 817px;"></div>
+    <div class="imageContainer equipmentInfo" data-equipmentid="rawMealGrindinSystemFan" id="zc_nxjc_ychc_yfcf_clinker01>circulatingFan>RunningState" style="position: absolute; height: 20px; width: 19px; top: 289px; left: 820px;"></div>
     <!--原料磨选粉机电机-->
     <div class="imageContainer equipmentInfo" data-equipmentid="powderSelectingMachine" id="zc_nxjc_ychc_yfcf_clinker01>powderSelectingMachine>RunningState" style="position: absolute; height: 20px; width: 19px; top: 412px; left: 291px;"></div>
     <!--胶带输送机-->
-    <div class="imageContainer equipmentInfo" data-equipmentid="rawMaterialMixTapeMachine" id="zc_nxjc_ychc_yfcf_clinker01>rawMaterialMixTapeMachine>RunningState" style="position: absolute; height: 20px; width: 19px; left: 188px; top: 73px;"></div>
+    <div class="imageContainer equipmentInfo" data-equipmentid="rawMaterialMixTapeMachine" id="zc_nxjc_ychc_yfcf_clinker01>rawMaterialMixTapeMachine>RunningState" style="position: absolute; height: 20px; width: 19px; left: 179px; top: 75px;"></div>
     <!--均化库入库提升机-->
     <div class="imageContainer equipmentInfo" data-equipmentid="homogenizationLibraryHoist" id="zc_nxjc_ychc_yfcf_clinker01>homogenizationLibraryHoist>RunningState" style="position: absolute; height: 20px; width: 19px; top: 368px; left: 703px;"></div>
     <!--长胶带离心风机210.16-->
     <div class="imageContainer equipmentInfo" data-equipmentid="rawMaterialDustCollectingFan" id="zc_nxjc_ychc_yfcf_clinker01>rawMaterialDustCollectingFan>RunningState" style="position: absolute; height: 20px; width: 19px; top: 291px; left: 200px;"></div>
       <!--皮带131.04-->
-    <div class="imageContainer equipmentInfo" data-equipmentid="ingredientsTapeMachine2" id="zc_nxjc_ychc_yfcf_clinker01>ingredientsTapeMachine2>RunningState" style="position: absolute; height: 20px; width: 19px; top: 204px; left: 220px;"></div>
+    <div class="imageContainer equipmentInfo" data-equipmentid="ingredientsTapeMachine2" id="zc_nxjc_ychc_yfcf_clinker01>ingredientsTapeMachine2>RunningState" style="position: absolute; height: 20px; width: 19px; top: 200px; left: 227px;"></div>
     <!--210.29-->
     <div class="imageContainer equipmentInfo" data-equipmentid="ingredientsTapeMachine1" id="zc_nxjc_ychc_yfcf_clinker01>ingredientsTapeMachine1>RunningState" style="position: absolute; height: 20px; width: 19px; top: 438px; left: 222px;"></div>
      <!--提升机211.08-->

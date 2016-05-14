@@ -19,7 +19,7 @@
     <script type="text/javascript" src="/lib/ealib/jquery.easyui.min.js" charset="utf-8"></script>
     <script type="text/javascript" src="/lib/ealib/easyui-lang-zh_CN.js" charset="utf-8"></script>
 
-    <script src="/UI_Monitor/js/common/monitorjs.js"></script>
+  <script src="/UI_Monitor/js/common/monitorjs.js"></script>
     <script src="/UI_Monitor/js/common/chartjs.js"></script>
     <script src="/UI_Monitor/js/common/SubMonitorAdapter.js"></script>
     <script src="/UI_Monitor/js/common/alarm.js"></script>
@@ -28,6 +28,7 @@
     <script src="/UI_Monitor/js/common/AmmeterStatistic.js"></script>
     <script src="/UI_Monitor/js/common/EquipmentInfo.js"></script>
     <script src="/UI_Monitor/js/common/DisplayName.js"></script>
+    <script src="/lib/ealib/extend/easyUI.WindowsOverrange.js"></script>
     <script>
         publicData.organizationId = "zc_nxjc_ychc_yfcf_cementmill01";
         publicData.sceneName = "1#水泥磨";
@@ -61,7 +62,7 @@
             </tr>
         </table>
         <!--1#水泥磨排风机-->
-        <table class="mytable" style="position: absolute; top: 23px; left: 714px; height: 53px; right: 570px;">
+      <%--  <table class="mytable" style="position: absolute; top: 23px; left: 717px; height: 53px; right: 567px;">
             <tr>
                 <td><span id="zc_nxjc_ychc_yfcf_cementmill01>mainExhaustFan>ElectricityConsumption" class="mchart"></span></td>
             </tr>
@@ -71,7 +72,7 @@
             <tr>
                 <td><span id="zc_nxjc_ychc_yfcf_cementmill01>mainExhaustFan>Power" class="mchart"></span></td>
             </tr>
-        </table>
+        </table>--%>
         <!--1#打散机-->
         <table class="mytable" style="position: absolute; top: 310px; left: 519px; height: 53px; right: 765px;">
             <tr>
@@ -121,7 +122,7 @@
             </tr>
         </table>
         <!--水泥制备-->
-        <table class="mytable" style="position: absolute; top: 585px; left: 97px;">
+        <table class="mytable" style="position: absolute; top: 587px; left: 99px;">
             <tr>
                 <td><span id="zc_nxjc_ychc_yfcf_cementmill01>cementPreparation>ElectricityQuantity" class="mchart"></span></td>
             </tr>
@@ -132,7 +133,7 @@
                 <td><span id="zc_nxjc_ychc_yfcf_cementmill01>cementPreparation>ElectricityConsumption" class="mchart"></span></td>
             </tr>
         </table>
-        <table class="mytable" style="position: absolute; top: 585px; left: 172px;">
+        <table class="mytable" style="position: absolute; top: 587px; left: 173px;">
             <tr>
                 <td><span id="zc_nxjc_ychc_yfcf_cementmill01>cementPreparation_ElectricityQuantity>Class" class="mchart"></span></td>
             </tr>
@@ -154,7 +155,7 @@
                 <td><span id="zc_nxjc_ychc_yfcf_cementmill01>cementPreparation_ElectricityConsumption>Day" class="mchart"></span></td>
             </tr>
         </table>
-
+        <div id="htmlContainer"></div>
 
         <!--1#水泥磨主电机运行信号-->
         <div class="imageContainer equipmentInfo" data-equipmentid="cementMillMainMotor" id="zc_nxjc_ychc_yfcf_cementmill01>cementMillMainMotor>RunningState" style="position: absolute; top: 332px; left: 699px; height: 20px; width: 19px;"></div>
@@ -170,7 +171,6 @@
         <div class="imageContainer equipmentInfo" data-equipmentid="rollerBagDustCollectingFan" id="zc_nxjc_ychc_yfcf_cementmill01>rollerBagDustCollectingFan>RunningState" style="position: absolute; height: 20px; width: 19px; top: 112px; left: 634px;"></div>
          <!--1#磨打散运行-->
         <div class="imageContainer equipmentInfo" data-equipmentid="scatteredGradeMotor" id="zc_nxjc_ychc_yfcf_cementmill01>scatteredGradeMotor>RunningState" style="position: absolute; height: 20px; width: 19px; top: 195px; left: 558px;"></div>
-          <div id="htmlContainer"></div>
 
 
     </div>

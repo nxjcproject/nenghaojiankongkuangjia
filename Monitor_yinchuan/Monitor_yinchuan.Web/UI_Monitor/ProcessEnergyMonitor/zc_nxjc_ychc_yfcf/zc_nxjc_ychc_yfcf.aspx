@@ -85,7 +85,7 @@
             </tr>
         </table>    
         <%--6#水泥粉磨 --%>
-        <table class="mytable" style="position: absolute; top: 120px; left: 1130px;">
+        <table class="mytable" style="position: absolute; top: 165px; left: 1216px;">
             <tr>
                 <td><span id="zc_nxjc_ychc_yfcf_cementmill01>cementGrind_ElectricityQuantity>Class" class="mchart"></span></td>
             </tr>
@@ -96,7 +96,7 @@
                 <td><span id="zc_nxjc_ychc_yfcf_cementmill01>cementGrind_ElectricityQuantity>Month" class="mchart"></span></td>
             </tr>
         </table>
-        <table class="mytable" style="position: absolute; top: 120px; left: 1192px;">
+        <table class="mytable" style="position: absolute; top: 165px; left: 1280px;">
             <tr>
                 <td><span id="zc_nxjc_ychc_yfcf_cementmill01>cementGrind_ElectricityConsumption>Class" class="mchart"></span></td>
             </tr>
@@ -108,7 +108,7 @@
             </tr>
         </table>
         <!--  水泥产量-->
-        <table class="mytable" style="position: absolute; top: 167px; left: 985px; height: 50px;">
+        <table class="mytable" style="position: absolute; top: 167px; left: 987px; height: 50px;">
             <tr>
                 <td><span id="zc_nxjc_ychc_yfcf_cementmill01>cement_CementOutput>Class" class="mchart nodisplay"></span></td>
             </tr>
@@ -131,7 +131,7 @@
                 <td><span id="zc_nxjc_ychc_yfcf_cementmill02>hybridMaterialsPreparation_ElectricityQuantity>Month" class="mchart"></span></td>
             </tr>
         </table>
-        <table class="mytable" style="position: absolute; top: 72px; left: 997px;">
+        <table class="mytable" style="position: absolute; top: 72px; left: 996px;">
             <tr>
                 <td><span id="zc_nxjc_ychc_yfcf_cementmill02>hybridMaterialsPreparation_ElectricityConsumption>Class" class="mchart"></span></td>
             </tr>
@@ -166,7 +166,7 @@
             </tr>
         </table>    
         <%--2#水泥粉磨 --%>
-        <table class="mytable" style="position: absolute; top: 295px; left: 808px;">
+        <table class="mytable" style="position: absolute; top: 294px; left: 809px;">
             <tr>
                 <td><span id="zc_nxjc_ychc_yfcf_cementmill02>cementGrind_ElectricityQuantity>Class" class="mchart"></span></td>
             </tr>
@@ -177,7 +177,7 @@
                 <td><span id="zc_nxjc_ychc_yfcf_cementmill02>cementGrind_ElectricityQuantity>Month" class="mchart"></span></td>
             </tr>
         </table>
-        <table class="mytable" style="position: absolute; top: 295px; left: 871px;">
+        <table class="mytable" style="position: absolute; top: 294px; left: 878px;">
             <tr>
                 <td><span id="zc_nxjc_ychc_yfcf_cementmill02>cementGrind_ElectricityConsumption>Class" class="mchart"></span></td>
             </tr>
@@ -189,7 +189,7 @@
             </tr>
         </table>
          <!--  水泥产量-->
-        <table class="mytable" style="position: absolute; top: 330px; left: 982px; height: 50px;">
+        <table class="mytable" style="position: absolute; top: 329px; left: 987px; height: 50px;">
             <tr>
                 <td><span id="zc_nxjc_ychc_yfcf_cementmill02>cement_CementOutput>Class" class="mchart nodisplay"></span></td>
             </tr>
@@ -212,7 +212,7 @@
                 <td><span id="zc_nxjc_ychc_yfcf_cementmill03>hybridMaterialsPreparation_ElectricityQuantity>Month" class="mchart"></span></td>
             </tr>
         </table>
-        <table class="mytable" style="position: absolute; top: 613px; left: 1277px;">
+        <table class="mytable" style="position: absolute; top: 613px; left: 1277px; bottom: 68px;">
             <tr>
                 <td><span id="zc_nxjc_ychc_yfcf_cementmill03>hybridMaterialsPreparation_ElectricityConsumption>Class" class="mchart"></span></td>
             </tr>
@@ -224,7 +224,7 @@
             </tr>
         </table>
         <%--3#熟料输送--%>
-         <table class="mytable" style="position: absolute; top: 459px; left: 1214px;">
+         <table class="mytable" style="position: absolute; top: 614px; left: 1083px;">
             <tr>
                 <td><span id="zc_nxjc_ychc_yfcf_cementmill03>clinkerTransport_ElectricityQuantity>Class" class="mchart"></span></td>
             </tr>
@@ -235,7 +235,7 @@
                 <td><span id="zc_nxjc_ychc_yfcf_cementmill03>clinkerTransport_ElectricityQuantity>Month" class="mchart"></span></td>
             </tr>
         </table>
-        <table class="mytable" style="position: absolute; top: 460px; left: 1276px;">
+        <table class="mytable" style="position: absolute; top: 613px; left: 1148px;">
             <tr>
                 <td><span id="zc_nxjc_ychc_yfcf_cementmill03>clinkerTransport_ElectricityConsumption>Class" class="mchart"></span></td>
             </tr>
@@ -247,7 +247,7 @@
             </tr>
         </table>    
         <%--3#水泥粉磨 --%>
-        <table class="mytable" style="position: absolute; top: 366px; left: 1218px;">
+        <table class="mytable" style="position: absolute; top: 412px; left: 1215px;">
             <tr>
                 <td><span id="zc_nxjc_ychc_yfcf_cementmill03>cementGrind_ElectricityQuantity>Class" class="mchart"></span></td>
             </tr>
@@ -258,7 +258,7 @@
                 <td><span id="zc_nxjc_ychc_yfcf_cementmill03>cementGrind_ElectricityQuantity>Month" class="mchart"></span></td>
             </tr>
         </table>
-        <table class="mytable" style="position: absolute; top: 366px; left: 1280px;">
+        <table class="mytable" style="position: absolute; top: 412px; left: 1281px;">
             <tr>
                 <td><span id="zc_nxjc_ychc_yfcf_cementmill03>cementGrind_ElectricityConsumption>Class" class="mchart"></span></td>
             </tr>
@@ -270,7 +270,7 @@
             </tr>
         </table>
         <!--  3#水泥粉磨水泥产量-->
-        <table class="mytable" style="position: absolute; top: 404px; left: 983px; height: 50px;">
+        <table class="mytable" style="position: absolute; top: 401px; left: 987px; height: 50px;">
             <tr>
                 <td><span id="zc_nxjc_ychc_yfcf_cementmill03>cement_CementOutput>Class" class="mchart nodisplay"></span></td>
             </tr>
@@ -305,7 +305,7 @@
             </tr>
         </table>
         <%--4#熟料输送--%>
-         <table class="mytable" style="position: absolute; top: 521px; left: 1210px;">
+         <table class="mytable" style="position: absolute; top: 673px; left: 1083px;">
             <tr>
                 <td><span id="zc_nxjc_ychc_yfcf_cementmill04>clinkerTransport_ElectricityQuantity>Class" class="mchart"></span></td>
             </tr>
@@ -316,7 +316,7 @@
                 <td><span id="zc_nxjc_ychc_yfcf_cementmill04>clinkerTransport_ElectricityQuantity>Month" class="mchart"></span></td>
             </tr>
         </table>
-        <table class="mytable" style="position: absolute; top: 521px; left: 1276px;">
+        <table class="mytable" style="position: absolute; top: 673px; left: 1148px;">
             <tr>
                 <td><span id="zc_nxjc_ychc_yfcf_cementmill04>clinkerTransport_ElectricityConsumption>Class" class="mchart"></span></td>
             </tr>
@@ -328,7 +328,7 @@
             </tr>
         </table>    
         <%--4#水泥粉磨 --%>
-        <table class="mytable" style="position: absolute; top: 537px; left: 826px;">
+        <table class="mytable" style="position: absolute; top: 535px; left: 810px; height: 59px;">
             <tr>
                 <td><span id="zc_nxjc_ychc_yfcf_cementmill04>cementGrind_ElectricityQuantity>Class" class="mchart"></span></td>
             </tr>
@@ -339,7 +339,7 @@
                 <td><span id="zc_nxjc_ychc_yfcf_cementmill04>cementGrind_ElectricityQuantity>Month" class="mchart"></span></td>
             </tr>
         </table>
-        <table class="mytable" style="position: absolute; top: 538px; left: 892px;">
+        <table class="mytable" style="position: absolute; top: 535px; left: 879px;">
             <tr>
                 <td><span id="zc_nxjc_ychc_yfcf_cementmill04>cementGrind_ElectricityConsumption>Class" class="mchart"></span></td>
             </tr>
@@ -363,7 +363,7 @@
             </tr>
         </table>
          <!--  水泥包装-->
-        <table class="mytable" style="position: absolute; top: 286px; left: 1218px;">
+        <table class="mytable" style="position: absolute; top: 238px; left: 1215px; bottom: 442px;">
             <tr>
                 <td><span id="zc_nxjc_ychc_yfcf>cementPacking_ElectricityQuantity>Class" class="mchart"></span></td>
             </tr>
@@ -375,7 +375,7 @@
             </tr>
         </table>
     
-        <table class="mytable" style="position: absolute; top: 286px; left: 1280px; height: 20px;">
+        <table class="mytable" style="position: absolute; top: 238px; left: 1281px; height: 20px;">
             <tr>
                 <td><span id="zc_nxjc_ychc_yfcf>cementPacking_ElectricityConsumption>Class" class="mchart"></span></td>
             </tr>
@@ -387,7 +387,7 @@
             </tr>
         </table>
          <%--原料预均化--%>
-        <table class="mytable" style="position: absolute; top: 91px; left: 22px;">
+        <table class="mytable" style="position: absolute; top: 357px; left: 27px;">
             <tr>
                 <td><span id="zc_nxjc_ychc_yfcf_clinker01>rawMaterialsHomogenize_ElectricityQuantity>Class" class="mchart"></span></td>
             </tr>
@@ -398,7 +398,7 @@
                 <td><span id="zc_nxjc_ychc_yfcf_clinker01>rawMaterialsHomogenize_ElectricityQuantity>Month" class="mchart"></span></td>
             </tr>
         </table>
-        <table class="mytable" style="position: absolute; top: 92px; left: 88px;">
+        <table class="mytable" style="position: absolute; top: 352px; left: 92px;">
             <tr>
                 <td><span id="zc_nxjc_ychc_yfcf_clinker01>rawMaterialsHomogenize_ElectricityConsumption>Class" class="mchart"></span></td>
             </tr>
@@ -411,7 +411,7 @@
         </table>
       
         <%--2生料产量--%>
-        <table class="mytable" style="position: absolute; top: 515px; left: 124px; height: 26px;">
+        <table class="mytable" style="position: absolute; top: 517px; left: 125px; height: 26px;">
             <tr>
                 <td><span id="zc_nxjc_ychc_yfcf_clinker01>clinker_MixtureMaterialsOutput>Class" class="mchart nodisplay"></span></td>
             </tr>
@@ -423,7 +423,7 @@
             </tr>
         </table>
           <%--2熟料产量--%>
-        <table class="mytable" style="position: absolute; top: 419px; left: 466px;">
+        <table class="mytable" style="position: absolute; top: 420px; left: 515px;">
             <tr>
                 <td><span id="zc_nxjc_ychc_yfcf_clinker01>clinker_ClinkerOutput>Class" class="mchart nodisplay"></span></td>
             </tr>
@@ -447,7 +447,7 @@
             </tr>
         </table>
         <%--2煤粉制备--%>
-        <table class="mytable" style="position: absolute; top: 292px; left: 512px;">
+        <table class="mytable" style="position: absolute; top: 288px; left: 588px;">
             <tr>
                 <td><span id="zc_nxjc_ychc_yfcf_clinker01>coalPreparation_ElectricityQuantity>Class" class="mchart"></span></td>
             </tr>
@@ -458,7 +458,7 @@
                 <td><span id="zc_nxjc_ychc_yfcf_clinker01>coalPreparation_ElectricityQuantity>Month" class="mchart"></span></td>
             </tr>
         </table>
-        <table class="mytable" style="position: absolute; top: 291px; left: 578px; height: 27px;">
+        <table class="mytable" style="position: absolute; top: 289px; left: 652px; height: 27px;">
             <tr>
                 <td><span id="zc_nxjc_ychc_yfcf_clinker01>coalPreparation_ElectricityConsumption>Class" class="mchart"></span></td>
             </tr>
@@ -470,7 +470,7 @@
             </tr>
         </table>
         <%--2废气处理--%>
-        <table class="mytable" style="position: absolute; top: 20px; left: 393px;">
+        <table class="mytable" style="position: absolute; top: 29px; left: 390px;">
             <tr>
                 <td><span id="zc_nxjc_ychc_yfcf_clinker01>kilnSystem_ElectricityQuantity>Class" class="mchart"></span></td>
             </tr>
@@ -481,7 +481,7 @@
                 <td><span id="zc_nxjc_ychc_yfcf_clinker01>kilnSystem_ElectricityQuantity>Month" class="mchart"></span></td>
             </tr>
         </table>
-        <table class="mytable" style="position: absolute; top: 20px; left: 456px;">
+        <table class="mytable" style="position: absolute; top: 29px; left: 456px;">
             <tr>
                 <td><span id="zc_nxjc_ychc_yfcf_clinker01>kilnSystem_ElectricityConsumption>Class" class="mchart"></span></td>
             </tr>
@@ -493,7 +493,7 @@
             </tr>
         </table>
         <%--2原料破碎--%>
-        <table class="mytable" style="position: absolute; top: 388px; left: 36px;">
+        <table class="mytable" style="position: absolute; top: 435px; left: 27px;">
             <tr>
                 <td><span id="zc_nxjc_ychc_yfcf_clinker01>rawMaterialsGrind_ElectricityQuantity>Class" class="mchart"></span></td>
             </tr>
@@ -505,7 +505,7 @@
             </tr>
         </table>
        
-        <table class="mytable" style="position: absolute; top: 388px; left: 103px;">
+        <table class="mytable" style="position: absolute; top: 434px; left: 92px;">
             <tr>
                 <td><span id="zc_nxjc_ychc_yfcf_clinker01>rawMaterialsGrind_ElectricityConsumption>Class" class="mchart"></span></td>
             </tr>
@@ -541,7 +541,7 @@
         </table>
       
           <%--煤粉消耗量--%>
-        <table class="mytable" style="position: absolute; top: 682px; left: 764px; right: 520px;">
+        <table class="mytable" style="position: absolute; top: 580px; left: 591px; right: 693px;">
             <tr>
                 <td><span id="zc_nxjc_ychc_yfcf_clinker01>clinker_PulverizedCoalInput>Class" class="mchart"></span></td>
             </tr>
@@ -553,7 +553,7 @@
             </tr>
         </table>
         <%--煤耗--%>
-        <table class="mytable" style="position: absolute; top: 682px; left: 829px;">
+        <table class="mytable" style="position: absolute; top: 578px; left: 656px;">
             <tr>
                 <td><span id="zc_nxjc_ychc_yfcf_clinker01>clinker_CoalConsumption>Class" class="mchart"></span></td>
             </tr>
@@ -565,7 +565,7 @@
             </tr>
         </table>
         <%--2#熟料烧成--%>
-        <table class="mytable" style="position: absolute; top: 680px; left: 603px;">
+        <table class="mytable" style="position: absolute; top: 581px; left: 458px;">
             <tr>
                 <td><span id="zc_nxjc_ychc_yfcf_clinker01>clinkerBurning_ElectricityQuantity>Class" class="mchart"></span></td>
             </tr>
@@ -576,7 +576,7 @@
                 <td><span id="zc_nxjc_ychc_yfcf_clinker01>clinkerBurning_ElectricityQuantity>Month" class="mchart"></span></td>
             </tr>
         </table>
-        <table class="mytable" style="position: absolute; top: 680px; left: 666px;">
+        <table class="mytable" style="position: absolute; top: 579px; left: 526px;">
             <tr>
                 <td><span id="zc_nxjc_ychc_yfcf_clinker01>clinkerBurning_ElectricityConsumption>Class" class="mchart"></span></td>
             </tr>
@@ -588,7 +588,7 @@
             </tr>
         </table>
           <%--发电量--%>
-        <table class="mytable" style="position: absolute; top: 192px; left: 596px; right: 625px;">
+        <table class="mytable" style="position: absolute; top: 190px; left: 587px; right: 634px;">
             <tr>
                 <td><span id="zc_nxjc_ychc_yfcf_clinker01>clinkerElectricityGeneration_ElectricityQuantity>Class" class="mchart"></span></td>
             </tr>
@@ -602,7 +602,7 @@
                 <td><span id="zc_nxjc_ychc_yfcf_clinker01>electricityOwnDemand_ElectricityQuantity>Class" class="mchart"></span></td>
             </tr>
         </table>
-        <table class="mytable" style="position: absolute; top: 192px; left: 657px;">
+        <table class="mytable" style="position: absolute; top: 191px; left: 652px;">
             <tr>
                 <td><span id="zc_nxjc_ychc_yfcf_clinker01>clinkerElectricityGeneration_ElectricityQuantity>Day" class="mchart"></span></td>
             </tr>
@@ -629,7 +629,7 @@
             </tr>
         </table>
          <!-- 供电用电-->
-        <table class="mytable" style="position: absolute; top: 40px; left: 198px;">
+        <table class="mytable" style="position: absolute; top: 40px; left: 43px;">
             <tr>
                 <td><span id="zc_nxjc_ychc_yfcf_cogeneration01>purchasedElectricity_ElectricityQuantity>Class" class="mchart"></span></td>
             </tr>
@@ -641,7 +641,7 @@
             </tr>
         </table>
            <%--综合电耗煤耗--%>
-        <table class="mytable" style="position: absolute; top: 686px; left: 415px;">
+        <table class="mytable" style="position: absolute; top: 686px; left: 414px;">
             <tr>
                 <td><span id="zc_nxjc_ychc_yfcf>clinker_ElectricityConsumption_Comprehensive>Comprehensive" class ="comprehensive"></span></td>
             </tr>
@@ -649,7 +649,7 @@
                 <td><span id="zc_nxjc_ychc_yfcf>clinker_CoalConsumption_Comprehensive>Comprehensive" class ="comprehensive"></span></td>
             </tr>
         </table>
-        <table class="mytable" style="position: absolute; top: 685px; left: 490px;">
+        <table class="mytable" style="position: absolute; top: 687px; left: 489px;">
             <tr>
                 <td><span id="zc_nxjc_ychc_lsf>cementmill_ElectricityConsumption_Comprehensive>Comprehensive" class ="comprehensive"></span></td>
             </tr>
@@ -692,6 +692,9 @@
             </tr>
         </table>
         
+       
+        
     </div>
+    <div id="htmlContainer"></div>
 </body>
 </html>

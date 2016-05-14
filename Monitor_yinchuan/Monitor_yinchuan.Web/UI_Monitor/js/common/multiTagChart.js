@@ -14,7 +14,7 @@ var multiTagCharData = {
 };
 //绑定右键菜单事件
 function BindContextmenu() {
-    $(".mchart:not(.nodisplay)").bind('contextmenu', function (e) {
+    $(".mchart:not(.nodisplay,.BarGraph,.BoolSignal,.AnlogSignal)").bind('contextmenu', function (e) {
         multiTagCharData.selectedId = this.id;
         e.preventDefault();
         $('#mm').menu('show', {

@@ -1623,8 +1623,17 @@
     <Content Include="UI_Monitor\css\common\mymonitor.css" />
     <Content Include="UI_Monitor\css\common\trendlineAnalysis.css" />
     <Content Include="UI_Monitor\css\common\trendlineRenderer.css" />
+    <Content Include="UI_Monitor\DCSMonitor\js\common\OptionHelper.js" />
+    <Content Include="UI_Monitor\DCSMonitor\js\common\Playback.js" />
+    <Content Include="UI_Monitor\DCSMonitor\zc_nxjc_qtx_efc\test.aspx" />
+    <Content Include="UI_Monitor\DCSMonitor\zc_nxjc_qtx_efc\zc_nxjc_qtx_efc_clinker03.aspx" />
+    <Content Include="UI_Monitor\DCSMonitor\zc_nxjc_qtx_tys\example.aspx" />
+    <Content Include="UI_Monitor\DCSMonitor\zc_nxjc_qtx_tys\zc_nxjc_qtx_tys_clinker04.aspx" />
     <Content Include="UI_Monitor\images\common\greenL.gif" />
     <Content Include="UI_Monitor\images\common\redL.gif" />
+    <Content Include="UI_Monitor\images\page\DCS\example.png" />
+    <Content Include="UI_Monitor\images\page\DCS\zc_nxjc_qtx_efc_clinker03.png" />
+    <Content Include="UI_Monitor\images\page\DCS\zc_nxjc_qtx_tys_clinker04.png" />
     <Content Include="UI_Monitor\images\page\zc_nxjc_qtx_efc.png" />
     <Content Include="UI_Monitor\images\page\zc_nxjc_qtx_efc_aircompressor.png" />
     <Content Include="UI_Monitor\images\page\zc_nxjc_qtx_efc_cementmill01.png" />
@@ -1646,8 +1655,10 @@
     <Content Include="UI_Monitor\js\common\alarm_old.js" />
     <Content Include="UI_Monitor\js\common\AmmeterStatistic.js" />
     <Content Include="UI_Monitor\js\common\blink.js" />
+    <Content Include="UI_Monitor\js\common\BoolSignalHelper.js" />
     <Content Include="UI_Monitor\js\common\chartjs.js" />
     <Content Include="UI_Monitor\js\common\ComprehensiveStatistic.js" />
+    <Content Include="UI_Monitor\js\common\DCSMonitorShell.js" />
     <Content Include="UI_Monitor\js\common\DisplayName.js" />
     <Content Include="UI_Monitor\js\common\EquipmentInfo.js" />
     <Content Include="UI_Monitor\js\common\monitorjs.js" />
@@ -1682,6 +1693,34 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI_Monitor\DCSMonitor\zc_nxjc_qtx_efc\test.aspx.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI_Monitor\DCSMonitor\zc_nxjc_qtx_efc\test.aspx.designer.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Monitor\DCSMonitor\zc_nxjc_qtx_efc\zc_nxjc_qtx_efc_clinker03.aspx.cs">
+      <DependentUpon>zc_nxjc_qtx_efc_clinker03.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI_Monitor\DCSMonitor\zc_nxjc_qtx_efc\zc_nxjc_qtx_efc_clinker03.aspx.designer.cs">
+      <DependentUpon>zc_nxjc_qtx_efc_clinker03.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Monitor\DCSMonitor\zc_nxjc_qtx_tys\example.aspx.cs">
+      <DependentUpon>example.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI_Monitor\DCSMonitor\zc_nxjc_qtx_tys\example.aspx.designer.cs">
+      <DependentUpon>example.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Monitor\DCSMonitor\zc_nxjc_qtx_tys\zc_nxjc_qtx_tys_clinker04.aspx.cs">
+      <DependentUpon>zc_nxjc_qtx_tys_clinker04.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI_Monitor\DCSMonitor\zc_nxjc_qtx_tys\zc_nxjc_qtx_tys_clinker04.aspx.designer.cs">
+      <DependentUpon>zc_nxjc_qtx_tys_clinker04.aspx</DependentUpon>
+    </Compile>
     <Compile Include="UI_Monitor\ProcessEnergyMonitor\zc_nxjc_qtx_efc\zc_nxjc_qtx_efc_aircompressor.aspx.cs">
       <DependentUpon>zc_nxjc_qtx_efc_aircompressor.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1823,6 +1862,7 @@
     <Folder Include="Images\Page\" />
     <Folder Include="js\page\" />
     <Folder Include="UI_Monitor\css\page\" />
+    <Folder Include="UI_Monitor\DCSMonitor\js\page\" />
     <Folder Include="UI_Monitor\js\page\" />
   </ItemGroup>
   <PropertyGroup>

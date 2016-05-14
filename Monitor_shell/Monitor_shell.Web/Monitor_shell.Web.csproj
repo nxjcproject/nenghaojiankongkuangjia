@@ -122,6 +122,7 @@
     <Content Include="lib\ealib\changelog.txt" />
     <Content Include="lib\ealib\easyloader.js" />
     <Content Include="lib\ealib\easyui-lang-zh_CN.js" />
+    <Content Include="lib\ealib\extend\easyUI.WindowsOverrange.js" />
     <Content Include="lib\ealib\extend\jquery.jqprint.js" />
     <Content Include="lib\ealib\extend\jquery.PrintArea.js" />
     <Content Include="lib\ealib\extend\layout.js" />
@@ -1627,12 +1628,46 @@
     <Content Include="UI_Monitor\css\common\trendlineAnalysis.css" />
     <Content Include="UI_Monitor\css\common\trendlineRenderer.css" />
     <Content Include="UI_Monitor\DCSMonitor\js\common\OptionHelper.js" />
+    <Content Include="UI_Monitor\DCSMonitor\js\common\Playback.js" />
     <Content Include="UI_Monitor\DCSMonitor\MonitorShell\DCSMonitorShell.asmx" />
     <Content Include="UI_Monitor\DCSMonitor\MonitorShell\DCSMonitorShell.aspx" />
     <Content Include="UI_Monitor\DCSMonitor\MonitorShell\test.aspx" />
+    <Content Include="UI_Monitor\images\common\arrowGreenDown.gif" />
+    <Content Include="UI_Monitor\images\common\arrowGreenDownS.gif" />
+    <Content Include="UI_Monitor\images\common\arrowGreenLeft.gif" />
+    <Content Include="UI_Monitor\images\common\arrowGreenLeftB.gif" />
+    <Content Include="UI_Monitor\images\common\arrowGreenRight.gif" />
+    <Content Include="UI_Monitor\images\common\arrowGreenRightB.gif" />
+    <Content Include="UI_Monitor\images\common\arrowGreenUp.gif" />
+    <Content Include="UI_Monitor\images\common\arrowGreenUpB.gif" />
+    <Content Include="UI_Monitor\images\common\arrowYellowDown.gif" />
+    <Content Include="UI_Monitor\images\common\arrowYellowDownB.gif" />
+    <Content Include="UI_Monitor\images\common\arrowYellowLeft.gif" />
+    <Content Include="UI_Monitor\images\common\arrowYellowLeftB.gif" />
+    <Content Include="UI_Monitor\images\common\arrowYellowRight.gif" />
+    <Content Include="UI_Monitor\images\common\arrowYellowRightB.gif" />
+    <Content Include="UI_Monitor\images\common\arrowYellowUp.gif" />
+    <Content Include="UI_Monitor\images\common\arrowYellowUpB.gif" />
+    <Content Include="UI_Monitor\images\common\blueC.gif" />
+    <Content Include="UI_Monitor\images\common\blueS.gif" />
     <Content Include="UI_Monitor\images\common\error.gif" />
+    <Content Include="UI_Monitor\images\common\grayC.gif" />
+    <Content Include="UI_Monitor\images\common\grayS.gif" />
+    <Content Include="UI_Monitor\images\common\greenC.gif" />
+    <Content Include="UI_Monitor\images\common\greenCB.gif" />
     <Content Include="UI_Monitor\images\common\greenL.gif" />
+    <Content Include="UI_Monitor\images\common\greenS.gif" />
+    <Content Include="UI_Monitor\images\common\greenSB.gif" />
+    <Content Include="UI_Monitor\images\common\NULL.gif" />
+    <Content Include="UI_Monitor\images\common\redC.gif" />
+    <Content Include="UI_Monitor\images\common\redCB.gif" />
     <Content Include="UI_Monitor\images\common\redL.gif" />
+    <Content Include="UI_Monitor\images\common\redS.gif" />
+    <Content Include="UI_Monitor\images\common\redSB.gif" />
+    <Content Include="UI_Monitor\images\common\yellowC.gif" />
+    <Content Include="UI_Monitor\images\common\yellowCB.gif" />
+    <Content Include="UI_Monitor\images\common\yellowS.gif" />
+    <Content Include="UI_Monitor\images\common\yellowSB.gif" />
     <Content Include="UI_Monitor\images\page\zc_nxjc_byc_byf.jpg" />
     <Content Include="UI_Monitor\images\page\zc_nxjc_byc_byf.png" />
     <Content Include="UI_Monitor\images\page\zc_nxjc_byc_byf_cementmill.jpg" />
@@ -1655,7 +1690,7 @@
     <Content Include="UI_Monitor\js\common\alarm_old.js" />
     <Content Include="UI_Monitor\js\common\AmmeterStatistic.js" />
     <Content Include="UI_Monitor\js\common\blink.js" />
-    <Content Include="UI_Monitor\js\common\BoolSignalHelper.js" />
+    <Content Include="UI_Monitor\js\common\DCSTagInfo.js" />
     <Content Include="UI_Monitor\js\common\chartjs.js" />
     <Content Include="UI_Monitor\js\common\ComprehensiveStatistic.js" />
     <Content Include="UI_Monitor\js\common\DCSMonitorShell.js" />
@@ -1674,6 +1709,7 @@
     <Content Include="UI_Monitor\ProcessEnergyMonitor\MonitorShell\MultiMonitorShell.asmx" />
     <Content Include="UI_Monitor\ProcessEnergyMonitor\MonitorShell\MultiMonitorShell.aspx" />
     <Content Include="UI_Monitor\ProcessEnergyMonitor\MonitorShell\test.aspx" />
+    <Content Include="UI_Monitor\ProcessEnergyMonitor\MonitorShell\WebForm1.aspx" />
     <Content Include="UI_Monitor\TrendTool\MultiTrendlineRenderer.aspx" />
     <Content Include="UI_Monitor\TrendTool\TrendlineRenderer.aspx" />
     <Content Include="Web.config">
@@ -1725,6 +1761,13 @@
     <Compile Include="UI_Monitor\ProcessEnergyMonitor\MonitorShell\test.aspx.designer.cs">
       <DependentUpon>test.aspx</DependentUpon>
     </Compile>
+    <Compile Include="UI_Monitor\ProcessEnergyMonitor\MonitorShell\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI_Monitor\ProcessEnergyMonitor\MonitorShell\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
     <Compile Include="UI_Monitor\TrendTool\MultiTrendlineRenderer.aspx.cs">
       <DependentUpon>MultiTrendlineRenderer.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1745,7 +1788,6 @@
     <Content Include="lib\pllib\syntaxhighlighter\LGPL-LICENSE" />
     <Content Include="lib\pllib\syntaxhighlighter\MIT-LICENSE" />
     <Content Include="UI_Monitor\css\common\mymonitor.css.orig" />
-    <Content Include="UI_Monitor\images\page.rar" />
     <None Include="Properties\PublishProfiles\Monitor_shell.pubxml" />
     <None Include="Properties\PublishProfiles\shell.pubxml" />
     <None Include="Web.Debug.config">

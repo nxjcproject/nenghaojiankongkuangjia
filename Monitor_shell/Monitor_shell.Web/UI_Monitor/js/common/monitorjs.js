@@ -1,26 +1,74 @@
 ﻿
 $(function () {
+    //AutoSetSubMonitorLayout();
+    GetTags();
     FactoryId = GetFactoryID();
+    AppengBarGraphChildrenDiv();
     GetSystemColor();
+    //AnlogSignalService();
+    
     InitializePage();
+    
     
 });
 
-var RelatedTags = "";
+var g_GaugesInfo="";
 var g_DataSet;  //数据集合
+var FactoryId = "";//分厂组织机构Id
 var SystemColor = new Object();//系统颜色
+var g_AppendChildrenBarGraph = false;//棒图内部Div是否加载标志位
+//不同的dcs标签
+//1、模拟量（AnlogSignalTags）：一个元素只有一个dcs标签，棒图标签也在此中
+//   模拟量量标签单独存放在AnlogSignalTags中，为了取出相关的仪表信息
+//2、开关量标签(RelatedTags)：一个元素中有多个dcs标签
+//3、汉字隐藏标签：存储在 publicData.ids 中
+    /*
+    publicData.ids中包含的标签有
+        普通标签
+        模拟量标签
+        棒图标签
+        汉字隐藏标签
+    */
 var AnlogSignalTags = "";//模拟量标签
 var BoolSignalTags = "";//数字量标签
-var FactoryId = "";//分厂组织机构Id
+var RelatedTags = "";//与设备状态相关的标签（RelatedTags属性的标签）
 var publicData = {
     ids:"",
     realTimer: {},
-    pollingIntervals: 10000
+    pollingIntervals: 1000
 };
+//根据SubMonitorLayout背景图片的大小自动设置SubMonitorLayout的长宽
+function AutoSetSubMonitorLayout() {
+
+    //是不是要当图表加载完再执行才可以获取图片的长宽？？？？？？？？？？
+    //此方法还存在bug
+    var divObj = $("#SubMonitorLayout");
+    var imgSrc = divObj.css("background-image");
+    var img = new Image();
+    var mSrc = imgSrc.substring(5, imgSrc.length - 2);
+    img.src = mSrc;
+    divObj.css("height", img.height);
+    divObj.css("width", img.width);
+}
+
+//添加棒图内部的div
+function AppengBarGraphChildrenDiv() {
+    var BarGraphs = $(".BarGraph")
+    if (!g_AppendChildrenBarGraph) { //没有添加柱状图内部div
+        for (var i = 0; i < BarGraphs.length; i++) {
+            var barGraphsWidth = $(BarGraphs[i]).css("width");
+            $(BarGraphs[i]).append('<div style="width:'+barGraphsWidth+';margin-bottom:0px;padding-bottom:0px"></div>');
+        }       
+    }
+}
+
 
 //以下为数据准备工作
+//1、分厂组织机构ID
+//2、系统颜色信息
+//3、获取所需标签
 
-//获取分厂组织机构Id
+//1、获取分厂组织机构Id
 function GetFactoryID() {
     var factoryId = "";
     $.ajax({
@@ -36,7 +84,7 @@ function GetFactoryID() {
     })
     return factoryId;
 }
-//获取系统颜色信息
+//2、获取系统颜色信息
 function GetSystemColor() {
     $.ajax({
         type: "POST",
@@ -47,39 +95,72 @@ function GetSystemColor() {
         async: false,//同步执行
         success: function (data) {
             SystemColor = data.d;
+            GaugesInfosService();
         }
     })
 }
 
-function InitializePage() {
-    var spans = $("span");//document.getElementsByTagName("span");
+//3、获取相关标签
+function GetTags() {
+    //1、获取值普通标签：publicData.ids 
+    //将span或者类为BarGraph或者类为TextDisplay或者类为AnlogSignal的全部取出
+    var spans = $("span,.BarGraph,.TextDisplay,.AnlogSignal");//document.getElementsByTagName("span");
     for (var i = 0; i < spans.length; i++) {
         publicData.ids = publicData.ids + spans[i].id + ",";
         //处理dcs相关标签
-        DealWidthDCSTags(spans[i]);
+        //DealWidthDCSTags(spans[i]);
     }
-    var divs = $("div");
-    for (var j in divs) {
-        DealWidthDCSTags(divs[j]);
+    //var barGraphs = $(".BarGraph");
+    //for (var n = 0; n < barGraphs.length;n++) {
+    //    publicData.ids = publicData.ids + barGraphs[n].id + ",";
+    //}
+    //2、获取模拟量标签：AnlogSignalTags
+    var a_tags = $(".AnlogSignal,.BarGraph");
+    for (var j = 0; j < a_tags.length; j++) {
+        var a_dcsObj = $(a_tags[j]);
+        var a_id = a_dcsObj.attr("id");
+        var a_dcsTag = a_id.split('>')[1];//dcs标签
+        AnlogSignalTags = AnlogSignalTags + a_dcsTag + ",";
     }
-    setTimeout(CycleOperate, 1000);
+    //3、获取开关量标签：RelatedTags
+    var b_tags = $(".BoolSignal");
+    for (var k = 0; k < b_tags.length; k++) {
+        var b_dcsObj = $(b_tags[k]);        
+        var dcsOptions = b_dcsObj.attr("data-option");
+        if (null == dcsOptions || undefined == dcsOptions || "" == dcsOptions) {
+            return;
+        }
+        //else if ("DCS" != OptionPick(dcsOptions, "DataSources")) {
+        //    return;
+        //}
+        var b_id = b_dcsObj.attr("id");
+        if (b_id == undefined || b_id == "") {
+            continue;
+        }
+        var relatedTags = OptionPick(dcsOptions, "RelatedTags");
+        RelatedTags = RelatedTags +b_id+","+ relatedTags + ";";
+    }
+}
+function InitializePage() {
+    setTimeout(CycleOperate, publicData.pollingIntervals);
 }
 
-//需要循环执行的操作
+//需要重复执行的操作
 function CycleOperate() {
     getLatestData();
     GetRunningStatusRelatedTags();
+    ConflictTag();
 }
 
 ////开关量处理
 function GetRunningStatusRelatedTags() {
-    var boolSignalArray = $(".BoolSignal");
-    for (var x in boolSignalArray) {
-        var dcsObj = boolSignalArray[x];
-        var dcsOptions = $(dcsObj).attr("data-option");
-        var tags = OptionPick(dcsOptions, "RelatedTags").replace(/ /g, "");
-        RelatedTags = RelatedTags + tags + ';';
-    }
+    //var boolSignalArray = $(".BoolSignal");
+    //for (var x in boolSignalArray) {
+    //    var dcsObj = boolSignalArray[x];
+    //    var dcsOptions = $(dcsObj).attr("data-option");
+    //    var tags = OptionPick(dcsOptions, "RelatedTags").replace(/ /g, "");
+    //    RelatedTags = RelatedTags + tags + ';';
+    //}
     GetTagsData();
 }
 //首先获取开关量相关标签数据
@@ -105,34 +186,48 @@ function GetTagsData() {
 }
 //处理运行状态显示
 function RunningStatusService(myData) {
+    var shape = "Circle";
     for(var x in myData){
-        var obj = $("#" + x);
+        var obj = $(document.getElementById(x));
         if (obj == undefined) {
             continue;
         }
+       
+        var dcsOptions = obj.attr("data-option");
+        var t_shape = OptionPick(dcsOptions, "Shape");
+        var myDisplay = OptionPick(dcsOptions, "Display");
+        var DisplayJson = StringToJson(myDisplay);//将显示属性转换为对象
+        if (t_shape != "") {
+            shape = t_shape;
+        }
+
         var src = "";
-        switch (myData[x].ResultNum) {
-            case 0:
-                src = "redL.gif";
-                break;
-            case 1:
-                src = "redL.gif";
-                break;
-            case 2:
-                src = "redL.gif";
-                break;
-            case 3:
-                src = "redL.gif";
-                break;
-            case 4:
-                src = "redL.gif";
-                break;
-            case 5:
-                src = "greenL.gif";
-                break;
-            case 6:
-                src = "redL.gif";
-                break;
+        src = DisplayJson[myData[x]]+".gif";
+        //switch (myData[x].ResultNum) {
+        //    case 0://备妥
+        //        src = "blue"+shape+".gif";
+        //        break;//正转
+        //    case 1:
+        //        src = "green" + shape + ".gif";
+        //        break;//反转
+        //    case 2:
+        //        src = "green" + shape + ".gif";
+        //        break;
+        //    case 3://机正
+        //        src = "green" + shape + ".gif";
+        //        break;
+        //    case 4://机反
+        //        src = "green" + shape + ".gif";
+        //        break;
+        //    case 5://报警
+        //        src = "red" + shape + ".gif";
+        //        break;
+        //    case 6://啥都没有
+        //        src = "yellow" + shape + ".gif";
+        //        break;
+        //}
+        if (src == "undefined.gif") {
+            continue;
         }
         var imgStr = '<img class="myimg" src="/UI_Monitor/images/common/' + src + '" style="width:100%;height:100%;" />';
         obj.html(imgStr);
@@ -168,13 +263,12 @@ function DealWidthDCSTags(dcsObj) {
     }
 }
 function getLatestData() {
-    //var m_MsgData;
     var dataToServer = {
         ids:publicData.ids,
         organizationId: publicData.organizationId,
         sceneName: publicData.sceneName
     };
-    var urlString = "../MonitorShell/MultiMonitorShell.asmx/GetRealTimeData";
+    var urlString = "/UI_Monitor/ProcessEnergyMonitor/MonitorShell/MultiMonitorShell.asmx/GetRealTimeData";
     $.ajax({
         type: "POST",
         url: urlString,
@@ -184,7 +278,9 @@ function getLatestData() {
         success: function (data) {
             g_DataSet = data.d;
             serviceSuccessful(data);
-            AnlogSignalService();//取得数值后再设置颜色
+            AnlogSignalStatus()
+            // AnlogSignalService();//取得数值后再设置颜色
+            
         },
         error: function () {
             setupTimerToPollLatestData();
@@ -210,7 +306,6 @@ function displayScene(scene) {
     // $("#sceneName").html(scene.Name);
     var datetime = $.jsonDateToDateTime(scene.time);
     $("#timestamp").html(datetime);
-
     // 显示数据项
     displayDataItem(scene.DataSet);
 }
@@ -221,11 +316,27 @@ function displayDataItem(dataSets) {
         //如果为汉字隐藏
         if (element.attr("class") == "TextDisplay") {
             //SearchValue(dataSets, FactoryId + ">" + element.attr("id").split('>')[1] + ">DCS")
-            if (1 == value) {
-                element.css("visibility", "hidden");
+            //----     
+            //处理汉字显示位
+            var dcsOptions = element.attr("data-option");
+            var displayValue = 1;
+            if (null == dcsOptions || undefined == dcsOptions || "" == dcsOptions) {
+                displayValue = 1;
             }
             else {
+                var display = OptionPick(dcsOptions, "Display").replace(/ /g, "");
+                if (display != "") {
+                    displayValue = display;
+                }
+            }
+            
+            //----
+
+            if (displayValue == value) {
                 element.css("visibility", "visible");
+            }
+            else {
+                element.css("visibility", "hidden");
             }
         }
         else {
@@ -240,7 +351,7 @@ function displayDataItem(dataSets) {
 
 
 //模拟量
-function AnlogSignalService() {
+function GaugesInfosService() {
     var sendData = {
         organizationId: publicData.organizationId,
         tagSet: AnlogSignalTags
@@ -252,25 +363,33 @@ function AnlogSignalService() {
         contentType: "application/json; charset=utf-8",
         dataType: "json",
         success: function (data) {
-            AnlogSignalStatus(data.d);
-        },
-        error: function () {
-            setupTimerToPollLatestData();
+            g_GaugesInfo = data.d;//设置仪表信息
+            
         }
+        //,
+        //error: function () {
+        //    setupTimerToPollLatestData();
+        //}
     });
 }
 
-//处理模拟量状态
-function AnlogSignalStatus(myData) {
+//模拟量和棒图统一处理
+function AnlogSignalStatus() {
+    //如果仪表信息为空直接返回
+    if (g_GaugesInfo == "") {
+        return;
+    }
+    var myData = g_GaugesInfo;
     //将标签加工成前台标准标签格式
-    for(var x in myData){     
-        DealWidthAlarmColor(myData[x]);
-        DealWidthBarGraph(myData[x]);
+    for(var x in myData){
+        DealWidthAlarmColor(myData[x]);//元素报警颜色设置
+        DealWidthBarGraph(myData[x]);//棒图元素设置
     } 
 }
 
 //处理报警颜色
 function DealWidthAlarmColor(gaugeObj) {
+    //var dcsTag = gaugeObj.DCSName + '_' + gaugeObj.TagName;
     var dcsTag = gaugeObj.TagName;
     var resultTag = FactoryId + ">" + dcsTag + ">DCS";
     var tagObj = $(document.getElementById(resultTag));
@@ -289,6 +408,8 @@ function DealWidthAlarmColor(gaugeObj) {
 
 //处理棒图
 function DealWidthBarGraph(gaugeObj) {
+
+    //var dcsTag =gaugeObj.DCSName+'_'+ gaugeObj.TagName;
     var dcsTag = gaugeObj.TagName;
     var resultTag = FactoryId + ">" + dcsTag + ">BarGraph";
     var tagObj = $(document.getElementById(resultTag));//棒图对象
@@ -316,16 +437,14 @@ function DealWidthBarGraph(gaugeObj) {
     tagObj.children().css("height", fillLevel);
 }
 
-//处理棒状图数值
+//查找棒状图数值
 function SearchValue(t_array,t_tagId) {
     for (var x in t_array) {
         if (t_array[x].ID == t_tagId) {
             return t_array[x].Value;
-        }
-        else {
-            return 0;//没有匹配项返回0
-        }
+        }           
     }
+    return 0;//没有匹配项返回0
 }
 
 //获得报警对应的颜色
@@ -333,25 +452,6 @@ function SearchValue(t_array,t_tagId) {
 //t_AlarmTags:标签界限标注
 //t_tagInfos:当前标签的具体信息值
 function GetAlarmColor(t_Value, t_AlarmTags, t_tagInfos) {
-
-    //应该首先获取不同程度报警的颜色设定值
-    //var colorInfo = new Object();
-    //$.ajax({
-    //    type: "POST",
-    //    url: "/UI_Monitor/DCSMonitor/MonitorShell/DCSMonitorShell.asmx/GetAlarmColorInfo",
-    //    data:'{organizationId:"'+FactoryId+'"}',
-    //    contentType: "application/json; charset=utf-8",
-    //    dataType: "json",
-    //    async: false,//同步执行
-    //    success: function (data) {
-    //        colorInfo=data.d;
-    //    }
-    //    //,
-    //    //error: function () {
-    //    //    setupTimerToPollLatestData();
-    //    //}
-    //})
-
     var result_color="";
     var t_tagArray = t_AlarmTags.split(",");
     var flag_HH = 0;
@@ -387,13 +487,13 @@ function GetAlarmColor(t_Value, t_AlarmTags, t_tagInfos) {
         }
     }
     if (flag_L) {
-        if (t_Value >= t_tagInfos.Value_L) {
+        if (t_Value <= t_tagInfos.Value_L) {
             result_color = SystemColor.Color_L;//"低限颜色";
             return result_color;
         }
     }
     if (flag_LL) {
-        if (t_Value >= t_tagInfos.Value_LL) {
+        if (t_Value <= t_tagInfos.Value_LL) {
             result_color = SystemColor.Color_LL;// "低低限颜色";
             return result_color;
         }
@@ -401,4 +501,56 @@ function GetAlarmColor(t_Value, t_AlarmTags, t_tagInfos) {
     else {
         return result_color;//无法匹配则返回空
     }
+}
+
+
+//处理一个画面中id重复的标签
+function ConflictTag() {
+    var conflicts = $(".Conflict");//document.getElementsByTagName("span");
+    for (var i = 0; i < conflicts.length; i++) {
+        var conflictsDcsObj = $(conflicts[i]);
+        var dcsOptions = conflictsDcsObj.attr("data-option");
+        if (null == dcsOptions || undefined == dcsOptions || "" == dcsOptions) {
+            continue;
+        } else {
+            var tagId = OptionPick(dcsOptions, "id");
+            var tagObj = $(document.getElementById(tagId));
+            var divHtml = tagObj[0].outerHTML;
+            //去掉id,class,top,left属性
+            var myHtml = divHtml.replace(/\sid\s*=\s*".*?"/, " ").replace(/\sclass\s*=\s*".*?"/, " ").replace(/top:\s*\d*px;?/, " ").replace(/left:\s*\d*px;?/, " ").replace(/right:\s*\d*px;?/, " ").replace(/bottom:\s*\d*px;?/, " ");
+            conflictsDcsObj.html(myHtml);
+        }
+    }
+}
+
+function CheckTags() {
+    var t_tags="";
+    var spans = $(".BarGraph,.TextDisplay,.AnlogSignal");//document.getElementsByTagName("span");
+    for (var i = 0; i < spans.length; i++) {
+        t_tags = t_tags + spans[i].id + ";";
+    }
+    
+    var checkTagsUrlString = "/UI_Monitor/DCSMonitor/MonitorShell/DCSMonitorShell.asmx/CheckTags";
+    $.ajax({
+        type: "POST",
+        url: checkTagsUrlString,
+        data: "{organizationId:'" + FactoryId + "',tags:'" + t_tags + "',boolSignalTags:'" + RelatedTags + "'}",
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        success: function (data) {
+            var msg = '';
+            if (data.d.length == 0) {
+                msg = "没有找到不正确标签";
+            }
+            else {
+                for (var i = 0; i < data.d.length; i++) {
+                    if (i % 3 == 0 && i != 0) {
+                        msg += "\n";
+                    }
+                    msg += data.d[i] + "   ,";
+                }
+            }
+            alert(msg);
+        }
+    });
 }
